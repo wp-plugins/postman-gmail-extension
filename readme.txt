@@ -22,7 +22,7 @@ The Postman Gmail API Extension is delivered as a separate plugin to keep the Po
 If you are willing to help translate Postman into your language, [please let me know](https://wordpress.org/support/plugin/postman-smtp#postform)!
 
 = Requirements =
-* Postman v1.4.3 (or later)
+* Postman v1.5 (or later)
 * WordPress 3.9 (or later)
 * PHP 5.3 (or later) with OpenSSL; or PHP 5.2 with SPL and OpenSSL 
 * A Gmail or Google Apps account; and a Google OAuth 2.0 Client ID
