@@ -68,11 +68,9 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 			return new PostmanZendMailTransportGmailApi ( $hostname, $config );
 		}
 		public function getDeliveryDetails(PostmanOptionsInterface $options) {
-			$deliveryDetails ['transport_name'] = $this->getName ();
-			$deliveryDetails ['host'] = _x ( 'Google', 'Name of the email service owner', 'postman-smtp' );
 			$deliveryDetails ['auth_desc'] = _x ( 'OAuth 2.0', 'Authentication Type', 'postman-smtp' );
-			/* translators: where %1$s is the transport type, %2$s is the host, and %3$s is the Authentication Type (e.g. Postman will send mail via smtp.gmail.com:465 using OAuth 2.0 authentication.) */
-			return sprintf ( __ ( 'Postman will send mail via the %1$s using %3$s authentication.', 'postman-smtp' ), '<b>' . $deliveryDetails ['transport_name'] . '</b>', '<b>' . $deliveryDetails ['host'] . '</b>', '<b>' . $deliveryDetails ['auth_desc'] . '</b>' );
+			/* translators: %s is the Authentication Type (e.g. OAuth 2.0) */
+			return sprintf ( __ ( 'Postman will send mail via the <b>Gmail API</b> using %s authentication.', 'postman-smtp' ), '<b>' . $deliveryDetails ['auth_desc'] . '</b>' );
 		}
 		/**
 		 * If the Transport is not properly configured, the MessageHandler warns the user,
