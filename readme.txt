@@ -16,13 +16,13 @@ Can't send Gmail because ports 465 and 587 are blocked on your host? No problem!
 The Postman Gmail API Extension is delivered as a separate plugin to keep the Postman SMTP stable and lightweight. It includes the **Google APIs Client Library for PHP**.
 
 = Features =
-* Send Gmail (with XOAUTH2/SSL) from your WordPress site even if the regular mail ports are blocked
+* Send Gmail (with HTTPS-XOAUTH2) from your WordPress site even if the regular mail ports are blocked
 * Available translations: English, French
 
 If you are willing to help translate Postman into your language, [please let me know](https://wordpress.org/support/plugin/postman-smtp#postform)!
 
 = Requirements =
-* Postman v1.4.3 (or later)
+* Postman v1.5 (or later)
 * WordPress 3.9 (or later)
 * PHP 5.3 (or later) with OpenSSL; or PHP 5.2 with SPL and OpenSSL 
 * A Gmail or Google Apps account; and a Google OAuth 2.0 Client ID
