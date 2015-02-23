@@ -56,6 +56,8 @@ The first and only WordPress plugin to allow sending mail with OAuth 2.0; Google
 
 == Screenshots ==
 
+1. A Postman port-test initiated from a GoDaddy.com WordPress site.
+
 == Changelog ==
 
 = 0.2 - 2015-02-23 =
