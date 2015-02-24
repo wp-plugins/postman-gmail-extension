@@ -13,7 +13,7 @@ The Postman Gmail API Extension uses the HTTPS port (443) to deliver mail even o
 
 Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail API Extension works in combination with [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) to send your mail out on the HTTPS port, port 443. Even if you host your site on GoDaddy, your Gmail will be delivered!
 
-The Postman Gmail API Extension is delivered as a separate plugin to keep the [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) stable and lightweight. It includes the **Google APIs Client Library for PHP**.
+The Postman Gmail API Extension includes the **Google APIs Client Library for PHP**. It is delivered as a separate plugin to keep [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) stable and lightweight.
 
 = Features =
 * Send Gmail (with HTTPS-XOAUTH2) from your WordPress site even if the regular mail ports are blocked
@@ -55,6 +55,12 @@ If you are willing to help translate Postman into your language, [please let me 
 = What is Postman? =
 
 The first and only WordPress plugin to allow sending mail with OAuth 2.0; Google, Hotmail and Yahoo Mail's preferred authentication mechanism. Email delivery problems are now a thing of the past.
+
+= What URI do I enter to whitelist the plugin? =
+
+If your WordPress is configured with WP_HTTP_BLOCK_EXTERNAL to prevent outbound connections, you may exempt the Gmail APIs with this definition:
+
+> define('WP_ACCESSIBLE_HOSTS', 'www.googleapis.com');
 
 == Screenshots ==
 
