@@ -58,7 +58,7 @@ The first and only WordPress plugin to allow sending mail with OAuth 2.0; Google
 
 = What URI do I enter to whitelist the plugin? =
 
-If your WordPress is configured with WP_HTTP_BLOCK_EXTERNAL to prevent outbound connections, you may exempt the Gmail APIs with this definition:
+If your WordPress site is configured with WP_HTTP_BLOCK_EXTERNAL to prevent outbound connections, you may exempt the Gmail APIs with this definition:
 
 > define('WP_ACCESSIBLE_HOSTS', 'www.googleapis.com');
 
