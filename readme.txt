@@ -25,7 +25,7 @@ If you are willing to help translate Postman into your language, [please let me 
 * [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) v1.5 (or later)
 * WordPress 3.9 (or later)
 * PHP 5.3 (or later) with OpenSSL; or PHP 5.2 with SPL and OpenSSL 
-* A Gmail or Google Apps account; and a Google OAuth 2.0 Client ID
+* A Gmail, Google or Google Apps account; a Google OAuth 2.0 Client ID
 
 == Installation ==
 
