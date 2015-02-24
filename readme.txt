@@ -7,7 +7,7 @@ Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Send Gmail from GoDaddy and other hosts that block the standard email (SMTP) ports with this add-on for the Postman SMTP plugin.
+Send Gmail from GoDaddy and other hosts that block the standard email ports with this add-on for the Postman SMTP plugin.
 
 == Description ==
 
