@@ -62,6 +62,23 @@ If your WordPress is configured with WP_HTTP_BLOCK_EXTERNAL to prevent outbound 
 
 > define('WP_ACCESSIBLE_HOSTS', 'www.googleapis.com');
 
+= What is a Client ID? =
+To use OAuth, your website needs it's own Client ID. The Client ID is used to control authentication and authorization and is tied to the specific URL of your website. If you manage several website, you will need a different Client ID for each one.
+
+= How do I get a Google Client ID? =
+1. Go to [Google Developer's Console](https://console.developers.google.com/) and choose 'Create Project', or use an existing project if you have one.
+1. If you have previously created a project, select it from the Projects page and you will arrive at the Project Dashboard. If you have just created a project, you are brought to the Project Dashboard automatically.
+1. If you have not filled out the consent screen for this project, do it now. In the left-hand hand navigation menu, select 'Consent Screen' from under 'APIs & auth'. Into 'email address' put your Gmail address and in 'product name' put 'Postman SMTP'. Choose 'Save'.
+1. Select 'Credentials' from under 'APIs & auth'. Choose 'Create a new Client ID'.
+1. For the 'Application Type' use 'Web application'.
+1. In 'Authorized Javascript origins' enter the 'Javascript Origins' shown on Postman's Settings page.
+1. In 'Authorized Redirect URIs' enter the 'Redirect URI' shown on Postman's Settings page.
+1. Choose 'Create Client ID'.
+1. Enter the Client ID and Client Secret displayed here into Postman's settings page.
+
+= How can I revoke Postman's access to Gmail? =
+* From the [Google Developer's Console](https://console.developers.google.com/) use the Delete button under the Client ID
+
 == Screenshots ==
 
 1. A Postman port-test initiated from a GoDaddy.com WordPress site.
