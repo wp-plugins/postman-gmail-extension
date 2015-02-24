@@ -42,7 +42,7 @@ If you are willing to help translate Postman into your language, [please let me 
 1. In 'Transport' choose 'Gmail API'
 1. In 'Sender Name' enter a name.
 1. In 'Sender Email Address' enter your Gmail email address. This MUST be the same address you login to Google with.
-1. Go to [Google Developer's Console](https://console.developers.google.com/) and create a Client ID for your WordPress site.. [instructions for this are detailed in the FAQ](https://wordpress.org/plugins/postman-smtp/faq/)
+1. Go to [Google Developer's Console](https://console.developers.google.com/) and create a Client ID for your WordPress site.. [instructions for this are detailed in the FAQ](https://wordpress.org/plugins/postman-gmail-extension/faq/)
 1. Copy your generated 'Client ID' and 'Client Secret' into the plugin's Settings.
 1. Choose the Save Changes button.
 1. Choose the 'Request Permission from Google' link and follow the instructions.
