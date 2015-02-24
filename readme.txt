@@ -1,13 +1,13 @@
 === Postman Gmail API Extension ===
 Contributors: jasonhendriks
-Tags: gmail, gmail api, google appengine, smtp, email, mail, oauth, oauth2, xoauth2, gmail, google apps, google apps for work, google apps for business
+Tags: oauth, gmail, gmail api, email, mail, google apps, godaddy, blocked ports, https
 Requires at least: 3.9
 Tested up to: 4.1.1
 Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Postman Gmail API Extension uses the HTTPS port (443) to deliver mail even on hosts that block the standard SMTP ports (25/465/587).
+Send Gmail from GoDaddy and other hosts that block the standard mail (SMTP) ports.
 
 == Description ==
 
