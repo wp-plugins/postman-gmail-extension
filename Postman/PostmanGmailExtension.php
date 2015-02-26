@@ -70,7 +70,7 @@ if (! class_exists ( 'PostmanGmail' )) {
 		/**
 		 */
 		public function displayMissingPostmanMessage() {
-			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', __ ( 'You must install <a href="https://wordpress.org/plugins/postman-smtp/">Postman SMTP</a> to use the Postman Gmail Extension' ) );
+			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', __ ( 'You must install and actvate <a href="https://wordpress.org/plugins/postman-smtp/">Postman SMTP</a> to use the Postman Gmail Extension', 'postman-smtp' ) );
 		}
 		
 		/**

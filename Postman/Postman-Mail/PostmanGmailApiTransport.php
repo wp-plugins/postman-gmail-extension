@@ -35,6 +35,9 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		public function getName() {
 			return _x ( 'Gmail API', 'Transport Name', 'postman-smtp' );
 		}
+		public function getVersion() {
+			return POSTMAN_GMAIL_API_PLUGIN_VERSION;
+		}
 		public function createPostmanMailAuthenticator(PostmanOptions $options, PostmanOAuthToken $authToken) {
 			require_once 'PostmanGmailApiMailAuthenticator.php';
 			return new PostmanGmailApiMailAuthenticator ( $options, $authToken );

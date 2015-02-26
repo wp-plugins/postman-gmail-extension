@@ -4,7 +4,7 @@
  * Plugin Name: Postman Gmail API Extension
  * Plugin URI: https://wordpress.org/plugins/postman-gmail-extension/
  * Description: Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail Extension works with Postman SMTP to send your mail out on the HTTPS port, TCP port 443.
- * Version: 0.2
+ * Version: 0.2.1
  * Author: Jason Hendriks
  * Text Domain: postman-gmail-api
  * Author URI: https://profiles.wordpress.org/jasonhendriks/
@@ -13,7 +13,7 @@
  */
 
 // define constants
-define ( 'POSTMAN_GMAIL_API_PLUGIN_VERSION', '0.2' );
+define ( 'POSTMAN_GMAIL_API_PLUGIN_VERSION', '0.2.1' );
 
 require_once 'Postman/PostmanGmailExtension.php';
 

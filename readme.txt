@@ -13,7 +13,7 @@ Send Gmail from GoDaddy and other hosts that block the standard email ports with
 
 Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail API Extension works in combination with [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) to send your mail out on the HTTPS port, port 443. Even if you host your site on GoDaddy, your Gmail will be delivered!
 
-The Postman Gmail API Extension includes the **Google APIs Client Library for PHP**. The Google API does not support password-based authentcation and Postman will guide you in creating a (free) [OAuth 2.0 Google Client ID](https://developers.google.com/accounts/docs/OAuth2) to use this service.
+The Postman Gmail API Extension includes the **Google APIs Client Library for PHP**. The Google API does not support password-based authentcation and Postman will guide you in creating a (free) [Google OAuth 2.0 Client ID](https://developers.google.com/accounts/docs/OAuth2) to use this service.
 
 = Features =
 * Send Gmail (with HTTPS-XOAUTH2) from your WordPress site on the HTTPS port
@@ -25,7 +25,7 @@ If you are willing to help translate Postman into your language, [please let me 
 * [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) v1.5 (or later)
 * WordPress 3.9 (or later)
 * PHP 5.3 (or later) with OpenSSL; or PHP 5.2 with SPL and OpenSSL 
-* A Gmail, Google or Google Apps account; a Google OAuth 2.0 Client ID
+* A [Gmail, Google](https://accounts.google.com/) or [Google Apps](https://www.google.com/work/apps/business/) account; a [Google OAuth 2.0 Client ID](https://developers.google.com/accounts/docs/OAuth2)
 
 == Installation ==
 
@@ -84,6 +84,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 1. A Postman port-test initiated from a GoDaddy.com WordPress site.
 
 == Changelog ==
+
+= 0.2.1 - 2015-02-25 =
+* A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
 
 = 0.2 - 2015-02-23 =
 * Published to WordPress.org
