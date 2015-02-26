@@ -29,25 +29,16 @@ if (! class_exists ( 'PostmanGmail' )) {
 			$basename = plugin_basename ( $postmanPhpFile );
 			$this->postmanPhpFile = $postmanPhpFile;
 			
-			// start the logger
-			$this->logger = new PostmanLogger ( get_class ( $this ) );
-			
 			// add the SMTP transport
-			$this->addTransport ();
+			$this->registerTransport ();
 			
-			// bind to wp_mail
+			// ask WpMailBinder to re-bind, if Postman has already loaded
 			if (class_exists ( 'PostmanWpMailBinder' )) {
 				// once the PostmanWpMailBinder has been loaded, ask it to bind
 				PostmanWpMailBinder::getInstance ()->bind ();
 			}
 			
-			// register the deactivation hook
-			register_deactivation_hook ( $postmanPhpFile, array (
-					$this,
-					'handleDeactivationEvent' 
-			) );
-			
-			// initialzie the plugin
+			// call the initialization on the standard WordPress plugins_loaded hook
 			add_action ( 'plugins_loaded', array (
 					$this,
 					'init' 
@@ -58,13 +49,33 @@ if (! class_exists ( 'PostmanGmail' )) {
 		 * Initializes the Plugin
 		 *
 		 * 1. Loads the text domain
+		 *
+		 * If we can't initialize the plugin, display an error message to the user
 		 */
 		public function init() {
-			$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
-			// load the text domain
-			$this->loadTextDomain ();
+			// start the logger
+			if (class_exists ( 'PostmanLogger' )) {
+				$this->logger = new PostmanLogger ( get_class ( $this ) );
+				$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
+				// load the text domain
+				$this->loadTextDomain ();
+			} else {
+				// Postman is not installed or activated
+				add_action ( 'admin_notices', Array (
+						$this,
+						'displayMissingPostmanMessage' 
+				) );
+			}
 		}
-		private function addTransport() {
+		/**
+		 */
+		public function displayMissingPostmanMessage() {
+			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', __ ( 'You must install <a href="https://wordpress.org/plugins/postman-smtp/">Postman SMTP</a> to use the Postman Gmail Extension' ) );
+		}
+		
+		/**
+		 */
+		private function registerTransport() {
 			PostmanTransportDirectory::getInstance ()->registerTransport ( new PostmanGmailApiTransport () );
 		}
 		
@@ -74,21 +85,6 @@ if (! class_exists ( 'PostmanGmail' )) {
 		private function loadTextDomain() {
 			$langDir = basename ( dirname ( $this->postmanPhpFile ) ) . '/Postman/languages/';
 			$success = load_plugin_textdomain ( 'postman-smtp', false, $langDir );
-		}
-		
-		/**
-		 * If the plugin is de-activated but Postman is set to use the Plugin,
-		 * the plugin should switch back to the default SMTP transport.
-		 */
-		public function handleDeactivationEvent() {
-			$this->logger->debug ( 'Deactivating' );
-			$options = PostmanOptions::getInstance ();
-			if ($options->getTransportType () == PostmanGmailApiTransport::SLUG) {
-				$options->setTransportType ( PostmanSmtpTransport::SLUG );
-				$options->save ();
-				$mh = new PostmanMessageHandler ( $options, PostmanOAuthToken::getInstance () );
-				$mh->addError ( __ ( 'Postman Transport reset to SMTP. Attention may be required.' ) );
-			}
 		}
 	}
 }

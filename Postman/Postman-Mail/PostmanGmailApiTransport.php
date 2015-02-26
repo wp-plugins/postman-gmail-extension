@@ -11,9 +11,6 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		const SLUG = 'gmail_api';
 		const PORT = 443;
 		const ENCRYPTION_TYPE = 'ssl';
-		public function __construct() {
-			$this->logger = new PostmanLogger ( get_class ( $this ) );
-		}
 		public function isSmtp() {
 			return false;
 		}
