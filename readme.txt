@@ -91,7 +91,7 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
 * This plugin removes its configuration when deactivated, which was a terrible design decision as this requires the user to re-enable the Gmail API on upgrades. Sorry. Fixed.
 * Added a warning message if this plugin is installed without Postman, in case a user thinks this is a stand-alone solution.
-* Fixed a bug where the French text-domain couldn't be loaded
+* Fixed French-language specific issues
 
 = 0.2 - 2015-02-23 =
 * Published to WordPress.org
