@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-extension\n"
-"POT-Creation-Date: 2015-02-23 22:34:53+00:00\n"
-"PO-Revision-Date: 2015-02-23 17:43-0500\n"
+"POT-Creation-Date: 2015-02-28 17:55:49+00:00\n"
+"PO-Revision-Date: 2015-02-28 12:56-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.7.4\n"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:39
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:36
 msgctxt "Transport Name"
 msgid "Gmail API"
 msgstr "API Gmail"
@@ -51,9 +51,13 @@ msgstr ""
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr "Recommande configuration API Gmail sur le port %d"
 
-#: Postman/PostmanGmailExtension.php:90
-msgid "Postman Transport reset to SMTP. Attention may be required."
-msgstr "Transport remis à SMTP. Attention, peut être nécessaire."
+#: Postman/PostmanGmailExtension.php:73
+msgid ""
+"You must install and actvate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
+"Extension"
+msgstr ""
+"Vous devez installer et actvate <a href=\"%s\">Postman SMTP</a> d'utiliser le Postman "
+"Gmail Extension"
 
 #. Plugin Name of the plugin/theme
 msgid "Postman Gmail API Extension"
@@ -80,6 +84,9 @@ msgstr "Jason Hendriks"
 #. Author URI of the plugin/theme
 msgid "https://profiles.wordpress.org/jasonhendriks/"
 msgstr "https://profiles.wordpress.org/jasonhendriks/"
+
+#~ msgid "Postman Transport reset to SMTP. Attention may be required."
+#~ msgstr "Transport remis à SMTP. Attention, peut être nécessaire."
 
 #~ msgctxt "Name of the email service owner"
 #~ msgid "Google"

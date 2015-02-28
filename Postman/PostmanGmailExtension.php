@@ -70,7 +70,7 @@ if (! class_exists ( 'PostmanGmail' )) {
 		/**
 		 */
 		public function displayMissingPostmanMessage() {
-			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', sprintf ( __ ( 'You must install and actvate <a href="%s">Postman SMTP</a> to use the Postman Gmail Extension', 'postman-smtp' ), 'https://wordpress.org/plugins/postman-smtp/' ) );
+			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', sprintf ( __ ( 'You must install and actvate <a href="%s">Postman SMTP</a> to use the Postman Gmail Extension', 'postman-gmail-extension' ), 'https://wordpress.org/plugins/postman-smtp/' ) );
 		}
 		
 		/**
@@ -83,8 +83,12 @@ if (! class_exists ( 'PostmanGmail' )) {
 		 * Loads the appropriate language file
 		 */
 		private function loadTextDomain() {
+			$textDomain = 'postman-gmail-extension';
 			$langDir = basename ( dirname ( $this->postmanPhpFile ) ) . '/Postman/languages/';
-			$success = load_plugin_textdomain ( 'postman-smtp', false, $langDir );
+			$success = load_plugin_textdomain ( $textDomain, false, $langDir );
+			if (! $success && get_locale () != 'en_US') {
+				$this->logger->error ( 'Could not load text domain ' . $langDir . $textDomain . '-' . get_locale () . '.po' );
+			}
 		}
 	}
 }
