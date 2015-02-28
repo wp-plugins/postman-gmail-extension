@@ -29,6 +29,9 @@ if (! class_exists ( 'PostmanGmail' )) {
 			$basename = plugin_basename ( $postmanPhpFile );
 			$this->postmanPhpFile = $postmanPhpFile;
 			
+			// load the text domain
+			$this->loadTextDomain ();
+			
 			// add the SMTP transport
 			$this->registerTransport ();
 			
@@ -57,8 +60,6 @@ if (! class_exists ( 'PostmanGmail' )) {
 			if (class_exists ( 'PostmanLogger' )) {
 				$this->logger = new PostmanLogger ( get_class ( $this ) );
 				$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
-				// load the text domain
-				$this->loadTextDomain ();
 			} else {
 				// Postman is not installed or activated
 				add_action ( 'admin_notices', Array (
