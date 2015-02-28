@@ -175,6 +175,7 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 					$recommendation ['enc'] = null;
 					$recommendation ['auth'] = null;
 					$recommendation ['port'] = null;
+					$recommendation ['hostname'] = null;
 					$recommendation ['display_auth'] = 'oauth2';
 					return $recommendation;
 				}
