@@ -11,8 +11,69 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		const SLUG = 'gmail_api';
 		const PORT = 443;
 		const ENCRYPTION_TYPE = 'ssl';
-		public function isSmtp() {
-			return false;
+		
+		// this should be standard across all transports
+		public function getSlug() {
+			return self::SLUG;
+		}
+		public function getName() {
+			return _x ( 'Gmail API', 'Transport Name', 'postman-gmail-extension' );
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getVersion() {
+			return POSTMAN_GMAIL_API_PLUGIN_VERSION;
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getHostname(PostmanOptionsInterface $options) {
+			return 'www.googleapis.com';
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getHostPort(PostmanOptionsInterface $options) {
+			return self::PORT;
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getAuthenticationType(PostmanOptionsInterface $options) {
+			return 'oauth2';
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getSecurityType(PostmanOptionsInterface $options) {
+			return 'https';
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getCredentialsId(PostmanOptionsInterface $options) {
+			return $options->getClientId ();
+		}
+		/**
+		 * v0.2.1
+		 *
+		 * @return string
+		 */
+		public function getCredentialsSecret(PostmanOptionsInterface $options) {
+			return $options->getClientSecret ();
 		}
 		public function isServiceProviderGoogle($hostname) {
 			return true;
@@ -28,15 +89,6 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		}
 		public function isTranscriptSupported() {
 			return false;
-		}
-		public function getSlug() {
-			return self::SLUG;
-		}
-		public function getName() {
-			return _x ( 'Gmail API', 'Transport Name', 'postman-gmail-extension' );
-		}
-		public function getVersion() {
-			return POSTMAN_GMAIL_API_PLUGIN_VERSION;
 		}
 		public function createPostmanMailAuthenticator(PostmanOptions $options, PostmanOAuthToken $authToken) {
 			require_once 'PostmanGmailApiMailAuthenticator.php';
@@ -115,7 +167,6 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		}
 		public function getMisconfigurationMessage(PostmanConfigTextHelper $scribe, PostmanOptionsInterface $options, PostmanOAuthToken $token) {
 			if ($this->isConfigurationNeeded ( $options )) {
-				/* translators: %1$s is the Client ID label, and %2$s is the Client Secret label (e.g. Warning: OAuth 2.0 authentication requires an OAuth 2.0-capable Outgoing Mail Server, Sender Email Address, Client ID, and Client Secret.) */
 				return sprintf ( __ ( 'The Gmail API transport requires a Sender Email Address, Client ID and Client Secret.', 'postman-gmail-extension' ) );
 			} else if ($this->isPermissionNeeded ( $token )) {
 				$message = sprintf ( __ ( 'You have configured OAuth 2.0 authentication, but have not received permission to use it.', 'postman-gmail-extension' ), $scribe->getClientIdLabel (), $scribe->getClientSecretLabel () );
