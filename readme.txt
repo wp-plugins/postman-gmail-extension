@@ -84,7 +84,7 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Screenshots ==
 
-1. A Postman port-test initiated from a GoDaddy.com WordPress site.
+1. A Postman Connectivity Test initiated from a GoDaddy.com WordPress site.
 
 == Changelog ==
 
