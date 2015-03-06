@@ -81,15 +81,15 @@ if (! class_exists ( 'PostmanGmail' )) {
 		}
 		
 		/**
-		 * Loads the appropriate language file
+		 * Loads the appropriate language file.
+		 * 
+		 * This function is called from the constructor
+		 * and therefore may NOT access the Logger instance.
 		 */
 		private function loadTextDomain() {
 			$textDomain = 'postman-gmail-extension';
 			$langDir = basename ( dirname ( $this->postmanPhpFile ) ) . '/Postman/languages/';
 			$success = load_plugin_textdomain ( $textDomain, false, $langDir );
-			if (! $success && get_locale () != 'en_US') {
-				$this->logger->error ( 'Could not load text domain ' . $langDir . $textDomain . '-' . get_locale () . '.po' );
-			}
 		}
 	}
 }
