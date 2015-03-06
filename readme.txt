@@ -90,6 +90,7 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 = 0.2.2 - 2015-03-05 =
 * Prevent collisions with other plugins using the Google API
+* Fixed an activation error with unexpected languages (not US English, not French)
 
 = 0.2.1 - 2015-03-01 =
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
