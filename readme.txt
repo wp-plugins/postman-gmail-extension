@@ -1,6 +1,6 @@
 === Postman Gmail API Extension ===
 Contributors: jasonhendriks
-Tags: oauth, gmail, gmail api, google api, email, mail, google apps, godaddy, blocked ports, https
+Tags: oauth, gmail, gmail api, email, mail, google apps, godaddy, blocked ports, https
 Requires at least: 3.9
 Tested up to: 4.1.1
 Stable tag: 0.2.1
@@ -88,8 +88,8 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
-= 0.2.2 - 2015-03-05 =
-* Prevent collisions with other plugins using the Google API
+= 0.2.1 - 2015-03-05 =
+* Quick fix to prevent Google API collisions with other plugins
 
 = 0.2.1 - 2015-03-01 =
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
