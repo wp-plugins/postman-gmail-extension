@@ -88,6 +88,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
+= 0.2.1 - 2015-03-05 =
+* Quick fix to prevent Google API collisions with other plugins
+
 = 0.2.1 - 2015-03-01 =
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
 * This plugin removes its configuration when deactivated, which was a terrible design decision as this requires the user to re-enable the Gmail API on upgrades. Sorry. Fixed.
