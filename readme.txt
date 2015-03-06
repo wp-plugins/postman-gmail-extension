@@ -3,7 +3,7 @@ Contributors: jasonhendriks
 Tags: oauth, gmail, gmail api, google api, email, mail, google apps, godaddy, blocked ports, https
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,9 +88,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
-= 0.2.2 - 2015-03-05 =
-* Prevent collisions with other plugins using the Google API
-* Fixed an activation error with unexpected languages (not US English, not French)
+= 0.2.2 - 2015-03-06 =
+* Quick fix for collisions with other plugins that use the Google API
+* Fixed an error on activation, and fatal error on switching languages, when using a non-supported language (not US English, not French)
 
 = 0.2.1 - 2015-03-01 =
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
@@ -105,6 +105,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 * Postman is one month old! To celebrate we've integrated the Gmail API for all our users who are prevented from sending email on the standard mail ports by their WordPress hosts!
 
 == Upgrade Notice ==
+
+= 0.2.2 =
+* Switching languages causes a non-recoverable error - fixed
 
 = 0.2.1 =
 * There is a known issue with deactivating/upgrading from v0.2. You will have to go back into Postman settings after upgrading and re-enable the Gmail API transport.
