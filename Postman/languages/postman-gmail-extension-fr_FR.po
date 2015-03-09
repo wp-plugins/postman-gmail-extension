@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-extension\n"
-"POT-Creation-Date: 2015-02-28 17:55:49+00:00\n"
-"PO-Revision-Date: 2015-02-28 12:56-0500\n"
+"POT-Creation-Date: 2015-03-09 04:57:32+00:00\n"
+"PO-Revision-Date: 2015-03-09 01:08-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,31 +15,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.7.4\n"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:36
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:20
 msgctxt "Transport Name"
 msgid "Gmail API"
 msgstr "API Gmail"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:71
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:123
 msgctxt "Authentication Type"
 msgid "OAuth 2.0"
 msgstr "OAuth 2.0"
 
 #. translators: %s is the Authentication Type (e.g. OAuth 2.0)
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:73
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:125
 msgid "Postman will send mail via the <b>Gmail API</b> using %s authentication."
 msgstr "Postman enverra mail via le <b>API Gmail</b> utilisant authentification OAuth 2.0."
 
-#. translators: %1$s is the Client ID label, and %2$s is the Client Secret
-#. label (e.g. Warning: OAuth 2.0 authentication requires an OAuth 2.0-capable
-#. Outgoing Mail Server, Sender Email Address, Client ID, and Client Secret.)
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:119
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:170
 msgid "The Gmail API transport requires a Sender Email Address, Client ID and Client Secret."
 msgstr ""
 "L'API Gmail nécessite un transport à l'expéditeur Adresse courriel, numéro de client et "
 "client secret."
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:121
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:172
 msgid ""
 "You have configured OAuth 2.0 authentication, but have not received permission to use it."
 msgstr ""
@@ -47,11 +44,11 @@ msgstr ""
 "l'utiliser."
 
 #. translators: where %d is the port number
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:172
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:223
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr "Recommande configuration API Gmail sur le port %d"
 
-#: Postman/PostmanGmailExtension.php:73
+#: Postman/PostmanGmailExtension.php:74
 msgid ""
 "You must install and actvate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
 "Extension"
@@ -61,7 +58,7 @@ msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Postman Gmail API Extension"
-msgstr "L'extension API Gmail de Postman"
+msgstr "Postman Gmail API Extension"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wordpress.org/plugins/postman-gmail-extension/"
