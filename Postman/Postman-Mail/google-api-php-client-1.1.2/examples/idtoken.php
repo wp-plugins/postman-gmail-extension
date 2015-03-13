@@ -28,7 +28,7 @@ $client_id = '<YOUR_CLIENT_ID>';
 $client_secret = '<YOUR_CLIENT_SECRET>';
 $redirect_uri = '<YOUR_REDIRECT_URI>';
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
 $client->setRedirectUri($redirect_uri);

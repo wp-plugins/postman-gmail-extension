@@ -25,8 +25,6 @@ If you are willing to help translate Postman into your language, [please let me 
 
 = Requirements =
 * [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) v1.5 (or later)
-* WordPress 3.9 (or later)
-* PHP 5.3 (or later) with OpenSSL; or PHP 5.2 with SPL and OpenSSL 
 * A [Gmail, Google](https://accounts.google.com/) or [Google Apps](https://www.google.com/work/apps/business/) account; a [Google OAuth 2.0 Client ID](https://developers.google.com/accounts/docs/OAuth2)
 
 == Installation ==
@@ -87,6 +85,11 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 1. A Postman port-test initiated from a GoDaddy.com WordPress site.
 
 == Changelog ==
+
+= 1.0.0 =
+* Stable release
+* Renamed Google API classes to prevent errors with other plugins using the Google API
+* Renamed Zend framework classes to prevent errors with other plugins using the Zend framework
 
 = 0.2.2 - 2015-03-06 =
 * Quick fix for collisions with other plugins that use the Google API

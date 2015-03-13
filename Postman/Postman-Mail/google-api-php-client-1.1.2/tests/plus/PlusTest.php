@@ -17,12 +17,12 @@
 
 class PlusTest extends BaseTest
 {
-  /** @var Google_PlusService */
+  /** @var Postman_Google_PlusService */
   public $plus;
   public function __construct()
   {
     parent::__construct();
-    $this->plus = new Google_Service_Plus($this->getClient());
+    $this->plus = new Postman_Google_Service_Plus($this->getClient());
   }
 
   public function testGetPerson()
@@ -61,7 +61,7 @@ class PlusTest extends BaseTest
     // assertArrayHasKey uses array_key_exists, which is not great:
     // it doesn't understand SPL ArrayAccess
     $this->assertTrue(isset($item['actor']));
-    $this->assertInstanceOf('Google_Service_Plus_ActivityActor', $item->actor);
+    $this->assertInstanceOf('Postman_Google_Service_Plus_ActivityActor', $item->actor);
     $this->assertTrue(isset($item['actor']['displayName']));
     $this->assertTrue(isset($item['actor']->url));
     $this->assertTrue(isset($item['object']));

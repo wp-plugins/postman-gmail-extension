@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Fitness extends Google_Service
+class Postman_Google_Service_Fitness extends Postman_Google_Service
 {
   /** View your activity information in Google Fit. */
   const FITNESS_ACTIVITY_READ =
@@ -57,16 +57,16 @@ class Google_Service_Fitness extends Google_Service
   /**
    * Constructs the internal representation of the Fitness service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'fitness/v1/users/';
     $this->version = 'v1';
     $this->serviceName = 'fitness';
 
-    $this->users_dataSources = new Google_Service_Fitness_UsersDataSources_Resource(
+    $this->users_dataSources = new Postman_Google_Service_Fitness_UsersDataSources_Resource(
         $this,
         $this->serviceName,
         'dataSources',
@@ -146,7 +146,7 @@ class Google_Service_Fitness extends Google_Service
           )
         )
     );
-    $this->users_dataSources_datasets = new Google_Service_Fitness_UsersDataSourcesDatasets_Resource(
+    $this->users_dataSources_datasets = new Postman_Google_Service_Fitness_UsersDataSourcesDatasets_Resource(
         $this,
         $this->serviceName,
         'datasets',
@@ -236,7 +236,7 @@ class Google_Service_Fitness extends Google_Service
           )
         )
     );
-    $this->users_sessions = new Google_Service_Fitness_UsersSessions_Resource(
+    $this->users_sessions = new Postman_Google_Service_Fitness_UsersSessions_Resource(
         $this,
         $this->serviceName,
         'sessions',
@@ -318,11 +318,11 @@ class Google_Service_Fitness extends Google_Service
  * The "users" collection of methods.
  * Typical usage is:
  *  <code>
- *   $fitnessService = new Google_Service_Fitness(...);
+ *   $fitnessService = new Postman_Google_Service_Fitness(...);
  *   $users = $fitnessService->users;
  *  </code>
  */
-class Google_Service_Fitness_Users_Resource extends Google_Service_Resource
+class Postman_Google_Service_Fitness_Users_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -330,11 +330,11 @@ class Google_Service_Fitness_Users_Resource extends Google_Service_Resource
  * The "dataSources" collection of methods.
  * Typical usage is:
  *  <code>
- *   $fitnessService = new Google_Service_Fitness(...);
+ *   $fitnessService = new Postman_Google_Service_Fitness(...);
  *   $dataSources = $fitnessService->dataSources;
  *  </code>
  */
-class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Resource
+class Postman_Google_Service_Fitness_UsersDataSources_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -349,15 +349,15 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
    *
    * @param string $userId Create the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
-   * @param Google_DataSource $postBody
+   * @param Postman_Google_DataSource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Fitness_DataSource
+   * @return Postman_Google_Service_Fitness_DataSource
    */
-  public function create($userId, Google_Service_Fitness_DataSource $postBody, $optParams = array())
+  public function create($userId, Postman_Google_Service_Fitness_DataSource $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Fitness_DataSource");
+    return $this->call('create', array($params), "Postman_Google_Service_Fitness_DataSource");
   }
 
   /**
@@ -368,13 +368,13 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
    * @param string $dataSourceId The data stream ID of the data source to
    * retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Fitness_DataSource
+   * @return Postman_Google_Service_Fitness_DataSource
    */
   public function get($userId, $dataSourceId, $optParams = array())
   {
     $params = array('userId' => $userId, 'dataSourceId' => $dataSourceId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Fitness_DataSource");
+    return $this->call('get', array($params), "Postman_Google_Service_Fitness_DataSource");
   }
 
   /**
@@ -389,13 +389,13 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
    *
    * @opt_param string dataTypeName The names of data types to include in the
    * list. If not specified, all data sources will be returned.
-   * @return Google_Service_Fitness_ListDataSourcesResponse
+   * @return Postman_Google_Service_Fitness_ListDataSourcesResponse
    */
   public function listUsersDataSources($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Fitness_ListDataSourcesResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Fitness_ListDataSourcesResponse");
   }
 
   /**
@@ -410,15 +410,15 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
    * @param string $userId Update the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
    * @param string $dataSourceId The data stream ID of the data source to update.
-   * @param Google_DataSource $postBody
+   * @param Postman_Google_DataSource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Fitness_DataSource
+   * @return Postman_Google_Service_Fitness_DataSource
    */
-  public function patch($userId, $dataSourceId, Google_Service_Fitness_DataSource $postBody, $optParams = array())
+  public function patch($userId, $dataSourceId, Postman_Google_Service_Fitness_DataSource $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'dataSourceId' => $dataSourceId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Fitness_DataSource");
+    return $this->call('patch', array($params), "Postman_Google_Service_Fitness_DataSource");
   }
 
   /**
@@ -432,15 +432,15 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
    * @param string $userId Update the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
    * @param string $dataSourceId The data stream ID of the data source to update.
-   * @param Google_DataSource $postBody
+   * @param Postman_Google_DataSource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Fitness_DataSource
+   * @return Postman_Google_Service_Fitness_DataSource
    */
-  public function update($userId, $dataSourceId, Google_Service_Fitness_DataSource $postBody, $optParams = array())
+  public function update($userId, $dataSourceId, Postman_Google_Service_Fitness_DataSource $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'dataSourceId' => $dataSourceId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Fitness_DataSource");
+    return $this->call('update', array($params), "Postman_Google_Service_Fitness_DataSource");
   }
 }
 
@@ -448,11 +448,11 @@ class Google_Service_Fitness_UsersDataSources_Resource extends Google_Service_Re
  * The "datasets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $fitnessService = new Google_Service_Fitness(...);
+ *   $fitnessService = new Postman_Google_Service_Fitness(...);
  *   $datasets = $fitnessService->datasets;
  *  </code>
  */
-class Google_Service_Fitness_UsersDataSourcesDatasets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Fitness_UsersDataSourcesDatasets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -511,13 +511,13 @@ class Google_Service_Fitness_UsersDataSourcesDatasets_Resource extends Google_Se
    * to the value of nextPageToken from the previous response. Each subsequent
    * call will yield a partial dataset with data point end timestamps that are
    * strictly smaller than those in the previous partial response.
-   * @return Google_Service_Fitness_Dataset
+   * @return Postman_Google_Service_Fitness_Dataset
    */
   public function get($userId, $dataSourceId, $datasetId, $optParams = array())
   {
     $params = array('userId' => $userId, 'dataSourceId' => $dataSourceId, 'datasetId' => $datasetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Fitness_Dataset");
+    return $this->call('get', array($params), "Postman_Google_Service_Fitness_Dataset");
   }
 
   /**
@@ -534,30 +534,30 @@ class Google_Service_Fitness_UsersDataSourcesDatasets_Resource extends Google_Se
    * minimum data point start time and maximum data point end time represented as
    * nanoseconds from the epoch. The ID is formatted like: "startTime-endTime"
    * where startTime and endTime are 64 bit integers.
-   * @param Google_Dataset $postBody
+   * @param Postman_Google_Dataset $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string currentTimeMillis The client's current time in milliseconds
    * since epoch. Note that the minStartTimeNs and maxEndTimeNs properties in the
    * request body are in nanoseconds instead of milliseconds.
-   * @return Google_Service_Fitness_Dataset
+   * @return Postman_Google_Service_Fitness_Dataset
    */
-  public function patch($userId, $dataSourceId, $datasetId, Google_Service_Fitness_Dataset $postBody, $optParams = array())
+  public function patch($userId, $dataSourceId, $datasetId, Postman_Google_Service_Fitness_Dataset $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'dataSourceId' => $dataSourceId, 'datasetId' => $datasetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Fitness_Dataset");
+    return $this->call('patch', array($params), "Postman_Google_Service_Fitness_Dataset");
   }
 }
 /**
  * The "sessions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $fitnessService = new Google_Service_Fitness(...);
+ *   $fitnessService = new Postman_Google_Service_Fitness(...);
  *   $sessions = $fitnessService->sessions;
  *  </code>
  */
-class Google_Service_Fitness_UsersSessions_Resource extends Google_Service_Resource
+class Postman_Google_Service_Fitness_UsersSessions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -595,13 +595,13 @@ class Google_Service_Fitness_UsersSessions_Resource extends Google_Service_Resou
    * will not have any other fields.
    * @opt_param string startTime An RFC3339 timestamp. Only sessions ending
    * between the start and end times will be included in the response.
-   * @return Google_Service_Fitness_ListSessionsResponse
+   * @return Postman_Google_Service_Fitness_ListSessionsResponse
    */
   public function listUsersSessions($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Fitness_ListSessionsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Fitness_ListSessionsResponse");
   }
 
   /**
@@ -610,25 +610,25 @@ class Google_Service_Fitness_UsersSessions_Resource extends Google_Service_Resou
    * @param string $userId Create sessions for the person identified. Use me to
    * indicate the authenticated user. Only me is supported at this time.
    * @param string $sessionId The ID of the session to be created.
-   * @param Google_Session $postBody
+   * @param Postman_Google_Session $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string currentTimeMillis The client's current time in milliseconds
    * since epoch.
-   * @return Google_Service_Fitness_Session
+   * @return Postman_Google_Service_Fitness_Session
    */
-  public function update($userId, $sessionId, Google_Service_Fitness_Session $postBody, $optParams = array())
+  public function update($userId, $sessionId, Postman_Google_Service_Fitness_Session $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'sessionId' => $sessionId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Fitness_Session");
+    return $this->call('update', array($params), "Postman_Google_Service_Fitness_Session");
   }
 }
 
 
 
 
-class Google_Service_Fitness_Application extends Google_Model
+class Postman_Google_Service_Fitness_Application extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -672,7 +672,7 @@ class Google_Service_Fitness_Application extends Google_Model
   }
 }
 
-class Google_Service_Fitness_DataPoint extends Google_Collection
+class Postman_Google_Service_Fitness_DataPoint extends Postman_Google_Collection
 {
   protected $collection_key = 'value';
   protected $internal_gapi_mappings = array(
@@ -684,7 +684,7 @@ class Google_Service_Fitness_DataPoint extends Google_Collection
   public $originDataSourceId;
   public $rawTimestampNanos;
   public $startTimeNanos;
-  protected $valueType = 'Google_Service_Fitness_Value';
+  protected $valueType = 'Postman_Google_Service_Fitness_Value';
   protected $valueDataType = 'array';
 
 
@@ -754,23 +754,23 @@ class Google_Service_Fitness_DataPoint extends Google_Collection
   }
 }
 
-class Google_Service_Fitness_DataSource extends Google_Model
+class Postman_Google_Service_Fitness_DataSource extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $applicationType = 'Google_Service_Fitness_Application';
+  protected $applicationType = 'Postman_Google_Service_Fitness_Application';
   protected $applicationDataType = '';
   public $dataStreamId;
   public $dataStreamName;
-  protected $dataTypeType = 'Google_Service_Fitness_DataType';
+  protected $dataTypeType = 'Postman_Google_Service_Fitness_DataType';
   protected $dataTypeDataType = '';
-  protected $deviceType = 'Google_Service_Fitness_Device';
+  protected $deviceType = 'Postman_Google_Service_Fitness_Device';
   protected $deviceDataType = '';
   public $name;
   public $type;
 
 
-  public function setApplication(Google_Service_Fitness_Application $application)
+  public function setApplication(Postman_Google_Service_Fitness_Application $application)
   {
     $this->application = $application;
   }
@@ -794,7 +794,7 @@ class Google_Service_Fitness_DataSource extends Google_Model
   {
     return $this->dataStreamName;
   }
-  public function setDataType(Google_Service_Fitness_DataType $dataType)
+  public function setDataType(Postman_Google_Service_Fitness_DataType $dataType)
   {
     $this->dataType = $dataType;
   }
@@ -802,7 +802,7 @@ class Google_Service_Fitness_DataSource extends Google_Model
   {
     return $this->dataType;
   }
-  public function setDevice(Google_Service_Fitness_Device $device)
+  public function setDevice(Postman_Google_Service_Fitness_Device $device)
   {
     $this->device = $device;
   }
@@ -828,12 +828,12 @@ class Google_Service_Fitness_DataSource extends Google_Model
   }
 }
 
-class Google_Service_Fitness_DataType extends Google_Collection
+class Postman_Google_Service_Fitness_DataType extends Postman_Google_Collection
 {
   protected $collection_key = 'field';
   protected $internal_gapi_mappings = array(
   );
-  protected $fieldType = 'Google_Service_Fitness_DataTypeField';
+  protected $fieldType = 'Postman_Google_Service_Fitness_DataTypeField';
   protected $fieldDataType = 'array';
   public $name;
 
@@ -856,7 +856,7 @@ class Google_Service_Fitness_DataType extends Google_Collection
   }
 }
 
-class Google_Service_Fitness_DataTypeField extends Google_Model
+class Postman_Google_Service_Fitness_DataTypeField extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -882,7 +882,7 @@ class Google_Service_Fitness_DataTypeField extends Google_Model
   }
 }
 
-class Google_Service_Fitness_Dataset extends Google_Collection
+class Postman_Google_Service_Fitness_Dataset extends Postman_Google_Collection
 {
   protected $collection_key = 'point';
   protected $internal_gapi_mappings = array(
@@ -891,7 +891,7 @@ class Google_Service_Fitness_Dataset extends Google_Collection
   public $maxEndTimeNs;
   public $minStartTimeNs;
   public $nextPageToken;
-  protected $pointType = 'Google_Service_Fitness_DataPoint';
+  protected $pointType = 'Postman_Google_Service_Fitness_DataPoint';
   protected $pointDataType = 'array';
 
 
@@ -937,7 +937,7 @@ class Google_Service_Fitness_Dataset extends Google_Collection
   }
 }
 
-class Google_Service_Fitness_Device extends Google_Model
+class Postman_Google_Service_Fitness_Device extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -990,12 +990,12 @@ class Google_Service_Fitness_Device extends Google_Model
   }
 }
 
-class Google_Service_Fitness_ListDataSourcesResponse extends Google_Collection
+class Postman_Google_Service_Fitness_ListDataSourcesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'dataSource';
   protected $internal_gapi_mappings = array(
   );
-  protected $dataSourceType = 'Google_Service_Fitness_DataSource';
+  protected $dataSourceType = 'Postman_Google_Service_Fitness_DataSource';
   protected $dataSourceDataType = 'array';
 
 
@@ -1009,15 +1009,15 @@ class Google_Service_Fitness_ListDataSourcesResponse extends Google_Collection
   }
 }
 
-class Google_Service_Fitness_ListSessionsResponse extends Google_Collection
+class Postman_Google_Service_Fitness_ListSessionsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'session';
   protected $internal_gapi_mappings = array(
   );
-  protected $deletedSessionType = 'Google_Service_Fitness_Session';
+  protected $deletedSessionType = 'Postman_Google_Service_Fitness_Session';
   protected $deletedSessionDataType = 'array';
   public $nextPageToken;
-  protected $sessionType = 'Google_Service_Fitness_Session';
+  protected $sessionType = 'Postman_Google_Service_Fitness_Session';
   protected $sessionDataType = 'array';
 
 
@@ -1047,12 +1047,12 @@ class Google_Service_Fitness_ListSessionsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Fitness_Session extends Google_Model
+class Postman_Google_Service_Fitness_Session extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $activityType;
-  protected $applicationType = 'Google_Service_Fitness_Application';
+  protected $applicationType = 'Postman_Google_Service_Fitness_Application';
   protected $applicationDataType = '';
   public $description;
   public $endTimeMillis;
@@ -1070,7 +1070,7 @@ class Google_Service_Fitness_Session extends Google_Model
   {
     return $this->activityType;
   }
-  public function setApplication(Google_Service_Fitness_Application $application)
+  public function setApplication(Postman_Google_Service_Fitness_Application $application)
   {
     $this->application = $application;
   }
@@ -1128,7 +1128,7 @@ class Google_Service_Fitness_Session extends Google_Model
   }
 }
 
-class Google_Service_Fitness_Value extends Google_Model
+class Postman_Google_Service_Fitness_Value extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

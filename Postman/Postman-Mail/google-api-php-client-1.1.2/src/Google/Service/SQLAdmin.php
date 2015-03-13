@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_SQLAdmin extends Google_Service
+class Postman_Google_Service_SQLAdmin extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -48,16 +48,16 @@ class Google_Service_SQLAdmin extends Google_Service
   /**
    * Constructs the internal representation of the SQLAdmin service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'sql/v1beta3/';
     $this->version = 'v1beta3';
     $this->serviceName = 'sqladmin';
 
-    $this->backupRuns = new Google_Service_SQLAdmin_BackupRuns_Resource(
+    $this->backupRuns = new Postman_Google_Service_SQLAdmin_BackupRuns_Resource(
         $this,
         $this->serviceName,
         'backupRuns',
@@ -120,7 +120,7 @@ class Google_Service_SQLAdmin extends Google_Service
           )
         )
     );
-    $this->flags = new Google_Service_SQLAdmin_Flags_Resource(
+    $this->flags = new Postman_Google_Service_SQLAdmin_Flags_Resource(
         $this,
         $this->serviceName,
         'flags',
@@ -134,7 +134,7 @@ class Google_Service_SQLAdmin extends Google_Service
           )
         )
     );
-    $this->instances = new Google_Service_SQLAdmin_Instances_Resource(
+    $this->instances = new Postman_Google_Service_SQLAdmin_Instances_Resource(
         $this,
         $this->serviceName,
         'instances',
@@ -357,7 +357,7 @@ class Google_Service_SQLAdmin extends Google_Service
           )
         )
     );
-    $this->operations = new Google_Service_SQLAdmin_Operations_Resource(
+    $this->operations = new Postman_Google_Service_SQLAdmin_Operations_Resource(
         $this,
         $this->serviceName,
         'operations',
@@ -410,7 +410,7 @@ class Google_Service_SQLAdmin extends Google_Service
           )
         )
     );
-    $this->sslCerts = new Google_Service_SQLAdmin_SslCerts_Resource(
+    $this->sslCerts = new Postman_Google_Service_SQLAdmin_SslCerts_Resource(
         $this,
         $this->serviceName,
         'sslCerts',
@@ -490,7 +490,7 @@ class Google_Service_SQLAdmin extends Google_Service
           )
         )
     );
-    $this->tiers = new Google_Service_SQLAdmin_Tiers_Resource(
+    $this->tiers = new Postman_Google_Service_SQLAdmin_Tiers_Resource(
         $this,
         $this->serviceName,
         'tiers',
@@ -518,11 +518,11 @@ class Google_Service_SQLAdmin extends Google_Service
  * The "backupRuns" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $backupRuns = $sqladminService->backupRuns;
  *  </code>
  */
-class Google_Service_SQLAdmin_BackupRuns_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_BackupRuns_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -538,13 +538,13 @@ class Google_Service_SQLAdmin_BackupRuns_Resource extends Google_Service_Resourc
    * backup can occur any time in the window. The time is in RFC 3339 format, for
    * example 2012-11-15T16:19:00.094Z.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_BackupRun
+   * @return Postman_Google_Service_SQLAdmin_BackupRun
    */
   public function get($project, $instance, $backupConfiguration, $dueTime, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'backupConfiguration' => $backupConfiguration, 'dueTime' => $dueTime);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SQLAdmin_BackupRun");
+    return $this->call('get', array($params), "Postman_Google_Service_SQLAdmin_BackupRun");
   }
 
   /**
@@ -561,13 +561,13 @@ class Google_Service_SQLAdmin_BackupRuns_Resource extends Google_Service_Resourc
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
    * @opt_param int maxResults Maximum number of backup runs per response.
-   * @return Google_Service_SQLAdmin_BackupRunsListResponse
+   * @return Postman_Google_Service_SQLAdmin_BackupRunsListResponse
    */
   public function listBackupRuns($project, $instance, $backupConfiguration, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'backupConfiguration' => $backupConfiguration);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_BackupRunsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_BackupRunsListResponse");
   }
 }
 
@@ -575,11 +575,11 @@ class Google_Service_SQLAdmin_BackupRuns_Resource extends Google_Service_Resourc
  * The "flags" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $flags = $sqladminService->flags;
  *  </code>
  */
-class Google_Service_SQLAdmin_Flags_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_Flags_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -587,13 +587,13 @@ class Google_Service_SQLAdmin_Flags_Resource extends Google_Service_Resource
    * (flags.listFlags)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_FlagsListResponse
+   * @return Postman_Google_Service_SQLAdmin_FlagsListResponse
    */
   public function listFlags($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_FlagsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_FlagsListResponse");
   }
 }
 
@@ -601,11 +601,11 @@ class Google_Service_SQLAdmin_Flags_Resource extends Google_Service_Resource
  * The "instances" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $instances = $sqladminService->instances;
  *  </code>
  */
-class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_Instances_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -614,15 +614,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    *
    * @param string $project Project ID of the source as well as the clone Cloud
    * SQL instance.
-   * @param Google_InstancesCloneRequest $postBody
+   * @param Postman_Google_InstancesCloneRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesCloneResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesCloneResponse
    */
-  public function cloneInstances($project, Google_Service_SQLAdmin_InstancesCloneRequest $postBody, $optParams = array())
+  public function cloneInstances($project, Postman_Google_Service_SQLAdmin_InstancesCloneRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('clone', array($params), "Google_Service_SQLAdmin_InstancesCloneResponse");
+    return $this->call('clone', array($params), "Postman_Google_Service_SQLAdmin_InstancesCloneResponse");
   }
 
   /**
@@ -633,13 +633,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesDeleteResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesDeleteResponse
    */
   public function delete($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_SQLAdmin_InstancesDeleteResponse");
+    return $this->call('delete', array($params), "Postman_Google_Service_SQLAdmin_InstancesDeleteResponse");
   }
 
   /**
@@ -650,15 +650,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * to be exported.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesExportRequest $postBody
+   * @param Postman_Google_InstancesExportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesExportResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesExportResponse
    */
-  public function export($project, $instance, Google_Service_SQLAdmin_InstancesExportRequest $postBody, $optParams = array())
+  public function export($project, $instance, Postman_Google_Service_SQLAdmin_InstancesExportRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('export', array($params), "Google_Service_SQLAdmin_InstancesExportResponse");
+    return $this->call('export', array($params), "Postman_Google_Service_SQLAdmin_InstancesExportResponse");
   }
 
   /**
@@ -668,13 +668,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_DatabaseInstance
+   * @return Postman_Google_Service_SQLAdmin_DatabaseInstance
    */
   public function get($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SQLAdmin_DatabaseInstance");
+    return $this->call('get', array($params), "Postman_Google_Service_SQLAdmin_DatabaseInstance");
   }
 
   /**
@@ -684,15 +684,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesImportRequest $postBody
+   * @param Postman_Google_InstancesImportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesImportResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesImportResponse
    */
-  public function import($project, $instance, Google_Service_SQLAdmin_InstancesImportRequest $postBody, $optParams = array())
+  public function import($project, $instance, Postman_Google_Service_SQLAdmin_InstancesImportRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('import', array($params), "Google_Service_SQLAdmin_InstancesImportResponse");
+    return $this->call('import', array($params), "Postman_Google_Service_SQLAdmin_InstancesImportResponse");
   }
 
   /**
@@ -700,15 +700,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    *
    * @param string $project Project ID of the project to which the newly created
    * Cloud SQL instances should belong.
-   * @param Google_DatabaseInstance $postBody
+   * @param Postman_Google_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesInsertResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesInsertResponse
    */
-  public function insert($project, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
+  public function insert($project, Postman_Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_SQLAdmin_InstancesInsertResponse");
+    return $this->call('insert', array($params), "Postman_Google_Service_SQLAdmin_InstancesInsertResponse");
   }
 
   /**
@@ -723,13 +723,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * part of the larger set of results to view.
    * @opt_param string maxResults The maximum number of results to return per
    * response.
-   * @return Google_Service_SQLAdmin_InstancesListResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesListResponse
    */
   public function listInstances($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_InstancesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_InstancesListResponse");
   }
 
   /**
@@ -739,15 +739,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_DatabaseInstance $postBody
+   * @param Postman_Google_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesUpdateResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesUpdateResponse
    */
-  public function patch($project, $instance, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
+  public function patch($project, $instance, Postman_Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_SQLAdmin_InstancesUpdateResponse");
+    return $this->call('patch', array($params), "Postman_Google_Service_SQLAdmin_InstancesUpdateResponse");
   }
 
   /**
@@ -757,13 +757,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesPromoteReplicaResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesPromoteReplicaResponse
    */
   public function promoteReplica($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('promoteReplica', array($params), "Google_Service_SQLAdmin_InstancesPromoteReplicaResponse");
+    return $this->call('promoteReplica', array($params), "Postman_Google_Service_SQLAdmin_InstancesPromoteReplicaResponse");
   }
 
   /**
@@ -774,13 +774,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesResetSslConfigResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesResetSslConfigResponse
    */
   public function resetSslConfig($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('resetSslConfig', array($params), "Google_Service_SQLAdmin_InstancesResetSslConfigResponse");
+    return $this->call('resetSslConfig', array($params), "Postman_Google_Service_SQLAdmin_InstancesResetSslConfigResponse");
   }
 
   /**
@@ -791,13 +791,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesRestartResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesRestartResponse
    */
   public function restart($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('restart', array($params), "Google_Service_SQLAdmin_InstancesRestartResponse");
+    return $this->call('restart', array($params), "Postman_Google_Service_SQLAdmin_InstancesRestartResponse");
   }
 
   /**
@@ -813,13 +813,13 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * backup can occur any time in the window. The time is in RFC 3339 format, for
    * example 2012-11-15T16:19:00.094Z.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesRestoreBackupResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesRestoreBackupResponse
    */
   public function restoreBackup($project, $instance, $backupConfiguration, $dueTime, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'backupConfiguration' => $backupConfiguration, 'dueTime' => $dueTime);
     $params = array_merge($params, $optParams);
-    return $this->call('restoreBackup', array($params), "Google_Service_SQLAdmin_InstancesRestoreBackupResponse");
+    return $this->call('restoreBackup', array($params), "Postman_Google_Service_SQLAdmin_InstancesRestoreBackupResponse");
   }
 
   /**
@@ -829,15 +829,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstanceSetRootPasswordRequest $postBody
+   * @param Postman_Google_InstanceSetRootPasswordRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesSetRootPasswordResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesSetRootPasswordResponse
    */
-  public function setRootPassword($project, $instance, Google_Service_SQLAdmin_InstanceSetRootPasswordRequest $postBody, $optParams = array())
+  public function setRootPassword($project, $instance, Postman_Google_Service_SQLAdmin_InstanceSetRootPasswordRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('setRootPassword', array($params), "Google_Service_SQLAdmin_InstancesSetRootPasswordResponse");
+    return $this->call('setRootPassword', array($params), "Postman_Google_Service_SQLAdmin_InstancesSetRootPasswordResponse");
   }
 
   /**
@@ -846,15 +846,15 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_DatabaseInstance $postBody
+   * @param Postman_Google_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstancesUpdateResponse
+   * @return Postman_Google_Service_SQLAdmin_InstancesUpdateResponse
    */
-  public function update($project, $instance, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
+  public function update($project, $instance, Postman_Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_SQLAdmin_InstancesUpdateResponse");
+    return $this->call('update', array($params), "Postman_Google_Service_SQLAdmin_InstancesUpdateResponse");
   }
 }
 
@@ -862,11 +862,11 @@ class Google_Service_SQLAdmin_Instances_Resource extends Google_Service_Resource
  * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $operations = $sqladminService->operations;
  *  </code>
  */
-class Google_Service_SQLAdmin_Operations_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_Operations_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -878,13 +878,13 @@ class Google_Service_SQLAdmin_Operations_Resource extends Google_Service_Resourc
    * project ID.
    * @param string $operation Instance operation ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_InstanceOperation
+   * @return Postman_Google_Service_SQLAdmin_InstanceOperation
    */
   public function get($project, $instance, $operation, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'operation' => $operation);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SQLAdmin_InstanceOperation");
+    return $this->call('get', array($params), "Postman_Google_Service_SQLAdmin_InstanceOperation");
   }
 
   /**
@@ -899,13 +899,13 @@ class Google_Service_SQLAdmin_Operations_Resource extends Google_Service_Resourc
    * @opt_param string maxResults Maximum number of operations per response.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
-   * @return Google_Service_SQLAdmin_OperationsListResponse
+   * @return Postman_Google_Service_SQLAdmin_OperationsListResponse
    */
   public function listOperations($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_OperationsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_OperationsListResponse");
   }
 }
 
@@ -913,11 +913,11 @@ class Google_Service_SQLAdmin_Operations_Resource extends Google_Service_Resourc
  * The "sslCerts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $sslCerts = $sqladminService->sslCerts;
  *  </code>
  */
-class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_SslCerts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -929,13 +929,13 @@ class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
    * project ID.
    * @param string $sha1Fingerprint Sha1 FingerPrint.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_SslCertsDeleteResponse
+   * @return Postman_Google_Service_SQLAdmin_SslCertsDeleteResponse
    */
   public function delete($project, $instance, $sha1Fingerprint, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'sha1Fingerprint' => $sha1Fingerprint);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_SQLAdmin_SslCertsDeleteResponse");
+    return $this->call('delete', array($params), "Postman_Google_Service_SQLAdmin_SslCertsDeleteResponse");
   }
 
   /**
@@ -947,13 +947,13 @@ class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
    * project ID.
    * @param string $sha1Fingerprint Sha1 FingerPrint.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_SslCert
+   * @return Postman_Google_Service_SQLAdmin_SslCert
    */
   public function get($project, $instance, $sha1Fingerprint, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'sha1Fingerprint' => $sha1Fingerprint);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SQLAdmin_SslCert");
+    return $this->call('get', array($params), "Postman_Google_Service_SQLAdmin_SslCert");
   }
 
   /**
@@ -964,15 +964,15 @@ class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
    * Cloud SQL instances should belong.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_SslCertsInsertRequest $postBody
+   * @param Postman_Google_SslCertsInsertRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_SslCertsInsertResponse
+   * @return Postman_Google_Service_SQLAdmin_SslCertsInsertResponse
    */
-  public function insert($project, $instance, Google_Service_SQLAdmin_SslCertsInsertRequest $postBody, $optParams = array())
+  public function insert($project, $instance, Postman_Google_Service_SQLAdmin_SslCertsInsertRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_SQLAdmin_SslCertsInsertResponse");
+    return $this->call('insert', array($params), "Postman_Google_Service_SQLAdmin_SslCertsInsertResponse");
   }
 
   /**
@@ -984,13 +984,13 @@ class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_SslCertsListResponse
+   * @return Postman_Google_Service_SQLAdmin_SslCertsListResponse
    */
   public function listSslCerts($project, $instance, $optParams = array())
   {
     $params = array('project' => $project, 'instance' => $instance);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_SslCertsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_SslCertsListResponse");
   }
 }
 
@@ -998,11 +998,11 @@ class Google_Service_SQLAdmin_SslCerts_Resource extends Google_Service_Resource
  * The "tiers" collection of methods.
  * Typical usage is:
  *  <code>
- *   $sqladminService = new Google_Service_SQLAdmin(...);
+ *   $sqladminService = new Postman_Google_Service_SQLAdmin(...);
  *   $tiers = $sqladminService->tiers;
  *  </code>
  */
-class Google_Service_SQLAdmin_Tiers_Resource extends Google_Service_Resource
+class Postman_Google_Service_SQLAdmin_Tiers_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1011,20 +1011,20 @@ class Google_Service_SQLAdmin_Tiers_Resource extends Google_Service_Resource
    *
    * @param string $project Project ID of the project for which to list tiers.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SQLAdmin_TiersListResponse
+   * @return Postman_Google_Service_SQLAdmin_TiersListResponse
    */
   public function listTiers($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SQLAdmin_TiersListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SQLAdmin_TiersListResponse");
   }
 }
 
 
 
 
-class Google_Service_SQLAdmin_BackupConfiguration extends Google_Model
+class Postman_Google_Service_SQLAdmin_BackupConfiguration extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1077,7 +1077,7 @@ class Google_Service_SQLAdmin_BackupConfiguration extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_BackupRun extends Google_Model
+class Postman_Google_Service_SQLAdmin_BackupRun extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1085,7 +1085,7 @@ class Google_Service_SQLAdmin_BackupRun extends Google_Model
   public $dueTime;
   public $endTime;
   public $enqueuedTime;
-  protected $errorType = 'Google_Service_SQLAdmin_OperationError';
+  protected $errorType = 'Postman_Google_Service_SQLAdmin_OperationError';
   protected $errorDataType = '';
   public $instance;
   public $kind;
@@ -1125,7 +1125,7 @@ class Google_Service_SQLAdmin_BackupRun extends Google_Model
   {
     return $this->enqueuedTime;
   }
-  public function setError(Google_Service_SQLAdmin_OperationError $error)
+  public function setError(Postman_Google_Service_SQLAdmin_OperationError $error)
   {
     $this->error = $error;
   }
@@ -1167,12 +1167,12 @@ class Google_Service_SQLAdmin_BackupRun extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_BackupRunsListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_BackupRunsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_BackupRun';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_BackupRun';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1204,7 +1204,7 @@ class Google_Service_SQLAdmin_BackupRunsListResponse extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_BinLogCoordinates extends Google_Model
+class Postman_Google_Service_SQLAdmin_BinLogCoordinates extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1239,18 +1239,18 @@ class Google_Service_SQLAdmin_BinLogCoordinates extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_CloneContext extends Google_Model
+class Postman_Google_Service_SQLAdmin_CloneContext extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $binLogCoordinatesType = 'Google_Service_SQLAdmin_BinLogCoordinates';
+  protected $binLogCoordinatesType = 'Postman_Google_Service_SQLAdmin_BinLogCoordinates';
   protected $binLogCoordinatesDataType = '';
   public $destinationInstanceName;
   public $kind;
   public $sourceInstanceName;
 
 
-  public function setBinLogCoordinates(Google_Service_SQLAdmin_BinLogCoordinates $binLogCoordinates)
+  public function setBinLogCoordinates(Postman_Google_Service_SQLAdmin_BinLogCoordinates $binLogCoordinates)
   {
     $this->binLogCoordinates = $binLogCoordinates;
   }
@@ -1284,7 +1284,7 @@ class Google_Service_SQLAdmin_CloneContext extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_DatabaseFlags extends Google_Model
+class Postman_Google_Service_SQLAdmin_DatabaseFlags extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1310,7 +1310,7 @@ class Google_Service_SQLAdmin_DatabaseFlags extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
+class Postman_Google_Service_SQLAdmin_DatabaseInstance extends Postman_Google_Collection
 {
   protected $collection_key = 'replicaNames';
   protected $internal_gapi_mappings = array(
@@ -1320,7 +1320,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public $etag;
   public $instance;
   public $instanceType;
-  protected $ipAddressesType = 'Google_Service_SQLAdmin_IpMapping';
+  protected $ipAddressesType = 'Postman_Google_Service_SQLAdmin_IpMapping';
   protected $ipAddressesDataType = 'array';
   public $ipv6Address;
   public $kind;
@@ -1329,9 +1329,9 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public $project;
   public $region;
   public $replicaNames;
-  protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
+  protected $serverCaCertType = 'Postman_Google_Service_SQLAdmin_SslCert';
   protected $serverCaCertDataType = '';
-  protected $settingsType = 'Google_Service_SQLAdmin_Settings';
+  protected $settingsType = 'Postman_Google_Service_SQLAdmin_Settings';
   protected $settingsDataType = '';
   public $state;
 
@@ -1440,7 +1440,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   {
     return $this->replicaNames;
   }
-  public function setServerCaCert(Google_Service_SQLAdmin_SslCert $serverCaCert)
+  public function setServerCaCert(Postman_Google_Service_SQLAdmin_SslCert $serverCaCert)
   {
     $this->serverCaCert = $serverCaCert;
   }
@@ -1448,7 +1448,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   {
     return $this->serverCaCert;
   }
-  public function setSettings(Google_Service_SQLAdmin_Settings $settings)
+  public function setSettings(Postman_Google_Service_SQLAdmin_Settings $settings)
   {
     $this->settings = $settings;
   }
@@ -1466,7 +1466,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_ExportContext extends Google_Collection
+class Postman_Google_Service_SQLAdmin_ExportContext extends Postman_Google_Collection
 {
   protected $collection_key = 'table';
   protected $internal_gapi_mappings = array(
@@ -1511,7 +1511,7 @@ class Google_Service_SQLAdmin_ExportContext extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_Flag extends Google_Collection
+class Postman_Google_Service_SQLAdmin_Flag extends Postman_Google_Collection
 {
   protected $collection_key = 'appliesTo';
   protected $internal_gapi_mappings = array(
@@ -1583,12 +1583,12 @@ class Google_Service_SQLAdmin_Flag extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_FlagsListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_FlagsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_Flag';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_Flag';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1611,7 +1611,7 @@ class Google_Service_SQLAdmin_FlagsListResponse extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_ImportContext extends Google_Collection
+class Postman_Google_Service_SQLAdmin_ImportContext extends Postman_Google_Collection
 {
   protected $collection_key = 'uri';
   protected $internal_gapi_mappings = array(
@@ -1647,18 +1647,18 @@ class Google_Service_SQLAdmin_ImportContext extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_InstanceOperation extends Google_Collection
+class Postman_Google_Service_SQLAdmin_InstanceOperation extends Postman_Google_Collection
 {
   protected $collection_key = 'error';
   protected $internal_gapi_mappings = array(
   );
   public $endTime;
   public $enqueuedTime;
-  protected $errorType = 'Google_Service_SQLAdmin_OperationError';
+  protected $errorType = 'Postman_Google_Service_SQLAdmin_OperationError';
   protected $errorDataType = 'array';
-  protected $exportContextType = 'Google_Service_SQLAdmin_ExportContext';
+  protected $exportContextType = 'Postman_Google_Service_SQLAdmin_ExportContext';
   protected $exportContextDataType = '';
-  protected $importContextType = 'Google_Service_SQLAdmin_ImportContext';
+  protected $importContextType = 'Postman_Google_Service_SQLAdmin_ImportContext';
   protected $importContextDataType = '';
   public $instance;
   public $kind;
@@ -1693,7 +1693,7 @@ class Google_Service_SQLAdmin_InstanceOperation extends Google_Collection
   {
     return $this->error;
   }
-  public function setExportContext(Google_Service_SQLAdmin_ExportContext $exportContext)
+  public function setExportContext(Postman_Google_Service_SQLAdmin_ExportContext $exportContext)
   {
     $this->exportContext = $exportContext;
   }
@@ -1701,7 +1701,7 @@ class Google_Service_SQLAdmin_InstanceOperation extends Google_Collection
   {
     return $this->exportContext;
   }
-  public function setImportContext(Google_Service_SQLAdmin_ImportContext $importContext)
+  public function setImportContext(Postman_Google_Service_SQLAdmin_ImportContext $importContext)
   {
     $this->importContext = $importContext;
   }
@@ -1767,15 +1767,15 @@ class Google_Service_SQLAdmin_InstanceOperation extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_InstanceSetRootPasswordRequest extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstanceSetRootPasswordRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $setRootPasswordContextType = 'Google_Service_SQLAdmin_SetRootPasswordContext';
+  protected $setRootPasswordContextType = 'Postman_Google_Service_SQLAdmin_SetRootPasswordContext';
   protected $setRootPasswordContextDataType = '';
 
 
-  public function setSetRootPasswordContext(Google_Service_SQLAdmin_SetRootPasswordContext $setRootPasswordContext)
+  public function setSetRootPasswordContext(Postman_Google_Service_SQLAdmin_SetRootPasswordContext $setRootPasswordContext)
   {
     $this->setRootPasswordContext = $setRootPasswordContext;
   }
@@ -1785,15 +1785,15 @@ class Google_Service_SQLAdmin_InstanceSetRootPasswordRequest extends Google_Mode
   }
 }
 
-class Google_Service_SQLAdmin_InstancesCloneRequest extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesCloneRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $cloneContextType = 'Google_Service_SQLAdmin_CloneContext';
+  protected $cloneContextType = 'Postman_Google_Service_SQLAdmin_CloneContext';
   protected $cloneContextDataType = '';
 
 
-  public function setCloneContext(Google_Service_SQLAdmin_CloneContext $cloneContext)
+  public function setCloneContext(Postman_Google_Service_SQLAdmin_CloneContext $cloneContext)
   {
     $this->cloneContext = $cloneContext;
   }
@@ -1803,7 +1803,7 @@ class Google_Service_SQLAdmin_InstancesCloneRequest extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesCloneResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesCloneResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1829,7 +1829,7 @@ class Google_Service_SQLAdmin_InstancesCloneResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesDeleteResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesDeleteResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1855,15 +1855,15 @@ class Google_Service_SQLAdmin_InstancesDeleteResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesExportRequest extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesExportRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $exportContextType = 'Google_Service_SQLAdmin_ExportContext';
+  protected $exportContextType = 'Postman_Google_Service_SQLAdmin_ExportContext';
   protected $exportContextDataType = '';
 
 
-  public function setExportContext(Google_Service_SQLAdmin_ExportContext $exportContext)
+  public function setExportContext(Postman_Google_Service_SQLAdmin_ExportContext $exportContext)
   {
     $this->exportContext = $exportContext;
   }
@@ -1873,7 +1873,7 @@ class Google_Service_SQLAdmin_InstancesExportRequest extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesExportResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesExportResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1899,15 +1899,15 @@ class Google_Service_SQLAdmin_InstancesExportResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesImportRequest extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesImportRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $importContextType = 'Google_Service_SQLAdmin_ImportContext';
+  protected $importContextType = 'Postman_Google_Service_SQLAdmin_ImportContext';
   protected $importContextDataType = '';
 
 
-  public function setImportContext(Google_Service_SQLAdmin_ImportContext $importContext)
+  public function setImportContext(Postman_Google_Service_SQLAdmin_ImportContext $importContext)
   {
     $this->importContext = $importContext;
   }
@@ -1917,7 +1917,7 @@ class Google_Service_SQLAdmin_InstancesImportRequest extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesImportResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesImportResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1943,7 +1943,7 @@ class Google_Service_SQLAdmin_InstancesImportResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesInsertResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesInsertResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1969,12 +1969,12 @@ class Google_Service_SQLAdmin_InstancesInsertResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_InstancesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_DatabaseInstance';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_DatabaseInstance';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2006,7 +2006,7 @@ class Google_Service_SQLAdmin_InstancesListResponse extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_InstancesPromoteReplicaResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesPromoteReplicaResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2032,7 +2032,7 @@ class Google_Service_SQLAdmin_InstancesPromoteReplicaResponse extends Google_Mod
   }
 }
 
-class Google_Service_SQLAdmin_InstancesResetSslConfigResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesResetSslConfigResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2058,7 +2058,7 @@ class Google_Service_SQLAdmin_InstancesResetSslConfigResponse extends Google_Mod
   }
 }
 
-class Google_Service_SQLAdmin_InstancesRestartResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesRestartResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2084,7 +2084,7 @@ class Google_Service_SQLAdmin_InstancesRestartResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_InstancesRestoreBackupResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesRestoreBackupResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2110,7 +2110,7 @@ class Google_Service_SQLAdmin_InstancesRestoreBackupResponse extends Google_Mode
   }
 }
 
-class Google_Service_SQLAdmin_InstancesSetRootPasswordResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesSetRootPasswordResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2136,7 +2136,7 @@ class Google_Service_SQLAdmin_InstancesSetRootPasswordResponse extends Google_Mo
   }
 }
 
-class Google_Service_SQLAdmin_InstancesUpdateResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_InstancesUpdateResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2162,7 +2162,7 @@ class Google_Service_SQLAdmin_InstancesUpdateResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_IpConfiguration extends Google_Collection
+class Postman_Google_Service_SQLAdmin_IpConfiguration extends Postman_Google_Collection
 {
   protected $collection_key = 'authorizedNetworks';
   protected $internal_gapi_mappings = array(
@@ -2207,7 +2207,7 @@ class Google_Service_SQLAdmin_IpConfiguration extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_IpMapping extends Google_Model
+class Postman_Google_Service_SQLAdmin_IpMapping extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2233,7 +2233,7 @@ class Google_Service_SQLAdmin_IpMapping extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_LocationPreference extends Google_Model
+class Postman_Google_Service_SQLAdmin_LocationPreference extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2268,7 +2268,7 @@ class Google_Service_SQLAdmin_LocationPreference extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_OperationError extends Google_Model
+class Postman_Google_Service_SQLAdmin_OperationError extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2294,12 +2294,12 @@ class Google_Service_SQLAdmin_OperationError extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_OperationsListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_OperationsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_InstanceOperation';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_InstanceOperation';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2331,7 +2331,7 @@ class Google_Service_SQLAdmin_OperationsListResponse extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_SetRootPasswordContext extends Google_Model
+class Postman_Google_Service_SQLAdmin_SetRootPasswordContext extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2357,22 +2357,22 @@ class Google_Service_SQLAdmin_SetRootPasswordContext extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_Settings extends Google_Collection
+class Postman_Google_Service_SQLAdmin_Settings extends Postman_Google_Collection
 {
   protected $collection_key = 'databaseFlags';
   protected $internal_gapi_mappings = array(
   );
   public $activationPolicy;
   public $authorizedGaeApplications;
-  protected $backupConfigurationType = 'Google_Service_SQLAdmin_BackupConfiguration';
+  protected $backupConfigurationType = 'Postman_Google_Service_SQLAdmin_BackupConfiguration';
   protected $backupConfigurationDataType = 'array';
-  protected $databaseFlagsType = 'Google_Service_SQLAdmin_DatabaseFlags';
+  protected $databaseFlagsType = 'Postman_Google_Service_SQLAdmin_DatabaseFlags';
   protected $databaseFlagsDataType = 'array';
   public $databaseReplicationEnabled;
-  protected $ipConfigurationType = 'Google_Service_SQLAdmin_IpConfiguration';
+  protected $ipConfigurationType = 'Postman_Google_Service_SQLAdmin_IpConfiguration';
   protected $ipConfigurationDataType = '';
   public $kind;
-  protected $locationPreferenceType = 'Google_Service_SQLAdmin_LocationPreference';
+  protected $locationPreferenceType = 'Postman_Google_Service_SQLAdmin_LocationPreference';
   protected $locationPreferenceDataType = '';
   public $pricingPlan;
   public $replicationType;
@@ -2420,7 +2420,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   {
     return $this->databaseReplicationEnabled;
   }
-  public function setIpConfiguration(Google_Service_SQLAdmin_IpConfiguration $ipConfiguration)
+  public function setIpConfiguration(Postman_Google_Service_SQLAdmin_IpConfiguration $ipConfiguration)
   {
     $this->ipConfiguration = $ipConfiguration;
   }
@@ -2436,7 +2436,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLocationPreference(Google_Service_SQLAdmin_LocationPreference $locationPreference)
+  public function setLocationPreference(Postman_Google_Service_SQLAdmin_LocationPreference $locationPreference)
   {
     $this->locationPreference = $locationPreference;
   }
@@ -2478,7 +2478,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_SslCert extends Google_Model
+class Postman_Google_Service_SQLAdmin_SslCert extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2558,16 +2558,16 @@ class Google_Service_SQLAdmin_SslCert extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_SslCertDetail extends Google_Model
+class Postman_Google_Service_SQLAdmin_SslCertDetail extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $certInfoType = 'Google_Service_SQLAdmin_SslCert';
+  protected $certInfoType = 'Postman_Google_Service_SQLAdmin_SslCert';
   protected $certInfoDataType = '';
   public $certPrivateKey;
 
 
-  public function setCertInfo(Google_Service_SQLAdmin_SslCert $certInfo)
+  public function setCertInfo(Postman_Google_Service_SQLAdmin_SslCert $certInfo)
   {
     $this->certInfo = $certInfo;
   }
@@ -2585,7 +2585,7 @@ class Google_Service_SQLAdmin_SslCertDetail extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_SslCertsDeleteResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_SslCertsDeleteResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2611,7 +2611,7 @@ class Google_Service_SQLAdmin_SslCertsDeleteResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_SslCertsInsertRequest extends Google_Model
+class Postman_Google_Service_SQLAdmin_SslCertsInsertRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2628,18 +2628,18 @@ class Google_Service_SQLAdmin_SslCertsInsertRequest extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_SslCertsInsertResponse extends Google_Model
+class Postman_Google_Service_SQLAdmin_SslCertsInsertResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $clientCertType = 'Google_Service_SQLAdmin_SslCertDetail';
+  protected $clientCertType = 'Postman_Google_Service_SQLAdmin_SslCertDetail';
   protected $clientCertDataType = '';
   public $kind;
-  protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
+  protected $serverCaCertType = 'Postman_Google_Service_SQLAdmin_SslCert';
   protected $serverCaCertDataType = '';
 
 
-  public function setClientCert(Google_Service_SQLAdmin_SslCertDetail $clientCert)
+  public function setClientCert(Postman_Google_Service_SQLAdmin_SslCertDetail $clientCert)
   {
     $this->clientCert = $clientCert;
   }
@@ -2655,7 +2655,7 @@ class Google_Service_SQLAdmin_SslCertsInsertResponse extends Google_Model
   {
     return $this->kind;
   }
-  public function setServerCaCert(Google_Service_SQLAdmin_SslCert $serverCaCert)
+  public function setServerCaCert(Postman_Google_Service_SQLAdmin_SslCert $serverCaCert)
   {
     $this->serverCaCert = $serverCaCert;
   }
@@ -2665,12 +2665,12 @@ class Google_Service_SQLAdmin_SslCertsInsertResponse extends Google_Model
   }
 }
 
-class Google_Service_SQLAdmin_SslCertsListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_SslCertsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_SslCert';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_SslCert';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -2693,7 +2693,7 @@ class Google_Service_SQLAdmin_SslCertsListResponse extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_Tier extends Google_Collection
+class Postman_Google_Service_SQLAdmin_Tier extends Postman_Google_Collection
 {
   protected $collection_key = 'region';
   protected $internal_gapi_mappings = array(
@@ -2749,12 +2749,12 @@ class Google_Service_SQLAdmin_Tier extends Google_Collection
   }
 }
 
-class Google_Service_SQLAdmin_TiersListResponse extends Google_Collection
+class Postman_Google_Service_SQLAdmin_TiersListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SQLAdmin_Tier';
+  protected $itemsType = 'Postman_Google_Service_SQLAdmin_Tier';
   protected $itemsDataType = 'array';
   public $kind;
 

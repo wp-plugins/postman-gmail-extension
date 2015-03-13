@@ -35,7 +35,7 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
   through a login flow. To do this we need some
   information from our API console project.
  ************************************************/
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
 $client->setRedirectUri($redirect_uri);
@@ -46,8 +46,8 @@ $client->addScope("https://www.googleapis.com/auth/youtube");
   We are going to create both YouTube and Drive
   services, and query both.
  ************************************************/
-$yt_service = new Google_Service_YouTube($client);
-$dr_service = new Google_Service_Drive($client);
+$yt_service = new Postman_Google_Service_YouTube($client);
+$dr_service = new Postman_Google_Service_Drive($client);
 
 
 /************************************************

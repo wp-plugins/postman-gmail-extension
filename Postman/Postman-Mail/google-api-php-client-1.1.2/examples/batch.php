@@ -30,7 +30,7 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
   setDeveloperKey, the request may still succeed
   using the anonymous quota.
  ************************************************/
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setApplicationName("Client_Library_Examples");
 $apiKey = "<YOUR_API_KEY>"; // Change to your API key.
 // Warn if the API key isn't changed!
@@ -39,7 +39,7 @@ if ($apiKey == '<YOUR_API_KEY>') {
 } else {
   $client->setDeveloperKey($apiKey);
 
-  $service = new Google_Service_Books($client);
+  $service = new Postman_Google_Service_Books($client);
 
   /************************************************
     To actually make the batch call we need to 
@@ -55,7 +55,7 @@ if ($apiKey == '<YOUR_API_KEY>') {
    want to execute with keys of our choice - these
    keys will be reflected in the returned array.
   ************************************************/
-  $batch = new Google_Http_Batch($client);
+  $batch = new Postman_Google_Http_Batch($client);
   $optParams = array('filter' => 'free-ebooks');
   $req1 = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
   $batch->add($req1, "thoreau");

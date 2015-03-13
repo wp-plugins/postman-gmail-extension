@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_SiteVerification extends Google_Service
+class Postman_Google_Service_SiteVerification extends Postman_Google_Service
 {
   /** Manage the list of sites and domains you control. */
   const SITEVERIFICATION =
@@ -43,16 +43,16 @@ class Google_Service_SiteVerification extends Google_Service
   /**
    * Constructs the internal representation of the SiteVerification service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'siteVerification/v1/';
     $this->version = 'v1';
     $this->serviceName = 'siteVerification';
 
-    $this->webResource = new Google_Service_SiteVerification_WebResource_Resource(
+    $this->webResource = new Postman_Google_Service_SiteVerification_WebResource_Resource(
         $this,
         $this->serviceName,
         'webResource',
@@ -128,11 +128,11 @@ class Google_Service_SiteVerification extends Google_Service
  * The "webResource" collection of methods.
  * Typical usage is:
  *  <code>
- *   $siteVerificationService = new Google_Service_SiteVerification(...);
+ *   $siteVerificationService = new Postman_Google_Service_SiteVerification(...);
  *   $webResource = $siteVerificationService->webResource;
  *  </code>
  */
-class Google_Service_SiteVerification_WebResource_Resource extends Google_Service_Resource
+class Postman_Google_Service_SiteVerification_WebResource_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -153,28 +153,28 @@ class Google_Service_SiteVerification_WebResource_Resource extends Google_Servic
    *
    * @param string $id The id of a verified site or domain.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceResource
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource
    */
   public function get($id, $optParams = array())
   {
     $params = array('id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceResource");
+    return $this->call('get', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource");
   }
 
   /**
    * Get a verification token for placing on a website or domain.
    * (webResource.getToken)
    *
-   * @param Google_SiteVerificationWebResourceGettokenRequest $postBody
+   * @param Postman_Google_SiteVerificationWebResourceGettokenRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse
    */
-  public function getToken(Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest $postBody, $optParams = array())
+  public function getToken(Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('getToken', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse");
+    return $this->call('getToken', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse");
   }
 
   /**
@@ -182,15 +182,15 @@ class Google_Service_SiteVerification_WebResource_Resource extends Google_Servic
    *
    * @param string $verificationMethod The method to use for verifying a site or
    * domain.
-   * @param Google_SiteVerificationWebResourceResource $postBody
+   * @param Postman_Google_SiteVerificationWebResourceResource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceResource
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource
    */
-  public function insert($verificationMethod, Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
+  public function insert($verificationMethod, Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
   {
     $params = array('verificationMethod' => $verificationMethod, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceResource");
+    return $this->call('insert', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource");
   }
 
   /**
@@ -198,13 +198,13 @@ class Google_Service_SiteVerification_WebResource_Resource extends Google_Servic
    * (webResource.listWebResource)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceListResponse
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceListResponse
    */
   public function listWebResource($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceListResponse");
   }
 
   /**
@@ -212,46 +212,46 @@ class Google_Service_SiteVerification_WebResource_Resource extends Google_Servic
    * patch semantics. (webResource.patch)
    *
    * @param string $id The id of a verified site or domain.
-   * @param Google_SiteVerificationWebResourceResource $postBody
+   * @param Postman_Google_SiteVerificationWebResourceResource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceResource
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource
    */
-  public function patch($id, Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
+  public function patch($id, Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
   {
     $params = array('id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceResource");
+    return $this->call('patch', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource");
   }
 
   /**
    * Modify the list of owners for your website or domain. (webResource.update)
    *
    * @param string $id The id of a verified site or domain.
-   * @param Google_SiteVerificationWebResourceResource $postBody
+   * @param Postman_Google_SiteVerificationWebResourceResource $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SiteVerification_SiteVerificationWebResourceResource
+   * @return Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource
    */
-  public function update($id, Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
+  public function update($id, Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource $postBody, $optParams = array())
   {
     $params = array('id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_SiteVerification_SiteVerificationWebResourceResource");
+    return $this->call('update', array($params), "Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource");
   }
 }
 
 
 
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest extends Google_Model
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite';
+  protected $siteType = 'Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite';
   protected $siteDataType = '';
   public $verificationMethod;
 
 
-  public function setSite(Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite $site)
+  public function setSite(Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite $site)
   {
     $this->site = $site;
   }
@@ -269,7 +269,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest
   }
 }
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite extends Google_Model
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -295,7 +295,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest
   }
 }
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse extends Google_Model
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceGettokenResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -321,12 +321,12 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRespons
   }
 }
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceListResponse extends Google_Collection
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_SiteVerification_SiteVerificationWebResourceResource';
+  protected $itemsType = 'Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource';
   protected $itemsDataType = 'array';
 
 
@@ -340,14 +340,14 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceListResponse ex
   }
 }
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceResource extends Google_Collection
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResource extends Postman_Google_Collection
 {
   protected $collection_key = 'owners';
   protected $internal_gapi_mappings = array(
   );
   public $id;
   public $owners;
-  protected $siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite';
+  protected $siteType = 'Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite';
   protected $siteDataType = '';
 
 
@@ -367,7 +367,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceResource extend
   {
     return $this->owners;
   }
-  public function setSite(Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite $site)
+  public function setSite(Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite $site)
   {
     $this->site = $site;
   }
@@ -377,7 +377,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceResource extend
   }
 }
 
-class Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite extends Google_Model
+class Postman_Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

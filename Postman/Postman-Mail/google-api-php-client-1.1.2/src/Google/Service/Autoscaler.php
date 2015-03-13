@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Autoscaler extends Google_Service
+class Postman_Google_Service_Autoscaler extends Postman_Google_Service
 {
   /** View and manage your Google Compute Engine resources. */
   const COMPUTE =
@@ -46,16 +46,16 @@ class Google_Service_Autoscaler extends Google_Service
   /**
    * Constructs the internal representation of the Autoscaler service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'autoscaler/v1beta2/';
     $this->version = 'v1beta2';
     $this->serviceName = 'autoscaler';
 
-    $this->autoscalers = new Google_Service_Autoscaler_Autoscalers_Resource(
+    $this->autoscalers = new Postman_Google_Service_Autoscaler_Autoscalers_Resource(
         $this,
         $this->serviceName,
         'autoscalers',
@@ -187,7 +187,7 @@ class Google_Service_Autoscaler extends Google_Service
           )
         )
     );
-    $this->zoneOperations = new Google_Service_Autoscaler_ZoneOperations_Resource(
+    $this->zoneOperations = new Postman_Google_Service_Autoscaler_ZoneOperations_Resource(
         $this,
         $this->serviceName,
         'zoneOperations',
@@ -264,7 +264,7 @@ class Google_Service_Autoscaler extends Google_Service
           )
         )
     );
-    $this->zones = new Google_Service_Autoscaler_Zones_Resource(
+    $this->zones = new Postman_Google_Service_Autoscaler_Zones_Resource(
         $this,
         $this->serviceName,
         'zones',
@@ -304,11 +304,11 @@ class Google_Service_Autoscaler extends Google_Service
  * The "autoscalers" collection of methods.
  * Typical usage is:
  *  <code>
- *   $autoscalerService = new Google_Service_Autoscaler(...);
+ *   $autoscalerService = new Postman_Google_Service_Autoscaler(...);
  *   $autoscalers = $autoscalerService->autoscalers;
  *  </code>
  */
-class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Resource
+class Postman_Google_Service_Autoscaler_Autoscalers_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -318,13 +318,13 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Operation
+   * @return Postman_Google_Service_Autoscaler_Operation
    */
   public function delete($project, $zone, $autoscaler, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'autoscaler' => $autoscaler);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Autoscaler_Operation");
+    return $this->call('delete', array($params), "Postman_Google_Service_Autoscaler_Operation");
   }
 
   /**
@@ -334,13 +334,13 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Autoscaler
+   * @return Postman_Google_Service_Autoscaler_Autoscaler
    */
   public function get($project, $zone, $autoscaler, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'autoscaler' => $autoscaler);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Autoscaler_Autoscaler");
+    return $this->call('get', array($params), "Postman_Google_Service_Autoscaler_Autoscaler");
   }
 
   /**
@@ -348,15 +348,15 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    *
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Postman_Google_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Operation
+   * @return Postman_Google_Service_Autoscaler_Operation
    */
-  public function insert($project, $zone, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
+  public function insert($project, $zone, Postman_Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Autoscaler_Operation");
+    return $this->call('insert', array($params), "Postman_Google_Service_Autoscaler_Operation");
   }
 
   /**
@@ -369,13 +369,13 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    * @opt_param string filter
    * @opt_param string pageToken
    * @opt_param string maxResults
-   * @return Google_Service_Autoscaler_AutoscalerListResponse
+   * @return Postman_Google_Service_Autoscaler_AutoscalerListResponse
    */
   public function listAutoscalers($project, $zone, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Autoscaler_AutoscalerListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Autoscaler_AutoscalerListResponse");
   }
 
   /**
@@ -385,15 +385,15 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Postman_Google_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Operation
+   * @return Postman_Google_Service_Autoscaler_Operation
    */
-  public function patch($project, $zone, $autoscaler, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
+  public function patch($project, $zone, $autoscaler, Postman_Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'autoscaler' => $autoscaler, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Autoscaler_Operation");
+    return $this->call('patch', array($params), "Postman_Google_Service_Autoscaler_Operation");
   }
 
   /**
@@ -402,15 +402,15 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Postman_Google_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Operation
+   * @return Postman_Google_Service_Autoscaler_Operation
    */
-  public function update($project, $zone, $autoscaler, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
+  public function update($project, $zone, $autoscaler, Postman_Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'autoscaler' => $autoscaler, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Autoscaler_Operation");
+    return $this->call('update', array($params), "Postman_Google_Service_Autoscaler_Operation");
   }
 }
 
@@ -418,11 +418,11 @@ class Google_Service_Autoscaler_Autoscalers_Resource extends Google_Service_Reso
  * The "zoneOperations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $autoscalerService = new Google_Service_Autoscaler(...);
+ *   $autoscalerService = new Postman_Google_Service_Autoscaler(...);
  *   $zoneOperations = $autoscalerService->zoneOperations;
  *  </code>
  */
-class Google_Service_Autoscaler_ZoneOperations_Resource extends Google_Service_Resource
+class Postman_Google_Service_Autoscaler_ZoneOperations_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -449,13 +449,13 @@ class Google_Service_Autoscaler_ZoneOperations_Resource extends Google_Service_R
    * @param string $zone
    * @param string $operation
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler_Operation
+   * @return Postman_Google_Service_Autoscaler_Operation
    */
   public function get($project, $zone, $operation, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Autoscaler_Operation");
+    return $this->call('get', array($params), "Postman_Google_Service_Autoscaler_Operation");
   }
 
   /**
@@ -469,13 +469,13 @@ class Google_Service_Autoscaler_ZoneOperations_Resource extends Google_Service_R
    * @opt_param string filter
    * @opt_param string pageToken
    * @opt_param string maxResults
-   * @return Google_Service_Autoscaler_OperationList
+   * @return Postman_Google_Service_Autoscaler_OperationList
    */
   public function listZoneOperations($project, $zone, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Autoscaler_OperationList");
+    return $this->call('list', array($params), "Postman_Google_Service_Autoscaler_OperationList");
   }
 }
 
@@ -483,11 +483,11 @@ class Google_Service_Autoscaler_ZoneOperations_Resource extends Google_Service_R
  * The "zones" collection of methods.
  * Typical usage is:
  *  <code>
- *   $autoscalerService = new Google_Service_Autoscaler(...);
+ *   $autoscalerService = new Postman_Google_Service_Autoscaler(...);
  *   $zones = $autoscalerService->zones;
  *  </code>
  */
-class Google_Service_Autoscaler_Zones_Resource extends Google_Service_Resource
+class Postman_Google_Service_Autoscaler_Zones_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -499,24 +499,24 @@ class Google_Service_Autoscaler_Zones_Resource extends Google_Service_Resource
    * @opt_param string filter
    * @opt_param string pageToken
    * @opt_param string maxResults
-   * @return Google_Service_Autoscaler_ZoneList
+   * @return Postman_Google_Service_Autoscaler_ZoneList
    */
   public function listZones($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Autoscaler_ZoneList");
+    return $this->call('list', array($params), "Postman_Google_Service_Autoscaler_ZoneList");
   }
 }
 
 
 
 
-class Google_Service_Autoscaler_Autoscaler extends Google_Model
+class Postman_Google_Service_Autoscaler_Autoscaler extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $autoscalingPolicyType = 'Google_Service_Autoscaler_AutoscalingPolicy';
+  protected $autoscalingPolicyType = 'Postman_Google_Service_Autoscaler_AutoscalingPolicy';
   protected $autoscalingPolicyDataType = '';
   public $creationTimestamp;
   public $description;
@@ -527,7 +527,7 @@ class Google_Service_Autoscaler_Autoscaler extends Google_Model
   public $target;
 
 
-  public function setAutoscalingPolicy(Google_Service_Autoscaler_AutoscalingPolicy $autoscalingPolicy)
+  public function setAutoscalingPolicy(Postman_Google_Service_Autoscaler_AutoscalingPolicy $autoscalingPolicy)
   {
     $this->autoscalingPolicy = $autoscalingPolicy;
   }
@@ -593,12 +593,12 @@ class Google_Service_Autoscaler_Autoscaler extends Google_Model
   }
 }
 
-class Google_Service_Autoscaler_AutoscalerListResponse extends Google_Collection
+class Postman_Google_Service_Autoscaler_AutoscalerListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Autoscaler_Autoscaler';
+  protected $itemsType = 'Postman_Google_Service_Autoscaler_Autoscaler';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -630,17 +630,17 @@ class Google_Service_Autoscaler_AutoscalerListResponse extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_AutoscalingPolicy extends Google_Collection
+class Postman_Google_Service_Autoscaler_AutoscalingPolicy extends Postman_Google_Collection
 {
   protected $collection_key = 'customMetricUtilizations';
   protected $internal_gapi_mappings = array(
   );
   public $coolDownPeriodSec;
-  protected $cpuUtilizationType = 'Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization';
+  protected $cpuUtilizationType = 'Postman_Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization';
   protected $cpuUtilizationDataType = '';
-  protected $customMetricUtilizationsType = 'Google_Service_Autoscaler_AutoscalingPolicyCustomMetricUtilization';
+  protected $customMetricUtilizationsType = 'Postman_Google_Service_Autoscaler_AutoscalingPolicyCustomMetricUtilization';
   protected $customMetricUtilizationsDataType = 'array';
-  protected $loadBalancingUtilizationType = 'Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization';
+  protected $loadBalancingUtilizationType = 'Postman_Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization';
   protected $loadBalancingUtilizationDataType = '';
   public $maxNumReplicas;
   public $minNumReplicas;
@@ -654,7 +654,7 @@ class Google_Service_Autoscaler_AutoscalingPolicy extends Google_Collection
   {
     return $this->coolDownPeriodSec;
   }
-  public function setCpuUtilization(Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization $cpuUtilization)
+  public function setCpuUtilization(Postman_Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization $cpuUtilization)
   {
     $this->cpuUtilization = $cpuUtilization;
   }
@@ -670,7 +670,7 @@ class Google_Service_Autoscaler_AutoscalingPolicy extends Google_Collection
   {
     return $this->customMetricUtilizations;
   }
-  public function setLoadBalancingUtilization(Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization $loadBalancingUtilization)
+  public function setLoadBalancingUtilization(Postman_Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization $loadBalancingUtilization)
   {
     $this->loadBalancingUtilization = $loadBalancingUtilization;
   }
@@ -696,7 +696,7 @@ class Google_Service_Autoscaler_AutoscalingPolicy extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization extends Google_Model
+class Postman_Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -713,7 +713,7 @@ class Google_Service_Autoscaler_AutoscalingPolicyCpuUtilization extends Google_M
   }
 }
 
-class Google_Service_Autoscaler_AutoscalingPolicyCustomMetricUtilization extends Google_Model
+class Postman_Google_Service_Autoscaler_AutoscalingPolicyCustomMetricUtilization extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -748,7 +748,7 @@ class Google_Service_Autoscaler_AutoscalingPolicyCustomMetricUtilization extends
   }
 }
 
-class Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization extends Google_Model
+class Postman_Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -765,7 +765,7 @@ class Google_Service_Autoscaler_AutoscalingPolicyLoadBalancingUtilization extend
   }
 }
 
-class Google_Service_Autoscaler_DeprecationStatus extends Google_Model
+class Postman_Google_Service_Autoscaler_DeprecationStatus extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -818,7 +818,7 @@ class Google_Service_Autoscaler_DeprecationStatus extends Google_Model
   }
 }
 
-class Google_Service_Autoscaler_Operation extends Google_Collection
+class Postman_Google_Service_Autoscaler_Operation extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
@@ -826,7 +826,7 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   public $clientOperationId;
   public $creationTimestamp;
   public $endTime;
-  protected $errorType = 'Google_Service_Autoscaler_OperationError';
+  protected $errorType = 'Postman_Google_Service_Autoscaler_OperationError';
   protected $errorDataType = '';
   public $httpErrorMessage;
   public $httpErrorStatusCode;
@@ -844,7 +844,7 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   public $targetId;
   public $targetLink;
   public $user;
-  protected $warningsType = 'Google_Service_Autoscaler_OperationWarnings';
+  protected $warningsType = 'Postman_Google_Service_Autoscaler_OperationWarnings';
   protected $warningsDataType = 'array';
   public $zone;
 
@@ -873,7 +873,7 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setError(Google_Service_Autoscaler_OperationError $error)
+  public function setError(Postman_Google_Service_Autoscaler_OperationError $error)
   {
     $this->error = $error;
   }
@@ -1027,12 +1027,12 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_OperationError extends Google_Collection
+class Postman_Google_Service_Autoscaler_OperationError extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
   );
-  protected $errorsType = 'Google_Service_Autoscaler_OperationErrorErrors';
+  protected $errorsType = 'Postman_Google_Service_Autoscaler_OperationErrorErrors';
   protected $errorsDataType = 'array';
 
 
@@ -1046,7 +1046,7 @@ class Google_Service_Autoscaler_OperationError extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_OperationErrorErrors extends Google_Model
+class Postman_Google_Service_Autoscaler_OperationErrorErrors extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1081,13 +1081,13 @@ class Google_Service_Autoscaler_OperationErrorErrors extends Google_Model
   }
 }
 
-class Google_Service_Autoscaler_OperationList extends Google_Collection
+class Postman_Google_Service_Autoscaler_OperationList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $itemsType = 'Google_Service_Autoscaler_Operation';
+  protected $itemsType = 'Postman_Google_Service_Autoscaler_Operation';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1136,13 +1136,13 @@ class Google_Service_Autoscaler_OperationList extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_OperationWarnings extends Google_Collection
+class Postman_Google_Service_Autoscaler_OperationWarnings extends Postman_Google_Collection
 {
   protected $collection_key = 'data';
   protected $internal_gapi_mappings = array(
   );
   public $code;
-  protected $dataType = 'Google_Service_Autoscaler_OperationWarningsData';
+  protected $dataType = 'Postman_Google_Service_Autoscaler_OperationWarningsData';
   protected $dataDataType = 'array';
   public $message;
 
@@ -1173,7 +1173,7 @@ class Google_Service_Autoscaler_OperationWarnings extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_OperationWarningsData extends Google_Model
+class Postman_Google_Service_Autoscaler_OperationWarningsData extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1199,18 +1199,18 @@ class Google_Service_Autoscaler_OperationWarningsData extends Google_Model
   }
 }
 
-class Google_Service_Autoscaler_Zone extends Google_Collection
+class Postman_Google_Service_Autoscaler_Zone extends Postman_Google_Collection
 {
   protected $collection_key = 'maintenanceWindows';
   protected $internal_gapi_mappings = array(
   );
   public $creationTimestamp;
-  protected $deprecatedType = 'Google_Service_Autoscaler_DeprecationStatus';
+  protected $deprecatedType = 'Postman_Google_Service_Autoscaler_DeprecationStatus';
   protected $deprecatedDataType = '';
   public $description;
   public $id;
   public $kind;
-  protected $maintenanceWindowsType = 'Google_Service_Autoscaler_ZoneMaintenanceWindows';
+  protected $maintenanceWindowsType = 'Postman_Google_Service_Autoscaler_ZoneMaintenanceWindows';
   protected $maintenanceWindowsDataType = 'array';
   public $name;
   public $region;
@@ -1226,7 +1226,7 @@ class Google_Service_Autoscaler_Zone extends Google_Collection
   {
     return $this->creationTimestamp;
   }
-  public function setDeprecated(Google_Service_Autoscaler_DeprecationStatus $deprecated)
+  public function setDeprecated(Postman_Google_Service_Autoscaler_DeprecationStatus $deprecated)
   {
     $this->deprecated = $deprecated;
   }
@@ -1300,13 +1300,13 @@ class Google_Service_Autoscaler_Zone extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_ZoneList extends Google_Collection
+class Postman_Google_Service_Autoscaler_ZoneList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $itemsType = 'Google_Service_Autoscaler_Zone';
+  protected $itemsType = 'Postman_Google_Service_Autoscaler_Zone';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1355,7 +1355,7 @@ class Google_Service_Autoscaler_ZoneList extends Google_Collection
   }
 }
 
-class Google_Service_Autoscaler_ZoneMaintenanceWindows extends Google_Model
+class Postman_Google_Service_Autoscaler_ZoneMaintenanceWindows extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

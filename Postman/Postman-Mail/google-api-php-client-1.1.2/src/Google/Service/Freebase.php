@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Freebase extends Google_Service
+class Postman_Google_Service_Freebase extends Postman_Google_Service
 {
 
 
@@ -38,16 +38,16 @@ class Google_Service_Freebase extends Google_Service
   /**
    * Constructs the internal representation of the Freebase service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'freebase/v1/';
     $this->version = 'v1';
     $this->serviceName = 'freebase';
 
-    $this->base_methods = new Google_Service_Resource(
+    $this->base_methods = new Postman_Google_Service_Resource(
         $this,
         $this->serviceName,
         '',
@@ -207,13 +207,13 @@ class Google_Service_Freebase extends Google_Service
    * @opt_param string kind Classifications of entity e.g. type, category, title.
    * @opt_param string prop Property values for entity formatted as :
    * @opt_param int limit Maximum number of candidates to return.
-   * @return Google_Service_Freebase_ReconcileGet
+   * @return Postman_Google_Service_Freebase_ReconcileGet
    */
   public function reconcile($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->base_methods->call('reconcile', array($params), "Google_Service_Freebase_ReconcileGet");
+    return $this->base_methods->call('reconcile', array($params), "Postman_Google_Service_Freebase_ReconcileGet");
   }
   /**
    * Search Freebase open data. (search)
@@ -261,7 +261,7 @@ class Google_Service_Freebase extends Google_Service
 
 
 
-class Google_Service_Freebase_ReconcileCandidate extends Google_Model
+class Postman_Google_Service_Freebase_ReconcileCandidate extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -269,7 +269,7 @@ class Google_Service_Freebase_ReconcileCandidate extends Google_Model
   public $lang;
   public $mid;
   public $name;
-  protected $notableType = 'Google_Service_Freebase_ReconcileCandidateNotable';
+  protected $notableType = 'Postman_Google_Service_Freebase_ReconcileCandidateNotable';
   protected $notableDataType = '';
 
 
@@ -305,7 +305,7 @@ class Google_Service_Freebase_ReconcileCandidate extends Google_Model
   {
     return $this->name;
   }
-  public function setNotable(Google_Service_Freebase_ReconcileCandidateNotable $notable)
+  public function setNotable(Postman_Google_Service_Freebase_ReconcileCandidateNotable $notable)
   {
     $this->notable = $notable;
   }
@@ -315,7 +315,7 @@ class Google_Service_Freebase_ReconcileCandidate extends Google_Model
   }
 }
 
-class Google_Service_Freebase_ReconcileCandidateNotable extends Google_Model
+class Postman_Google_Service_Freebase_ReconcileCandidateNotable extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -341,18 +341,18 @@ class Google_Service_Freebase_ReconcileCandidateNotable extends Google_Model
   }
 }
 
-class Google_Service_Freebase_ReconcileGet extends Google_Collection
+class Postman_Google_Service_Freebase_ReconcileGet extends Postman_Google_Collection
 {
   protected $collection_key = 'warning';
   protected $internal_gapi_mappings = array(
   );
-  protected $candidateType = 'Google_Service_Freebase_ReconcileCandidate';
+  protected $candidateType = 'Postman_Google_Service_Freebase_ReconcileCandidate';
   protected $candidateDataType = 'array';
-  protected $costsType = 'Google_Service_Freebase_ReconcileGetCosts';
+  protected $costsType = 'Postman_Google_Service_Freebase_ReconcileGetCosts';
   protected $costsDataType = '';
-  protected $matchType = 'Google_Service_Freebase_ReconcileCandidate';
+  protected $matchType = 'Postman_Google_Service_Freebase_ReconcileCandidate';
   protected $matchDataType = '';
-  protected $warningType = 'Google_Service_Freebase_ReconcileGetWarning';
+  protected $warningType = 'Postman_Google_Service_Freebase_ReconcileGetWarning';
   protected $warningDataType = 'array';
 
 
@@ -364,7 +364,7 @@ class Google_Service_Freebase_ReconcileGet extends Google_Collection
   {
     return $this->candidate;
   }
-  public function setCosts(Google_Service_Freebase_ReconcileGetCosts $costs)
+  public function setCosts(Postman_Google_Service_Freebase_ReconcileGetCosts $costs)
   {
     $this->costs = $costs;
   }
@@ -372,7 +372,7 @@ class Google_Service_Freebase_ReconcileGet extends Google_Collection
   {
     return $this->costs;
   }
-  public function setMatch(Google_Service_Freebase_ReconcileCandidate $match)
+  public function setMatch(Postman_Google_Service_Freebase_ReconcileCandidate $match)
   {
     $this->match = $match;
   }
@@ -390,7 +390,7 @@ class Google_Service_Freebase_ReconcileGet extends Google_Collection
   }
 }
 
-class Google_Service_Freebase_ReconcileGetCosts extends Google_Model
+class Postman_Google_Service_Freebase_ReconcileGetCosts extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -416,7 +416,7 @@ class Google_Service_Freebase_ReconcileGetCosts extends Google_Model
   }
 }
 
-class Google_Service_Freebase_ReconcileGetWarning extends Google_Model
+class Postman_Google_Service_Freebase_ReconcileGetWarning extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

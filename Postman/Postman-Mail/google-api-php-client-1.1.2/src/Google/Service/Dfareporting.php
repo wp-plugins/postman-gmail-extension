@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Dfareporting extends Google_Service
+class Postman_Google_Service_Dfareporting extends Postman_Google_Service
 {
   /** View and manage DoubleClick for Advertisers reports. */
   const DFAREPORTING =
@@ -45,16 +45,16 @@ class Google_Service_Dfareporting extends Google_Service
   /**
    * Constructs the internal representation of the Dfareporting service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'dfareporting/v1.3/';
     $this->version = 'v1.3';
     $this->serviceName = 'dfareporting';
 
-    $this->dimensionValues = new Google_Service_Dfareporting_DimensionValues_Resource(
+    $this->dimensionValues = new Postman_Google_Service_Dfareporting_DimensionValues_Resource(
         $this,
         $this->serviceName,
         'dimensionValues',
@@ -82,7 +82,7 @@ class Google_Service_Dfareporting extends Google_Service
           )
         )
     );
-    $this->files = new Google_Service_Dfareporting_Files_Resource(
+    $this->files = new Postman_Google_Service_Dfareporting_Files_Resource(
         $this,
         $this->serviceName,
         'files',
@@ -137,7 +137,7 @@ class Google_Service_Dfareporting extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_Dfareporting_Reports_Resource(
+    $this->reports = new Postman_Google_Service_Dfareporting_Reports_Resource(
         $this,
         $this->serviceName,
         'reports',
@@ -266,7 +266,7 @@ class Google_Service_Dfareporting extends Google_Service
           )
         )
     );
-    $this->reports_compatibleFields = new Google_Service_Dfareporting_ReportsCompatibleFields_Resource(
+    $this->reports_compatibleFields = new Postman_Google_Service_Dfareporting_ReportsCompatibleFields_Resource(
         $this,
         $this->serviceName,
         'compatibleFields',
@@ -286,7 +286,7 @@ class Google_Service_Dfareporting extends Google_Service
           )
         )
     );
-    $this->reports_files = new Google_Service_Dfareporting_ReportsFiles_Resource(
+    $this->reports_files = new Postman_Google_Service_Dfareporting_ReportsFiles_Resource(
         $this,
         $this->serviceName,
         'files',
@@ -347,7 +347,7 @@ class Google_Service_Dfareporting extends Google_Service
           )
         )
     );
-    $this->userProfiles = new Google_Service_Dfareporting_UserProfiles_Resource(
+    $this->userProfiles = new Postman_Google_Service_Dfareporting_UserProfiles_Resource(
         $this,
         $this->serviceName,
         'userProfiles',
@@ -379,11 +379,11 @@ class Google_Service_Dfareporting extends Google_Service
  * The "dimensionValues" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $dimensionValues = $dfareportingService->dimensionValues;
  *  </code>
  */
-class Google_Service_Dfareporting_DimensionValues_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_DimensionValues_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -391,19 +391,19 @@ class Google_Service_Dfareporting_DimensionValues_Resource extends Google_Servic
    * (dimensionValues.query)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_DimensionValueRequest $postBody
+   * @param Postman_Google_DimensionValueRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken The value of the nextToken from the previous
    * result page.
    * @opt_param int maxResults Maximum number of results to return.
-   * @return Google_Service_Dfareporting_DimensionValueList
+   * @return Postman_Google_Service_Dfareporting_DimensionValueList
    */
-  public function query($profileId, Google_Service_Dfareporting_DimensionValueRequest $postBody, $optParams = array())
+  public function query($profileId, Postman_Google_Service_Dfareporting_DimensionValueRequest $postBody, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('query', array($params), "Google_Service_Dfareporting_DimensionValueList");
+    return $this->call('query', array($params), "Postman_Google_Service_Dfareporting_DimensionValueList");
   }
 }
 
@@ -411,11 +411,11 @@ class Google_Service_Dfareporting_DimensionValues_Resource extends Google_Servic
  * The "files" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $files = $dfareportingService->files;
  *  </code>
  */
-class Google_Service_Dfareporting_Files_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_Files_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -424,13 +424,13 @@ class Google_Service_Dfareporting_Files_Resource extends Google_Service_Resource
    * @param string $reportId The ID of the report.
    * @param string $fileId The ID of the report file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_DfareportingFile
+   * @return Postman_Google_Service_Dfareporting_DfareportingFile
    */
   public function get($reportId, $fileId, $optParams = array())
   {
     $params = array('reportId' => $reportId, 'fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dfareporting_DfareportingFile");
+    return $this->call('get', array($params), "Postman_Google_Service_Dfareporting_DfareportingFile");
   }
 
   /**
@@ -446,13 +446,13 @@ class Google_Service_Dfareporting_Files_Resource extends Google_Service_Resource
    * @opt_param string sortOrder Order of sorted results, default is 'DESCENDING'.
    * @opt_param string scope The scope that defines which results are returned,
    * default is 'MINE'.
-   * @return Google_Service_Dfareporting_FileList
+   * @return Postman_Google_Service_Dfareporting_FileList
    */
   public function listFiles($profileId, $optParams = array())
   {
     $params = array('profileId' => $profileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dfareporting_FileList");
+    return $this->call('list', array($params), "Postman_Google_Service_Dfareporting_FileList");
   }
 }
 
@@ -460,11 +460,11 @@ class Google_Service_Dfareporting_Files_Resource extends Google_Service_Resource
  * The "reports" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $reports = $dfareportingService->reports;
  *  </code>
  */
-class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_Reports_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -487,28 +487,28 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
    * @param string $profileId The DFA user profile ID.
    * @param string $reportId The ID of the report.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_Report
+   * @return Postman_Google_Service_Dfareporting_Report
    */
   public function get($profileId, $reportId, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dfareporting_Report");
+    return $this->call('get', array($params), "Postman_Google_Service_Dfareporting_Report");
   }
 
   /**
    * Creates a report. (reports.insert)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_Report $postBody
+   * @param Postman_Google_Report $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_Report
+   * @return Postman_Google_Service_Dfareporting_Report
    */
-  public function insert($profileId, Google_Service_Dfareporting_Report $postBody, $optParams = array())
+  public function insert($profileId, Postman_Google_Service_Dfareporting_Report $postBody, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Dfareporting_Report");
+    return $this->call('insert', array($params), "Postman_Google_Service_Dfareporting_Report");
   }
 
   /**
@@ -524,13 +524,13 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
    * @opt_param string sortOrder Order of sorted results, default is 'DESCENDING'.
    * @opt_param string scope The scope that defines which results are returned,
    * default is 'MINE'.
-   * @return Google_Service_Dfareporting_ReportList
+   * @return Postman_Google_Service_Dfareporting_ReportList
    */
   public function listReports($profileId, $optParams = array())
   {
     $params = array('profileId' => $profileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dfareporting_ReportList");
+    return $this->call('list', array($params), "Postman_Google_Service_Dfareporting_ReportList");
   }
 
   /**
@@ -538,15 +538,15 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
    *
    * @param string $profileId The DFA user profile ID.
    * @param string $reportId The ID of the report.
-   * @param Google_Report $postBody
+   * @param Postman_Google_Report $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_Report
+   * @return Postman_Google_Service_Dfareporting_Report
    */
-  public function patch($profileId, $reportId, Google_Service_Dfareporting_Report $postBody, $optParams = array())
+  public function patch($profileId, $reportId, Postman_Google_Service_Dfareporting_Report $postBody, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Dfareporting_Report");
+    return $this->call('patch', array($params), "Postman_Google_Service_Dfareporting_Report");
   }
 
   /**
@@ -558,13 +558,13 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
    *
    * @opt_param bool synchronous If set and true, tries to run the report
    * synchronously.
-   * @return Google_Service_Dfareporting_DfareportingFile
+   * @return Postman_Google_Service_Dfareporting_DfareportingFile
    */
   public function run($profileId, $reportId, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId);
     $params = array_merge($params, $optParams);
-    return $this->call('run', array($params), "Google_Service_Dfareporting_DfareportingFile");
+    return $this->call('run', array($params), "Postman_Google_Service_Dfareporting_DfareportingFile");
   }
 
   /**
@@ -572,15 +572,15 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
    *
    * @param string $profileId The DFA user profile ID.
    * @param string $reportId The ID of the report.
-   * @param Google_Report $postBody
+   * @param Postman_Google_Report $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_Report
+   * @return Postman_Google_Service_Dfareporting_Report
    */
-  public function update($profileId, $reportId, Google_Service_Dfareporting_Report $postBody, $optParams = array())
+  public function update($profileId, $reportId, Postman_Google_Service_Dfareporting_Report $postBody, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Dfareporting_Report");
+    return $this->call('update', array($params), "Postman_Google_Service_Dfareporting_Report");
   }
 }
 
@@ -588,11 +588,11 @@ class Google_Service_Dfareporting_Reports_Resource extends Google_Service_Resour
  * The "compatibleFields" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $compatibleFields = $dfareportingService->compatibleFields;
  *  </code>
  */
-class Google_Service_Dfareporting_ReportsCompatibleFields_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_ReportsCompatibleFields_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -601,26 +601,26 @@ class Google_Service_Dfareporting_ReportsCompatibleFields_Resource extends Googl
    * report and user permissions. (compatibleFields.query)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_Report $postBody
+   * @param Postman_Google_Report $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_CompatibleFields
+   * @return Postman_Google_Service_Dfareporting_CompatibleFields
    */
-  public function query($profileId, Google_Service_Dfareporting_Report $postBody, $optParams = array())
+  public function query($profileId, Postman_Google_Service_Dfareporting_Report $postBody, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('query', array($params), "Google_Service_Dfareporting_CompatibleFields");
+    return $this->call('query', array($params), "Postman_Google_Service_Dfareporting_CompatibleFields");
   }
 }
 /**
  * The "files" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $files = $dfareportingService->files;
  *  </code>
  */
-class Google_Service_Dfareporting_ReportsFiles_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_ReportsFiles_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -630,13 +630,13 @@ class Google_Service_Dfareporting_ReportsFiles_Resource extends Google_Service_R
    * @param string $reportId The ID of the report.
    * @param string $fileId The ID of the report file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_DfareportingFile
+   * @return Postman_Google_Service_Dfareporting_DfareportingFile
    */
   public function get($profileId, $reportId, $fileId, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId, 'fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dfareporting_DfareportingFile");
+    return $this->call('get', array($params), "Postman_Google_Service_Dfareporting_DfareportingFile");
   }
 
   /**
@@ -651,13 +651,13 @@ class Google_Service_Dfareporting_ReportsFiles_Resource extends Google_Service_R
    * @opt_param string pageToken The value of the nextToken from the previous
    * result page.
    * @opt_param string sortOrder Order of sorted results, default is 'DESCENDING'.
-   * @return Google_Service_Dfareporting_FileList
+   * @return Postman_Google_Service_Dfareporting_FileList
    */
   public function listReportsFiles($profileId, $reportId, $optParams = array())
   {
     $params = array('profileId' => $profileId, 'reportId' => $reportId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dfareporting_FileList");
+    return $this->call('list', array($params), "Postman_Google_Service_Dfareporting_FileList");
   }
 }
 
@@ -665,11 +665,11 @@ class Google_Service_Dfareporting_ReportsFiles_Resource extends Google_Service_R
  * The "userProfiles" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dfareportingService = new Google_Service_Dfareporting(...);
+ *   $dfareportingService = new Postman_Google_Service_Dfareporting(...);
  *   $userProfiles = $dfareportingService->userProfiles;
  *  </code>
  */
-class Google_Service_Dfareporting_UserProfiles_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dfareporting_UserProfiles_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -677,38 +677,38 @@ class Google_Service_Dfareporting_UserProfiles_Resource extends Google_Service_R
    *
    * @param string $profileId The user profile ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_UserProfile
+   * @return Postman_Google_Service_Dfareporting_UserProfile
    */
   public function get($profileId, $optParams = array())
   {
     $params = array('profileId' => $profileId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dfareporting_UserProfile");
+    return $this->call('get', array($params), "Postman_Google_Service_Dfareporting_UserProfile");
   }
 
   /**
    * Retrieves list of user profiles for a user. (userProfiles.listUserProfiles)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dfareporting_UserProfileList
+   * @return Postman_Google_Service_Dfareporting_UserProfileList
    */
   public function listUserProfiles($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dfareporting_UserProfileList");
+    return $this->call('list', array($params), "Postman_Google_Service_Dfareporting_UserProfileList");
   }
 }
 
 
 
 
-class Google_Service_Dfareporting_Activities extends Google_Collection
+class Postman_Google_Service_Dfareporting_Activities extends Postman_Google_Collection
 {
   protected $collection_key = 'metricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $filtersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $filtersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $filtersDataType = 'array';
   public $kind;
   public $metricNames;
@@ -740,24 +740,24 @@ class Google_Service_Dfareporting_Activities extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_CompatibleFields extends Google_Model
+class Postman_Google_Service_Dfareporting_CompatibleFields extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $crossDimensionReachReportCompatibleFieldsType = 'Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields';
+  protected $crossDimensionReachReportCompatibleFieldsType = 'Postman_Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields';
   protected $crossDimensionReachReportCompatibleFieldsDataType = '';
-  protected $floodlightReportCompatibleFieldsType = 'Google_Service_Dfareporting_FloodlightReportCompatibleFields';
+  protected $floodlightReportCompatibleFieldsType = 'Postman_Google_Service_Dfareporting_FloodlightReportCompatibleFields';
   protected $floodlightReportCompatibleFieldsDataType = '';
   public $kind;
-  protected $pathToConversionReportCompatibleFieldsType = 'Google_Service_Dfareporting_PathToConversionReportCompatibleFields';
+  protected $pathToConversionReportCompatibleFieldsType = 'Postman_Google_Service_Dfareporting_PathToConversionReportCompatibleFields';
   protected $pathToConversionReportCompatibleFieldsDataType = '';
-  protected $reachReportCompatibleFieldsType = 'Google_Service_Dfareporting_ReachReportCompatibleFields';
+  protected $reachReportCompatibleFieldsType = 'Postman_Google_Service_Dfareporting_ReachReportCompatibleFields';
   protected $reachReportCompatibleFieldsDataType = '';
-  protected $reportCompatibleFieldsType = 'Google_Service_Dfareporting_ReportCompatibleFields';
+  protected $reportCompatibleFieldsType = 'Postman_Google_Service_Dfareporting_ReportCompatibleFields';
   protected $reportCompatibleFieldsDataType = '';
 
 
-  public function setCrossDimensionReachReportCompatibleFields(Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields)
+  public function setCrossDimensionReachReportCompatibleFields(Postman_Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields)
   {
     $this->crossDimensionReachReportCompatibleFields = $crossDimensionReachReportCompatibleFields;
   }
@@ -765,7 +765,7 @@ class Google_Service_Dfareporting_CompatibleFields extends Google_Model
   {
     return $this->crossDimensionReachReportCompatibleFields;
   }
-  public function setFloodlightReportCompatibleFields(Google_Service_Dfareporting_FloodlightReportCompatibleFields $floodlightReportCompatibleFields)
+  public function setFloodlightReportCompatibleFields(Postman_Google_Service_Dfareporting_FloodlightReportCompatibleFields $floodlightReportCompatibleFields)
   {
     $this->floodlightReportCompatibleFields = $floodlightReportCompatibleFields;
   }
@@ -781,7 +781,7 @@ class Google_Service_Dfareporting_CompatibleFields extends Google_Model
   {
     return $this->kind;
   }
-  public function setPathToConversionReportCompatibleFields(Google_Service_Dfareporting_PathToConversionReportCompatibleFields $pathToConversionReportCompatibleFields)
+  public function setPathToConversionReportCompatibleFields(Postman_Google_Service_Dfareporting_PathToConversionReportCompatibleFields $pathToConversionReportCompatibleFields)
   {
     $this->pathToConversionReportCompatibleFields = $pathToConversionReportCompatibleFields;
   }
@@ -789,7 +789,7 @@ class Google_Service_Dfareporting_CompatibleFields extends Google_Model
   {
     return $this->pathToConversionReportCompatibleFields;
   }
-  public function setReachReportCompatibleFields(Google_Service_Dfareporting_ReachReportCompatibleFields $reachReportCompatibleFields)
+  public function setReachReportCompatibleFields(Postman_Google_Service_Dfareporting_ReachReportCompatibleFields $reachReportCompatibleFields)
   {
     $this->reachReportCompatibleFields = $reachReportCompatibleFields;
   }
@@ -797,7 +797,7 @@ class Google_Service_Dfareporting_CompatibleFields extends Google_Model
   {
     return $this->reachReportCompatibleFields;
   }
-  public function setReportCompatibleFields(Google_Service_Dfareporting_ReportCompatibleFields $reportCompatibleFields)
+  public function setReportCompatibleFields(Postman_Google_Service_Dfareporting_ReportCompatibleFields $reportCompatibleFields)
   {
     $this->reportCompatibleFields = $reportCompatibleFields;
   }
@@ -807,19 +807,19 @@ class Google_Service_Dfareporting_CompatibleFields extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields extends Google_Collection
+class Postman_Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields extends Postman_Google_Collection
 {
   protected $collection_key = 'overlapMetrics';
   protected $internal_gapi_mappings = array(
   );
-  protected $breakdownType = 'Google_Service_Dfareporting_Dimension';
+  protected $breakdownType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $breakdownDataType = 'array';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionFiltersDataType = 'array';
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $metricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $metricsDataType = 'array';
-  protected $overlapMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $overlapMetricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $overlapMetricsDataType = 'array';
 
 
@@ -865,12 +865,12 @@ class Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields exte
   }
 }
 
-class Google_Service_Dfareporting_CustomRichMediaEvents extends Google_Collection
+class Postman_Google_Service_Dfareporting_CustomRichMediaEvents extends Postman_Google_Collection
 {
   protected $collection_key = 'filteredEventIds';
   protected $internal_gapi_mappings = array(
   );
-  protected $filteredEventIdsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $filteredEventIdsType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $filteredEventIdsDataType = 'array';
   public $kind;
 
@@ -893,7 +893,7 @@ class Google_Service_Dfareporting_CustomRichMediaEvents extends Google_Collectio
   }
 }
 
-class Google_Service_Dfareporting_DateRange extends Google_Model
+class Postman_Google_Service_Dfareporting_DateRange extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -937,11 +937,11 @@ class Google_Service_Dfareporting_DateRange extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_DfareportingFile extends Google_Model
+class Postman_Google_Service_Dfareporting_DfareportingFile extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
   public $etag;
   public $fileName;
@@ -951,11 +951,11 @@ class Google_Service_Dfareporting_DfareportingFile extends Google_Model
   public $lastModifiedTime;
   public $reportId;
   public $status;
-  protected $urlsType = 'Google_Service_Dfareporting_DfareportingFileUrls';
+  protected $urlsType = 'Postman_Google_Service_Dfareporting_DfareportingFileUrls';
   protected $urlsDataType = '';
 
 
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -1027,7 +1027,7 @@ class Google_Service_Dfareporting_DfareportingFile extends Google_Model
   {
     return $this->status;
   }
-  public function setUrls(Google_Service_Dfareporting_DfareportingFileUrls $urls)
+  public function setUrls(Postman_Google_Service_Dfareporting_DfareportingFileUrls $urls)
   {
     $this->urls = $urls;
   }
@@ -1037,7 +1037,7 @@ class Google_Service_Dfareporting_DfareportingFile extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_DfareportingFileUrls extends Google_Model
+class Postman_Google_Service_Dfareporting_DfareportingFileUrls extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1063,7 +1063,7 @@ class Google_Service_Dfareporting_DfareportingFileUrls extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_Dimension extends Google_Model
+class Postman_Google_Service_Dfareporting_Dimension extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1089,7 +1089,7 @@ class Google_Service_Dfareporting_Dimension extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_DimensionFilter extends Google_Model
+class Postman_Google_Service_Dfareporting_DimensionFilter extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1124,7 +1124,7 @@ class Google_Service_Dfareporting_DimensionFilter extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_DimensionValue extends Google_Model
+class Postman_Google_Service_Dfareporting_DimensionValue extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1186,13 +1186,13 @@ class Google_Service_Dfareporting_DimensionValue extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_DimensionValueList extends Google_Collection
+class Postman_Google_Service_Dfareporting_DimensionValueList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $itemsType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1232,14 +1232,14 @@ class Google_Service_Dfareporting_DimensionValueList extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_DimensionValueRequest extends Google_Collection
+class Postman_Google_Service_Dfareporting_DimensionValueRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'filters';
   protected $internal_gapi_mappings = array(
   );
   public $dimensionName;
   public $endDate;
-  protected $filtersType = 'Google_Service_Dfareporting_DimensionFilter';
+  protected $filtersType = 'Postman_Google_Service_Dfareporting_DimensionFilter';
   protected $filtersDataType = 'array';
   public $kind;
   public $startDate;
@@ -1287,13 +1287,13 @@ class Google_Service_Dfareporting_DimensionValueRequest extends Google_Collectio
   }
 }
 
-class Google_Service_Dfareporting_FileList extends Google_Collection
+class Postman_Google_Service_Dfareporting_FileList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Dfareporting_DfareportingFile';
+  protected $itemsType = 'Postman_Google_Service_Dfareporting_DfareportingFile';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1333,17 +1333,17 @@ class Google_Service_Dfareporting_FileList extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_FloodlightReportCompatibleFields extends Google_Collection
+class Postman_Google_Service_Dfareporting_FloodlightReportCompatibleFields extends Postman_Google_Collection
 {
   protected $collection_key = 'metrics';
   protected $internal_gapi_mappings = array(
   );
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionsDataType = 'array';
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $metricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $metricsDataType = 'array';
 
 
@@ -1381,7 +1381,7 @@ class Google_Service_Dfareporting_FloodlightReportCompatibleFields extends Googl
   }
 }
 
-class Google_Service_Dfareporting_Metric extends Google_Model
+class Postman_Google_Service_Dfareporting_Metric extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1407,19 +1407,19 @@ class Google_Service_Dfareporting_Metric extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_PathToConversionReportCompatibleFields extends Google_Collection
+class Postman_Google_Service_Dfareporting_PathToConversionReportCompatibleFields extends Postman_Google_Collection
 {
   protected $collection_key = 'perInteractionDimensions';
   protected $internal_gapi_mappings = array(
   );
-  protected $conversionDimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $conversionDimensionsType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $conversionDimensionsDataType = 'array';
-  protected $customFloodlightVariablesType = 'Google_Service_Dfareporting_Dimension';
+  protected $customFloodlightVariablesType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $customFloodlightVariablesDataType = 'array';
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $metricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $metricsDataType = 'array';
-  protected $perInteractionDimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $perInteractionDimensionsType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $perInteractionDimensionsDataType = 'array';
 
 
@@ -1465,21 +1465,21 @@ class Google_Service_Dfareporting_PathToConversionReportCompatibleFields extends
   }
 }
 
-class Google_Service_Dfareporting_ReachReportCompatibleFields extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReachReportCompatibleFields extends Postman_Google_Collection
 {
   protected $collection_key = 'reachByFrequencyMetrics';
   protected $internal_gapi_mappings = array(
   );
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionsDataType = 'array';
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $metricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $metricsDataType = 'array';
-  protected $pivotedActivityMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $pivotedActivityMetricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $pivotedActivityMetricsDataType = 'array';
-  protected $reachByFrequencyMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $reachByFrequencyMetricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $reachByFrequencyMetricsDataType = 'array';
 
 
@@ -1533,7 +1533,7 @@ class Google_Service_Dfareporting_ReachReportCompatibleFields extends Google_Col
   }
 }
 
-class Google_Service_Dfareporting_Recipient extends Google_Model
+class Postman_Google_Service_Dfareporting_Recipient extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1568,22 +1568,22 @@ class Google_Service_Dfareporting_Recipient extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_Report extends Google_Model
+class Postman_Google_Service_Dfareporting_Report extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $accountId;
-  protected $activeGrpCriteriaType = 'Google_Service_Dfareporting_ReportActiveGrpCriteria';
+  protected $activeGrpCriteriaType = 'Postman_Google_Service_Dfareporting_ReportActiveGrpCriteria';
   protected $activeGrpCriteriaDataType = '';
-  protected $criteriaType = 'Google_Service_Dfareporting_ReportCriteria';
+  protected $criteriaType = 'Postman_Google_Service_Dfareporting_ReportCriteria';
   protected $criteriaDataType = '';
-  protected $crossDimensionReachCriteriaType = 'Google_Service_Dfareporting_ReportCrossDimensionReachCriteria';
+  protected $crossDimensionReachCriteriaType = 'Postman_Google_Service_Dfareporting_ReportCrossDimensionReachCriteria';
   protected $crossDimensionReachCriteriaDataType = '';
-  protected $deliveryType = 'Google_Service_Dfareporting_ReportDelivery';
+  protected $deliveryType = 'Postman_Google_Service_Dfareporting_ReportDelivery';
   protected $deliveryDataType = '';
   public $etag;
   public $fileName;
-  protected $floodlightCriteriaType = 'Google_Service_Dfareporting_ReportFloodlightCriteria';
+  protected $floodlightCriteriaType = 'Postman_Google_Service_Dfareporting_ReportFloodlightCriteria';
   protected $floodlightCriteriaDataType = '';
   public $format;
   public $id;
@@ -1591,11 +1591,11 @@ class Google_Service_Dfareporting_Report extends Google_Model
   public $lastModifiedTime;
   public $name;
   public $ownerProfileId;
-  protected $pathToConversionCriteriaType = 'Google_Service_Dfareporting_ReportPathToConversionCriteria';
+  protected $pathToConversionCriteriaType = 'Postman_Google_Service_Dfareporting_ReportPathToConversionCriteria';
   protected $pathToConversionCriteriaDataType = '';
-  protected $reachCriteriaType = 'Google_Service_Dfareporting_ReportReachCriteria';
+  protected $reachCriteriaType = 'Postman_Google_Service_Dfareporting_ReportReachCriteria';
   protected $reachCriteriaDataType = '';
-  protected $scheduleType = 'Google_Service_Dfareporting_ReportSchedule';
+  protected $scheduleType = 'Postman_Google_Service_Dfareporting_ReportSchedule';
   protected $scheduleDataType = '';
   public $subAccountId;
   public $type;
@@ -1609,7 +1609,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->accountId;
   }
-  public function setActiveGrpCriteria(Google_Service_Dfareporting_ReportActiveGrpCriteria $activeGrpCriteria)
+  public function setActiveGrpCriteria(Postman_Google_Service_Dfareporting_ReportActiveGrpCriteria $activeGrpCriteria)
   {
     $this->activeGrpCriteria = $activeGrpCriteria;
   }
@@ -1617,7 +1617,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->activeGrpCriteria;
   }
-  public function setCriteria(Google_Service_Dfareporting_ReportCriteria $criteria)
+  public function setCriteria(Postman_Google_Service_Dfareporting_ReportCriteria $criteria)
   {
     $this->criteria = $criteria;
   }
@@ -1625,7 +1625,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->criteria;
   }
-  public function setCrossDimensionReachCriteria(Google_Service_Dfareporting_ReportCrossDimensionReachCriteria $crossDimensionReachCriteria)
+  public function setCrossDimensionReachCriteria(Postman_Google_Service_Dfareporting_ReportCrossDimensionReachCriteria $crossDimensionReachCriteria)
   {
     $this->crossDimensionReachCriteria = $crossDimensionReachCriteria;
   }
@@ -1633,7 +1633,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->crossDimensionReachCriteria;
   }
-  public function setDelivery(Google_Service_Dfareporting_ReportDelivery $delivery)
+  public function setDelivery(Postman_Google_Service_Dfareporting_ReportDelivery $delivery)
   {
     $this->delivery = $delivery;
   }
@@ -1657,7 +1657,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->fileName;
   }
-  public function setFloodlightCriteria(Google_Service_Dfareporting_ReportFloodlightCriteria $floodlightCriteria)
+  public function setFloodlightCriteria(Postman_Google_Service_Dfareporting_ReportFloodlightCriteria $floodlightCriteria)
   {
     $this->floodlightCriteria = $floodlightCriteria;
   }
@@ -1713,7 +1713,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->ownerProfileId;
   }
-  public function setPathToConversionCriteria(Google_Service_Dfareporting_ReportPathToConversionCriteria $pathToConversionCriteria)
+  public function setPathToConversionCriteria(Postman_Google_Service_Dfareporting_ReportPathToConversionCriteria $pathToConversionCriteria)
   {
     $this->pathToConversionCriteria = $pathToConversionCriteria;
   }
@@ -1721,7 +1721,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->pathToConversionCriteria;
   }
-  public function setReachCriteria(Google_Service_Dfareporting_ReportReachCriteria $reachCriteria)
+  public function setReachCriteria(Postman_Google_Service_Dfareporting_ReportReachCriteria $reachCriteria)
   {
     $this->reachCriteria = $reachCriteria;
   }
@@ -1729,7 +1729,7 @@ class Google_Service_Dfareporting_Report extends Google_Model
   {
     return $this->reachCriteria;
   }
-  public function setSchedule(Google_Service_Dfareporting_ReportSchedule $schedule)
+  public function setSchedule(Postman_Google_Service_Dfareporting_ReportSchedule $schedule)
   {
     $this->schedule = $schedule;
   }
@@ -1755,21 +1755,21 @@ class Google_Service_Dfareporting_Report extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_ReportActiveGrpCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportActiveGrpCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'metricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $dimensionsDataType = 'array';
   public $metricNames;
 
 
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -1803,19 +1803,19 @@ class Google_Service_Dfareporting_ReportActiveGrpCriteria extends Google_Collect
   }
 }
 
-class Google_Service_Dfareporting_ReportCompatibleFields extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportCompatibleFields extends Postman_Google_Collection
 {
   protected $collection_key = 'pivotedActivityMetrics';
   protected $internal_gapi_mappings = array(
   );
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_Dimension';
   protected $dimensionsDataType = 'array';
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $metricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $metricsDataType = 'array';
-  protected $pivotedActivityMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $pivotedActivityMetricsType = 'Postman_Google_Service_Dfareporting_Metric';
   protected $pivotedActivityMetricsDataType = 'array';
 
 
@@ -1861,25 +1861,25 @@ class Google_Service_Dfareporting_ReportCompatibleFields extends Google_Collecti
   }
 }
 
-class Google_Service_Dfareporting_ReportCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'metricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $activitiesType = 'Google_Service_Dfareporting_Activities';
+  protected $activitiesType = 'Postman_Google_Service_Dfareporting_Activities';
   protected $activitiesDataType = '';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_CustomRichMediaEvents';
+  protected $customRichMediaEventsType = 'Postman_Google_Service_Dfareporting_CustomRichMediaEvents';
   protected $customRichMediaEventsDataType = '';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $dimensionsDataType = 'array';
   public $metricNames;
 
 
-  public function setActivities(Google_Service_Dfareporting_Activities $activities)
+  public function setActivities(Postman_Google_Service_Dfareporting_Activities $activities)
   {
     $this->activities = $activities;
   }
@@ -1887,7 +1887,7 @@ class Google_Service_Dfareporting_ReportCriteria extends Google_Collection
   {
     return $this->activities;
   }
-  public function setCustomRichMediaEvents(Google_Service_Dfareporting_CustomRichMediaEvents $customRichMediaEvents)
+  public function setCustomRichMediaEvents(Postman_Google_Service_Dfareporting_CustomRichMediaEvents $customRichMediaEvents)
   {
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
@@ -1895,7 +1895,7 @@ class Google_Service_Dfareporting_ReportCriteria extends Google_Collection
   {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -1929,17 +1929,17 @@ class Google_Service_Dfareporting_ReportCriteria extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'overlapMetricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $breakdownType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $breakdownType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $breakdownDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
   public $dimension;
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $dimensionFiltersDataType = 'array';
   public $metricNames;
   public $overlapMetricNames;
@@ -1954,7 +1954,7 @@ class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Goog
   {
     return $this->breakdown;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -2004,7 +2004,7 @@ class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Goog
   }
 }
 
-class Google_Service_Dfareporting_ReportDelivery extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportDelivery extends Postman_Google_Collection
 {
   protected $collection_key = 'recipients';
   protected $internal_gapi_mappings = array(
@@ -2012,7 +2012,7 @@ class Google_Service_Dfareporting_ReportDelivery extends Google_Collection
   public $emailOwner;
   public $emailOwnerDeliveryType;
   public $message;
-  protected $recipientsType = 'Google_Service_Dfareporting_Recipient';
+  protected $recipientsType = 'Postman_Google_Service_Dfareporting_Recipient';
   protected $recipientsDataType = 'array';
 
 
@@ -2050,23 +2050,23 @@ class Google_Service_Dfareporting_ReportDelivery extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportFloodlightCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'metricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $customRichMediaEventsType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $customRichMediaEventsDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $dimensionsDataType = 'array';
-  protected $floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $floodlightConfigIdType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $floodlightConfigIdDataType = '';
   public $metricNames;
-  protected $reportPropertiesType = 'Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties';
+  protected $reportPropertiesType = 'Postman_Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties';
   protected $reportPropertiesDataType = '';
 
 
@@ -2078,7 +2078,7 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -2102,7 +2102,7 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   {
     return $this->dimensions;
   }
-  public function setFloodlightConfigId(Google_Service_Dfareporting_DimensionValue $floodlightConfigId)
+  public function setFloodlightConfigId(Postman_Google_Service_Dfareporting_DimensionValue $floodlightConfigId)
   {
     $this->floodlightConfigId = $floodlightConfigId;
   }
@@ -2118,7 +2118,7 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   {
     return $this->metricNames;
   }
-  public function setReportProperties(Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties $reportProperties)
+  public function setReportProperties(Postman_Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties $reportProperties)
   {
     $this->reportProperties = $reportProperties;
   }
@@ -2128,7 +2128,7 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   }
 }
 
-class Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties extends Google_Model
+class Postman_Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2163,13 +2163,13 @@ class Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties exten
   }
 }
 
-class Google_Service_Dfareporting_ReportList extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Dfareporting_Report';
+  protected $itemsType = 'Postman_Google_Service_Dfareporting_Report';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2209,27 +2209,27 @@ class Google_Service_Dfareporting_ReportList extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportPathToConversionCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'perInteractionDimensions';
   protected $internal_gapi_mappings = array(
   );
-  protected $activityFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $activityFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $activityFiltersDataType = 'array';
-  protected $conversionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $conversionDimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $conversionDimensionsDataType = 'array';
-  protected $customFloodlightVariablesType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $customFloodlightVariablesType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $customFloodlightVariablesDataType = 'array';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $customRichMediaEventsType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $customRichMediaEventsDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
-  protected $floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $floodlightConfigIdType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $floodlightConfigIdDataType = '';
   public $metricNames;
-  protected $perInteractionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $perInteractionDimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $perInteractionDimensionsDataType = 'array';
-  protected $reportPropertiesType = 'Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties';
+  protected $reportPropertiesType = 'Postman_Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties';
   protected $reportPropertiesDataType = '';
 
 
@@ -2265,7 +2265,7 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -2273,7 +2273,7 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   {
     return $this->dateRange;
   }
-  public function setFloodlightConfigId(Google_Service_Dfareporting_DimensionValue $floodlightConfigId)
+  public function setFloodlightConfigId(Postman_Google_Service_Dfareporting_DimensionValue $floodlightConfigId)
   {
     $this->floodlightConfigId = $floodlightConfigId;
   }
@@ -2297,7 +2297,7 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   {
     return $this->perInteractionDimensions;
   }
-  public function setReportProperties(Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties $reportProperties)
+  public function setReportProperties(Postman_Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties $reportProperties)
   {
     $this->reportProperties = $reportProperties;
   }
@@ -2307,7 +2307,7 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   }
 }
 
-class Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties extends Google_Model
+class Postman_Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2396,26 +2396,26 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties
   }
 }
 
-class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportReachCriteria extends Postman_Google_Collection
 {
   protected $collection_key = 'reachByFrequencyMetricNames';
   protected $internal_gapi_mappings = array(
   );
-  protected $activitiesType = 'Google_Service_Dfareporting_Activities';
+  protected $activitiesType = 'Postman_Google_Service_Dfareporting_Activities';
   protected $activitiesDataType = '';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_CustomRichMediaEvents';
+  protected $customRichMediaEventsType = 'Postman_Google_Service_Dfareporting_CustomRichMediaEvents';
   protected $customRichMediaEventsDataType = '';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $dateRangeType = 'Postman_Google_Service_Dfareporting_DateRange';
   protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $dimensionFiltersType = 'Postman_Google_Service_Dfareporting_DimensionValue';
   protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $dimensionsType = 'Postman_Google_Service_Dfareporting_SortedDimension';
   protected $dimensionsDataType = 'array';
   public $metricNames;
   public $reachByFrequencyMetricNames;
 
 
-  public function setActivities(Google_Service_Dfareporting_Activities $activities)
+  public function setActivities(Postman_Google_Service_Dfareporting_Activities $activities)
   {
     $this->activities = $activities;
   }
@@ -2423,7 +2423,7 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   {
     return $this->activities;
   }
-  public function setCustomRichMediaEvents(Google_Service_Dfareporting_CustomRichMediaEvents $customRichMediaEvents)
+  public function setCustomRichMediaEvents(Postman_Google_Service_Dfareporting_CustomRichMediaEvents $customRichMediaEvents)
   {
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
@@ -2431,7 +2431,7 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
+  public function setDateRange(Postman_Google_Service_Dfareporting_DateRange $dateRange)
   {
     $this->dateRange = $dateRange;
   }
@@ -2473,7 +2473,7 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_ReportSchedule extends Google_Collection
+class Postman_Google_Service_Dfareporting_ReportSchedule extends Postman_Google_Collection
 {
   protected $collection_key = 'repeatsOnWeekDays';
   protected $internal_gapi_mappings = array(
@@ -2545,7 +2545,7 @@ class Google_Service_Dfareporting_ReportSchedule extends Google_Collection
   }
 }
 
-class Google_Service_Dfareporting_SortedDimension extends Google_Model
+class Postman_Google_Service_Dfareporting_SortedDimension extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2580,7 +2580,7 @@ class Google_Service_Dfareporting_SortedDimension extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_UserProfile extends Google_Model
+class Postman_Google_Service_Dfareporting_UserProfile extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2660,13 +2660,13 @@ class Google_Service_Dfareporting_UserProfile extends Google_Model
   }
 }
 
-class Google_Service_Dfareporting_UserProfileList extends Google_Collection
+class Postman_Google_Service_Dfareporting_UserProfileList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Dfareporting_UserProfile';
+  protected $itemsType = 'Postman_Google_Service_Dfareporting_UserProfile';
   protected $itemsDataType = 'array';
   public $kind;
 

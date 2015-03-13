@@ -17,13 +17,13 @@
 
 class TasksTest extends BaseTest
 {
-  /** @var Google_TasksService */
+  /** @var Postman_Google_TasksService */
   public $taskService;
 
   public function __construct()
   {
     parent::__construct();
-    $this->taskService = new Google_Service_Tasks($this->getClient());
+    $this->taskService = new Postman_Google_Service_Tasks($this->getClient());
   }
 
   public function testInsertTask()
@@ -70,7 +70,7 @@ class TasksTest extends BaseTest
 
   private function createTaskList($name)
   {
-    $list = new Google_Service_Tasks_TaskList();
+    $list = new Postman_Google_Service_Tasks_TaskList();
     $list->title = $name;
     return $this->taskService->tasklists->insert($list);
   }
@@ -78,7 +78,7 @@ class TasksTest extends BaseTest
   private function createTask($title, $listId)
   {
     $tasks = $this->taskService->tasks;
-    $task = new Google_Service_Tasks_Task();
+    $task = new Postman_Google_Service_Tasks_Task();
     $task->title = $title;
     return $tasks->insert($listId, $task);
   }

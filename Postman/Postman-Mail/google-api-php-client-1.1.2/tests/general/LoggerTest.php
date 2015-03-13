@@ -24,7 +24,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   public function setup()
   {
-    $this->client = new Google_Client();
+    $this->client = new Postman_Google_Client();
   }
 
   /**
@@ -45,7 +45,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   /**
    * @dataProvider invalidLevelsProvider
-   * @expectedException Google_Logger_Exception
+   * @expectedException Postman_Google_Logger_Exception
    * @expectedExceptionMessage Unknown LogLevel
    */
   public function testSetLabelWithBadValue($level)
@@ -55,12 +55,12 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   /**
    * @dataProvider invalidLevelsProvider
-   * @expectedException Google_Logger_Exception
+   * @expectedException Postman_Google_Logger_Exception
    * @expectedExceptionMessage Unknown LogLevel
    */
   public function testSetLabelWithBadValueFromConfig($level)
   {
-    $this->client->setClassConfig('Google_Logger_Abstract', 'level', $level);
+    $this->client->setClassConfig('Postman_Google_Logger_Abstract', 'level', $level);
     $this->getLogger();
   }
 
@@ -80,7 +80,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
    */
   public function testShouldHandleFromConfig($config, $handleLevel, $expected)
   {
-    $this->client->setClassConfig('Google_Logger_Abstract', 'level', $config);
+    $this->client->setClassConfig('Postman_Google_Logger_Abstract', 'level', $config);
     $logger = $this->getLogger();
 
     $this->assertEquals($expected, $logger->shouldHandle($handleLevel));
@@ -104,7 +104,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
    */
   public function testShouldWriteFromConfig($config, $logLevel, $expected)
   {
-    $this->client->setClassConfig('Google_Logger_Abstract', 'level', $config);
+    $this->client->setClassConfig('Postman_Google_Logger_Abstract', 'level', $config);
     $logger = $this->getLogger();
     $logger->expects($expected ? $this->once() : $this->never())
            ->method('write');
@@ -124,17 +124,17 @@ class LoggerTest extends PHPUnit_Framework_TestCase
       $expected
   ) {
     $this->client->setClassConfig(
-        'Google_Logger_Abstract',
+        'Postman_Google_Logger_Abstract',
         'log_format',
         $format
     );
     $this->client->setClassConfig(
-        'Google_Logger_Abstract',
+        'Postman_Google_Logger_Abstract',
         'date_format',
         $date_format
     );
     $this->client->setClassConfig(
-        'Google_Logger_Abstract',
+        'Postman_Google_Logger_Abstract',
         'allow_newlines',
         $newlines
     );
@@ -149,7 +149,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   public function testNullLoggerNeverWrites()
   {
-    $logger = $this->getLogger('write', 'Google_Logger_Null');
+    $logger = $this->getLogger('write', 'Postman_Google_Logger_Null');
     $logger->expects($this->never())
            ->method('write');
 
@@ -162,14 +162,14 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   public function testNullLoggerNeverHandles()
   {
-    $logger = $this->getLogger('write', 'Google_Logger_Null');
+    $logger = $this->getLogger('write', 'Postman_Google_Logger_Null');
     $this->assertFalse($logger->shouldHandle('emergency'));
     $this->assertFalse($logger->shouldHandle(600));
   }
 
   public function testPsrNeverWrites()
   {
-    $logger = $this->getLogger('write', 'Google_Logger_Psr');
+    $logger = $this->getLogger('write', 'Postman_Google_Logger_Psr');
     $logger->expects($this->never())
            ->method('write');
 
@@ -190,14 +190,14 @@ class LoggerTest extends PHPUnit_Framework_TestCase
 
   public function testPsrNeverShouldHandleWhenNoLoggerSet()
   {
-    $logger = $this->getLogger(null, 'Google_Logger_Psr');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_Psr');
     $this->assertFalse($logger->shouldHandle('emergency'));
     $this->assertFalse($logger->shouldHandle(600));
   }
 
   public function testPsrShouldHandleWhenLoggerSet()
   {
-    $logger = $this->getLogger(null, 'Google_Logger_Psr');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_Psr');
     $logger->setLogger($this->getLogger());
 
     $this->assertTrue($logger->shouldHandle('emergency'));
@@ -217,44 +217,44 @@ class LoggerTest extends PHPUnit_Framework_TestCase
              ->method('log')
              ->with($key, $message, $context);
 
-    $logger = $this->getLogger(null, 'Google_Logger_Psr');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_Psr');
     $logger->setLogger($delegate);
 
     call_user_func(array($logger, $key), $message, $context);
   }
 
   /**
-   * @expectedException Google_Logger_Exception
+   * @expectedException Postman_Google_Logger_Exception
    * @expectedExceptionMessage File logger requires a filename or a valid file pointer
    */
   public function testLoggerWithBadFileType()
   {
-    $this->client->setClassConfig('Google_Logger_File', 'file', false);
-    $logger = $this->getLogger(null, 'Google_Logger_File');
+    $this->client->setClassConfig('Postman_Google_Logger_File', 'file', false);
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_File');
   }
 
   /**
-   * @expectedException Google_Logger_Exception
+   * @expectedException Postman_Google_Logger_Exception
    * @expectedExceptionMessage Logger Error
    */
   public function testLoggerWithBadFileValue()
   {
-    $this->client->setClassConfig('Google_Logger_File', 'file', 'not://exist');
+    $this->client->setClassConfig('Postman_Google_Logger_File', 'file', 'not://exist');
 
-    $logger = $this->getLogger(null, 'Google_Logger_File');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_File');
     $logger->log('emergency', 'will fail');
   }
 
   /**
-   * @expectedException Google_Logger_Exception
+   * @expectedException Postman_Google_Logger_Exception
    * @expectedExceptionMessage File pointer is no longer available
    */
   public function testLoggerWithClosedFileReference()
   {
     $fp = fopen('php://memory', 'r+');
 
-    $this->client->setClassConfig('Google_Logger_File', 'file', $fp);
-    $logger = $this->getLogger(null, 'Google_Logger_File');
+    $this->client->setClassConfig('Postman_Google_Logger_File', 'file', $fp);
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_File');
 
     fclose($fp);
 
@@ -265,14 +265,14 @@ class LoggerTest extends PHPUnit_Framework_TestCase
   {
     $fp = fopen('php://memory', 'r+');
 
-    $this->client->setClassConfig('Google_Logger_File', 'file', $fp);
+    $this->client->setClassConfig('Postman_Google_Logger_File', 'file', $fp);
     $this->client->setClassConfig(
-        'Google_Logger_Abstract',
+        'Postman_Google_Logger_Abstract',
         'log_format',
         "%level% - %message%\n"
     );
 
-    $logger = $this->getLogger(null, 'Google_Logger_File');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_File');
     $logger->log('emergency', 'test one');
     $logger->log('alert', 'test two');
     $logger->log(500, 'test three');
@@ -293,17 +293,17 @@ class LoggerTest extends PHPUnit_Framework_TestCase
     );
 
     $this->client->setClassConfig(
-        'Google_Logger_File',
+        'Postman_Google_Logger_File',
         'file',
         'php://output'
     );
     $this->client->setClassConfig(
-        'Google_Logger_Abstract',
+        'Postman_Google_Logger_Abstract',
         'log_format',
         "%level% - %message%\n"
     );
 
-    $logger = $this->getLogger(null, 'Google_Logger_File');
+    $logger = $this->getLogger(null, 'Postman_Google_Logger_File');
     $logger->log('emergency', 'test one');
     $logger->log('alert', 'test two');
     $logger->log(500, 'test three');
@@ -435,7 +435,7 @@ class LoggerTest extends PHPUnit_Framework_TestCase
     );
   }
 
-  private function getLogger($methods = null, $type = 'Google_Logger_Abstract')
+  private function getLogger($methods = null, $type = 'Postman_Google_Logger_Abstract')
   {
     return $this->getMockBuilder($type)
                 ->setMethods((array) $methods)

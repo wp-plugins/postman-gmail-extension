@@ -25,7 +25,7 @@ class URITemplateTest extends BaseTest
     $var = "value";
     $hello = "Hello World!";
 
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
     $this->assertEquals(
         "value",
         $urit->parse("{var}", array("var" => $var))
@@ -42,7 +42,7 @@ class URITemplateTest extends BaseTest
     $hello = "Hello World!";
     $path = "/foo/bar";
 
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
     $this->assertEquals(
         "value",
         $urit->parse("{+var}", array("var" => $var))
@@ -78,7 +78,7 @@ class URITemplateTest extends BaseTest
     $x = "1024";
     $y = "768";
 
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
     $this->assertEquals(
         "map?1024,768",
         $urit->parse("map?{x,y}", array("x" => $x, "y" => $y))
@@ -219,7 +219,7 @@ class URITemplateTest extends BaseTest
 
     );
 
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
 
     foreach ($tests as $input => $output) {
       $this->assertEquals($output, $urit->parse($input, $values), $input . " failed");
@@ -230,7 +230,7 @@ class URITemplateTest extends BaseTest
   {
     $var = "value";
     $hello = "Hello World!";
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
     $this->assertEquals(
         "http://www.google.com/Hello%20World!?var=value",
         $urit->parse(
@@ -266,7 +266,7 @@ class URITemplateTest extends BaseTest
   {
     $location = "../../uritemplate-test/*.json";
 
-    $urit = new Google_Utils_URITemplate();
+    $urit = new Postman_Google_Utils_URITemplate();
     foreach (glob($location) as $file) {
       $test = json_decode(file_get_contents($file), true);
       foreach ($test as $title => $testsets) {

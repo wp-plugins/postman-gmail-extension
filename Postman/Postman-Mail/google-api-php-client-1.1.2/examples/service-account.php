@@ -47,9 +47,9 @@ if ($client_id == '<YOUR_CLIENT_ID>'
   echo missingServiceAccountDetailsWarning();
 }
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setApplicationName("Client_Library_Examples");
-$service = new Google_Service_Books($client);
+$service = new Postman_Google_Service_Books($client);
 
 /************************************************
   If we have an access token, we can carry on.
@@ -63,7 +63,7 @@ if (isset($_SESSION['service_token'])) {
   $client->setAccessToken($_SESSION['service_token']);
 }
 $key = file_get_contents($key_file_location);
-$cred = new Google_Auth_AssertionCredentials(
+$cred = new Postman_Google_Auth_AssertionCredentials(
     $service_account_name,
     array('https://www.googleapis.com/auth/books'),
     $key

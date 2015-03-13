@@ -21,9 +21,9 @@ require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
  * A blank storage class, for cases where caching is not
  * required.
  */
-class Google_Cache_Null extends Google_Cache_Abstract
+class Postman_Google_Cache_Null extends Postman_Google_Cache_Abstract
 {
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
 
   }

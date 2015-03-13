@@ -17,18 +17,18 @@
 
 class UrlShortenerTests extends BaseTest
 {
-  /** @var Google_UrlshortenerService */
+  /** @var Postman_Google_UrlshortenerService */
   public $service;
 
   public function __construct()
   {
     parent::__construct();
-    $this->service = new Google_Service_Urlshortener($this->getClient());
+    $this->service = new Postman_Google_Service_Urlshortener($this->getClient());
   }
 
   public function testUrlShort()
   {
-    $url = new Google_Service_Urlshortener_Url();
+    $url = new Postman_Google_Service_Urlshortener_Url();
     $url->longUrl = "http://google.com";
 
     $shortUrl = $this->service->url->insert($url);

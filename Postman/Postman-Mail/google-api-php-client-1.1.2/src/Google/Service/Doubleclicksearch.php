@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Doubleclicksearch extends Google_Service
+class Postman_Google_Service_Doubleclicksearch extends Postman_Google_Service
 {
   /** View and manage your advertising data in DoubleClick Search. */
   const DOUBLECLICKSEARCH =
@@ -43,16 +43,16 @@ class Google_Service_Doubleclicksearch extends Google_Service
   /**
    * Constructs the internal representation of the Doubleclicksearch service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'doubleclicksearch/v2/';
     $this->version = 'v2';
     $this->serviceName = 'doubleclicksearch';
 
-    $this->conversion = new Google_Service_Doubleclicksearch_Conversion_Resource(
+    $this->conversion = new Postman_Google_Service_Doubleclicksearch_Conversion_Resource(
         $this,
         $this->serviceName,
         'conversion',
@@ -170,7 +170,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_Doubleclicksearch_Reports_Resource(
+    $this->reports = new Postman_Google_Service_Doubleclicksearch_Reports_Resource(
         $this,
         $this->serviceName,
         'reports',
@@ -213,7 +213,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
           )
         )
     );
-    $this->savedColumns = new Google_Service_Doubleclicksearch_SavedColumns_Resource(
+    $this->savedColumns = new Postman_Google_Service_Doubleclicksearch_SavedColumns_Resource(
         $this,
         $this->serviceName,
         'savedColumns',
@@ -246,11 +246,11 @@ class Google_Service_Doubleclicksearch extends Google_Service
  * The "conversion" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclicksearchService = new Google_Service_Doubleclicksearch(...);
+ *   $doubleclicksearchService = new Postman_Google_Service_Doubleclicksearch(...);
  *   $conversion = $doubleclicksearchService->conversion;
  *  </code>
  */
-class Google_Service_Doubleclicksearch_Conversion_Resource extends Google_Service_Resource
+class Postman_Google_Service_Doubleclicksearch_Conversion_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -273,28 +273,28 @@ class Google_Service_Doubleclicksearch_Conversion_Resource extends Google_Servic
    * @opt_param string campaignId Numeric ID of the campaign.
    * @opt_param string adId Numeric ID of the ad.
    * @opt_param string criterionId Numeric ID of the criterion.
-   * @return Google_Service_Doubleclicksearch_ConversionList
+   * @return Postman_Google_Service_Doubleclicksearch_ConversionList
    */
   public function get($agencyId, $advertiserId, $engineAccountId, $endDate, $rowCount, $startDate, $startRow, $optParams = array())
   {
     $params = array('agencyId' => $agencyId, 'advertiserId' => $advertiserId, 'engineAccountId' => $engineAccountId, 'endDate' => $endDate, 'rowCount' => $rowCount, 'startDate' => $startDate, 'startRow' => $startRow);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Doubleclicksearch_ConversionList");
+    return $this->call('get', array($params), "Postman_Google_Service_Doubleclicksearch_ConversionList");
   }
 
   /**
    * Inserts a batch of new conversions into DoubleClick Search.
    * (conversion.insert)
    *
-   * @param Google_ConversionList $postBody
+   * @param Postman_Google_ConversionList $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_ConversionList
+   * @return Postman_Google_Service_Doubleclicksearch_ConversionList
    */
-  public function insert(Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Doubleclicksearch_ConversionList");
+    return $this->call('insert', array($params), "Postman_Google_Service_Doubleclicksearch_ConversionList");
   }
 
   /**
@@ -311,44 +311,44 @@ class Google_Service_Doubleclicksearch_Conversion_Resource extends Google_Servic
    * conversions. Format is yyyymmdd.
    * @param string $startRow The 0-based starting index for retrieving conversions
    * results.
-   * @param Google_ConversionList $postBody
+   * @param Postman_Google_ConversionList $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_ConversionList
+   * @return Postman_Google_Service_Doubleclicksearch_ConversionList
    */
-  public function patch($advertiserId, $agencyId, $endDate, $engineAccountId, $rowCount, $startDate, $startRow, Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
+  public function patch($advertiserId, $agencyId, $endDate, $engineAccountId, $rowCount, $startDate, $startRow, Postman_Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
   {
     $params = array('advertiserId' => $advertiserId, 'agencyId' => $agencyId, 'endDate' => $endDate, 'engineAccountId' => $engineAccountId, 'rowCount' => $rowCount, 'startDate' => $startDate, 'startRow' => $startRow, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Doubleclicksearch_ConversionList");
+    return $this->call('patch', array($params), "Postman_Google_Service_Doubleclicksearch_ConversionList");
   }
 
   /**
    * Updates a batch of conversions in DoubleClick Search. (conversion.update)
    *
-   * @param Google_ConversionList $postBody
+   * @param Postman_Google_ConversionList $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_ConversionList
+   * @return Postman_Google_Service_Doubleclicksearch_ConversionList
    */
-  public function update(Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
+  public function update(Postman_Google_Service_Doubleclicksearch_ConversionList $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Doubleclicksearch_ConversionList");
+    return $this->call('update', array($params), "Postman_Google_Service_Doubleclicksearch_ConversionList");
   }
 
   /**
    * Updates the availabilities of a batch of floodlight activities in DoubleClick
    * Search. (conversion.updateAvailability)
    *
-   * @param Google_UpdateAvailabilityRequest $postBody
+   * @param Postman_Google_UpdateAvailabilityRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_UpdateAvailabilityResponse
+   * @return Postman_Google_Service_Doubleclicksearch_UpdateAvailabilityResponse
    */
-  public function updateAvailability(Google_Service_Doubleclicksearch_UpdateAvailabilityRequest $postBody, $optParams = array())
+  public function updateAvailability(Postman_Google_Service_Doubleclicksearch_UpdateAvailabilityRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('updateAvailability', array($params), "Google_Service_Doubleclicksearch_UpdateAvailabilityResponse");
+    return $this->call('updateAvailability', array($params), "Postman_Google_Service_Doubleclicksearch_UpdateAvailabilityResponse");
   }
 }
 
@@ -356,25 +356,25 @@ class Google_Service_Doubleclicksearch_Conversion_Resource extends Google_Servic
  * The "reports" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclicksearchService = new Google_Service_Doubleclicksearch(...);
+ *   $doubleclicksearchService = new Postman_Google_Service_Doubleclicksearch(...);
  *   $reports = $doubleclicksearchService->reports;
  *  </code>
  */
-class Google_Service_Doubleclicksearch_Reports_Resource extends Google_Service_Resource
+class Postman_Google_Service_Doubleclicksearch_Reports_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Generates and returns a report immediately. (reports.generate)
    *
-   * @param Google_ReportRequest $postBody
+   * @param Postman_Google_ReportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_Report
+   * @return Postman_Google_Service_Doubleclicksearch_Report
    */
-  public function generate(Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
+  public function generate(Postman_Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('generate', array($params), "Google_Service_Doubleclicksearch_Report");
+    return $this->call('generate', array($params), "Postman_Google_Service_Doubleclicksearch_Report");
   }
 
   /**
@@ -382,13 +382,13 @@ class Google_Service_Doubleclicksearch_Reports_Resource extends Google_Service_R
    *
    * @param string $reportId ID of the report request being polled.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_Report
+   * @return Postman_Google_Service_Doubleclicksearch_Report
    */
   public function get($reportId, $optParams = array())
   {
     $params = array('reportId' => $reportId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Doubleclicksearch_Report");
+    return $this->call('get', array($params), "Postman_Google_Service_Doubleclicksearch_Report");
   }
 
   /**
@@ -408,15 +408,15 @@ class Google_Service_Doubleclicksearch_Reports_Resource extends Google_Service_R
   /**
    * Inserts a report request into the reporting system. (reports.request)
    *
-   * @param Google_ReportRequest $postBody
+   * @param Postman_Google_ReportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_Report
+   * @return Postman_Google_Service_Doubleclicksearch_Report
    */
-  public function request(Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
+  public function request(Postman_Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('request', array($params), "Google_Service_Doubleclicksearch_Report");
+    return $this->call('request', array($params), "Postman_Google_Service_Doubleclicksearch_Report");
   }
 }
 
@@ -424,11 +424,11 @@ class Google_Service_Doubleclicksearch_Reports_Resource extends Google_Service_R
  * The "savedColumns" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclicksearchService = new Google_Service_Doubleclicksearch(...);
+ *   $doubleclicksearchService = new Postman_Google_Service_Doubleclicksearch(...);
  *   $savedColumns = $doubleclicksearchService->savedColumns;
  *  </code>
  */
-class Google_Service_Doubleclicksearch_SavedColumns_Resource extends Google_Service_Resource
+class Postman_Google_Service_Doubleclicksearch_SavedColumns_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -438,20 +438,20 @@ class Google_Service_Doubleclicksearch_SavedColumns_Resource extends Google_Serv
    * @param string $agencyId DS ID of the agency.
    * @param string $advertiserId DS ID of the advertiser.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Doubleclicksearch_SavedColumnList
+   * @return Postman_Google_Service_Doubleclicksearch_SavedColumnList
    */
   public function listSavedColumns($agencyId, $advertiserId, $optParams = array())
   {
     $params = array('agencyId' => $agencyId, 'advertiserId' => $advertiserId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Doubleclicksearch_SavedColumnList");
+    return $this->call('list', array($params), "Postman_Google_Service_Doubleclicksearch_SavedColumnList");
   }
 }
 
 
 
 
-class Google_Service_Doubleclicksearch_Availability extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_Availability extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -513,7 +513,7 @@ class Google_Service_Doubleclicksearch_Availability extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_Conversion extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_Conversion extends Postman_Google_Collection
 {
   protected $collection_key = 'customMetric';
   protected $internal_gapi_mappings = array(
@@ -531,9 +531,9 @@ class Google_Service_Doubleclicksearch_Conversion extends Google_Collection
   public $countMillis;
   public $criterionId;
   public $currencyCode;
-  protected $customDimensionType = 'Google_Service_Doubleclicksearch_CustomDimension';
+  protected $customDimensionType = 'Postman_Google_Service_Doubleclicksearch_CustomDimension';
   protected $customDimensionDataType = 'array';
-  protected $customMetricType = 'Google_Service_Doubleclicksearch_CustomMetric';
+  protected $customMetricType = 'Postman_Google_Service_Doubleclicksearch_CustomMetric';
   protected $customMetricDataType = 'array';
   public $dsConversionId;
   public $engineAccountId;
@@ -749,12 +749,12 @@ class Google_Service_Doubleclicksearch_Conversion extends Google_Collection
   }
 }
 
-class Google_Service_Doubleclicksearch_ConversionList extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_ConversionList extends Postman_Google_Collection
 {
   protected $collection_key = 'conversion';
   protected $internal_gapi_mappings = array(
   );
-  protected $conversionType = 'Google_Service_Doubleclicksearch_Conversion';
+  protected $conversionType = 'Postman_Google_Service_Doubleclicksearch_Conversion';
   protected $conversionDataType = 'array';
   public $kind;
 
@@ -777,7 +777,7 @@ class Google_Service_Doubleclicksearch_ConversionList extends Google_Collection
   }
 }
 
-class Google_Service_Doubleclicksearch_CustomDimension extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_CustomDimension extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -803,7 +803,7 @@ class Google_Service_Doubleclicksearch_CustomDimension extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_CustomMetric extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_CustomMetric extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -829,17 +829,17 @@ class Google_Service_Doubleclicksearch_CustomMetric extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_Report extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_Report extends Postman_Google_Collection
 {
   protected $collection_key = 'rows';
   protected $internal_gapi_mappings = array(
   );
-  protected $filesType = 'Google_Service_Doubleclicksearch_ReportFiles';
+  protected $filesType = 'Postman_Google_Service_Doubleclicksearch_ReportFiles';
   protected $filesDataType = 'array';
   public $id;
   public $isReportReady;
   public $kind;
-  protected $requestType = 'Google_Service_Doubleclicksearch_ReportRequest';
+  protected $requestType = 'Postman_Google_Service_Doubleclicksearch_ReportRequest';
   protected $requestDataType = '';
   public $rowCount;
   public $rows;
@@ -879,7 +879,7 @@ class Google_Service_Doubleclicksearch_Report extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRequest(Google_Service_Doubleclicksearch_ReportRequest $request)
+  public function setRequest(Postman_Google_Service_Doubleclicksearch_ReportRequest $request)
   {
     $this->request = $request;
   }
@@ -921,7 +921,7 @@ class Google_Service_Doubleclicksearch_Report extends Google_Collection
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportApiColumnSpec extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1010,7 +1010,7 @@ class Google_Service_Doubleclicksearch_ReportApiColumnSpec extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportFiles extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportFiles extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1036,28 +1036,28 @@ class Google_Service_Doubleclicksearch_ReportFiles extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_ReportRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'orderBy';
   protected $internal_gapi_mappings = array(
   );
-  protected $columnsType = 'Google_Service_Doubleclicksearch_ReportApiColumnSpec';
+  protected $columnsType = 'Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec';
   protected $columnsDataType = 'array';
   public $downloadFormat;
-  protected $filtersType = 'Google_Service_Doubleclicksearch_ReportRequestFilters';
+  protected $filtersType = 'Postman_Google_Service_Doubleclicksearch_ReportRequestFilters';
   protected $filtersDataType = 'array';
   public $includeDeletedEntities;
   public $includeRemovedEntities;
   public $maxRowsPerFile;
-  protected $orderByType = 'Google_Service_Doubleclicksearch_ReportRequestOrderBy';
+  protected $orderByType = 'Postman_Google_Service_Doubleclicksearch_ReportRequestOrderBy';
   protected $orderByDataType = 'array';
-  protected $reportScopeType = 'Google_Service_Doubleclicksearch_ReportRequestReportScope';
+  protected $reportScopeType = 'Postman_Google_Service_Doubleclicksearch_ReportRequestReportScope';
   protected $reportScopeDataType = '';
   public $reportType;
   public $rowCount;
   public $startRow;
   public $statisticsCurrency;
-  protected $timeRangeType = 'Google_Service_Doubleclicksearch_ReportRequestTimeRange';
+  protected $timeRangeType = 'Postman_Google_Service_Doubleclicksearch_ReportRequestTimeRange';
   protected $timeRangeDataType = '';
   public $verifySingleTimeZone;
 
@@ -1118,7 +1118,7 @@ class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
   {
     return $this->orderBy;
   }
-  public function setReportScope(Google_Service_Doubleclicksearch_ReportRequestReportScope $reportScope)
+  public function setReportScope(Postman_Google_Service_Doubleclicksearch_ReportRequestReportScope $reportScope)
   {
     $this->reportScope = $reportScope;
   }
@@ -1158,7 +1158,7 @@ class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
   {
     return $this->statisticsCurrency;
   }
-  public function setTimeRange(Google_Service_Doubleclicksearch_ReportRequestTimeRange $timeRange)
+  public function setTimeRange(Postman_Google_Service_Doubleclicksearch_ReportRequestTimeRange $timeRange)
   {
     $this->timeRange = $timeRange;
   }
@@ -1176,18 +1176,18 @@ class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRequestFilters extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_ReportRequestFilters extends Postman_Google_Collection
 {
   protected $collection_key = 'values';
   protected $internal_gapi_mappings = array(
   );
-  protected $columnType = 'Google_Service_Doubleclicksearch_ReportApiColumnSpec';
+  protected $columnType = 'Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec';
   protected $columnDataType = '';
   public $operator;
   public $values;
 
 
-  public function setColumn(Google_Service_Doubleclicksearch_ReportApiColumnSpec $column)
+  public function setColumn(Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec $column)
   {
     $this->column = $column;
   }
@@ -1213,16 +1213,16 @@ class Google_Service_Doubleclicksearch_ReportRequestFilters extends Google_Colle
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRequestOrderBy extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportRequestOrderBy extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $columnType = 'Google_Service_Doubleclicksearch_ReportApiColumnSpec';
+  protected $columnType = 'Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec';
   protected $columnDataType = '';
   public $sortOrder;
 
 
-  public function setColumn(Google_Service_Doubleclicksearch_ReportApiColumnSpec $column)
+  public function setColumn(Postman_Google_Service_Doubleclicksearch_ReportApiColumnSpec $column)
   {
     $this->column = $column;
   }
@@ -1240,7 +1240,7 @@ class Google_Service_Doubleclicksearch_ReportRequestOrderBy extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRequestReportScope extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportRequestReportScope extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1311,7 +1311,7 @@ class Google_Service_Doubleclicksearch_ReportRequestReportScope extends Google_M
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRequestTimeRange extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportRequestTimeRange extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1355,11 +1355,11 @@ class Google_Service_Doubleclicksearch_ReportRequestTimeRange extends Google_Mod
   }
 }
 
-class Google_Service_Doubleclicksearch_ReportRow extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_ReportRow extends Postman_Google_Model
 {
 }
 
-class Google_Service_Doubleclicksearch_SavedColumn extends Google_Model
+class Postman_Google_Service_Doubleclicksearch_SavedColumn extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1394,12 +1394,12 @@ class Google_Service_Doubleclicksearch_SavedColumn extends Google_Model
   }
 }
 
-class Google_Service_Doubleclicksearch_SavedColumnList extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_SavedColumnList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Doubleclicksearch_SavedColumn';
+  protected $itemsType = 'Postman_Google_Service_Doubleclicksearch_SavedColumn';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1422,12 +1422,12 @@ class Google_Service_Doubleclicksearch_SavedColumnList extends Google_Collection
   }
 }
 
-class Google_Service_Doubleclicksearch_UpdateAvailabilityRequest extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_UpdateAvailabilityRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'availabilities';
   protected $internal_gapi_mappings = array(
   );
-  protected $availabilitiesType = 'Google_Service_Doubleclicksearch_Availability';
+  protected $availabilitiesType = 'Postman_Google_Service_Doubleclicksearch_Availability';
   protected $availabilitiesDataType = 'array';
 
 
@@ -1441,12 +1441,12 @@ class Google_Service_Doubleclicksearch_UpdateAvailabilityRequest extends Google_
   }
 }
 
-class Google_Service_Doubleclicksearch_UpdateAvailabilityResponse extends Google_Collection
+class Postman_Google_Service_Doubleclicksearch_UpdateAvailabilityResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'availabilities';
   protected $internal_gapi_mappings = array(
   );
-  protected $availabilitiesType = 'Google_Service_Doubleclicksearch_Availability';
+  protected $availabilitiesType = 'Postman_Google_Service_Doubleclicksearch_Availability';
   protected $availabilitiesDataType = 'array';
 
 

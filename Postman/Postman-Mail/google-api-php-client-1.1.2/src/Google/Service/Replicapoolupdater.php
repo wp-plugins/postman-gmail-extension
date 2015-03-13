@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Replicapoolupdater extends Google_Service
+class Postman_Google_Service_Replicapoolupdater extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -47,16 +47,16 @@ class Google_Service_Replicapoolupdater extends Google_Service
   /**
    * Constructs the internal representation of the Replicapoolupdater service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'replicapoolupdater/v1beta1/projects/';
     $this->version = 'v1beta1';
     $this->serviceName = 'replicapoolupdater';
 
-    $this->updates = new Google_Service_Replicapoolupdater_Updates_Resource(
+    $this->updates = new Postman_Google_Service_Replicapoolupdater_Updates_Resource(
         $this,
         $this->serviceName,
         'updates',
@@ -247,11 +247,11 @@ class Google_Service_Replicapoolupdater extends Google_Service
  * The "updates" collection of methods.
  * Typical usage is:
  *  <code>
- *   $replicapoolupdaterService = new Google_Service_Replicapoolupdater(...);
+ *   $replicapoolupdaterService = new Postman_Google_Service_Replicapoolupdater(...);
  *   $updates = $replicapoolupdaterService->updates;
  *  </code>
  */
-class Google_Service_Replicapoolupdater_Updates_Resource extends Google_Service_Resource
+class Postman_Google_Service_Replicapoolupdater_Updates_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -282,13 +282,13 @@ class Google_Service_Replicapoolupdater_Updates_Resource extends Google_Service_
    * this request.
    * @param string $update Unique (in the context of a group) handle of an update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Replicapoolupdater_Update
+   * @return Postman_Google_Service_Replicapoolupdater_Update
    */
   public function get($project, $zone, $instanceGroupManager, $update, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'update' => $update);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Replicapoolupdater_Update");
+    return $this->call('get', array($params), "Postman_Google_Service_Replicapoolupdater_Update");
   }
 
   /**
@@ -299,15 +299,15 @@ class Google_Service_Replicapoolupdater_Updates_Resource extends Google_Service_
    * @param string $zone Zone for the instance group manager.
    * @param string $instanceGroupManager Name of the instance group manager for
    * this request.
-   * @param Google_Update $postBody
+   * @param Postman_Google_Update $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Replicapoolupdater_InsertResponse
+   * @return Postman_Google_Service_Replicapoolupdater_InsertResponse
    */
-  public function insert($project, $zone, $instanceGroupManager, Google_Service_Replicapoolupdater_Update $postBody, $optParams = array())
+  public function insert($project, $zone, $instanceGroupManager, Postman_Google_Service_Replicapoolupdater_Update $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Replicapoolupdater_InsertResponse");
+    return $this->call('insert', array($params), "Postman_Google_Service_Replicapoolupdater_InsertResponse");
   }
 
   /**
@@ -326,13 +326,13 @@ class Google_Service_Replicapoolupdater_Updates_Resource extends Google_Service_
    * list request.
    * @opt_param int maxResults Maximum count of results to be returned. Acceptable
    * values are 1 to 100, inclusive. (Default: 50)
-   * @return Google_Service_Replicapoolupdater_UpdateList
+   * @return Postman_Google_Service_Replicapoolupdater_UpdateList
    */
   public function listUpdates($project, $zone, $instanceGroupManager, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Replicapoolupdater_UpdateList");
+    return $this->call('list', array($params), "Postman_Google_Service_Replicapoolupdater_UpdateList");
   }
 
   /**
@@ -396,7 +396,7 @@ class Google_Service_Replicapoolupdater_Updates_Resource extends Google_Service_
 
 
 
-class Google_Service_Replicapoolupdater_InsertResponse extends Google_Model
+class Postman_Google_Service_Replicapoolupdater_InsertResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -413,7 +413,7 @@ class Google_Service_Replicapoolupdater_InsertResponse extends Google_Model
   }
 }
 
-class Google_Service_Replicapoolupdater_InstanceUpdate extends Google_Model
+class Postman_Google_Service_Replicapoolupdater_InstanceUpdate extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -439,7 +439,7 @@ class Google_Service_Replicapoolupdater_InstanceUpdate extends Google_Model
   }
 }
 
-class Google_Service_Replicapoolupdater_Update extends Google_Collection
+class Postman_Google_Service_Replicapoolupdater_Update extends Postman_Google_Collection
 {
   protected $collection_key = 'instanceUpdates';
   protected $internal_gapi_mappings = array(
@@ -448,10 +448,10 @@ class Google_Service_Replicapoolupdater_Update extends Google_Collection
   public $details;
   public $handle;
   public $instanceTemplate;
-  protected $instanceUpdatesType = 'Google_Service_Replicapoolupdater_InstanceUpdate';
+  protected $instanceUpdatesType = 'Postman_Google_Service_Replicapoolupdater_InstanceUpdate';
   protected $instanceUpdatesDataType = 'array';
   public $kind;
-  protected $policyType = 'Google_Service_Replicapoolupdater_UpdatePolicy';
+  protected $policyType = 'Postman_Google_Service_Replicapoolupdater_UpdatePolicy';
   protected $policyDataType = '';
   public $selfLink;
   public $state;
@@ -507,7 +507,7 @@ class Google_Service_Replicapoolupdater_Update extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPolicy(Google_Service_Replicapoolupdater_UpdatePolicy $policy)
+  public function setPolicy(Postman_Google_Service_Replicapoolupdater_UpdatePolicy $policy)
   {
     $this->policy = $policy;
   }
@@ -549,12 +549,12 @@ class Google_Service_Replicapoolupdater_Update extends Google_Collection
   }
 }
 
-class Google_Service_Replicapoolupdater_UpdateList extends Google_Collection
+class Postman_Google_Service_Replicapoolupdater_UpdateList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Replicapoolupdater_Update';
+  protected $itemsType = 'Postman_Google_Service_Replicapoolupdater_Update';
   protected $itemsDataType = 'array';
   public $nextPageToken;
 
@@ -577,17 +577,17 @@ class Google_Service_Replicapoolupdater_UpdateList extends Google_Collection
   }
 }
 
-class Google_Service_Replicapoolupdater_UpdatePolicy extends Google_Model
+class Postman_Google_Service_Replicapoolupdater_UpdatePolicy extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $canaryType = 'Google_Service_Replicapoolupdater_UpdatePolicyCanary';
+  protected $canaryType = 'Postman_Google_Service_Replicapoolupdater_UpdatePolicyCanary';
   protected $canaryDataType = '';
   public $maxNumConcurrentInstances;
   public $sleepAfterInstanceRestartSec;
 
 
-  public function setCanary(Google_Service_Replicapoolupdater_UpdatePolicyCanary $canary)
+  public function setCanary(Postman_Google_Service_Replicapoolupdater_UpdatePolicyCanary $canary)
   {
     $this->canary = $canary;
   }
@@ -613,7 +613,7 @@ class Google_Service_Replicapoolupdater_UpdatePolicy extends Google_Model
   }
 }
 
-class Google_Service_Replicapoolupdater_UpdatePolicyCanary extends Google_Model
+class Postman_Google_Service_Replicapoolupdater_UpdatePolicyCanary extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

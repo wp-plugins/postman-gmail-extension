@@ -23,54 +23,54 @@ class IoTest extends BaseTest
 
   public function testExecutorSelection()
   {
-    $default = function_exists('curl_version') ? 'Google_IO_Curl' : 'Google_IO_Stream';
+    $default = function_exists('curl_version') ? 'Postman_Google_IO_Curl' : 'Postman_Google_IO_Stream';
     $client = $this->getClient();
     $this->assertInstanceOf($default, $client->getIo());
-    $config = new Google_Config();
-    $config->setIoClass('Google_IO_Stream');
-    $client = new Google_Client($config);
-    $this->assertInstanceOf('Google_IO_Stream', $client->getIo());
+    $config = new Postman_Google_Config();
+    $config->setIoClass('Postman_Google_IO_Stream');
+    $client = new Postman_Google_Client($config);
+    $this->assertInstanceOf('Postman_Google_IO_Stream', $client->getIo());
   }
 
   public function testStreamSetTimeout()
   {
-    $io = new Google_IO_Stream($this->getClient());
+    $io = new Postman_Google_IO_Stream($this->getClient());
     $this->timeoutChecker($io);
   }
 
   public function testStreamParseHttpResponseBody()
   {
-    $io = new Google_IO_Stream($this->getClient());
+    $io = new Postman_Google_IO_Stream($this->getClient());
     $this->responseChecker($io);
   }
 
   public function testStreamProcessEntityRequest()
   {
     $client = $this->getClient();
-    $io = new Google_IO_Stream($client);
+    $io = new Postman_Google_IO_Stream($client);
     $this->processEntityRequest($io, $client);
   }
 
   public function testStreamCacheHit()
   {
     $client = $this->getClient();
-    $io = new Google_IO_Stream($client);
+    $io = new Postman_Google_IO_Stream($client);
     $this->cacheHit($io, $client);
   }
 
   public function testStreamAuthCache()
   {
     $client = $this->getClient();
-    $io = new Google_IO_Stream($client);
+    $io = new Postman_Google_IO_Stream($client);
     $this->authCache($io, $client);
   }
 
   /**
-   * @expectedException Google_IO_Exception
+   * @expectedException Postman_Google_IO_Exception
    */
   public function testStreamInvalidRequest()
   {
-    $io = new Google_IO_Stream($this->getClient());
+    $io = new Postman_Google_IO_Stream($this->getClient());
     $this->invalidRequest($io);
   }
 
@@ -79,7 +79,7 @@ class IoTest extends BaseTest
     if (!function_exists('curl_version')) {
       $this->markTestSkipped('cURL not present');
     }
-    $io = new Google_IO_Curl($this->getClient());
+    $io = new Postman_Google_IO_Curl($this->getClient());
     $this->timeoutChecker($io);
   }
 
@@ -88,7 +88,7 @@ class IoTest extends BaseTest
     if (!function_exists('curl_version')) {
       $this->markTestSkipped('cURL not present');
     }
-    $io = new Google_IO_Curl($this->getClient());
+    $io = new Postman_Google_IO_Curl($this->getClient());
     $this->responseChecker($io);
   }
 
@@ -98,7 +98,7 @@ class IoTest extends BaseTest
       $this->markTestSkipped('cURL not present');
     }
     $client = $this->getClient();
-    $io = new Google_IO_Curl($client);
+    $io = new Postman_Google_IO_Curl($client);
     $this->processEntityRequest($io, $client);
   }
 
@@ -108,7 +108,7 @@ class IoTest extends BaseTest
       $this->markTestSkipped('cURL not present');
     }
     $client = $this->getClient();
-    $io = new Google_IO_Curl($client);
+    $io = new Postman_Google_IO_Curl($client);
     $this->cacheHit($io, $client);
   }
 
@@ -118,19 +118,19 @@ class IoTest extends BaseTest
       $this->markTestSkipped('cURL not present');
     }
     $client = $this->getClient();
-    $io = new Google_IO_Curl($client);
+    $io = new Postman_Google_IO_Curl($client);
     $this->authCache($io, $client);
   }
 
   /**
-   * @expectedException Google_IO_Exception
+   * @expectedException Postman_Google_IO_Exception
    */
   public function testCurlInvalidRequest()
   {
     if (!function_exists('curl_version')) {
       $this->markTestSkipped('cURL not present');
     }
-    $io = new Google_IO_Curl($this->getClient());
+    $io = new Postman_Google_IO_Curl($this->getClient());
     $this->invalidRequest($io);
   }
 
@@ -146,7 +146,7 @@ class IoTest extends BaseTest
   public function invalidRequest($io)
   {
     $url = "http://localhost:1";
-    $req = new Google_Http_Request($url, "GET");
+    $req = new Postman_Google_Http_Request($url, "GET");
     $io->makeRequest($req);
   }
 
@@ -155,7 +155,7 @@ class IoTest extends BaseTest
     $url = "http://www.googleapis.com";
     // Create a cacheable request/response.
     // Should not be revalidated.
-    $cacheReq = new Google_Http_Request($url, "GET");
+    $cacheReq = new Postman_Google_Http_Request($url, "GET");
     $cacheReq->setRequestHeaders(
         array("Accept" => "*/*",)
     );
@@ -175,7 +175,7 @@ class IoTest extends BaseTest
     $io->setCachedRequest($cacheReq);
 
     // Execute the same mock request, and expect a cache hit.
-    $res = $io->makeRequest(new Google_Http_Request($url, "GET"));
+    $res = $io->makeRequest(new Postman_Google_Http_Request($url, "GET"));
     $this->assertEquals("{\"a\": \"foo\"}", $res->getResponseBody());
     $this->assertEquals(200, $res->getResponseHttpCode());
   }
@@ -185,7 +185,7 @@ class IoTest extends BaseTest
     $url = "http://www.googleapis.com/protected/resource";
 
     // Create a cacheable request/response, but it should not be cached.
-    $cacheReq = new Google_Http_Request($url, "GET");
+    $cacheReq = new Postman_Google_Http_Request($url, "GET");
     $cacheReq->setRequestHeaders(
         array(
             "Accept" => "*/*",
@@ -213,7 +213,7 @@ class IoTest extends BaseTest
     $hasQuirk = false;
     if (function_exists('curl_version')) {
       $curlVer = curl_version();
-      $hasQuirk = $curlVer['version_number'] < Google_IO_Curl::NO_QUIRK_VERSION;
+      $hasQuirk = $curlVer['version_number'] < Postman_Google_IO_Curl::NO_QUIRK_VERSION;
     }
 
     $rawHeaders = "HTTP/1.1 200 OK\r\n"
@@ -251,7 +251,7 @@ class IoTest extends BaseTest
       $headersSize = strlen($rawHeaders);
       // If we have a broken cURL version we have to simulate it to get the
       // correct test result.
-      if ($hasQuirk && get_class($io) === 'Google_IO_Curl') {
+      if ($hasQuirk && get_class($io) === 'Postman_Google_IO_Curl') {
           $headersSize -= strlen($established_header);
       }
       $rawBody = "{}";
@@ -265,7 +265,7 @@ class IoTest extends BaseTest
 
   public function processEntityRequest($io, $client)
   {
-    $req = new Google_Http_Request("http://localhost.com");
+    $req = new Postman_Google_Http_Request("http://localhost.com");
     $req->setRequestMethod("POST");
 
     // Verify that the content-length is calculated.
@@ -288,7 +288,7 @@ class IoTest extends BaseTest
     $io->processEntityRequest($req);
     $this->assertEquals(7, $req->getRequestHeader("content-length"));
     $this->assertEquals(
-        Google_IO_Abstract::FORM_URLENCODED,
+        Postman_Google_IO_Abstract::FORM_URLENCODED,
         $req->getRequestHeader("content-type")
     );
     $this->assertEquals("a=1&b=2", $req->getPostBody());

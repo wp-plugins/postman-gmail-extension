@@ -35,7 +35,7 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
   through a login flow. To do this we need some
   information from our API console project.
  ************************************************/
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
 $client->setRedirectUri($redirect_uri);
@@ -47,7 +47,7 @@ $client->addScope("https://www.googleapis.com/auth/urlshortener");
   for the required scopes, and uses that when
   generating the authentication URL later.
  ************************************************/
-$service = new Google_Service_Urlshortener($client);
+$service = new Postman_Google_Service_Urlshortener($client);
 
 /************************************************
   If we're logging out we just need to clear our
@@ -91,7 +91,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   refreshed if the application has offline access.
  ************************************************/
 if ($client->getAccessToken() && isset($_GET['url'])) {
-  $url = new Google_Service_Urlshortener_Url();
+  $url = new Postman_Google_Service_Urlshortener_Url();
   $url->longUrl = $_GET['url'];
   $short = $service->url->insert($url);
   $_SESSION['access_token'] = $client->getAccessToken();

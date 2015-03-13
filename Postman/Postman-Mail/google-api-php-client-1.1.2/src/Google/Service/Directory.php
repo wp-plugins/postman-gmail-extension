@@ -30,7 +30,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Directory extends Google_Service
+class Postman_Google_Service_Directory extends Postman_Google_Service
 {
   /** View and manage your Chrome OS devices' metadata. */
   const ADMIN_DIRECTORY_DEVICE_CHROMEOS =
@@ -110,16 +110,16 @@ class Google_Service_Directory extends Google_Service
   /**
    * Constructs the internal representation of the Directory service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'admin/directory/v1/';
     $this->version = 'directory_v1';
     $this->serviceName = 'admin';
 
-    $this->asps = new Google_Service_Directory_Asps_Resource(
+    $this->asps = new Postman_Google_Service_Directory_Asps_Resource(
         $this,
         $this->serviceName,
         'asps',
@@ -169,7 +169,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Directory_Channels_Resource(
+    $this->channels = new Postman_Google_Service_Directory_Channels_Resource(
         $this,
         $this->serviceName,
         'channels',
@@ -183,7 +183,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->chromeosdevices = new Google_Service_Directory_Chromeosdevices_Resource(
+    $this->chromeosdevices = new Postman_Google_Service_Directory_Chromeosdevices_Resource(
         $this,
         $this->serviceName,
         'chromeosdevices',
@@ -284,7 +284,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->groups = new Google_Service_Directory_Groups_Resource(
+    $this->groups = new Postman_Google_Service_Directory_Groups_Resource(
         $this,
         $this->serviceName,
         'groups',
@@ -363,7 +363,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->groups_aliases = new Google_Service_Directory_GroupsAliases_Resource(
+    $this->groups_aliases = new Postman_Google_Service_Directory_GroupsAliases_Resource(
         $this,
         $this->serviceName,
         'aliases',
@@ -408,7 +408,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->members = new Google_Service_Directory_Members_Resource(
+    $this->members = new Postman_Google_Service_Directory_Members_Resource(
         $this,
         $this->serviceName,
         'members',
@@ -510,7 +510,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->mobiledevices = new Google_Service_Directory_Mobiledevices_Resource(
+    $this->mobiledevices = new Postman_Google_Service_Directory_Mobiledevices_Resource(
         $this,
         $this->serviceName,
         'mobiledevices',
@@ -603,7 +603,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->notifications = new Google_Service_Directory_Notifications_Resource(
+    $this->notifications = new Postman_Google_Service_Directory_Notifications_Resource(
         $this,
         $this->serviceName,
         'notifications',
@@ -695,7 +695,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->orgunits = new Google_Service_Directory_Orgunits_Resource(
+    $this->orgunits = new Postman_Google_Service_Directory_Orgunits_Resource(
         $this,
         $this->serviceName,
         'orgunits',
@@ -797,7 +797,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->schemas = new Google_Service_Directory_Schemas_Resource(
+    $this->schemas = new Postman_Google_Service_Directory_Schemas_Resource(
         $this,
         $this->serviceName,
         'schemas',
@@ -887,7 +887,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->tokens = new Google_Service_Directory_Tokens_Resource(
+    $this->tokens = new Postman_Google_Service_Directory_Tokens_Resource(
         $this,
         $this->serviceName,
         'tokens',
@@ -937,7 +937,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users = new Google_Service_Directory_Users_Resource(
+    $this->users = new Postman_Google_Service_Directory_Users_Resource(
         $this,
         $this->serviceName,
         'users',
@@ -1129,7 +1129,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users_aliases = new Google_Service_Directory_UsersAliases_Resource(
+    $this->users_aliases = new Postman_Google_Service_Directory_UsersAliases_Resource(
         $this,
         $this->serviceName,
         'aliases',
@@ -1192,7 +1192,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users_photos = new Google_Service_Directory_UsersPhotos_Resource(
+    $this->users_photos = new Postman_Google_Service_Directory_UsersPhotos_Resource(
         $this,
         $this->serviceName,
         'photos',
@@ -1242,7 +1242,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->verificationCodes = new Google_Service_Directory_VerificationCodes_Resource(
+    $this->verificationCodes = new Postman_Google_Service_Directory_VerificationCodes_Resource(
         $this,
         $this->serviceName,
         'verificationCodes',
@@ -1290,11 +1290,11 @@ class Google_Service_Directory extends Google_Service
  * The "asps" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $asps = $adminService->asps;
  *  </code>
  */
-class Google_Service_Directory_Asps_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Asps_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1319,13 +1319,13 @@ class Google_Service_Directory_Asps_Resource extends Google_Service_Resource
    * be the user's primary email address, alias email address, or unique user ID.
    * @param int $codeId The unique ID of the ASP.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Asp
+   * @return Postman_Google_Service_Directory_Asp
    */
   public function get($userKey, $codeId, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'codeId' => $codeId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Asp");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Asp");
   }
 
   /**
@@ -1334,13 +1334,13 @@ class Google_Service_Directory_Asps_Resource extends Google_Service_Resource
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Asps
+   * @return Postman_Google_Service_Directory_Asps
    */
   public function listAsps($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Asps");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Asps");
   }
 }
 
@@ -1348,20 +1348,20 @@ class Google_Service_Directory_Asps_Resource extends Google_Service_Resource
  * The "channels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $channels = $adminService->channels;
  *  </code>
  */
-class Google_Service_Directory_Channels_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Channels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Stop watching resources through this channel (channels.stop)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    */
-  public function stop(Google_Service_Directory_Channel $postBody, $optParams = array())
+  public function stop(Postman_Google_Service_Directory_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1373,11 +1373,11 @@ class Google_Service_Directory_Channels_Resource extends Google_Service_Resource
  * The "chromeosdevices" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $chromeosdevices = $adminService->chromeosdevices;
  *  </code>
  */
-class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Chromeosdevices_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1389,13 +1389,13 @@ class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_R
    *
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
-   * @return Google_Service_Directory_ChromeOsDevice
+   * @return Postman_Google_Service_Directory_ChromeOsDevice
    */
   public function get($customerId, $deviceId, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'deviceId' => $deviceId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_ChromeOsDevice");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_ChromeOsDevice");
   }
 
   /**
@@ -1414,13 +1414,13 @@ class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_R
    * descending order. Only of use when orderBy is also used
    * @opt_param string query Search string in the format given at
    * http://support.google.com/chromeos/a/bin/answer.py?hl=en=1698333
-   * @return Google_Service_Directory_ChromeOsDevices
+   * @return Postman_Google_Service_Directory_ChromeOsDevices
    */
   public function listChromeosdevices($customerId, $optParams = array())
   {
     $params = array('customerId' => $customerId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_ChromeOsDevices");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_ChromeOsDevices");
   }
 
   /**
@@ -1429,18 +1429,18 @@ class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_R
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $deviceId Immutable id of Chrome OS Device
-   * @param Google_ChromeOsDevice $postBody
+   * @param Postman_Google_ChromeOsDevice $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
-   * @return Google_Service_Directory_ChromeOsDevice
+   * @return Postman_Google_Service_Directory_ChromeOsDevice
    */
-  public function patch($customerId, $deviceId, Google_Service_Directory_ChromeOsDevice $postBody, $optParams = array())
+  public function patch($customerId, $deviceId, Postman_Google_Service_Directory_ChromeOsDevice $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'deviceId' => $deviceId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_ChromeOsDevice");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_ChromeOsDevice");
   }
 
   /**
@@ -1448,18 +1448,18 @@ class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_R
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $deviceId Immutable id of Chrome OS Device
-   * @param Google_ChromeOsDevice $postBody
+   * @param Postman_Google_ChromeOsDevice $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
-   * @return Google_Service_Directory_ChromeOsDevice
+   * @return Postman_Google_Service_Directory_ChromeOsDevice
    */
-  public function update($customerId, $deviceId, Google_Service_Directory_ChromeOsDevice $postBody, $optParams = array())
+  public function update($customerId, $deviceId, Postman_Google_Service_Directory_ChromeOsDevice $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'deviceId' => $deviceId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_ChromeOsDevice");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_ChromeOsDevice");
   }
 }
 
@@ -1467,11 +1467,11 @@ class Google_Service_Directory_Chromeosdevices_Resource extends Google_Service_R
  * The "groups" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $groups = $adminService->groups;
  *  </code>
  */
-class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Groups_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1492,27 +1492,27 @@ class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
    *
    * @param string $groupKey Email or immutable Id of the group
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Group
+   * @return Postman_Google_Service_Directory_Group
    */
   public function get($groupKey, $optParams = array())
   {
     $params = array('groupKey' => $groupKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Group");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Group");
   }
 
   /**
    * Create Group (groups.insert)
    *
-   * @param Google_Group $postBody
+   * @param Postman_Google_Group $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Group
+   * @return Postman_Google_Service_Directory_Group
    */
-  public function insert(Google_Service_Directory_Group $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Directory_Group $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_Group");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_Group");
   }
 
   /**
@@ -1531,13 +1531,13 @@ class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
    * @opt_param string userKey Email or immutable Id of the user if only those
    * groups are to be listed, the given user is a member of. If Id, it should
    * match with id of user object
-   * @return Google_Service_Directory_Groups
+   * @return Postman_Google_Service_Directory_Groups
    */
   public function listGroups($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Groups");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Groups");
   }
 
   /**
@@ -1545,15 +1545,15 @@ class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
    *
    * @param string $groupKey Email or immutable Id of the group. If Id, it should
    * match with id of group object
-   * @param Google_Group $postBody
+   * @param Postman_Google_Group $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Group
+   * @return Postman_Google_Service_Directory_Group
    */
-  public function patch($groupKey, Google_Service_Directory_Group $postBody, $optParams = array())
+  public function patch($groupKey, Postman_Google_Service_Directory_Group $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_Group");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_Group");
   }
 
   /**
@@ -1561,15 +1561,15 @@ class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
    *
    * @param string $groupKey Email or immutable Id of the group. If Id, it should
    * match with id of group object
-   * @param Google_Group $postBody
+   * @param Postman_Google_Group $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Group
+   * @return Postman_Google_Service_Directory_Group
    */
-  public function update($groupKey, Google_Service_Directory_Group $postBody, $optParams = array())
+  public function update($groupKey, Postman_Google_Service_Directory_Group $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_Group");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_Group");
   }
 }
 
@@ -1577,11 +1577,11 @@ class Google_Service_Directory_Groups_Resource extends Google_Service_Resource
  * The "aliases" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $aliases = $adminService->aliases;
  *  </code>
  */
-class Google_Service_Directory_GroupsAliases_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_GroupsAliases_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1602,15 +1602,15 @@ class Google_Service_Directory_GroupsAliases_Resource extends Google_Service_Res
    * Add a alias for the group (aliases.insert)
    *
    * @param string $groupKey Email or immutable Id of the group
-   * @param Google_Alias $postBody
+   * @param Postman_Google_Alias $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Alias
+   * @return Postman_Google_Service_Directory_Alias
    */
-  public function insert($groupKey, Google_Service_Directory_Alias $postBody, $optParams = array())
+  public function insert($groupKey, Postman_Google_Service_Directory_Alias $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_Alias");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_Alias");
   }
 
   /**
@@ -1618,13 +1618,13 @@ class Google_Service_Directory_GroupsAliases_Resource extends Google_Service_Res
    *
    * @param string $groupKey Email or immutable Id of the group
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Aliases
+   * @return Postman_Google_Service_Directory_Aliases
    */
   public function listGroupsAliases($groupKey, $optParams = array())
   {
     $params = array('groupKey' => $groupKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Aliases");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Aliases");
   }
 }
 
@@ -1632,11 +1632,11 @@ class Google_Service_Directory_GroupsAliases_Resource extends Google_Service_Res
  * The "members" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $members = $adminService->members;
  *  </code>
  */
-class Google_Service_Directory_Members_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Members_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1659,28 +1659,28 @@ class Google_Service_Directory_Members_Resource extends Google_Service_Resource
    * @param string $groupKey Email or immutable Id of the group
    * @param string $memberKey Email or immutable Id of the member
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Member
+   * @return Postman_Google_Service_Directory_Member
    */
   public function get($groupKey, $memberKey, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'memberKey' => $memberKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Member");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Member");
   }
 
   /**
    * Add user to the specified group. (members.insert)
    *
    * @param string $groupKey Email or immutable Id of the group
-   * @param Google_Member $postBody
+   * @param Postman_Google_Member $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Member
+   * @return Postman_Google_Service_Directory_Member
    */
-  public function insert($groupKey, Google_Service_Directory_Member $postBody, $optParams = array())
+  public function insert($groupKey, Postman_Google_Service_Directory_Member $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_Member");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_Member");
   }
 
   /**
@@ -1693,13 +1693,13 @@ class Google_Service_Directory_Members_Resource extends Google_Service_Resource
    * @opt_param string roles Comma separated role values to filter list results
    * on.
    * @opt_param int maxResults Maximum number of results to return. Default is 200
-   * @return Google_Service_Directory_Members
+   * @return Postman_Google_Service_Directory_Members
    */
   public function listMembers($groupKey, $optParams = array())
   {
     $params = array('groupKey' => $groupKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Members");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Members");
   }
 
   /**
@@ -1710,15 +1710,15 @@ class Google_Service_Directory_Members_Resource extends Google_Service_Resource
    * match with id of group object
    * @param string $memberKey Email or immutable Id of the user. If Id, it should
    * match with id of member object
-   * @param Google_Member $postBody
+   * @param Postman_Google_Member $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Member
+   * @return Postman_Google_Service_Directory_Member
    */
-  public function patch($groupKey, $memberKey, Google_Service_Directory_Member $postBody, $optParams = array())
+  public function patch($groupKey, $memberKey, Postman_Google_Service_Directory_Member $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'memberKey' => $memberKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_Member");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_Member");
   }
 
   /**
@@ -1728,15 +1728,15 @@ class Google_Service_Directory_Members_Resource extends Google_Service_Resource
    * match with id of group object
    * @param string $memberKey Email or immutable Id of the user. If Id, it should
    * match with id of member object
-   * @param Google_Member $postBody
+   * @param Postman_Google_Member $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Member
+   * @return Postman_Google_Service_Directory_Member
    */
-  public function update($groupKey, $memberKey, Google_Service_Directory_Member $postBody, $optParams = array())
+  public function update($groupKey, $memberKey, Postman_Google_Service_Directory_Member $postBody, $optParams = array())
   {
     $params = array('groupKey' => $groupKey, 'memberKey' => $memberKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_Member");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_Member");
   }
 }
 
@@ -1744,11 +1744,11 @@ class Google_Service_Directory_Members_Resource extends Google_Service_Resource
  * The "mobiledevices" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $mobiledevices = $adminService->mobiledevices;
  *  </code>
  */
-class Google_Service_Directory_Mobiledevices_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Mobiledevices_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1756,10 +1756,10 @@ class Google_Service_Directory_Mobiledevices_Resource extends Google_Service_Res
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $resourceId Immutable id of Mobile Device
-   * @param Google_MobileDeviceAction $postBody
+   * @param Postman_Google_MobileDeviceAction $postBody
    * @param array $optParams Optional parameters.
    */
-  public function action($customerId, $resourceId, Google_Service_Directory_MobileDeviceAction $postBody, $optParams = array())
+  public function action($customerId, $resourceId, Postman_Google_Service_Directory_MobileDeviceAction $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'resourceId' => $resourceId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1789,13 +1789,13 @@ class Google_Service_Directory_Mobiledevices_Resource extends Google_Service_Res
    *
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
-   * @return Google_Service_Directory_MobileDevice
+   * @return Postman_Google_Service_Directory_MobileDevice
    */
   public function get($customerId, $resourceId, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'resourceId' => $resourceId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_MobileDevice");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_MobileDevice");
   }
 
   /**
@@ -1814,13 +1814,13 @@ class Google_Service_Directory_Mobiledevices_Resource extends Google_Service_Res
    * descending order. Only of use when orderBy is also used
    * @opt_param string query Search string in the format given at
    * http://support.google.com/a/bin/answer.py?hl=en=1408863#search
-   * @return Google_Service_Directory_MobileDevices
+   * @return Postman_Google_Service_Directory_MobileDevices
    */
   public function listMobiledevices($customerId, $optParams = array())
   {
     $params = array('customerId' => $customerId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_MobileDevices");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_MobileDevices");
   }
 }
 
@@ -1828,11 +1828,11 @@ class Google_Service_Directory_Mobiledevices_Resource extends Google_Service_Res
  * The "notifications" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $notifications = $adminService->notifications;
  *  </code>
  */
-class Google_Service_Directory_Notifications_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Notifications_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1857,13 +1857,13 @@ class Google_Service_Directory_Notifications_Resource extends Google_Service_Res
    * customerId is also returned as part of the Users resource.
    * @param string $notificationId The unique ID of the notification.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Notification
+   * @return Postman_Google_Service_Directory_Notification
    */
   public function get($customer, $notificationId, $optParams = array())
   {
     $params = array('customer' => $customer, 'notificationId' => $notificationId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Notification");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Notification");
   }
 
   /**
@@ -1878,13 +1878,13 @@ class Google_Service_Directory_Notifications_Resource extends Google_Service_Res
    * page. The default is 100.
    * @opt_param string language The ISO 639-1 code of the language notifications
    * are returned in. The default is English (en).
-   * @return Google_Service_Directory_Notifications
+   * @return Postman_Google_Service_Directory_Notifications
    */
   public function listNotifications($customer, $optParams = array())
   {
     $params = array('customer' => $customer);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Notifications");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Notifications");
   }
 
   /**
@@ -1893,15 +1893,15 @@ class Google_Service_Directory_Notifications_Resource extends Google_Service_Res
    *
    * @param string $customer The unique ID for the customer's Google account.
    * @param string $notificationId The unique ID of the notification.
-   * @param Google_Notification $postBody
+   * @param Postman_Google_Notification $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Notification
+   * @return Postman_Google_Service_Directory_Notification
    */
-  public function patch($customer, $notificationId, Google_Service_Directory_Notification $postBody, $optParams = array())
+  public function patch($customer, $notificationId, Postman_Google_Service_Directory_Notification $postBody, $optParams = array())
   {
     $params = array('customer' => $customer, 'notificationId' => $notificationId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_Notification");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_Notification");
   }
 
   /**
@@ -1909,15 +1909,15 @@ class Google_Service_Directory_Notifications_Resource extends Google_Service_Res
    *
    * @param string $customer The unique ID for the customer's Google account.
    * @param string $notificationId The unique ID of the notification.
-   * @param Google_Notification $postBody
+   * @param Postman_Google_Notification $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Notification
+   * @return Postman_Google_Service_Directory_Notification
    */
-  public function update($customer, $notificationId, Google_Service_Directory_Notification $postBody, $optParams = array())
+  public function update($customer, $notificationId, Postman_Google_Service_Directory_Notification $postBody, $optParams = array())
   {
     $params = array('customer' => $customer, 'notificationId' => $notificationId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_Notification");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_Notification");
   }
 }
 
@@ -1925,11 +1925,11 @@ class Google_Service_Directory_Notifications_Resource extends Google_Service_Res
  * The "orgunits" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $orgunits = $adminService->orgunits;
  *  </code>
  */
-class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Orgunits_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1952,28 +1952,28 @@ class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $orgUnitPath Full path of the organization unit
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_OrgUnit
+   * @return Postman_Google_Service_Directory_OrgUnit
    */
   public function get($customerId, $orgUnitPath, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'orgUnitPath' => $orgUnitPath);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_OrgUnit");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_OrgUnit");
   }
 
   /**
    * Add Organization Unit (orgunits.insert)
    *
    * @param string $customerId Immutable id of the Google Apps account
-   * @param Google_OrgUnit $postBody
+   * @param Postman_Google_OrgUnit $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_OrgUnit
+   * @return Postman_Google_Service_Directory_OrgUnit
    */
-  public function insert($customerId, Google_Service_Directory_OrgUnit $postBody, $optParams = array())
+  public function insert($customerId, Postman_Google_Service_Directory_OrgUnit $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_OrgUnit");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_OrgUnit");
   }
 
   /**
@@ -1985,13 +1985,13 @@ class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
    * @opt_param string type Whether to return all sub-organizations or just
    * immediate children
    * @opt_param string orgUnitPath the URL-encoded organization unit
-   * @return Google_Service_Directory_OrgUnits
+   * @return Postman_Google_Service_Directory_OrgUnits
    */
   public function listOrgunits($customerId, $optParams = array())
   {
     $params = array('customerId' => $customerId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_OrgUnits");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_OrgUnits");
   }
 
   /**
@@ -2000,15 +2000,15 @@ class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $orgUnitPath Full path of the organization unit
-   * @param Google_OrgUnit $postBody
+   * @param Postman_Google_OrgUnit $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_OrgUnit
+   * @return Postman_Google_Service_Directory_OrgUnit
    */
-  public function patch($customerId, $orgUnitPath, Google_Service_Directory_OrgUnit $postBody, $optParams = array())
+  public function patch($customerId, $orgUnitPath, Postman_Google_Service_Directory_OrgUnit $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'orgUnitPath' => $orgUnitPath, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_OrgUnit");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_OrgUnit");
   }
 
   /**
@@ -2016,15 +2016,15 @@ class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $orgUnitPath Full path of the organization unit
-   * @param Google_OrgUnit $postBody
+   * @param Postman_Google_OrgUnit $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_OrgUnit
+   * @return Postman_Google_Service_Directory_OrgUnit
    */
-  public function update($customerId, $orgUnitPath, Google_Service_Directory_OrgUnit $postBody, $optParams = array())
+  public function update($customerId, $orgUnitPath, Postman_Google_Service_Directory_OrgUnit $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'orgUnitPath' => $orgUnitPath, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_OrgUnit");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_OrgUnit");
   }
 }
 
@@ -2032,11 +2032,11 @@ class Google_Service_Directory_Orgunits_Resource extends Google_Service_Resource
  * The "schemas" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $schemas = $adminService->schemas;
  *  </code>
  */
-class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Schemas_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2059,28 +2059,28 @@ class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $schemaKey Name or immutable Id of the schema
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Schema
+   * @return Postman_Google_Service_Directory_Schema
    */
   public function get($customerId, $schemaKey, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'schemaKey' => $schemaKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Schema");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Schema");
   }
 
   /**
    * Create schema. (schemas.insert)
    *
    * @param string $customerId Immutable id of the Google Apps account
-   * @param Google_Schema $postBody
+   * @param Postman_Google_Schema $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Schema
+   * @return Postman_Google_Service_Directory_Schema
    */
-  public function insert($customerId, Google_Service_Directory_Schema $postBody, $optParams = array())
+  public function insert($customerId, Postman_Google_Service_Directory_Schema $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_Schema");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_Schema");
   }
 
   /**
@@ -2088,13 +2088,13 @@ class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Schemas
+   * @return Postman_Google_Service_Directory_Schemas
    */
   public function listSchemas($customerId, $optParams = array())
   {
     $params = array('customerId' => $customerId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Schemas");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Schemas");
   }
 
   /**
@@ -2102,15 +2102,15 @@ class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $schemaKey Name or immutable Id of the schema.
-   * @param Google_Schema $postBody
+   * @param Postman_Google_Schema $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Schema
+   * @return Postman_Google_Service_Directory_Schema
    */
-  public function patch($customerId, $schemaKey, Google_Service_Directory_Schema $postBody, $optParams = array())
+  public function patch($customerId, $schemaKey, Postman_Google_Service_Directory_Schema $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'schemaKey' => $schemaKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_Schema");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_Schema");
   }
 
   /**
@@ -2118,15 +2118,15 @@ class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
    *
    * @param string $customerId Immutable id of the Google Apps account
    * @param string $schemaKey Name or immutable Id of the schema.
-   * @param Google_Schema $postBody
+   * @param Postman_Google_Schema $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Schema
+   * @return Postman_Google_Service_Directory_Schema
    */
-  public function update($customerId, $schemaKey, Google_Service_Directory_Schema $postBody, $optParams = array())
+  public function update($customerId, $schemaKey, Postman_Google_Service_Directory_Schema $postBody, $optParams = array())
   {
     $params = array('customerId' => $customerId, 'schemaKey' => $schemaKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_Schema");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_Schema");
   }
 }
 
@@ -2134,11 +2134,11 @@ class Google_Service_Directory_Schemas_Resource extends Google_Service_Resource
  * The "tokens" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $tokens = $adminService->tokens;
  *  </code>
  */
-class Google_Service_Directory_Tokens_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Tokens_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2165,13 +2165,13 @@ class Google_Service_Directory_Tokens_Resource extends Google_Service_Resource
    * @param string $clientId The Client ID of the application the token is issued
    * to.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Token
+   * @return Postman_Google_Service_Directory_Token
    */
   public function get($userKey, $clientId, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'clientId' => $clientId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_Token");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_Token");
   }
 
   /**
@@ -2181,13 +2181,13 @@ class Google_Service_Directory_Tokens_Resource extends Google_Service_Resource
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Tokens
+   * @return Postman_Google_Service_Directory_Tokens
    */
   public function listTokens($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Tokens");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Tokens");
   }
 }
 
@@ -2195,11 +2195,11 @@ class Google_Service_Directory_Tokens_Resource extends Google_Service_Resource
  * The "users" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $users = $adminService->users;
  *  </code>
  */
-class Google_Service_Directory_Users_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_Users_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2227,27 +2227,27 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
    * fields from these schemas are fetched. This should only be set when
    * projection=custom.
    * @opt_param string projection What subset of fields to fetch for this user.
-   * @return Google_Service_Directory_User
+   * @return Postman_Google_Service_Directory_User
    */
   public function get($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_User");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_User");
   }
 
   /**
    * create user. (users.insert)
    *
-   * @param Google_User $postBody
+   * @param Postman_Google_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_User
+   * @return Postman_Google_Service_Directory_User
    */
-  public function insert(Google_Service_Directory_User $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Directory_User $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_User");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_User");
   }
 
   /**
@@ -2281,23 +2281,23 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
    * view of the user.
    * @opt_param string event Event on which subscription is intended (if
    * subscribing)
-   * @return Google_Service_Directory_Users
+   * @return Postman_Google_Service_Directory_Users
    */
   public function listUsers($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Users");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Users");
   }
 
   /**
    * change admin status of a user (users.makeAdmin)
    *
    * @param string $userKey Email or immutable Id of the user as admin
-   * @param Google_UserMakeAdmin $postBody
+   * @param Postman_Google_UserMakeAdmin $postBody
    * @param array $optParams Optional parameters.
    */
-  public function makeAdmin($userKey, Google_Service_Directory_UserMakeAdmin $postBody, $optParams = array())
+  public function makeAdmin($userKey, Postman_Google_Service_Directory_UserMakeAdmin $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -2309,25 +2309,25 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
    *
    * @param string $userKey Email or immutable Id of the user. If Id, it should
    * match with id of user object
-   * @param Google_User $postBody
+   * @param Postman_Google_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_User
+   * @return Postman_Google_Service_Directory_User
    */
-  public function patch($userKey, Google_Service_Directory_User $postBody, $optParams = array())
+  public function patch($userKey, Postman_Google_Service_Directory_User $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_User");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_User");
   }
 
   /**
    * Undelete a deleted user (users.undelete)
    *
    * @param string $userKey The immutable id of the user
-   * @param Google_UserUndelete $postBody
+   * @param Postman_Google_UserUndelete $postBody
    * @param array $optParams Optional parameters.
    */
-  public function undelete($userKey, Google_Service_Directory_UserUndelete $postBody, $optParams = array())
+  public function undelete($userKey, Postman_Google_Service_Directory_UserUndelete $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -2339,21 +2339,21 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
    *
    * @param string $userKey Email or immutable Id of the user. If Id, it should
    * match with id of user object
-   * @param Google_User $postBody
+   * @param Postman_Google_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_User
+   * @return Postman_Google_Service_Directory_User
    */
-  public function update($userKey, Google_Service_Directory_User $postBody, $optParams = array())
+  public function update($userKey, Postman_Google_Service_Directory_User $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_User");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_User");
   }
 
   /**
    * Watch for changes in users list (users.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customer Immutable id of the Google Apps account. In case
@@ -2381,13 +2381,13 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
    * view of the user.
    * @opt_param string event Event on which subscription is intended (if
    * subscribing)
-   * @return Google_Service_Directory_Channel
+   * @return Postman_Google_Service_Directory_Channel
    */
-  public function watch(Google_Service_Directory_Channel $postBody, $optParams = array())
+  public function watch(Postman_Google_Service_Directory_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Directory_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Directory_Channel");
   }
 }
 
@@ -2395,11 +2395,11 @@ class Google_Service_Directory_Users_Resource extends Google_Service_Resource
  * The "aliases" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $aliases = $adminService->aliases;
  *  </code>
  */
-class Google_Service_Directory_UsersAliases_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_UsersAliases_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2420,15 +2420,15 @@ class Google_Service_Directory_UsersAliases_Resource extends Google_Service_Reso
    * Add a alias for the user (aliases.insert)
    *
    * @param string $userKey Email or immutable Id of the user
-   * @param Google_Alias $postBody
+   * @param Postman_Google_Alias $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_Alias
+   * @return Postman_Google_Service_Directory_Alias
    */
-  public function insert($userKey, Google_Service_Directory_Alias $postBody, $optParams = array())
+  public function insert($userKey, Postman_Google_Service_Directory_Alias $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Directory_Alias");
+    return $this->call('insert', array($params), "Postman_Google_Service_Directory_Alias");
   }
 
   /**
@@ -2439,42 +2439,42 @@ class Google_Service_Directory_UsersAliases_Resource extends Google_Service_Reso
    *
    * @opt_param string event Event on which subscription is intended (if
    * subscribing)
-   * @return Google_Service_Directory_Aliases
+   * @return Postman_Google_Service_Directory_Aliases
    */
   public function listUsersAliases($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_Aliases");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_Aliases");
   }
 
   /**
    * Watch for changes in user aliases list (aliases.watch)
    *
    * @param string $userKey Email or immutable Id of the user
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string event Event on which subscription is intended (if
    * subscribing)
-   * @return Google_Service_Directory_Channel
+   * @return Postman_Google_Service_Directory_Channel
    */
-  public function watch($userKey, Google_Service_Directory_Channel $postBody, $optParams = array())
+  public function watch($userKey, Postman_Google_Service_Directory_Channel $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Directory_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Directory_Channel");
   }
 }
 /**
  * The "photos" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $photos = $adminService->photos;
  *  </code>
  */
-class Google_Service_Directory_UsersPhotos_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_UsersPhotos_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2495,13 +2495,13 @@ class Google_Service_Directory_UsersPhotos_Resource extends Google_Service_Resou
    *
    * @param string $userKey Email or immutable Id of the user
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_UserPhoto
+   * @return Postman_Google_Service_Directory_UserPhoto
    */
   public function get($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Directory_UserPhoto");
+    return $this->call('get', array($params), "Postman_Google_Service_Directory_UserPhoto");
   }
 
   /**
@@ -2509,30 +2509,30 @@ class Google_Service_Directory_UsersPhotos_Resource extends Google_Service_Resou
    * (photos.patch)
    *
    * @param string $userKey Email or immutable Id of the user
-   * @param Google_UserPhoto $postBody
+   * @param Postman_Google_UserPhoto $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_UserPhoto
+   * @return Postman_Google_Service_Directory_UserPhoto
    */
-  public function patch($userKey, Google_Service_Directory_UserPhoto $postBody, $optParams = array())
+  public function patch($userKey, Postman_Google_Service_Directory_UserPhoto $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Directory_UserPhoto");
+    return $this->call('patch', array($params), "Postman_Google_Service_Directory_UserPhoto");
   }
 
   /**
    * Add a photo for the user (photos.update)
    *
    * @param string $userKey Email or immutable Id of the user
-   * @param Google_UserPhoto $postBody
+   * @param Postman_Google_UserPhoto $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_UserPhoto
+   * @return Postman_Google_Service_Directory_UserPhoto
    */
-  public function update($userKey, Google_Service_Directory_UserPhoto $postBody, $optParams = array())
+  public function update($userKey, Postman_Google_Service_Directory_UserPhoto $postBody, $optParams = array())
   {
     $params = array('userKey' => $userKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Directory_UserPhoto");
+    return $this->call('update', array($params), "Postman_Google_Service_Directory_UserPhoto");
   }
 }
 
@@ -2540,11 +2540,11 @@ class Google_Service_Directory_UsersPhotos_Resource extends Google_Service_Resou
  * The "verificationCodes" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adminService = new Google_Service_Directory(...);
+ *   $adminService = new Postman_Google_Service_Directory(...);
  *   $verificationCodes = $adminService->verificationCodes;
  *  </code>
  */
-class Google_Service_Directory_VerificationCodes_Resource extends Google_Service_Resource
+class Postman_Google_Service_Directory_VerificationCodes_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2582,20 +2582,20 @@ class Google_Service_Directory_VerificationCodes_Resource extends Google_Service
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Directory_VerificationCodes
+   * @return Postman_Google_Service_Directory_VerificationCodes
    */
   public function listVerificationCodes($userKey, $optParams = array())
   {
     $params = array('userKey' => $userKey);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Directory_VerificationCodes");
+    return $this->call('list', array($params), "Postman_Google_Service_Directory_VerificationCodes");
   }
 }
 
 
 
 
-class Google_Service_Directory_Alias extends Google_Model
+class Postman_Google_Service_Directory_Alias extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2648,12 +2648,12 @@ class Google_Service_Directory_Alias extends Google_Model
   }
 }
 
-class Google_Service_Directory_Aliases extends Google_Collection
+class Postman_Google_Service_Directory_Aliases extends Postman_Google_Collection
 {
   protected $collection_key = 'aliases';
   protected $internal_gapi_mappings = array(
   );
-  protected $aliasesType = 'Google_Service_Directory_Alias';
+  protected $aliasesType = 'Postman_Google_Service_Directory_Alias';
   protected $aliasesDataType = 'array';
   public $etag;
   public $kind;
@@ -2685,7 +2685,7 @@ class Google_Service_Directory_Aliases extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Asp extends Google_Model
+class Postman_Google_Service_Directory_Asp extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2756,13 +2756,13 @@ class Google_Service_Directory_Asp extends Google_Model
   }
 }
 
-class Google_Service_Directory_Asps extends Google_Collection
+class Postman_Google_Service_Directory_Asps extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Directory_Asp';
+  protected $itemsType = 'Postman_Google_Service_Directory_Asp';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -2793,7 +2793,7 @@ class Google_Service_Directory_Asps extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Channel extends Google_Model
+class Postman_Google_Service_Directory_Channel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2891,16 +2891,16 @@ class Google_Service_Directory_Channel extends Google_Model
   }
 }
 
-class Google_Service_Directory_ChannelParams extends Google_Model
+class Postman_Google_Service_Directory_ChannelParams extends Postman_Google_Model
 {
 }
 
-class Google_Service_Directory_ChromeOsDevice extends Google_Collection
+class Postman_Google_Service_Directory_ChromeOsDevice extends Postman_Google_Collection
 {
   protected $collection_key = 'recentUsers';
   protected $internal_gapi_mappings = array(
   );
-  protected $activeTimeRangesType = 'Google_Service_Directory_ChromeOsDeviceActiveTimeRanges';
+  protected $activeTimeRangesType = 'Postman_Google_Service_Directory_ChromeOsDeviceActiveTimeRanges';
   protected $activeTimeRangesDataType = 'array';
   public $annotatedLocation;
   public $annotatedUser;
@@ -2920,7 +2920,7 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
   public $orgUnitPath;
   public $osVersion;
   public $platformVersion;
-  protected $recentUsersType = 'Google_Service_Directory_ChromeOsDeviceRecentUsers';
+  protected $recentUsersType = 'Postman_Google_Service_Directory_ChromeOsDeviceRecentUsers';
   protected $recentUsersDataType = 'array';
   public $serialNumber;
   public $status;
@@ -3122,7 +3122,7 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
   }
 }
 
-class Google_Service_Directory_ChromeOsDeviceActiveTimeRanges extends Google_Model
+class Postman_Google_Service_Directory_ChromeOsDeviceActiveTimeRanges extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3148,7 +3148,7 @@ class Google_Service_Directory_ChromeOsDeviceActiveTimeRanges extends Google_Mod
   }
 }
 
-class Google_Service_Directory_ChromeOsDeviceRecentUsers extends Google_Model
+class Postman_Google_Service_Directory_ChromeOsDeviceRecentUsers extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3174,12 +3174,12 @@ class Google_Service_Directory_ChromeOsDeviceRecentUsers extends Google_Model
   }
 }
 
-class Google_Service_Directory_ChromeOsDevices extends Google_Collection
+class Postman_Google_Service_Directory_ChromeOsDevices extends Postman_Google_Collection
 {
   protected $collection_key = 'chromeosdevices';
   protected $internal_gapi_mappings = array(
   );
-  protected $chromeosdevicesType = 'Google_Service_Directory_ChromeOsDevice';
+  protected $chromeosdevicesType = 'Postman_Google_Service_Directory_ChromeOsDevice';
   protected $chromeosdevicesDataType = 'array';
   public $etag;
   public $kind;
@@ -3220,7 +3220,7 @@ class Google_Service_Directory_ChromeOsDevices extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Group extends Google_Collection
+class Postman_Google_Service_Directory_Group extends Postman_Google_Collection
 {
   protected $collection_key = 'nonEditableAliases';
   protected $internal_gapi_mappings = array(
@@ -3319,13 +3319,13 @@ class Google_Service_Directory_Group extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Groups extends Google_Collection
+class Postman_Google_Service_Directory_Groups extends Postman_Google_Collection
 {
   protected $collection_key = 'groups';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $groupsType = 'Google_Service_Directory_Group';
+  protected $groupsType = 'Postman_Google_Service_Directory_Group';
   protected $groupsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -3365,7 +3365,7 @@ class Google_Service_Directory_Groups extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Member extends Google_Model
+class Postman_Google_Service_Directory_Member extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3427,14 +3427,14 @@ class Google_Service_Directory_Member extends Google_Model
   }
 }
 
-class Google_Service_Directory_Members extends Google_Collection
+class Postman_Google_Service_Directory_Members extends Postman_Google_Collection
 {
   protected $collection_key = 'members';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
   public $kind;
-  protected $membersType = 'Google_Service_Directory_Member';
+  protected $membersType = 'Postman_Google_Service_Directory_Member';
   protected $membersDataType = 'array';
   public $nextPageToken;
 
@@ -3473,12 +3473,12 @@ class Google_Service_Directory_Members extends Google_Collection
   }
 }
 
-class Google_Service_Directory_MobileDevice extends Google_Collection
+class Postman_Google_Service_Directory_MobileDevice extends Postman_Google_Collection
 {
   protected $collection_key = 'name';
   protected $internal_gapi_mappings = array(
   );
-  protected $applicationsType = 'Google_Service_Directory_MobileDeviceApplications';
+  protected $applicationsType = 'Postman_Google_Service_Directory_MobileDeviceApplications';
   protected $applicationsDataType = 'array';
   public $basebandVersion;
   public $buildNumber;
@@ -3717,7 +3717,7 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
   }
 }
 
-class Google_Service_Directory_MobileDeviceAction extends Google_Model
+class Postman_Google_Service_Directory_MobileDeviceAction extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3734,7 +3734,7 @@ class Google_Service_Directory_MobileDeviceAction extends Google_Model
   }
 }
 
-class Google_Service_Directory_MobileDeviceApplications extends Google_Collection
+class Postman_Google_Service_Directory_MobileDeviceApplications extends Postman_Google_Collection
 {
   protected $collection_key = 'permission';
   protected $internal_gapi_mappings = array(
@@ -3788,14 +3788,14 @@ class Google_Service_Directory_MobileDeviceApplications extends Google_Collectio
   }
 }
 
-class Google_Service_Directory_MobileDevices extends Google_Collection
+class Postman_Google_Service_Directory_MobileDevices extends Postman_Google_Collection
 {
   protected $collection_key = 'mobiledevices';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
   public $kind;
-  protected $mobiledevicesType = 'Google_Service_Directory_MobileDevice';
+  protected $mobiledevicesType = 'Postman_Google_Service_Directory_MobileDevice';
   protected $mobiledevicesDataType = 'array';
   public $nextPageToken;
 
@@ -3834,7 +3834,7 @@ class Google_Service_Directory_MobileDevices extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Notification extends Google_Model
+class Postman_Google_Service_Directory_Notification extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3914,13 +3914,13 @@ class Google_Service_Directory_Notification extends Google_Model
   }
 }
 
-class Google_Service_Directory_Notifications extends Google_Collection
+class Postman_Google_Service_Directory_Notifications extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Directory_Notification';
+  protected $itemsType = 'Postman_Google_Service_Directory_Notification';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -3969,7 +3969,7 @@ class Google_Service_Directory_Notifications extends Google_Collection
   }
 }
 
-class Google_Service_Directory_OrgUnit extends Google_Model
+class Postman_Google_Service_Directory_OrgUnit extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4040,14 +4040,14 @@ class Google_Service_Directory_OrgUnit extends Google_Model
   }
 }
 
-class Google_Service_Directory_OrgUnits extends Google_Collection
+class Postman_Google_Service_Directory_OrgUnits extends Postman_Google_Collection
 {
   protected $collection_key = 'organizationUnits';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
   public $kind;
-  protected $organizationUnitsType = 'Google_Service_Directory_OrgUnit';
+  protected $organizationUnitsType = 'Postman_Google_Service_Directory_OrgUnit';
   protected $organizationUnitsDataType = 'array';
 
 
@@ -4077,13 +4077,13 @@ class Google_Service_Directory_OrgUnits extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Schema extends Google_Collection
+class Postman_Google_Service_Directory_Schema extends Postman_Google_Collection
 {
   protected $collection_key = 'fields';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $fieldsType = 'Google_Service_Directory_SchemaFieldSpec';
+  protected $fieldsType = 'Postman_Google_Service_Directory_SchemaFieldSpec';
   protected $fieldsDataType = 'array';
   public $kind;
   public $schemaId;
@@ -4132,7 +4132,7 @@ class Google_Service_Directory_Schema extends Google_Collection
   }
 }
 
-class Google_Service_Directory_SchemaFieldSpec extends Google_Model
+class Postman_Google_Service_Directory_SchemaFieldSpec extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4143,7 +4143,7 @@ class Google_Service_Directory_SchemaFieldSpec extends Google_Model
   public $indexed;
   public $kind;
   public $multiValued;
-  protected $numericIndexingSpecType = 'Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec';
+  protected $numericIndexingSpecType = 'Postman_Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec';
   protected $numericIndexingSpecDataType = '';
   public $readAccessType;
 
@@ -4204,7 +4204,7 @@ class Google_Service_Directory_SchemaFieldSpec extends Google_Model
   {
     return $this->multiValued;
   }
-  public function setNumericIndexingSpec(Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec $numericIndexingSpec)
+  public function setNumericIndexingSpec(Postman_Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec $numericIndexingSpec)
   {
     $this->numericIndexingSpec = $numericIndexingSpec;
   }
@@ -4222,7 +4222,7 @@ class Google_Service_Directory_SchemaFieldSpec extends Google_Model
   }
 }
 
-class Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec extends Google_Model
+class Postman_Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4248,14 +4248,14 @@ class Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec extends Google
   }
 }
 
-class Google_Service_Directory_Schemas extends Google_Collection
+class Postman_Google_Service_Directory_Schemas extends Postman_Google_Collection
 {
   protected $collection_key = 'schemas';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
   public $kind;
-  protected $schemasType = 'Google_Service_Directory_Schema';
+  protected $schemasType = 'Postman_Google_Service_Directory_Schema';
   protected $schemasDataType = 'array';
 
 
@@ -4285,7 +4285,7 @@ class Google_Service_Directory_Schemas extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Token extends Google_Collection
+class Postman_Google_Service_Directory_Token extends Postman_Google_Collection
 {
   protected $collection_key = 'scopes';
   protected $internal_gapi_mappings = array(
@@ -4366,13 +4366,13 @@ class Google_Service_Directory_Token extends Google_Collection
   }
 }
 
-class Google_Service_Directory_Tokens extends Google_Collection
+class Postman_Google_Service_Directory_Tokens extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Directory_Token';
+  protected $itemsType = 'Postman_Google_Service_Directory_Token';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -4403,7 +4403,7 @@ class Google_Service_Directory_Tokens extends Google_Collection
   }
 }
 
-class Google_Service_Directory_User extends Google_Collection
+class Postman_Google_Service_Directory_User extends Postman_Google_Collection
 {
   protected $collection_key = 'nonEditableAliases';
   protected $internal_gapi_mappings = array(
@@ -4429,7 +4429,7 @@ class Google_Service_Directory_User extends Google_Collection
   public $isMailboxSetup;
   public $kind;
   public $lastLoginTime;
-  protected $nameType = 'Google_Service_Directory_UserName';
+  protected $nameType = 'Postman_Google_Service_Directory_UserName';
   protected $nameDataType = '';
   public $nonEditableAliases;
   public $orgUnitPath;
@@ -4611,7 +4611,7 @@ class Google_Service_Directory_User extends Google_Collection
   {
     return $this->lastLoginTime;
   }
-  public function setName(Google_Service_Directory_UserName $name)
+  public function setName(Postman_Google_Service_Directory_UserName $name)
   {
     $this->name = $name;
   }
@@ -4701,7 +4701,7 @@ class Google_Service_Directory_User extends Google_Collection
   }
 }
 
-class Google_Service_Directory_UserAddress extends Google_Model
+class Postman_Google_Service_Directory_UserAddress extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4826,15 +4826,15 @@ class Google_Service_Directory_UserAddress extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserCustomProperties extends Google_Model
+class Postman_Google_Service_Directory_UserCustomProperties extends Postman_Google_Model
 {
 }
 
-class Google_Service_Directory_UserCustomSchemas extends Google_Model
+class Postman_Google_Service_Directory_UserCustomSchemas extends Postman_Google_Model
 {
 }
 
-class Google_Service_Directory_UserEmail extends Google_Model
+class Postman_Google_Service_Directory_UserEmail extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4878,7 +4878,7 @@ class Google_Service_Directory_UserEmail extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserExternalId extends Google_Model
+class Postman_Google_Service_Directory_UserExternalId extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4913,7 +4913,7 @@ class Google_Service_Directory_UserExternalId extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserIm extends Google_Model
+class Postman_Google_Service_Directory_UserIm extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4975,7 +4975,7 @@ class Google_Service_Directory_UserIm extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserMakeAdmin extends Google_Model
+class Postman_Google_Service_Directory_UserMakeAdmin extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4992,7 +4992,7 @@ class Google_Service_Directory_UserMakeAdmin extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserName extends Google_Model
+class Postman_Google_Service_Directory_UserName extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5027,7 +5027,7 @@ class Google_Service_Directory_UserName extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserOrganization extends Google_Model
+class Postman_Google_Service_Directory_UserOrganization extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5134,7 +5134,7 @@ class Google_Service_Directory_UserOrganization extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserPhone extends Google_Model
+class Postman_Google_Service_Directory_UserPhone extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5178,7 +5178,7 @@ class Google_Service_Directory_UserPhone extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserPhoto extends Google_Model
+class Postman_Google_Service_Directory_UserPhoto extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5258,7 +5258,7 @@ class Google_Service_Directory_UserPhoto extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserRelation extends Google_Model
+class Postman_Google_Service_Directory_UserRelation extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5293,7 +5293,7 @@ class Google_Service_Directory_UserRelation extends Google_Model
   }
 }
 
-class Google_Service_Directory_UserUndelete extends Google_Model
+class Postman_Google_Service_Directory_UserUndelete extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5310,7 +5310,7 @@ class Google_Service_Directory_UserUndelete extends Google_Model
   }
 }
 
-class Google_Service_Directory_Users extends Google_Collection
+class Postman_Google_Service_Directory_Users extends Postman_Google_Collection
 {
   protected $collection_key = 'users';
   protected $internal_gapi_mappings = array(
@@ -5320,7 +5320,7 @@ class Google_Service_Directory_Users extends Google_Collection
   public $kind;
   public $nextPageToken;
   public $triggerEvent;
-  protected $usersType = 'Google_Service_Directory_User';
+  protected $usersType = 'Postman_Google_Service_Directory_User';
   protected $usersDataType = 'array';
 
 
@@ -5366,7 +5366,7 @@ class Google_Service_Directory_Users extends Google_Collection
   }
 }
 
-class Google_Service_Directory_VerificationCode extends Google_Model
+class Postman_Google_Service_Directory_VerificationCode extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5410,13 +5410,13 @@ class Google_Service_Directory_VerificationCode extends Google_Model
   }
 }
 
-class Google_Service_Directory_VerificationCodes extends Google_Collection
+class Postman_Google_Service_Directory_VerificationCodes extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Directory_VerificationCode';
+  protected $itemsType = 'Postman_Google_Service_Directory_VerificationCode';
   protected $itemsDataType = 'array';
   public $kind;
 

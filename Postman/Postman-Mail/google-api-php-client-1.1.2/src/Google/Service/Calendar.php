@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Calendar extends Google_Service
+class Postman_Google_Service_Calendar extends Postman_Google_Service
 {
   /** Manage your calendars. */
   const CALENDAR =
@@ -50,16 +50,16 @@ class Google_Service_Calendar extends Google_Service
   /**
    * Constructs the internal representation of the Calendar service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'calendar/v3/';
     $this->version = 'v3';
     $this->serviceName = 'calendar';
 
-    $this->acl = new Google_Service_Calendar_Acl_Resource(
+    $this->acl = new Postman_Google_Service_Calendar_Acl_Resource(
         $this,
         $this->serviceName,
         'acl',
@@ -191,7 +191,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->calendarList = new Google_Service_Calendar_CalendarList_Resource(
+    $this->calendarList = new Postman_Google_Service_Calendar_CalendarList_Resource(
         $this,
         $this->serviceName,
         'calendarList',
@@ -316,7 +316,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->calendars = new Google_Service_Calendar_Calendars_Resource(
+    $this->calendars = new Postman_Google_Service_Calendar_Calendars_Resource(
         $this,
         $this->serviceName,
         'calendars',
@@ -380,7 +380,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Calendar_Channels_Resource(
+    $this->channels = new Postman_Google_Service_Calendar_Channels_Resource(
         $this,
         $this->serviceName,
         'channels',
@@ -394,7 +394,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->colors = new Google_Service_Calendar_Colors_Resource(
+    $this->colors = new Postman_Google_Service_Calendar_Colors_Resource(
         $this,
         $this->serviceName,
         'colors',
@@ -408,7 +408,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->events = new Google_Service_Calendar_Events_Resource(
+    $this->events = new Postman_Google_Service_Calendar_Events_Resource(
         $this,
         $this->serviceName,
         'events',
@@ -800,7 +800,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->freebusy = new Google_Service_Calendar_Freebusy_Resource(
+    $this->freebusy = new Postman_Google_Service_Calendar_Freebusy_Resource(
         $this,
         $this->serviceName,
         'freebusy',
@@ -814,7 +814,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->settings = new Google_Service_Calendar_Settings_Resource(
+    $this->settings = new Postman_Google_Service_Calendar_Settings_Resource(
         $this,
         $this->serviceName,
         'settings',
@@ -876,11 +876,11 @@ class Google_Service_Calendar extends Google_Service
  * The "acl" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $acl = $calendarService->acl;
  *  </code>
  */
-class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Acl_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -903,28 +903,28 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier.
    * @param string $ruleId ACL rule identifier.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_AclRule
+   * @return Postman_Google_Service_Calendar_AclRule
    */
   public function get($calendarId, $ruleId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'ruleId' => $ruleId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_AclRule");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_AclRule");
   }
 
   /**
    * Creates an access control rule. (acl.insert)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_AclRule $postBody
+   * @param Postman_Google_AclRule $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_AclRule
+   * @return Postman_Google_Service_Calendar_AclRule
    */
-  public function insert($calendarId, Google_Service_Calendar_AclRule $postBody, $optParams = array())
+  public function insert($calendarId, Postman_Google_Service_Calendar_AclRule $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_AclRule");
+    return $this->call('insert', array($params), "Postman_Google_Service_Calendar_AclRule");
   }
 
   /**
@@ -950,13 +950,13 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
    * @opt_param bool showDeleted Whether to include deleted ACLs in the result.
    * Deleted ACLs are represented by role equal to "none". Deleted ACLs will
    * always be included if syncToken is provided. Optional. The default is False.
-   * @return Google_Service_Calendar_Acl
+   * @return Postman_Google_Service_Calendar_Acl
    */
   public function listAcl($calendarId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_Acl");
+    return $this->call('list', array($params), "Postman_Google_Service_Calendar_Acl");
   }
 
   /**
@@ -965,15 +965,15 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
    *
    * @param string $calendarId Calendar identifier.
    * @param string $ruleId ACL rule identifier.
-   * @param Google_AclRule $postBody
+   * @param Postman_Google_AclRule $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_AclRule
+   * @return Postman_Google_Service_Calendar_AclRule
    */
-  public function patch($calendarId, $ruleId, Google_Service_Calendar_AclRule $postBody, $optParams = array())
+  public function patch($calendarId, $ruleId, Postman_Google_Service_Calendar_AclRule $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'ruleId' => $ruleId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_AclRule");
+    return $this->call('patch', array($params), "Postman_Google_Service_Calendar_AclRule");
   }
 
   /**
@@ -981,22 +981,22 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
    *
    * @param string $calendarId Calendar identifier.
    * @param string $ruleId ACL rule identifier.
-   * @param Google_AclRule $postBody
+   * @param Postman_Google_AclRule $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_AclRule
+   * @return Postman_Google_Service_Calendar_AclRule
    */
-  public function update($calendarId, $ruleId, Google_Service_Calendar_AclRule $postBody, $optParams = array())
+  public function update($calendarId, $ruleId, Postman_Google_Service_Calendar_AclRule $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'ruleId' => $ruleId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_AclRule");
+    return $this->call('update', array($params), "Postman_Google_Service_Calendar_AclRule");
   }
 
   /**
    * Watch for changes to ACL resources. (acl.watch)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Token specifying which result page to return.
@@ -1016,13 +1016,13 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
    * @opt_param bool showDeleted Whether to include deleted ACLs in the result.
    * Deleted ACLs are represented by role equal to "none". Deleted ACLs will
    * always be included if syncToken is provided. Optional. The default is False.
-   * @return Google_Service_Calendar_Channel
+   * @return Postman_Google_Service_Calendar_Channel
    */
-  public function watch($calendarId, Google_Service_Calendar_Channel $postBody, $optParams = array())
+  public function watch($calendarId, Postman_Google_Service_Calendar_Channel $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Calendar_Channel");
   }
 }
 
@@ -1030,11 +1030,11 @@ class Google_Service_Calendar_Acl_Resource extends Google_Service_Resource
  * The "calendarList" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $calendarList = $calendarService->calendarList;
  *  </code>
  */
-class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_CalendarList_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1055,32 +1055,32 @@ class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resou
    *
    * @param string $calendarId Calendar identifier.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return Postman_Google_Service_Calendar_CalendarListEntry
    */
   public function get($calendarId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_CalendarListEntry");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_CalendarListEntry");
   }
 
   /**
    * Adds an entry to the user's calendar list. (calendarList.insert)
    *
-   * @param Google_CalendarListEntry $postBody
+   * @param Postman_Google_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return Postman_Google_Service_Calendar_CalendarListEntry
    */
-  public function insert(Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_CalendarListEntry");
+    return $this->call('insert', array($params), "Postman_Google_Service_Calendar_CalendarListEntry");
   }
 
   /**
@@ -1111,13 +1111,13 @@ class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resou
    * Optional.
    * @opt_param bool showHidden Whether to show hidden entries. Optional. The
    * default is False.
-   * @return Google_Service_Calendar_CalendarList
+   * @return Postman_Google_Service_Calendar_CalendarList
    */
   public function listCalendarList($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_CalendarList");
+    return $this->call('list', array($params), "Postman_Google_Service_Calendar_CalendarList");
   }
 
   /**
@@ -1125,46 +1125,46 @@ class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resou
    * semantics. (calendarList.patch)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_CalendarListEntry $postBody
+   * @param Postman_Google_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return Postman_Google_Service_Calendar_CalendarListEntry
    */
-  public function patch($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+  public function patch($calendarId, Postman_Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_CalendarListEntry");
+    return $this->call('patch', array($params), "Postman_Google_Service_Calendar_CalendarListEntry");
   }
 
   /**
    * Updates an entry on the user's calendar list. (calendarList.update)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_CalendarListEntry $postBody
+   * @param Postman_Google_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return Postman_Google_Service_Calendar_CalendarListEntry
    */
-  public function update($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+  public function update($calendarId, Postman_Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_CalendarListEntry");
+    return $this->call('update', array($params), "Postman_Google_Service_Calendar_CalendarListEntry");
   }
 
   /**
    * Watch for changes to CalendarList resources. (calendarList.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string syncToken Token obtained from the nextSyncToken field
@@ -1190,13 +1190,13 @@ class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resou
    * Optional.
    * @opt_param bool showHidden Whether to show hidden entries. Optional. The
    * default is False.
-   * @return Google_Service_Calendar_Channel
+   * @return Postman_Google_Service_Calendar_Channel
    */
-  public function watch(Google_Service_Calendar_Channel $postBody, $optParams = array())
+  public function watch(Postman_Google_Service_Calendar_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Calendar_Channel");
   }
 }
 
@@ -1204,11 +1204,11 @@ class Google_Service_Calendar_CalendarList_Resource extends Google_Service_Resou
  * The "calendars" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $calendars = $calendarService->calendars;
  *  </code>
  */
-class Google_Service_Calendar_Calendars_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Calendars_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1243,27 +1243,27 @@ class Google_Service_Calendar_Calendars_Resource extends Google_Service_Resource
    *
    * @param string $calendarId Calendar identifier.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Calendar
+   * @return Postman_Google_Service_Calendar_Calendar
    */
   public function get($calendarId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_Calendar");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_Calendar");
   }
 
   /**
    * Creates a secondary calendar. (calendars.insert)
    *
-   * @param Google_Calendar $postBody
+   * @param Postman_Google_Calendar $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Calendar
+   * @return Postman_Google_Service_Calendar_Calendar
    */
-  public function insert(Google_Service_Calendar_Calendar $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Calendar_Calendar $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_Calendar");
+    return $this->call('insert', array($params), "Postman_Google_Service_Calendar_Calendar");
   }
 
   /**
@@ -1271,30 +1271,30 @@ class Google_Service_Calendar_Calendars_Resource extends Google_Service_Resource
    * (calendars.patch)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Calendar $postBody
+   * @param Postman_Google_Calendar $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Calendar
+   * @return Postman_Google_Service_Calendar_Calendar
    */
-  public function patch($calendarId, Google_Service_Calendar_Calendar $postBody, $optParams = array())
+  public function patch($calendarId, Postman_Google_Service_Calendar_Calendar $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_Calendar");
+    return $this->call('patch', array($params), "Postman_Google_Service_Calendar_Calendar");
   }
 
   /**
    * Updates metadata for a calendar. (calendars.update)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Calendar $postBody
+   * @param Postman_Google_Calendar $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Calendar
+   * @return Postman_Google_Service_Calendar_Calendar
    */
-  public function update($calendarId, Google_Service_Calendar_Calendar $postBody, $optParams = array())
+  public function update($calendarId, Postman_Google_Service_Calendar_Calendar $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_Calendar");
+    return $this->call('update', array($params), "Postman_Google_Service_Calendar_Calendar");
   }
 }
 
@@ -1302,20 +1302,20 @@ class Google_Service_Calendar_Calendars_Resource extends Google_Service_Resource
  * The "channels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $channels = $calendarService->channels;
  *  </code>
  */
-class Google_Service_Calendar_Channels_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Channels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Stop watching resources through this channel (channels.stop)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    */
-  public function stop(Google_Service_Calendar_Channel $postBody, $optParams = array())
+  public function stop(Postman_Google_Service_Calendar_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1327,24 +1327,24 @@ class Google_Service_Calendar_Channels_Resource extends Google_Service_Resource
  * The "colors" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $colors = $calendarService->colors;
  *  </code>
  */
-class Google_Service_Calendar_Colors_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Colors_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Returns the color definitions for calendars and events. (colors.get)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Colors
+   * @return Postman_Google_Service_Calendar_Colors
    */
   public function get($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_Colors");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_Colors");
   }
 }
 
@@ -1352,11 +1352,11 @@ class Google_Service_Calendar_Colors_Resource extends Google_Service_Resource
  * The "events" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $events = $calendarService->events;
  *  </code>
  */
-class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Events_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1394,13 +1394,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
   public function get($calendarId, $eventId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_Event");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
@@ -1408,22 +1408,22 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * event to a calendar. (events.import)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Event $postBody
+   * @param Postman_Google_Event $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
-  public function import($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
+  public function import($calendarId, Postman_Google_Service_Calendar_Event $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('import', array($params), "Google_Service_Calendar_Event");
+    return $this->call('import', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
    * Creates an event. (events.insert)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Event $postBody
+   * @param Postman_Google_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
@@ -1431,13 +1431,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
-  public function insert($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
+  public function insert($calendarId, Postman_Google_Service_Calendar_Event $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_Event");
+    return $this->call('insert', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
@@ -1473,13 +1473,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Events
+   * @return Postman_Google_Service_Calendar_Events
    */
   public function instances($calendarId, $eventId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
     $params = array_merge($params, $optParams);
-    return $this->call('instances', array($params), "Google_Service_Calendar_Events");
+    return $this->call('instances', array($params), "Postman_Google_Service_Calendar_Events");
   }
 
   /**
@@ -1552,13 +1552,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Events
+   * @return Postman_Google_Service_Calendar_Events
    */
   public function listEvents($calendarId, $optParams = array())
   {
     $params = array('calendarId' => $calendarId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_Events");
+    return $this->call('list', array($params), "Postman_Google_Service_Calendar_Events");
   }
 
   /**
@@ -1574,13 +1574,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
    * change of the event's organizer. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
   public function move($calendarId, $eventId, $destination, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'destination' => $destination);
     $params = array_merge($params, $optParams);
-    return $this->call('move', array($params), "Google_Service_Calendar_Event");
+    return $this->call('move', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
@@ -1588,7 +1588,7 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    *
    * @param string $calendarId Calendar identifier.
    * @param string $eventId Event identifier.
-   * @param Google_Event $postBody
+   * @param Postman_Google_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
@@ -1603,13 +1603,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
-  public function patch($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
+  public function patch($calendarId, $eventId, Postman_Google_Service_Calendar_Event $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_Event");
+    return $this->call('patch', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
@@ -1621,13 +1621,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
    * creation of the event. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
   public function quickAdd($calendarId, $text, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'text' => $text);
     $params = array_merge($params, $optParams);
-    return $this->call('quickAdd', array($params), "Google_Service_Calendar_Event");
+    return $this->call('quickAdd', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
@@ -1635,7 +1635,7 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    *
    * @param string $calendarId Calendar identifier.
    * @param string $eventId Event identifier.
-   * @param Google_Event $postBody
+   * @param Postman_Google_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
@@ -1650,20 +1650,20 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Event
+   * @return Postman_Google_Service_Calendar_Event
    */
-  public function update($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
+  public function update($calendarId, $eventId, Postman_Google_Service_Calendar_Event $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_Event");
+    return $this->call('update', array($params), "Postman_Google_Service_Calendar_Event");
   }
 
   /**
    * Watch for changes to Events resources. (events.watch)
    *
    * @param string $calendarId Calendar identifier.
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy The order of the events returned in the result.
@@ -1730,13 +1730,13 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
    * @opt_param int maxAttendees The maximum number of attendees to include in the
    * response. If there are more than the specified number of attendees, only the
    * participant is returned. Optional.
-   * @return Google_Service_Calendar_Channel
+   * @return Postman_Google_Service_Calendar_Channel
    */
-  public function watch($calendarId, Google_Service_Calendar_Channel $postBody, $optParams = array())
+  public function watch($calendarId, Postman_Google_Service_Calendar_Channel $postBody, $optParams = array())
   {
     $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Calendar_Channel");
   }
 }
 
@@ -1744,25 +1744,25 @@ class Google_Service_Calendar_Events_Resource extends Google_Service_Resource
  * The "freebusy" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $freebusy = $calendarService->freebusy;
  *  </code>
  */
-class Google_Service_Calendar_Freebusy_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Freebusy_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Returns free/busy information for a set of calendars. (freebusy.query)
    *
-   * @param Google_FreeBusyRequest $postBody
+   * @param Postman_Google_FreeBusyRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_FreeBusyResponse
+   * @return Postman_Google_Service_Calendar_FreeBusyResponse
    */
-  public function query(Google_Service_Calendar_FreeBusyRequest $postBody, $optParams = array())
+  public function query(Postman_Google_Service_Calendar_FreeBusyRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('query', array($params), "Google_Service_Calendar_FreeBusyResponse");
+    return $this->call('query', array($params), "Postman_Google_Service_Calendar_FreeBusyResponse");
   }
 }
 
@@ -1770,11 +1770,11 @@ class Google_Service_Calendar_Freebusy_Resource extends Google_Service_Resource
  * The "settings" collection of methods.
  * Typical usage is:
  *  <code>
- *   $calendarService = new Google_Service_Calendar(...);
+ *   $calendarService = new Postman_Google_Service_Calendar(...);
  *   $settings = $calendarService->settings;
  *  </code>
  */
-class Google_Service_Calendar_Settings_Resource extends Google_Service_Resource
+class Postman_Google_Service_Calendar_Settings_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1782,13 +1782,13 @@ class Google_Service_Calendar_Settings_Resource extends Google_Service_Resource
    *
    * @param string $setting The id of the user setting.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Calendar_Setting
+   * @return Postman_Google_Service_Calendar_Setting
    */
   public function get($setting, $optParams = array())
   {
     $params = array('setting' => $setting);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_Setting");
+    return $this->call('get', array($params), "Postman_Google_Service_Calendar_Setting");
   }
 
   /**
@@ -1808,19 +1808,19 @@ class Google_Service_Calendar_Settings_Resource extends Google_Service_Resource
    * response code and the client should clear its storage and perform a full
    * synchronization without any syncToken. Learn more about incremental
    * synchronization. Optional. The default is to return all entries.
-   * @return Google_Service_Calendar_Settings
+   * @return Postman_Google_Service_Calendar_Settings
    */
   public function listSettings($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_Settings");
+    return $this->call('list', array($params), "Postman_Google_Service_Calendar_Settings");
   }
 
   /**
    * Watch for changes to Settings resources. (settings.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Token specifying which result page to return.
@@ -1835,26 +1835,26 @@ class Google_Service_Calendar_Settings_Resource extends Google_Service_Resource
    * response code and the client should clear its storage and perform a full
    * synchronization without any syncToken. Learn more about incremental
    * synchronization. Optional. The default is to return all entries.
-   * @return Google_Service_Calendar_Channel
+   * @return Postman_Google_Service_Calendar_Channel
    */
-  public function watch(Google_Service_Calendar_Channel $postBody, $optParams = array())
+  public function watch(Postman_Google_Service_Calendar_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Calendar_Channel");
   }
 }
 
 
 
 
-class Google_Service_Calendar_Acl extends Google_Collection
+class Postman_Google_Service_Calendar_Acl extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Calendar_AclRule';
+  protected $itemsType = 'Postman_Google_Service_Calendar_AclRule';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1903,7 +1903,7 @@ class Google_Service_Calendar_Acl extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_AclRule extends Google_Model
+class Postman_Google_Service_Calendar_AclRule extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1911,7 +1911,7 @@ class Google_Service_Calendar_AclRule extends Google_Model
   public $id;
   public $kind;
   public $role;
-  protected $scopeType = 'Google_Service_Calendar_AclRuleScope';
+  protected $scopeType = 'Postman_Google_Service_Calendar_AclRuleScope';
   protected $scopeDataType = '';
 
 
@@ -1947,7 +1947,7 @@ class Google_Service_Calendar_AclRule extends Google_Model
   {
     return $this->role;
   }
-  public function setScope(Google_Service_Calendar_AclRuleScope $scope)
+  public function setScope(Postman_Google_Service_Calendar_AclRuleScope $scope)
   {
     $this->scope = $scope;
   }
@@ -1957,7 +1957,7 @@ class Google_Service_Calendar_AclRule extends Google_Model
   }
 }
 
-class Google_Service_Calendar_AclRuleScope extends Google_Model
+class Postman_Google_Service_Calendar_AclRuleScope extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1983,7 +1983,7 @@ class Google_Service_Calendar_AclRuleScope extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Calendar extends Google_Model
+class Postman_Google_Service_Calendar_Calendar extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2054,13 +2054,13 @@ class Google_Service_Calendar_Calendar extends Google_Model
   }
 }
 
-class Google_Service_Calendar_CalendarList extends Google_Collection
+class Postman_Google_Service_Calendar_CalendarList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Calendar_CalendarListEntry';
+  protected $itemsType = 'Postman_Google_Service_Calendar_CalendarListEntry';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2109,7 +2109,7 @@ class Google_Service_Calendar_CalendarList extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_CalendarListEntry extends Google_Collection
+class Postman_Google_Service_Calendar_CalendarListEntry extends Postman_Google_Collection
 {
   protected $collection_key = 'defaultReminders';
   protected $internal_gapi_mappings = array(
@@ -2117,7 +2117,7 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   public $accessRole;
   public $backgroundColor;
   public $colorId;
-  protected $defaultRemindersType = 'Google_Service_Calendar_EventReminder';
+  protected $defaultRemindersType = 'Postman_Google_Service_Calendar_EventReminder';
   protected $defaultRemindersDataType = 'array';
   public $deleted;
   public $description;
@@ -2127,7 +2127,7 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   public $id;
   public $kind;
   public $location;
-  protected $notificationSettingsType = 'Google_Service_Calendar_CalendarListEntryNotificationSettings';
+  protected $notificationSettingsType = 'Postman_Google_Service_Calendar_CalendarListEntryNotificationSettings';
   protected $notificationSettingsDataType = '';
   public $primary;
   public $selected;
@@ -2232,7 +2232,7 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   {
     return $this->location;
   }
-  public function setNotificationSettings(Google_Service_Calendar_CalendarListEntryNotificationSettings $notificationSettings)
+  public function setNotificationSettings(Postman_Google_Service_Calendar_CalendarListEntryNotificationSettings $notificationSettings)
   {
     $this->notificationSettings = $notificationSettings;
   }
@@ -2282,12 +2282,12 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_CalendarListEntryNotificationSettings extends Google_Collection
+class Postman_Google_Service_Calendar_CalendarListEntryNotificationSettings extends Postman_Google_Collection
 {
   protected $collection_key = 'notifications';
   protected $internal_gapi_mappings = array(
   );
-  protected $notificationsType = 'Google_Service_Calendar_CalendarNotification';
+  protected $notificationsType = 'Postman_Google_Service_Calendar_CalendarNotification';
   protected $notificationsDataType = 'array';
 
 
@@ -2301,7 +2301,7 @@ class Google_Service_Calendar_CalendarListEntryNotificationSettings extends Goog
   }
 }
 
-class Google_Service_Calendar_CalendarNotification extends Google_Model
+class Postman_Google_Service_Calendar_CalendarNotification extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2327,7 +2327,7 @@ class Google_Service_Calendar_CalendarNotification extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Channel extends Google_Model
+class Postman_Google_Service_Calendar_Channel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2425,11 +2425,11 @@ class Google_Service_Calendar_Channel extends Google_Model
   }
 }
 
-class Google_Service_Calendar_ChannelParams extends Google_Model
+class Postman_Google_Service_Calendar_ChannelParams extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_ColorDefinition extends Google_Model
+class Postman_Google_Service_Calendar_ColorDefinition extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2455,13 +2455,13 @@ class Google_Service_Calendar_ColorDefinition extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Colors extends Google_Model
+class Postman_Google_Service_Calendar_Colors extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $calendarType = 'Google_Service_Calendar_ColorDefinition';
+  protected $calendarType = 'Postman_Google_Service_Calendar_ColorDefinition';
   protected $calendarDataType = 'map';
-  protected $eventType = 'Google_Service_Calendar_ColorDefinition';
+  protected $eventType = 'Postman_Google_Service_Calendar_ColorDefinition';
   protected $eventDataType = 'map';
   public $kind;
   public $updated;
@@ -2501,15 +2501,15 @@ class Google_Service_Calendar_Colors extends Google_Model
   }
 }
 
-class Google_Service_Calendar_ColorsCalendar extends Google_Model
+class Postman_Google_Service_Calendar_ColorsCalendar extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_ColorsEvent extends Google_Model
+class Postman_Google_Service_Calendar_ColorsEvent extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_Error extends Google_Model
+class Postman_Google_Service_Calendar_Error extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2535,27 +2535,27 @@ class Google_Service_Calendar_Error extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Event extends Google_Collection
+class Postman_Google_Service_Calendar_Event extends Postman_Google_Collection
 {
   protected $collection_key = 'recurrence';
   protected $internal_gapi_mappings = array(
   );
   public $anyoneCanAddSelf;
-  protected $attendeesType = 'Google_Service_Calendar_EventAttendee';
+  protected $attendeesType = 'Postman_Google_Service_Calendar_EventAttendee';
   protected $attendeesDataType = 'array';
   public $attendeesOmitted;
   public $colorId;
   public $created;
-  protected $creatorType = 'Google_Service_Calendar_EventCreator';
+  protected $creatorType = 'Postman_Google_Service_Calendar_EventCreator';
   protected $creatorDataType = '';
   public $description;
-  protected $endType = 'Google_Service_Calendar_EventDateTime';
+  protected $endType = 'Postman_Google_Service_Calendar_EventDateTime';
   protected $endDataType = '';
   public $endTimeUnspecified;
   public $etag;
-  protected $extendedPropertiesType = 'Google_Service_Calendar_EventExtendedProperties';
+  protected $extendedPropertiesType = 'Postman_Google_Service_Calendar_EventExtendedProperties';
   protected $extendedPropertiesDataType = '';
-  protected $gadgetType = 'Google_Service_Calendar_EventGadget';
+  protected $gadgetType = 'Postman_Google_Service_Calendar_EventGadget';
   protected $gadgetDataType = '';
   public $guestsCanInviteOthers;
   public $guestsCanModify;
@@ -2567,19 +2567,19 @@ class Google_Service_Calendar_Event extends Google_Collection
   public $kind;
   public $location;
   public $locked;
-  protected $organizerType = 'Google_Service_Calendar_EventOrganizer';
+  protected $organizerType = 'Postman_Google_Service_Calendar_EventOrganizer';
   protected $organizerDataType = '';
-  protected $originalStartTimeType = 'Google_Service_Calendar_EventDateTime';
+  protected $originalStartTimeType = 'Postman_Google_Service_Calendar_EventDateTime';
   protected $originalStartTimeDataType = '';
   public $privateCopy;
   public $recurrence;
   public $recurringEventId;
-  protected $remindersType = 'Google_Service_Calendar_EventReminders';
+  protected $remindersType = 'Postman_Google_Service_Calendar_EventReminders';
   protected $remindersDataType = '';
   public $sequence;
-  protected $sourceType = 'Google_Service_Calendar_EventSource';
+  protected $sourceType = 'Postman_Google_Service_Calendar_EventSource';
   protected $sourceDataType = '';
-  protected $startType = 'Google_Service_Calendar_EventDateTime';
+  protected $startType = 'Postman_Google_Service_Calendar_EventDateTime';
   protected $startDataType = '';
   public $status;
   public $summary;
@@ -2628,7 +2628,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->created;
   }
-  public function setCreator(Google_Service_Calendar_EventCreator $creator)
+  public function setCreator(Postman_Google_Service_Calendar_EventCreator $creator)
   {
     $this->creator = $creator;
   }
@@ -2644,7 +2644,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->description;
   }
-  public function setEnd(Google_Service_Calendar_EventDateTime $end)
+  public function setEnd(Postman_Google_Service_Calendar_EventDateTime $end)
   {
     $this->end = $end;
   }
@@ -2668,7 +2668,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->etag;
   }
-  public function setExtendedProperties(Google_Service_Calendar_EventExtendedProperties $extendedProperties)
+  public function setExtendedProperties(Postman_Google_Service_Calendar_EventExtendedProperties $extendedProperties)
   {
     $this->extendedProperties = $extendedProperties;
   }
@@ -2676,7 +2676,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->extendedProperties;
   }
-  public function setGadget(Google_Service_Calendar_EventGadget $gadget)
+  public function setGadget(Postman_Google_Service_Calendar_EventGadget $gadget)
   {
     $this->gadget = $gadget;
   }
@@ -2764,7 +2764,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->locked;
   }
-  public function setOrganizer(Google_Service_Calendar_EventOrganizer $organizer)
+  public function setOrganizer(Postman_Google_Service_Calendar_EventOrganizer $organizer)
   {
     $this->organizer = $organizer;
   }
@@ -2772,7 +2772,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->organizer;
   }
-  public function setOriginalStartTime(Google_Service_Calendar_EventDateTime $originalStartTime)
+  public function setOriginalStartTime(Postman_Google_Service_Calendar_EventDateTime $originalStartTime)
   {
     $this->originalStartTime = $originalStartTime;
   }
@@ -2804,7 +2804,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->recurringEventId;
   }
-  public function setReminders(Google_Service_Calendar_EventReminders $reminders)
+  public function setReminders(Postman_Google_Service_Calendar_EventReminders $reminders)
   {
     $this->reminders = $reminders;
   }
@@ -2820,7 +2820,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->sequence;
   }
-  public function setSource(Google_Service_Calendar_EventSource $source)
+  public function setSource(Postman_Google_Service_Calendar_EventSource $source)
   {
     $this->source = $source;
   }
@@ -2828,7 +2828,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->source;
   }
-  public function setStart(Google_Service_Calendar_EventDateTime $start)
+  public function setStart(Postman_Google_Service_Calendar_EventDateTime $start)
   {
     $this->start = $start;
   }
@@ -2878,7 +2878,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_EventAttachment extends Google_Model
+class Postman_Google_Service_Calendar_EventAttachment extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2895,7 +2895,7 @@ class Google_Service_Calendar_EventAttachment extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventAttendee extends Google_Model
+class Postman_Google_Service_Calendar_EventAttendee extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2993,7 +2993,7 @@ class Google_Service_Calendar_EventAttendee extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventCreator extends Google_Model
+class Postman_Google_Service_Calendar_EventCreator extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3037,7 +3037,7 @@ class Google_Service_Calendar_EventCreator extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventDateTime extends Google_Model
+class Postman_Google_Service_Calendar_EventDateTime extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3072,7 +3072,7 @@ class Google_Service_Calendar_EventDateTime extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventExtendedProperties extends Google_Model
+class Postman_Google_Service_Calendar_EventExtendedProperties extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3098,15 +3098,15 @@ class Google_Service_Calendar_EventExtendedProperties extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventExtendedPropertiesPrivate extends Google_Model
+class Postman_Google_Service_Calendar_EventExtendedPropertiesPrivate extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_EventExtendedPropertiesShared extends Google_Model
+class Postman_Google_Service_Calendar_EventExtendedPropertiesShared extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_EventGadget extends Google_Model
+class Postman_Google_Service_Calendar_EventGadget extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3186,11 +3186,11 @@ class Google_Service_Calendar_EventGadget extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventGadgetPreferences extends Google_Model
+class Postman_Google_Service_Calendar_EventGadgetPreferences extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_EventOrganizer extends Google_Model
+class Postman_Google_Service_Calendar_EventOrganizer extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3234,7 +3234,7 @@ class Google_Service_Calendar_EventOrganizer extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventReminder extends Google_Model
+class Postman_Google_Service_Calendar_EventReminder extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3260,12 +3260,12 @@ class Google_Service_Calendar_EventReminder extends Google_Model
   }
 }
 
-class Google_Service_Calendar_EventReminders extends Google_Collection
+class Postman_Google_Service_Calendar_EventReminders extends Postman_Google_Collection
 {
   protected $collection_key = 'overrides';
   protected $internal_gapi_mappings = array(
   );
-  protected $overridesType = 'Google_Service_Calendar_EventReminder';
+  protected $overridesType = 'Postman_Google_Service_Calendar_EventReminder';
   protected $overridesDataType = 'array';
   public $useDefault;
 
@@ -3288,7 +3288,7 @@ class Google_Service_Calendar_EventReminders extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_EventSource extends Google_Model
+class Postman_Google_Service_Calendar_EventSource extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3314,17 +3314,17 @@ class Google_Service_Calendar_EventSource extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Events extends Google_Collection
+class Postman_Google_Service_Calendar_Events extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $accessRole;
-  protected $defaultRemindersType = 'Google_Service_Calendar_EventReminder';
+  protected $defaultRemindersType = 'Postman_Google_Service_Calendar_EventReminder';
   protected $defaultRemindersDataType = 'array';
   public $description;
   public $etag;
-  protected $itemsType = 'Google_Service_Calendar_Event';
+  protected $itemsType = 'Postman_Google_Service_Calendar_Event';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -3424,14 +3424,14 @@ class Google_Service_Calendar_Events extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_FreeBusyCalendar extends Google_Collection
+class Postman_Google_Service_Calendar_FreeBusyCalendar extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
   );
-  protected $busyType = 'Google_Service_Calendar_TimePeriod';
+  protected $busyType = 'Postman_Google_Service_Calendar_TimePeriod';
   protected $busyDataType = 'array';
-  protected $errorsType = 'Google_Service_Calendar_Error';
+  protected $errorsType = 'Postman_Google_Service_Calendar_Error';
   protected $errorsDataType = 'array';
 
 
@@ -3453,13 +3453,13 @@ class Google_Service_Calendar_FreeBusyCalendar extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_FreeBusyGroup extends Google_Collection
+class Postman_Google_Service_Calendar_FreeBusyGroup extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
   );
   public $calendars;
-  protected $errorsType = 'Google_Service_Calendar_Error';
+  protected $errorsType = 'Postman_Google_Service_Calendar_Error';
   protected $errorsDataType = 'array';
 
 
@@ -3481,14 +3481,14 @@ class Google_Service_Calendar_FreeBusyGroup extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_FreeBusyRequest extends Google_Collection
+class Postman_Google_Service_Calendar_FreeBusyRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $calendarExpansionMax;
   public $groupExpansionMax;
-  protected $itemsType = 'Google_Service_Calendar_FreeBusyRequestItem';
+  protected $itemsType = 'Postman_Google_Service_Calendar_FreeBusyRequestItem';
   protected $itemsDataType = 'array';
   public $timeMax;
   public $timeMin;
@@ -3545,7 +3545,7 @@ class Google_Service_Calendar_FreeBusyRequest extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_FreeBusyRequestItem extends Google_Model
+class Postman_Google_Service_Calendar_FreeBusyRequestItem extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3562,13 +3562,13 @@ class Google_Service_Calendar_FreeBusyRequestItem extends Google_Model
   }
 }
 
-class Google_Service_Calendar_FreeBusyResponse extends Google_Model
+class Postman_Google_Service_Calendar_FreeBusyResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $calendarsType = 'Google_Service_Calendar_FreeBusyCalendar';
+  protected $calendarsType = 'Postman_Google_Service_Calendar_FreeBusyCalendar';
   protected $calendarsDataType = 'map';
-  protected $groupsType = 'Google_Service_Calendar_FreeBusyGroup';
+  protected $groupsType = 'Postman_Google_Service_Calendar_FreeBusyGroup';
   protected $groupsDataType = 'map';
   public $kind;
   public $timeMax;
@@ -3617,15 +3617,15 @@ class Google_Service_Calendar_FreeBusyResponse extends Google_Model
   }
 }
 
-class Google_Service_Calendar_FreeBusyResponseCalendars extends Google_Model
+class Postman_Google_Service_Calendar_FreeBusyResponseCalendars extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_FreeBusyResponseGroups extends Google_Model
+class Postman_Google_Service_Calendar_FreeBusyResponseGroups extends Postman_Google_Model
 {
 }
 
-class Google_Service_Calendar_Setting extends Google_Model
+class Postman_Google_Service_Calendar_Setting extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3669,13 +3669,13 @@ class Google_Service_Calendar_Setting extends Google_Model
   }
 }
 
-class Google_Service_Calendar_Settings extends Google_Collection
+class Postman_Google_Service_Calendar_Settings extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Calendar_Setting';
+  protected $itemsType = 'Postman_Google_Service_Calendar_Setting';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -3724,7 +3724,7 @@ class Google_Service_Calendar_Settings extends Google_Collection
   }
 }
 
-class Google_Service_Calendar_TimePeriod extends Google_Model
+class Postman_Google_Service_Calendar_TimePeriod extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

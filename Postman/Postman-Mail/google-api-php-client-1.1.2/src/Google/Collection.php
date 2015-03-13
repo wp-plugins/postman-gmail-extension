@@ -3,11 +3,11 @@
 require_once realpath(dirname(__FILE__) . '/../../autoload.php');
 
 /**
- * Extension to the regular Google_Model that automatically
+ * Extension to the regular Postman_Google_Model that automatically
  * exposes the items array for iteration, so you can just
  * iterate over the object rather than a reference inside.
  */
-class Google_Collection extends Google_Model implements Iterator, Countable
+class Postman_Google_Collection extends Postman_Google_Model implements Iterator, Countable
 {
   protected $collection_key = 'items';
 

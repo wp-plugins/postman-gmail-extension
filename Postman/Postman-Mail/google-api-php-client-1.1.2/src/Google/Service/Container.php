@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Container extends Google_Service
+class Postman_Google_Service_Container extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -44,16 +44,16 @@ class Google_Service_Container extends Google_Service
   /**
    * Constructs the internal representation of the Container service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'container/v1beta1/projects/';
     $this->version = 'v1beta1';
     $this->serviceName = 'container';
 
-    $this->projects_clusters = new Google_Service_Container_ProjectsClusters_Resource(
+    $this->projects_clusters = new Postman_Google_Service_Container_ProjectsClusters_Resource(
         $this,
         $this->serviceName,
         'clusters',
@@ -73,7 +73,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_operations = new Google_Service_Container_ProjectsOperations_Resource(
+    $this->projects_operations = new Postman_Google_Service_Container_ProjectsOperations_Resource(
         $this,
         $this->serviceName,
         'operations',
@@ -93,7 +93,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_zones_clusters = new Google_Service_Container_ProjectsZonesClusters_Resource(
+    $this->projects_zones_clusters = new Postman_Google_Service_Container_ProjectsZonesClusters_Resource(
         $this,
         $this->serviceName,
         'clusters',
@@ -173,7 +173,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_zones_operations = new Google_Service_Container_ProjectsZonesOperations_Resource(
+    $this->projects_zones_operations = new Postman_Google_Service_Container_ProjectsZonesOperations_Resource(
         $this,
         $this->serviceName,
         'operations',
@@ -226,11 +226,11 @@ class Google_Service_Container extends Google_Service
  * The "projects" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $projects = $containerService->projects;
  *  </code>
  */
-class Google_Service_Container_Projects_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_Projects_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -238,11 +238,11 @@ class Google_Service_Container_Projects_Resource extends Google_Service_Resource
  * The "clusters" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $clusters = $containerService->clusters;
  *  </code>
  */
-class Google_Service_Container_ProjectsClusters_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_ProjectsClusters_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -252,24 +252,24 @@ class Google_Service_Container_ProjectsClusters_Resource extends Google_Service_
    * @param string $projectId The Google Developers Console project ID or  project
    * number.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_ListAggregatedClustersResponse
+   * @return Postman_Google_Service_Container_ListAggregatedClustersResponse
    */
   public function listProjectsClusters($projectId, $optParams = array())
   {
     $params = array('projectId' => $projectId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Container_ListAggregatedClustersResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Container_ListAggregatedClustersResponse");
   }
 }
 /**
  * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $operations = $containerService->operations;
  *  </code>
  */
-class Google_Service_Container_ProjectsOperations_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_ProjectsOperations_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -279,24 +279,24 @@ class Google_Service_Container_ProjectsOperations_Resource extends Google_Servic
    * @param string $projectId The Google Developers Console project ID or  project
    * number.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_ListAggregatedOperationsResponse
+   * @return Postman_Google_Service_Container_ListAggregatedOperationsResponse
    */
   public function listProjectsOperations($projectId, $optParams = array())
   {
     $params = array('projectId' => $projectId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Container_ListAggregatedOperationsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Container_ListAggregatedOperationsResponse");
   }
 }
 /**
  * The "zones" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $zones = $containerService->zones;
  *  </code>
  */
-class Google_Service_Container_ProjectsZones_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_ProjectsZones_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -304,11 +304,11 @@ class Google_Service_Container_ProjectsZones_Resource extends Google_Service_Res
  * The "clusters" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $clusters = $containerService->clusters;
  *  </code>
  */
-class Google_Service_Container_ProjectsZonesClusters_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_ProjectsZonesClusters_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -329,15 +329,15 @@ class Google_Service_Container_ProjectsZonesClusters_Resource extends Google_Ser
    * number.
    * @param string $zoneId The name of the Google Compute Engine zone in which the
    * cluster resides.
-   * @param Google_CreateClusterRequest $postBody
+   * @param Postman_Google_CreateClusterRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_Operation
+   * @return Postman_Google_Service_Container_Operation
    */
-  public function create($projectId, $zoneId, Google_Service_Container_CreateClusterRequest $postBody, $optParams = array())
+  public function create($projectId, $zoneId, Postman_Google_Service_Container_CreateClusterRequest $postBody, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Container_Operation");
+    return $this->call('create', array($params), "Postman_Google_Service_Container_Operation");
   }
 
   /**
@@ -352,13 +352,13 @@ class Google_Service_Container_ProjectsZonesClusters_Resource extends Google_Ser
    * cluster resides.
    * @param string $clusterId The name of the cluster to delete.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_Operation
+   * @return Postman_Google_Service_Container_Operation
    */
   public function delete($projectId, $zoneId, $clusterId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId, 'clusterId' => $clusterId);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Container_Operation");
+    return $this->call('delete', array($params), "Postman_Google_Service_Container_Operation");
   }
 
   /**
@@ -370,13 +370,13 @@ class Google_Service_Container_ProjectsZonesClusters_Resource extends Google_Ser
    * cluster resides.
    * @param string $clusterId The name of the cluster to retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_Cluster
+   * @return Postman_Google_Service_Container_Cluster
    */
   public function get($projectId, $zoneId, $clusterId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId, 'clusterId' => $clusterId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Container_Cluster");
+    return $this->call('get', array($params), "Postman_Google_Service_Container_Cluster");
   }
 
   /**
@@ -388,24 +388,24 @@ class Google_Service_Container_ProjectsZonesClusters_Resource extends Google_Ser
    * @param string $zoneId The name of the Google Compute Engine zone in which the
    * cluster resides.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_ListClustersResponse
+   * @return Postman_Google_Service_Container_ListClustersResponse
    */
   public function listProjectsZonesClusters($projectId, $zoneId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Container_ListClustersResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Container_ListClustersResponse");
   }
 }
 /**
  * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $containerService = new Google_Service_Container(...);
+ *   $containerService = new Postman_Google_Service_Container(...);
  *   $operations = $containerService->operations;
  *  </code>
  */
-class Google_Service_Container_ProjectsZonesOperations_Resource extends Google_Service_Resource
+class Postman_Google_Service_Container_ProjectsZonesOperations_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -418,13 +418,13 @@ class Google_Service_Container_ProjectsZonesOperations_Resource extends Google_S
    * operation is associated.
    * @param string $operationId The server-assigned name of the operation.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_Operation
+   * @return Postman_Google_Service_Container_Operation
    */
   public function get($projectId, $zoneId, $operationId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId, 'operationId' => $operationId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Container_Operation");
+    return $this->call('get', array($params), "Postman_Google_Service_Container_Operation");
   }
 
   /**
@@ -436,20 +436,20 @@ class Google_Service_Container_ProjectsZonesOperations_Resource extends Google_S
    * @param string $zoneId The name of the Google Compute Engine zone to return
    * operations for.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Container_ListOperationsResponse
+   * @return Postman_Google_Service_Container_ListOperationsResponse
    */
   public function listProjectsZonesOperations($projectId, $zoneId, $optParams = array())
   {
     $params = array('projectId' => $projectId, 'zoneId' => $zoneId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Container_ListOperationsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Container_ListOperationsResponse");
   }
 }
 
 
 
 
-class Google_Service_Container_Cluster extends Google_Model
+class Postman_Google_Service_Container_Cluster extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -458,10 +458,10 @@ class Google_Service_Container_Cluster extends Google_Model
   public $creationTimestamp;
   public $description;
   public $endpoint;
-  protected $masterAuthType = 'Google_Service_Container_MasterAuth';
+  protected $masterAuthType = 'Postman_Google_Service_Container_MasterAuth';
   protected $masterAuthDataType = '';
   public $name;
-  protected $nodeConfigType = 'Google_Service_Container_NodeConfig';
+  protected $nodeConfigType = 'Postman_Google_Service_Container_NodeConfig';
   protected $nodeConfigDataType = '';
   public $nodeRoutingPrefixSize;
   public $numNodes;
@@ -511,7 +511,7 @@ class Google_Service_Container_Cluster extends Google_Model
   {
     return $this->endpoint;
   }
-  public function setMasterAuth(Google_Service_Container_MasterAuth $masterAuth)
+  public function setMasterAuth(Postman_Google_Service_Container_MasterAuth $masterAuth)
   {
     $this->masterAuth = $masterAuth;
   }
@@ -527,7 +527,7 @@ class Google_Service_Container_Cluster extends Google_Model
   {
     return $this->name;
   }
-  public function setNodeConfig(Google_Service_Container_NodeConfig $nodeConfig)
+  public function setNodeConfig(Postman_Google_Service_Container_NodeConfig $nodeConfig)
   {
     $this->nodeConfig = $nodeConfig;
   }
@@ -585,15 +585,15 @@ class Google_Service_Container_Cluster extends Google_Model
   }
 }
 
-class Google_Service_Container_CreateClusterRequest extends Google_Model
+class Postman_Google_Service_Container_CreateClusterRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $clusterType = 'Google_Service_Container_Cluster';
+  protected $clusterType = 'Postman_Google_Service_Container_Cluster';
   protected $clusterDataType = '';
 
 
-  public function setCluster(Google_Service_Container_Cluster $cluster)
+  public function setCluster(Postman_Google_Service_Container_Cluster $cluster)
   {
     $this->cluster = $cluster;
   }
@@ -603,12 +603,12 @@ class Google_Service_Container_CreateClusterRequest extends Google_Model
   }
 }
 
-class Google_Service_Container_ListAggregatedClustersResponse extends Google_Collection
+class Postman_Google_Service_Container_ListAggregatedClustersResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'clusters';
   protected $internal_gapi_mappings = array(
   );
-  protected $clustersType = 'Google_Service_Container_Cluster';
+  protected $clustersType = 'Postman_Google_Service_Container_Cluster';
   protected $clustersDataType = 'array';
 
 
@@ -622,12 +622,12 @@ class Google_Service_Container_ListAggregatedClustersResponse extends Google_Col
   }
 }
 
-class Google_Service_Container_ListAggregatedOperationsResponse extends Google_Collection
+class Postman_Google_Service_Container_ListAggregatedOperationsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'operations';
   protected $internal_gapi_mappings = array(
   );
-  protected $operationsType = 'Google_Service_Container_Operation';
+  protected $operationsType = 'Postman_Google_Service_Container_Operation';
   protected $operationsDataType = 'array';
 
 
@@ -641,12 +641,12 @@ class Google_Service_Container_ListAggregatedOperationsResponse extends Google_C
   }
 }
 
-class Google_Service_Container_ListClustersResponse extends Google_Collection
+class Postman_Google_Service_Container_ListClustersResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'clusters';
   protected $internal_gapi_mappings = array(
   );
-  protected $clustersType = 'Google_Service_Container_Cluster';
+  protected $clustersType = 'Postman_Google_Service_Container_Cluster';
   protected $clustersDataType = 'array';
 
 
@@ -660,12 +660,12 @@ class Google_Service_Container_ListClustersResponse extends Google_Collection
   }
 }
 
-class Google_Service_Container_ListOperationsResponse extends Google_Collection
+class Postman_Google_Service_Container_ListOperationsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'operations';
   protected $internal_gapi_mappings = array(
   );
-  protected $operationsType = 'Google_Service_Container_Operation';
+  protected $operationsType = 'Postman_Google_Service_Container_Operation';
   protected $operationsDataType = 'array';
 
 
@@ -679,7 +679,7 @@ class Google_Service_Container_ListOperationsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Container_MasterAuth extends Google_Model
+class Postman_Google_Service_Container_MasterAuth extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -705,7 +705,7 @@ class Google_Service_Container_MasterAuth extends Google_Model
   }
 }
 
-class Google_Service_Container_NodeConfig extends Google_Model
+class Postman_Google_Service_Container_NodeConfig extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -731,7 +731,7 @@ class Google_Service_Container_NodeConfig extends Google_Model
   }
 }
 
-class Google_Service_Container_Operation extends Google_Model
+class Postman_Google_Service_Container_Operation extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

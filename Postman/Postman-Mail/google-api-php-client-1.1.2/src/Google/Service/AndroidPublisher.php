@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_AndroidPublisher extends Google_Service
+class Postman_Google_Service_AndroidPublisher extends Postman_Google_Service
 {
   /** View and manage your Google Play Android Developer account. */
   const ANDROIDPUBLISHER =
@@ -51,16 +51,16 @@ class Google_Service_AndroidPublisher extends Google_Service
   /**
    * Constructs the internal representation of the AndroidPublisher service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'androidpublisher/v2/applications/';
     $this->version = 'v2';
     $this->serviceName = 'androidpublisher';
 
-    $this->edits = new Google_Service_AndroidPublisher_Edits_Resource(
+    $this->edits = new Postman_Google_Service_AndroidPublisher_Edits_Resource(
         $this,
         $this->serviceName,
         'edits',
@@ -140,7 +140,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_apklistings = new Google_Service_AndroidPublisher_EditsApklistings_Resource(
+    $this->edits_apklistings = new Postman_Google_Service_AndroidPublisher_EditsApklistings_Resource(
         $this,
         $this->serviceName,
         'apklistings',
@@ -290,7 +290,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_apks = new Google_Service_AndroidPublisher_EditsApks_Resource(
+    $this->edits_apks = new Postman_Google_Service_AndroidPublisher_EditsApks_Resource(
         $this,
         $this->serviceName,
         'apks',
@@ -330,7 +330,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_details = new Google_Service_AndroidPublisher_EditsDetails_Resource(
+    $this->edits_details = new Postman_Google_Service_AndroidPublisher_EditsDetails_Resource(
         $this,
         $this->serviceName,
         'details',
@@ -385,7 +385,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_expansionfiles = new Google_Service_AndroidPublisher_EditsExpansionfiles_Resource(
+    $this->edits_expansionfiles = new Postman_Google_Service_AndroidPublisher_EditsExpansionfiles_Resource(
         $this,
         $this->serviceName,
         'expansionfiles',
@@ -495,7 +495,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_images = new Google_Service_AndroidPublisher_EditsImages_Resource(
+    $this->edits_images = new Postman_Google_Service_AndroidPublisher_EditsImages_Resource(
         $this,
         $this->serviceName,
         'images',
@@ -610,7 +610,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_listings = new Google_Service_AndroidPublisher_EditsListings_Resource(
+    $this->edits_listings = new Postman_Google_Service_AndroidPublisher_EditsListings_Resource(
         $this,
         $this->serviceName,
         'listings',
@@ -730,7 +730,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_testers = new Google_Service_AndroidPublisher_EditsTesters_Resource(
+    $this->edits_testers = new Postman_Google_Service_AndroidPublisher_EditsTesters_Resource(
         $this,
         $this->serviceName,
         'testers',
@@ -800,7 +800,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->edits_tracks = new Google_Service_AndroidPublisher_EditsTracks_Resource(
+    $this->edits_tracks = new Postman_Google_Service_AndroidPublisher_EditsTracks_Resource(
         $this,
         $this->serviceName,
         'tracks',
@@ -885,7 +885,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->inappproducts = new Google_Service_AndroidPublisher_Inappproducts_Resource(
+    $this->inappproducts = new Postman_Google_Service_AndroidPublisher_Inappproducts_Resource(
         $this,
         $this->serviceName,
         'inappproducts',
@@ -1003,7 +1003,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->purchases_products = new Google_Service_AndroidPublisher_PurchasesProducts_Resource(
+    $this->purchases_products = new Postman_Google_Service_AndroidPublisher_PurchasesProducts_Resource(
         $this,
         $this->serviceName,
         'products',
@@ -1033,7 +1033,7 @@ class Google_Service_AndroidPublisher extends Google_Service
           )
         )
     );
-    $this->purchases_subscriptions = new Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource(
+    $this->purchases_subscriptions = new Postman_Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource(
         $this,
         $this->serviceName,
         'subscriptions',
@@ -1151,11 +1151,11 @@ class Google_Service_AndroidPublisher extends Google_Service
  * The "edits" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $edits = $androidpublisherService->edits;
  *  </code>
  */
-class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_Edits_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1165,13 +1165,13 @@ class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Reso
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppEdit
+   * @return Postman_Google_Service_AndroidPublisher_AppEdit
    */
   public function commit($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('commit', array($params), "Google_Service_AndroidPublisher_AppEdit");
+    return $this->call('commit', array($params), "Postman_Google_Service_AndroidPublisher_AppEdit");
   }
 
   /**
@@ -1199,13 +1199,13 @@ class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Reso
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppEdit
+   * @return Postman_Google_Service_AndroidPublisher_AppEdit
    */
   public function get($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_AppEdit");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_AppEdit");
   }
 
   /**
@@ -1214,15 +1214,15 @@ class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Reso
    *
    * @param string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
-   * @param Google_AppEdit $postBody
+   * @param Postman_Google_AppEdit $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppEdit
+   * @return Postman_Google_Service_AndroidPublisher_AppEdit
    */
-  public function insert($packageName, Google_Service_AndroidPublisher_AppEdit $postBody, $optParams = array())
+  public function insert($packageName, Postman_Google_Service_AndroidPublisher_AppEdit $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_AndroidPublisher_AppEdit");
+    return $this->call('insert', array($params), "Postman_Google_Service_AndroidPublisher_AppEdit");
   }
 
   /**
@@ -1233,13 +1233,13 @@ class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Reso
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppEdit
+   * @return Postman_Google_Service_AndroidPublisher_AppEdit
    */
   public function validate($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('validate', array($params), "Google_Service_AndroidPublisher_AppEdit");
+    return $this->call('validate', array($params), "Postman_Google_Service_AndroidPublisher_AppEdit");
   }
 }
 
@@ -1247,11 +1247,11 @@ class Google_Service_AndroidPublisher_Edits_Resource extends Google_Service_Reso
  * The "apklistings" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $apklistings = $androidpublisherService->apklistings;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsApklistings_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsApklistings_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1306,13 +1306,13 @@ class Google_Service_AndroidPublisher_EditsApklistings_Resource extends Google_S
    * specific localized listing to read or modify. For example, to select Austrian
    * German, pass "de-AT".
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ApkListing
+   * @return Postman_Google_Service_AndroidPublisher_ApkListing
    */
   public function get($packageName, $editId, $apkVersionCode, $language, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'language' => $language);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_ApkListing");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_ApkListing");
   }
 
   /**
@@ -1325,13 +1325,13 @@ class Google_Service_AndroidPublisher_EditsApklistings_Resource extends Google_S
    * @param int $apkVersionCode The APK version code whose APK-specific listings
    * should be read or modified.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ApkListingsListResponse
+   * @return Postman_Google_Service_AndroidPublisher_ApkListingsListResponse
    */
   public function listEditsApklistings($packageName, $editId, $apkVersionCode, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_ApkListingsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_ApkListingsListResponse");
   }
 
   /**
@@ -1346,15 +1346,15 @@ class Google_Service_AndroidPublisher_EditsApklistings_Resource extends Google_S
    * @param string $language The language code (a BCP-47 language tag) of the APK-
    * specific localized listing to read or modify. For example, to select Austrian
    * German, pass "de-AT".
-   * @param Google_ApkListing $postBody
+   * @param Postman_Google_ApkListing $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ApkListing
+   * @return Postman_Google_Service_AndroidPublisher_ApkListing
    */
-  public function patch($packageName, $editId, $apkVersionCode, $language, Google_Service_AndroidPublisher_ApkListing $postBody, $optParams = array())
+  public function patch($packageName, $editId, $apkVersionCode, $language, Postman_Google_Service_AndroidPublisher_ApkListing $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'language' => $language, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_ApkListing");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_ApkListing");
   }
 
   /**
@@ -1369,26 +1369,26 @@ class Google_Service_AndroidPublisher_EditsApklistings_Resource extends Google_S
    * @param string $language The language code (a BCP-47 language tag) of the APK-
    * specific localized listing to read or modify. For example, to select Austrian
    * German, pass "de-AT".
-   * @param Google_ApkListing $postBody
+   * @param Postman_Google_ApkListing $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ApkListing
+   * @return Postman_Google_Service_AndroidPublisher_ApkListing
    */
-  public function update($packageName, $editId, $apkVersionCode, $language, Google_Service_AndroidPublisher_ApkListing $postBody, $optParams = array())
+  public function update($packageName, $editId, $apkVersionCode, $language, Postman_Google_Service_AndroidPublisher_ApkListing $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'language' => $language, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_ApkListing");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_ApkListing");
   }
 }
 /**
  * The "apks" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $apks = $androidpublisherService->apks;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsApks_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsApks_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1398,13 +1398,13 @@ class Google_Service_AndroidPublisher_EditsApks_Resource extends Google_Service_
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ApksListResponse
+   * @return Postman_Google_Service_AndroidPublisher_ApksListResponse
    */
   public function listEditsApks($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_ApksListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_ApksListResponse");
   }
 
   /**
@@ -1414,24 +1414,24 @@ class Google_Service_AndroidPublisher_EditsApks_Resource extends Google_Service_
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Apk
+   * @return Postman_Google_Service_AndroidPublisher_Apk
    */
   public function upload($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('upload', array($params), "Google_Service_AndroidPublisher_Apk");
+    return $this->call('upload', array($params), "Postman_Google_Service_AndroidPublisher_Apk");
   }
 }
 /**
  * The "details" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $details = $androidpublisherService->details;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsDetails_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsDetails_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1442,13 +1442,13 @@ class Google_Service_AndroidPublisher_EditsDetails_Resource extends Google_Servi
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppDetails
+   * @return Postman_Google_Service_AndroidPublisher_AppDetails
    */
   public function get($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_AppDetails");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_AppDetails");
   }
 
   /**
@@ -1458,15 +1458,15 @@ class Google_Service_AndroidPublisher_EditsDetails_Resource extends Google_Servi
    * @param string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
-   * @param Google_AppDetails $postBody
+   * @param Postman_Google_AppDetails $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppDetails
+   * @return Postman_Google_Service_AndroidPublisher_AppDetails
    */
-  public function patch($packageName, $editId, Google_Service_AndroidPublisher_AppDetails $postBody, $optParams = array())
+  public function patch($packageName, $editId, Postman_Google_Service_AndroidPublisher_AppDetails $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_AppDetails");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_AppDetails");
   }
 
   /**
@@ -1475,26 +1475,26 @@ class Google_Service_AndroidPublisher_EditsDetails_Resource extends Google_Servi
    * @param string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
-   * @param Google_AppDetails $postBody
+   * @param Postman_Google_AppDetails $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_AppDetails
+   * @return Postman_Google_Service_AndroidPublisher_AppDetails
    */
-  public function update($packageName, $editId, Google_Service_AndroidPublisher_AppDetails $postBody, $optParams = array())
+  public function update($packageName, $editId, Postman_Google_Service_AndroidPublisher_AppDetails $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_AppDetails");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_AppDetails");
   }
 }
 /**
  * The "expansionfiles" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $expansionfiles = $androidpublisherService->expansionfiles;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1508,13 +1508,13 @@ class Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Googl
    * configuration is being read or modified.
    * @param string $expansionFileType
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ExpansionFile
+   * @return Postman_Google_Service_AndroidPublisher_ExpansionFile
    */
   public function get($packageName, $editId, $apkVersionCode, $expansionFileType, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'expansionFileType' => $expansionFileType);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_ExpansionFile");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_ExpansionFile");
   }
 
   /**
@@ -1528,15 +1528,15 @@ class Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Googl
    * @param int $apkVersionCode The version code of the APK whose Expansion File
    * configuration is being read or modified.
    * @param string $expansionFileType
-   * @param Google_ExpansionFile $postBody
+   * @param Postman_Google_ExpansionFile $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ExpansionFile
+   * @return Postman_Google_Service_AndroidPublisher_ExpansionFile
    */
-  public function patch($packageName, $editId, $apkVersionCode, $expansionFileType, Google_Service_AndroidPublisher_ExpansionFile $postBody, $optParams = array())
+  public function patch($packageName, $editId, $apkVersionCode, $expansionFileType, Postman_Google_Service_AndroidPublisher_ExpansionFile $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'expansionFileType' => $expansionFileType, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_ExpansionFile");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_ExpansionFile");
   }
 
   /**
@@ -1550,15 +1550,15 @@ class Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Googl
    * @param int $apkVersionCode The version code of the APK whose Expansion File
    * configuration is being read or modified.
    * @param string $expansionFileType
-   * @param Google_ExpansionFile $postBody
+   * @param Postman_Google_ExpansionFile $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ExpansionFile
+   * @return Postman_Google_Service_AndroidPublisher_ExpansionFile
    */
-  public function update($packageName, $editId, $apkVersionCode, $expansionFileType, Google_Service_AndroidPublisher_ExpansionFile $postBody, $optParams = array())
+  public function update($packageName, $editId, $apkVersionCode, $expansionFileType, Postman_Google_Service_AndroidPublisher_ExpansionFile $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'expansionFileType' => $expansionFileType, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_ExpansionFile");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_ExpansionFile");
   }
 
   /**
@@ -1572,24 +1572,24 @@ class Google_Service_AndroidPublisher_EditsExpansionfiles_Resource extends Googl
    * configuration is being read or modified.
    * @param string $expansionFileType
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ExpansionFilesUploadResponse
+   * @return Postman_Google_Service_AndroidPublisher_ExpansionFilesUploadResponse
    */
   public function upload($packageName, $editId, $apkVersionCode, $expansionFileType, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'expansionFileType' => $expansionFileType);
     $params = array_merge($params, $optParams);
-    return $this->call('upload', array($params), "Google_Service_AndroidPublisher_ExpansionFilesUploadResponse");
+    return $this->call('upload', array($params), "Postman_Google_Service_AndroidPublisher_ExpansionFilesUploadResponse");
   }
 }
 /**
  * The "images" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $images = $androidpublisherService->images;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsImages_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsImages_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1625,13 +1625,13 @@ class Google_Service_AndroidPublisher_EditsImages_Resource extends Google_Servic
    * select Austrian German, pass "de-AT".
    * @param string $imageType
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ImagesDeleteAllResponse
+   * @return Postman_Google_Service_AndroidPublisher_ImagesDeleteAllResponse
    */
   public function deleteall($packageName, $editId, $language, $imageType, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
     $params = array_merge($params, $optParams);
-    return $this->call('deleteall', array($params), "Google_Service_AndroidPublisher_ImagesDeleteAllResponse");
+    return $this->call('deleteall', array($params), "Postman_Google_Service_AndroidPublisher_ImagesDeleteAllResponse");
   }
 
   /**
@@ -1646,13 +1646,13 @@ class Google_Service_AndroidPublisher_EditsImages_Resource extends Google_Servic
    * select Austrian German, pass "de-AT".
    * @param string $imageType
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ImagesListResponse
+   * @return Postman_Google_Service_AndroidPublisher_ImagesListResponse
    */
   public function listEditsImages($packageName, $editId, $language, $imageType, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_ImagesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_ImagesListResponse");
   }
 
   /**
@@ -1667,24 +1667,24 @@ class Google_Service_AndroidPublisher_EditsImages_Resource extends Google_Servic
    * select Austrian German, pass "de-AT".
    * @param string $imageType
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ImagesUploadResponse
+   * @return Postman_Google_Service_AndroidPublisher_ImagesUploadResponse
    */
   public function upload($packageName, $editId, $language, $imageType, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
     $params = array_merge($params, $optParams);
-    return $this->call('upload', array($params), "Google_Service_AndroidPublisher_ImagesUploadResponse");
+    return $this->call('upload', array($params), "Postman_Google_Service_AndroidPublisher_ImagesUploadResponse");
   }
 }
 /**
  * The "listings" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $listings = $androidpublisherService->listings;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsListings_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsListings_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1730,13 +1730,13 @@ class Google_Service_AndroidPublisher_EditsListings_Resource extends Google_Serv
    * localized listing to read or modify. For example, to select Austrian German,
    * pass "de-AT".
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Listing
+   * @return Postman_Google_Service_AndroidPublisher_Listing
    */
   public function get($packageName, $editId, $language, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_Listing");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_Listing");
   }
 
   /**
@@ -1747,13 +1747,13 @@ class Google_Service_AndroidPublisher_EditsListings_Resource extends Google_Serv
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ListingsListResponse
+   * @return Postman_Google_Service_AndroidPublisher_ListingsListResponse
    */
   public function listEditsListings($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_ListingsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_ListingsListResponse");
   }
 
   /**
@@ -1766,15 +1766,15 @@ class Google_Service_AndroidPublisher_EditsListings_Resource extends Google_Serv
    * @param string $language The language code (a BCP-47 language tag) of the
    * localized listing to read or modify. For example, to select Austrian German,
    * pass "de-AT".
-   * @param Google_Listing $postBody
+   * @param Postman_Google_Listing $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Listing
+   * @return Postman_Google_Service_AndroidPublisher_Listing
    */
-  public function patch($packageName, $editId, $language, Google_Service_AndroidPublisher_Listing $postBody, $optParams = array())
+  public function patch($packageName, $editId, $language, Postman_Google_Service_AndroidPublisher_Listing $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_Listing");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_Listing");
   }
 
   /**
@@ -1786,26 +1786,26 @@ class Google_Service_AndroidPublisher_EditsListings_Resource extends Google_Serv
    * @param string $language The language code (a BCP-47 language tag) of the
    * localized listing to read or modify. For example, to select Austrian German,
    * pass "de-AT".
-   * @param Google_Listing $postBody
+   * @param Postman_Google_Listing $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Listing
+   * @return Postman_Google_Service_AndroidPublisher_Listing
    */
-  public function update($packageName, $editId, $language, Google_Service_AndroidPublisher_Listing $postBody, $optParams = array())
+  public function update($packageName, $editId, $language, Postman_Google_Service_AndroidPublisher_Listing $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_Listing");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_Listing");
   }
 }
 /**
  * The "testers" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $testers = $androidpublisherService->testers;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsTesters_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsTesters_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1816,13 +1816,13 @@ class Google_Service_AndroidPublisher_EditsTesters_Resource extends Google_Servi
    * @param string $editId Unique identifier for this edit.
    * @param string $track
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Testers
+   * @return Postman_Google_Service_AndroidPublisher_Testers
    */
   public function get($packageName, $editId, $track, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_Testers");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_Testers");
   }
 
   /**
@@ -1832,15 +1832,15 @@ class Google_Service_AndroidPublisher_EditsTesters_Resource extends Google_Servi
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track
-   * @param Google_Testers $postBody
+   * @param Postman_Google_Testers $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Testers
+   * @return Postman_Google_Service_AndroidPublisher_Testers
    */
-  public function patch($packageName, $editId, $track, Google_Service_AndroidPublisher_Testers $postBody, $optParams = array())
+  public function patch($packageName, $editId, $track, Postman_Google_Service_AndroidPublisher_Testers $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_Testers");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_Testers");
   }
 
   /**
@@ -1850,26 +1850,26 @@ class Google_Service_AndroidPublisher_EditsTesters_Resource extends Google_Servi
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track
-   * @param Google_Testers $postBody
+   * @param Postman_Google_Testers $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Testers
+   * @return Postman_Google_Service_AndroidPublisher_Testers
    */
-  public function update($packageName, $editId, $track, Google_Service_AndroidPublisher_Testers $postBody, $optParams = array())
+  public function update($packageName, $editId, $track, Postman_Google_Service_AndroidPublisher_Testers $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_Testers");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_Testers");
   }
 }
 /**
  * The "tracks" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $tracks = $androidpublisherService->tracks;
  *  </code>
  */
-class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_EditsTracks_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1881,13 +1881,13 @@ class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Servic
    * @param string $editId Unique identifier for this edit.
    * @param string $track The track type to read or modify.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Track
+   * @return Postman_Google_Service_AndroidPublisher_Track
    */
   public function get($packageName, $editId, $track, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_Track");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_Track");
   }
 
   /**
@@ -1897,13 +1897,13 @@ class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Servic
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_TracksListResponse
+   * @return Postman_Google_Service_AndroidPublisher_TracksListResponse
    */
   public function listEditsTracks($packageName, $editId, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_TracksListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_TracksListResponse");
   }
 
   /**
@@ -1914,15 +1914,15 @@ class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Servic
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track The track type to read or modify.
-   * @param Google_Track $postBody
+   * @param Postman_Google_Track $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Track
+   * @return Postman_Google_Service_AndroidPublisher_Track
    */
-  public function patch($packageName, $editId, $track, Google_Service_AndroidPublisher_Track $postBody, $optParams = array())
+  public function patch($packageName, $editId, $track, Postman_Google_Service_AndroidPublisher_Track $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_Track");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_Track");
   }
 
   /**
@@ -1932,15 +1932,15 @@ class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Servic
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track The track type to read or modify.
-   * @param Google_Track $postBody
+   * @param Postman_Google_Track $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_Track
+   * @return Postman_Google_Service_AndroidPublisher_Track
    */
-  public function update($packageName, $editId, $track, Google_Service_AndroidPublisher_Track $postBody, $optParams = array())
+  public function update($packageName, $editId, $track, Postman_Google_Service_AndroidPublisher_Track $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'editId' => $editId, 'track' => $track, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_Track");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_Track");
   }
 }
 
@@ -1948,25 +1948,25 @@ class Google_Service_AndroidPublisher_EditsTracks_Resource extends Google_Servic
  * The "inappproducts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $inappproducts = $androidpublisherService->inappproducts;
  *  </code>
  */
-class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_Inappproducts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * (inappproducts.batch)
    *
-   * @param Google_InappproductsBatchRequest $postBody
+   * @param Postman_Google_InappproductsBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_InappproductsBatchResponse
+   * @return Postman_Google_Service_AndroidPublisher_InappproductsBatchResponse
    */
-  public function batch(Google_Service_AndroidPublisher_InappproductsBatchRequest $postBody, $optParams = array())
+  public function batch(Postman_Google_Service_AndroidPublisher_InappproductsBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('batch', array($params), "Google_Service_AndroidPublisher_InappproductsBatchResponse");
+    return $this->call('batch', array($params), "Postman_Google_Service_AndroidPublisher_InappproductsBatchResponse");
   }
 
   /**
@@ -1990,13 +1990,13 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
    * @param string $packageName
    * @param string $sku Unique identifier for the in-app product.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_InAppProduct
+   * @return Postman_Google_Service_AndroidPublisher_InAppProduct
    */
   public function get($packageName, $sku, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'sku' => $sku);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_InAppProduct");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_InAppProduct");
   }
 
   /**
@@ -2004,20 +2004,20 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
    *
    * @param string $packageName Unique identifier for the Android app; for
    * example, "com.spiffygame".
-   * @param Google_InAppProduct $postBody
+   * @param Postman_Google_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
    * targeted by the parent app that don't have a price specified for this in-app
    * product will be auto converted to the target currency based on the default
    * price. Defaults to false.
-   * @return Google_Service_AndroidPublisher_InAppProduct
+   * @return Postman_Google_Service_AndroidPublisher_InAppProduct
    */
-  public function insert($packageName, Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
+  public function insert($packageName, Postman_Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_AndroidPublisher_InAppProduct");
+    return $this->call('insert', array($params), "Postman_Google_Service_AndroidPublisher_InAppProduct");
   }
 
   /**
@@ -2031,13 +2031,13 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
    * @opt_param string token
    * @opt_param string startIndex
    * @opt_param string maxResults
-   * @return Google_Service_AndroidPublisher_InappproductsListResponse
+   * @return Postman_Google_Service_AndroidPublisher_InappproductsListResponse
    */
   public function listInappproducts($packageName, $optParams = array())
   {
     $params = array('packageName' => $packageName);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_InappproductsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_AndroidPublisher_InappproductsListResponse");
   }
 
   /**
@@ -2047,20 +2047,20 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
    * @param string $packageName Unique identifier for the Android app with the in-
    * app product; for example, "com.spiffygame".
    * @param string $sku Unique identifier for the in-app product.
-   * @param Google_InAppProduct $postBody
+   * @param Postman_Google_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
    * targeted by the parent app that don't have a price specified for this in-app
    * product will be auto converted to the target currency based on the default
    * price. Defaults to false.
-   * @return Google_Service_AndroidPublisher_InAppProduct
+   * @return Postman_Google_Service_AndroidPublisher_InAppProduct
    */
-  public function patch($packageName, $sku, Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
+  public function patch($packageName, $sku, Postman_Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'sku' => $sku, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidPublisher_InAppProduct");
+    return $this->call('patch', array($params), "Postman_Google_Service_AndroidPublisher_InAppProduct");
   }
 
   /**
@@ -2069,20 +2069,20 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
    * @param string $packageName Unique identifier for the Android app with the in-
    * app product; for example, "com.spiffygame".
    * @param string $sku Unique identifier for the in-app product.
-   * @param Google_InAppProduct $postBody
+   * @param Postman_Google_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
    * targeted by the parent app that don't have a price specified for this in-app
    * product will be auto converted to the target currency based on the default
    * price. Defaults to false.
-   * @return Google_Service_AndroidPublisher_InAppProduct
+   * @return Postman_Google_Service_AndroidPublisher_InAppProduct
    */
-  public function update($packageName, $sku, Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
+  public function update($packageName, $sku, Postman_Google_Service_AndroidPublisher_InAppProduct $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'sku' => $sku, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AndroidPublisher_InAppProduct");
+    return $this->call('update', array($params), "Postman_Google_Service_AndroidPublisher_InAppProduct");
   }
 }
 
@@ -2090,11 +2090,11 @@ class Google_Service_AndroidPublisher_Inappproducts_Resource extends Google_Serv
  * The "purchases" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $purchases = $androidpublisherService->purchases;
  *  </code>
  */
-class Google_Service_AndroidPublisher_Purchases_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_Purchases_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -2102,11 +2102,11 @@ class Google_Service_AndroidPublisher_Purchases_Resource extends Google_Service_
  * The "products" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $products = $androidpublisherService->products;
  *  </code>
  */
-class Google_Service_AndroidPublisher_PurchasesProducts_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_PurchasesProducts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2119,24 +2119,24 @@ class Google_Service_AndroidPublisher_PurchasesProducts_Resource extends Google_
    * @param string $token The token provided to the user's device when the inapp
    * product was purchased.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_ProductPurchase
+   * @return Postman_Google_Service_AndroidPublisher_ProductPurchase
    */
   public function get($packageName, $productId, $token, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'productId' => $productId, 'token' => $token);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_ProductPurchase");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_ProductPurchase");
   }
 }
 /**
  * The "subscriptions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
+ *   $androidpublisherService = new Postman_Google_Service_AndroidPublisher(...);
  *   $subscriptions = $androidpublisherService->subscriptions;
  *  </code>
  */
-class Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource extends Google_Service_Resource
+class Postman_Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2168,15 +2168,15 @@ class Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource extends Go
    * 'monthly001').
    * @param string $token The token provided to the user's device when the
    * subscription was purchased.
-   * @param Google_SubscriptionPurchasesDeferRequest $postBody
+   * @param Postman_Google_SubscriptionPurchasesDeferRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse
+   * @return Postman_Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse
    */
-  public function defer($packageName, $subscriptionId, $token, Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest $postBody, $optParams = array())
+  public function defer($packageName, $subscriptionId, $token, Postman_Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest $postBody, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'subscriptionId' => $subscriptionId, 'token' => $token, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('defer', array($params), "Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse");
+    return $this->call('defer', array($params), "Postman_Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse");
   }
 
   /**
@@ -2190,13 +2190,13 @@ class Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource extends Go
    * @param string $token The token provided to the user's device when the
    * subscription was purchased.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidPublisher_SubscriptionPurchase
+   * @return Postman_Google_Service_AndroidPublisher_SubscriptionPurchase
    */
   public function get($packageName, $subscriptionId, $token, $optParams = array())
   {
     $params = array('packageName' => $packageName, 'subscriptionId' => $subscriptionId, 'token' => $token);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidPublisher_SubscriptionPurchase");
+    return $this->call('get', array($params), "Postman_Google_Service_AndroidPublisher_SubscriptionPurchase");
   }
 
   /**
@@ -2243,16 +2243,16 @@ class Google_Service_AndroidPublisher_PurchasesSubscriptions_Resource extends Go
 
 
 
-class Google_Service_AndroidPublisher_Apk extends Google_Model
+class Postman_Google_Service_AndroidPublisher_Apk extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $binaryType = 'Google_Service_AndroidPublisher_ApkBinary';
+  protected $binaryType = 'Postman_Google_Service_AndroidPublisher_ApkBinary';
   protected $binaryDataType = '';
   public $versionCode;
 
 
-  public function setBinary(Google_Service_AndroidPublisher_ApkBinary $binary)
+  public function setBinary(Postman_Google_Service_AndroidPublisher_ApkBinary $binary)
   {
     $this->binary = $binary;
   }
@@ -2270,7 +2270,7 @@ class Google_Service_AndroidPublisher_Apk extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ApkBinary extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ApkBinary extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2287,7 +2287,7 @@ class Google_Service_AndroidPublisher_ApkBinary extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ApkListing extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ApkListing extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2313,13 +2313,13 @@ class Google_Service_AndroidPublisher_ApkListing extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ApkListingsListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_ApkListingsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'listings';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $listingsType = 'Google_Service_AndroidPublisher_ApkListing';
+  protected $listingsType = 'Postman_Google_Service_AndroidPublisher_ApkListing';
   protected $listingsDataType = 'array';
 
 
@@ -2341,12 +2341,12 @@ class Google_Service_AndroidPublisher_ApkListingsListResponse extends Google_Col
   }
 }
 
-class Google_Service_AndroidPublisher_ApksListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_ApksListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'apks';
   protected $internal_gapi_mappings = array(
   );
-  protected $apksType = 'Google_Service_AndroidPublisher_Apk';
+  protected $apksType = 'Postman_Google_Service_AndroidPublisher_Apk';
   protected $apksDataType = 'array';
   public $kind;
 
@@ -2369,7 +2369,7 @@ class Google_Service_AndroidPublisher_ApksListResponse extends Google_Collection
   }
 }
 
-class Google_Service_AndroidPublisher_AppDetails extends Google_Model
+class Postman_Google_Service_AndroidPublisher_AppDetails extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2413,7 +2413,7 @@ class Google_Service_AndroidPublisher_AppDetails extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_AppEdit extends Google_Model
+class Postman_Google_Service_AndroidPublisher_AppEdit extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2439,7 +2439,7 @@ class Google_Service_AndroidPublisher_AppEdit extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ExpansionFile extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ExpansionFile extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2465,15 +2465,15 @@ class Google_Service_AndroidPublisher_ExpansionFile extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ExpansionFilesUploadResponse extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ExpansionFilesUploadResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $expansionFileType = 'Google_Service_AndroidPublisher_ExpansionFile';
+  protected $expansionFileType = 'Postman_Google_Service_AndroidPublisher_ExpansionFile';
   protected $expansionFileDataType = '';
 
 
-  public function setExpansionFile(Google_Service_AndroidPublisher_ExpansionFile $expansionFile)
+  public function setExpansionFile(Postman_Google_Service_AndroidPublisher_ExpansionFile $expansionFile)
   {
     $this->expansionFile = $expansionFile;
   }
@@ -2483,7 +2483,7 @@ class Google_Service_AndroidPublisher_ExpansionFilesUploadResponse extends Googl
   }
 }
 
-class Google_Service_AndroidPublisher_Image extends Google_Model
+class Postman_Google_Service_AndroidPublisher_Image extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2518,12 +2518,12 @@ class Google_Service_AndroidPublisher_Image extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ImagesDeleteAllResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_ImagesDeleteAllResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'deleted';
   protected $internal_gapi_mappings = array(
   );
-  protected $deletedType = 'Google_Service_AndroidPublisher_Image';
+  protected $deletedType = 'Postman_Google_Service_AndroidPublisher_Image';
   protected $deletedDataType = 'array';
 
 
@@ -2537,12 +2537,12 @@ class Google_Service_AndroidPublisher_ImagesDeleteAllResponse extends Google_Col
   }
 }
 
-class Google_Service_AndroidPublisher_ImagesListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_ImagesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'images';
   protected $internal_gapi_mappings = array(
   );
-  protected $imagesType = 'Google_Service_AndroidPublisher_Image';
+  protected $imagesType = 'Postman_Google_Service_AndroidPublisher_Image';
   protected $imagesDataType = 'array';
 
 
@@ -2556,15 +2556,15 @@ class Google_Service_AndroidPublisher_ImagesListResponse extends Google_Collecti
   }
 }
 
-class Google_Service_AndroidPublisher_ImagesUploadResponse extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ImagesUploadResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $imageType = 'Google_Service_AndroidPublisher_Image';
+  protected $imageType = 'Postman_Google_Service_AndroidPublisher_Image';
   protected $imageDataType = '';
 
 
-  public function setImage(Google_Service_AndroidPublisher_Image $image)
+  public function setImage(Postman_Google_Service_AndroidPublisher_Image $image)
   {
     $this->image = $image;
   }
@@ -2574,20 +2574,20 @@ class Google_Service_AndroidPublisher_ImagesUploadResponse extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InAppProduct extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $defaultLanguage;
-  protected $defaultPriceType = 'Google_Service_AndroidPublisher_Price';
+  protected $defaultPriceType = 'Postman_Google_Service_AndroidPublisher_Price';
   protected $defaultPriceDataType = '';
-  protected $listingsType = 'Google_Service_AndroidPublisher_InAppProductListing';
+  protected $listingsType = 'Postman_Google_Service_AndroidPublisher_InAppProductListing';
   protected $listingsDataType = 'map';
   public $packageName;
-  protected $pricesType = 'Google_Service_AndroidPublisher_Price';
+  protected $pricesType = 'Postman_Google_Service_AndroidPublisher_Price';
   protected $pricesDataType = 'map';
   public $purchaseType;
-  protected $seasonType = 'Google_Service_AndroidPublisher_Season';
+  protected $seasonType = 'Postman_Google_Service_AndroidPublisher_Season';
   protected $seasonDataType = '';
   public $sku;
   public $status;
@@ -2603,7 +2603,7 @@ class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
   {
     return $this->defaultLanguage;
   }
-  public function setDefaultPrice(Google_Service_AndroidPublisher_Price $defaultPrice)
+  public function setDefaultPrice(Postman_Google_Service_AndroidPublisher_Price $defaultPrice)
   {
     $this->defaultPrice = $defaultPrice;
   }
@@ -2643,7 +2643,7 @@ class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
   {
     return $this->purchaseType;
   }
-  public function setSeason(Google_Service_AndroidPublisher_Season $season)
+  public function setSeason(Postman_Google_Service_AndroidPublisher_Season $season)
   {
     $this->season = $season;
   }
@@ -2685,7 +2685,7 @@ class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_InAppProductListing extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InAppProductListing extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2711,20 +2711,20 @@ class Google_Service_AndroidPublisher_InAppProductListing extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_InAppProductListings extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InAppProductListings extends Postman_Google_Model
 {
 }
 
-class Google_Service_AndroidPublisher_InAppProductPrices extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InAppProductPrices extends Postman_Google_Model
 {
 }
 
-class Google_Service_AndroidPublisher_InappproductsBatchRequest extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_InappproductsBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entrys';
   protected $internal_gapi_mappings = array(
   );
-  protected $entrysType = 'Google_Service_AndroidPublisher_InappproductsBatchRequestEntry';
+  protected $entrysType = 'Postman_Google_Service_AndroidPublisher_InappproductsBatchRequestEntry';
   protected $entrysDataType = 'array';
 
 
@@ -2738,14 +2738,14 @@ class Google_Service_AndroidPublisher_InappproductsBatchRequest extends Google_C
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsBatchRequestEntry extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $inappproductsinsertrequestType = 'Google_Service_AndroidPublisher_InappproductsInsertRequest';
+  protected $inappproductsinsertrequestType = 'Postman_Google_Service_AndroidPublisher_InappproductsInsertRequest';
   protected $inappproductsinsertrequestDataType = '';
-  protected $inappproductsupdaterequestType = 'Google_Service_AndroidPublisher_InappproductsUpdateRequest';
+  protected $inappproductsupdaterequestType = 'Postman_Google_Service_AndroidPublisher_InappproductsUpdateRequest';
   protected $inappproductsupdaterequestDataType = '';
   public $methodName;
 
@@ -2758,7 +2758,7 @@ class Google_Service_AndroidPublisher_InappproductsBatchRequestEntry extends Goo
   {
     return $this->batchId;
   }
-  public function setInappproductsinsertrequest(Google_Service_AndroidPublisher_InappproductsInsertRequest $inappproductsinsertrequest)
+  public function setInappproductsinsertrequest(Postman_Google_Service_AndroidPublisher_InappproductsInsertRequest $inappproductsinsertrequest)
   {
     $this->inappproductsinsertrequest = $inappproductsinsertrequest;
   }
@@ -2766,7 +2766,7 @@ class Google_Service_AndroidPublisher_InappproductsBatchRequestEntry extends Goo
   {
     return $this->inappproductsinsertrequest;
   }
-  public function setInappproductsupdaterequest(Google_Service_AndroidPublisher_InappproductsUpdateRequest $inappproductsupdaterequest)
+  public function setInappproductsupdaterequest(Postman_Google_Service_AndroidPublisher_InappproductsUpdateRequest $inappproductsupdaterequest)
   {
     $this->inappproductsupdaterequest = $inappproductsupdaterequest;
   }
@@ -2784,12 +2784,12 @@ class Google_Service_AndroidPublisher_InappproductsBatchRequestEntry extends Goo
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsBatchResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_InappproductsBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entrys';
   protected $internal_gapi_mappings = array(
   );
-  protected $entrysType = 'Google_Service_AndroidPublisher_InappproductsBatchResponseEntry';
+  protected $entrysType = 'Postman_Google_Service_AndroidPublisher_InappproductsBatchResponseEntry';
   protected $entrysDataType = 'array';
   public $kind;
 
@@ -2812,14 +2812,14 @@ class Google_Service_AndroidPublisher_InappproductsBatchResponse extends Google_
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsBatchResponseEntry extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $inappproductsinsertresponseType = 'Google_Service_AndroidPublisher_InappproductsInsertResponse';
+  protected $inappproductsinsertresponseType = 'Postman_Google_Service_AndroidPublisher_InappproductsInsertResponse';
   protected $inappproductsinsertresponseDataType = '';
-  protected $inappproductsupdateresponseType = 'Google_Service_AndroidPublisher_InappproductsUpdateResponse';
+  protected $inappproductsupdateresponseType = 'Postman_Google_Service_AndroidPublisher_InappproductsUpdateResponse';
   protected $inappproductsupdateresponseDataType = '';
 
 
@@ -2831,7 +2831,7 @@ class Google_Service_AndroidPublisher_InappproductsBatchResponseEntry extends Go
   {
     return $this->batchId;
   }
-  public function setInappproductsinsertresponse(Google_Service_AndroidPublisher_InappproductsInsertResponse $inappproductsinsertresponse)
+  public function setInappproductsinsertresponse(Postman_Google_Service_AndroidPublisher_InappproductsInsertResponse $inappproductsinsertresponse)
   {
     $this->inappproductsinsertresponse = $inappproductsinsertresponse;
   }
@@ -2839,7 +2839,7 @@ class Google_Service_AndroidPublisher_InappproductsBatchResponseEntry extends Go
   {
     return $this->inappproductsinsertresponse;
   }
-  public function setInappproductsupdateresponse(Google_Service_AndroidPublisher_InappproductsUpdateResponse $inappproductsupdateresponse)
+  public function setInappproductsupdateresponse(Postman_Google_Service_AndroidPublisher_InappproductsUpdateResponse $inappproductsupdateresponse)
   {
     $this->inappproductsupdateresponse = $inappproductsupdateresponse;
   }
@@ -2849,15 +2849,15 @@ class Google_Service_AndroidPublisher_InappproductsBatchResponseEntry extends Go
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsInsertRequest extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsInsertRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
+  protected $inappproductType = 'Postman_Google_Service_AndroidPublisher_InAppProduct';
   protected $inappproductDataType = '';
 
 
-  public function setInappproduct(Google_Service_AndroidPublisher_InAppProduct $inappproduct)
+  public function setInappproduct(Postman_Google_Service_AndroidPublisher_InAppProduct $inappproduct)
   {
     $this->inappproduct = $inappproduct;
   }
@@ -2867,15 +2867,15 @@ class Google_Service_AndroidPublisher_InappproductsInsertRequest extends Google_
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsInsertResponse extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsInsertResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
+  protected $inappproductType = 'Postman_Google_Service_AndroidPublisher_InAppProduct';
   protected $inappproductDataType = '';
 
 
-  public function setInappproduct(Google_Service_AndroidPublisher_InAppProduct $inappproduct)
+  public function setInappproduct(Postman_Google_Service_AndroidPublisher_InAppProduct $inappproduct)
   {
     $this->inappproduct = $inappproduct;
   }
@@ -2885,17 +2885,17 @@ class Google_Service_AndroidPublisher_InappproductsInsertResponse extends Google
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_InappproductsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'inappproduct';
   protected $internal_gapi_mappings = array(
   );
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
+  protected $inappproductType = 'Postman_Google_Service_AndroidPublisher_InAppProduct';
   protected $inappproductDataType = 'array';
   public $kind;
-  protected $pageInfoType = 'Google_Service_AndroidPublisher_PageInfo';
+  protected $pageInfoType = 'Postman_Google_Service_AndroidPublisher_PageInfo';
   protected $pageInfoDataType = '';
-  protected $tokenPaginationType = 'Google_Service_AndroidPublisher_TokenPagination';
+  protected $tokenPaginationType = 'Postman_Google_Service_AndroidPublisher_TokenPagination';
   protected $tokenPaginationDataType = '';
 
 
@@ -2915,7 +2915,7 @@ class Google_Service_AndroidPublisher_InappproductsListResponse extends Google_C
   {
     return $this->kind;
   }
-  public function setPageInfo(Google_Service_AndroidPublisher_PageInfo $pageInfo)
+  public function setPageInfo(Postman_Google_Service_AndroidPublisher_PageInfo $pageInfo)
   {
     $this->pageInfo = $pageInfo;
   }
@@ -2923,7 +2923,7 @@ class Google_Service_AndroidPublisher_InappproductsListResponse extends Google_C
   {
     return $this->pageInfo;
   }
-  public function setTokenPagination(Google_Service_AndroidPublisher_TokenPagination $tokenPagination)
+  public function setTokenPagination(Postman_Google_Service_AndroidPublisher_TokenPagination $tokenPagination)
   {
     $this->tokenPagination = $tokenPagination;
   }
@@ -2933,15 +2933,15 @@ class Google_Service_AndroidPublisher_InappproductsListResponse extends Google_C
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsUpdateRequest extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsUpdateRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
+  protected $inappproductType = 'Postman_Google_Service_AndroidPublisher_InAppProduct';
   protected $inappproductDataType = '';
 
 
-  public function setInappproduct(Google_Service_AndroidPublisher_InAppProduct $inappproduct)
+  public function setInappproduct(Postman_Google_Service_AndroidPublisher_InAppProduct $inappproduct)
   {
     $this->inappproduct = $inappproduct;
   }
@@ -2951,15 +2951,15 @@ class Google_Service_AndroidPublisher_InappproductsUpdateRequest extends Google_
   }
 }
 
-class Google_Service_AndroidPublisher_InappproductsUpdateResponse extends Google_Model
+class Postman_Google_Service_AndroidPublisher_InappproductsUpdateResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
+  protected $inappproductType = 'Postman_Google_Service_AndroidPublisher_InAppProduct';
   protected $inappproductDataType = '';
 
 
-  public function setInappproduct(Google_Service_AndroidPublisher_InAppProduct $inappproduct)
+  public function setInappproduct(Postman_Google_Service_AndroidPublisher_InAppProduct $inappproduct)
   {
     $this->inappproduct = $inappproduct;
   }
@@ -2969,7 +2969,7 @@ class Google_Service_AndroidPublisher_InappproductsUpdateResponse extends Google
   }
 }
 
-class Google_Service_AndroidPublisher_Listing extends Google_Model
+class Postman_Google_Service_AndroidPublisher_Listing extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3022,13 +3022,13 @@ class Google_Service_AndroidPublisher_Listing extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ListingsListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_ListingsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'listings';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $listingsType = 'Google_Service_AndroidPublisher_Listing';
+  protected $listingsType = 'Postman_Google_Service_AndroidPublisher_Listing';
   protected $listingsDataType = 'array';
 
 
@@ -3050,7 +3050,7 @@ class Google_Service_AndroidPublisher_ListingsListResponse extends Google_Collec
   }
 }
 
-class Google_Service_AndroidPublisher_MonthDay extends Google_Model
+class Postman_Google_Service_AndroidPublisher_MonthDay extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3076,7 +3076,7 @@ class Google_Service_AndroidPublisher_MonthDay extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_PageInfo extends Google_Model
+class Postman_Google_Service_AndroidPublisher_PageInfo extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3111,7 +3111,7 @@ class Google_Service_AndroidPublisher_PageInfo extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_Price extends Google_Model
+class Postman_Google_Service_AndroidPublisher_Price extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3137,7 +3137,7 @@ class Google_Service_AndroidPublisher_Price extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_ProductPurchase extends Google_Model
+class Postman_Google_Service_AndroidPublisher_ProductPurchase extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3190,17 +3190,17 @@ class Google_Service_AndroidPublisher_ProductPurchase extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_Season extends Google_Model
+class Postman_Google_Service_AndroidPublisher_Season extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $endType = 'Google_Service_AndroidPublisher_MonthDay';
+  protected $endType = 'Postman_Google_Service_AndroidPublisher_MonthDay';
   protected $endDataType = '';
-  protected $startType = 'Google_Service_AndroidPublisher_MonthDay';
+  protected $startType = 'Postman_Google_Service_AndroidPublisher_MonthDay';
   protected $startDataType = '';
 
 
-  public function setEnd(Google_Service_AndroidPublisher_MonthDay $end)
+  public function setEnd(Postman_Google_Service_AndroidPublisher_MonthDay $end)
   {
     $this->end = $end;
   }
@@ -3208,7 +3208,7 @@ class Google_Service_AndroidPublisher_Season extends Google_Model
   {
     return $this->end;
   }
-  public function setStart(Google_Service_AndroidPublisher_MonthDay $start)
+  public function setStart(Postman_Google_Service_AndroidPublisher_MonthDay $start)
   {
     $this->start = $start;
   }
@@ -3218,7 +3218,7 @@ class Google_Service_AndroidPublisher_Season extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_SubscriptionDeferralInfo extends Google_Model
+class Postman_Google_Service_AndroidPublisher_SubscriptionDeferralInfo extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3244,7 +3244,7 @@ class Google_Service_AndroidPublisher_SubscriptionDeferralInfo extends Google_Mo
   }
 }
 
-class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
+class Postman_Google_Service_AndroidPublisher_SubscriptionPurchase extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3288,15 +3288,15 @@ class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest extends Google_Model
+class Postman_Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $deferralInfoType = 'Google_Service_AndroidPublisher_SubscriptionDeferralInfo';
+  protected $deferralInfoType = 'Postman_Google_Service_AndroidPublisher_SubscriptionDeferralInfo';
   protected $deferralInfoDataType = '';
 
 
-  public function setDeferralInfo(Google_Service_AndroidPublisher_SubscriptionDeferralInfo $deferralInfo)
+  public function setDeferralInfo(Postman_Google_Service_AndroidPublisher_SubscriptionDeferralInfo $deferralInfo)
   {
     $this->deferralInfo = $deferralInfo;
   }
@@ -3306,7 +3306,7 @@ class Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest extends 
   }
 }
 
-class Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse extends Google_Model
+class Postman_Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3323,7 +3323,7 @@ class Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse extends
   }
 }
 
-class Google_Service_AndroidPublisher_Testers extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_Testers extends Postman_Google_Collection
 {
   protected $collection_key = 'googlePlusCommunities';
   protected $internal_gapi_mappings = array(
@@ -3350,7 +3350,7 @@ class Google_Service_AndroidPublisher_Testers extends Google_Collection
   }
 }
 
-class Google_Service_AndroidPublisher_TokenPagination extends Google_Model
+class Postman_Google_Service_AndroidPublisher_TokenPagination extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3376,7 +3376,7 @@ class Google_Service_AndroidPublisher_TokenPagination extends Google_Model
   }
 }
 
-class Google_Service_AndroidPublisher_Track extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_Track extends Postman_Google_Collection
 {
   protected $collection_key = 'versionCodes';
   protected $internal_gapi_mappings = array(
@@ -3412,13 +3412,13 @@ class Google_Service_AndroidPublisher_Track extends Google_Collection
   }
 }
 
-class Google_Service_AndroidPublisher_TracksListResponse extends Google_Collection
+class Postman_Google_Service_AndroidPublisher_TracksListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'tracks';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $tracksType = 'Google_Service_AndroidPublisher_Track';
+  protected $tracksType = 'Postman_Google_Service_AndroidPublisher_Track';
   protected $tracksDataType = 'array';
 
 

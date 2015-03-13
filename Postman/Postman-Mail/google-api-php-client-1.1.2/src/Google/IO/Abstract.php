@@ -21,7 +21,7 @@
 
 require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
-abstract class Google_IO_Abstract
+abstract class Postman_Google_IO_Abstract
 {
   const UNKNOWN_CODE = 0;
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';
@@ -31,24 +31,24 @@ abstract class Google_IO_Abstract
   );
   private static $ENTITY_HTTP_METHODS = array("POST" => null, "PUT" => null);
 
-  /** @var Google_Client */
+  /** @var Postman_Google_Client */
   protected $client;
 
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     $this->client = $client;
-    $timeout = $client->getClassConfig('Google_IO_Abstract', 'request_timeout_seconds');
+    $timeout = $client->getClassConfig('Postman_Google_IO_Abstract', 'request_timeout_seconds');
     if ($timeout > 0) {
       $this->setTimeout($timeout);
     }
   }
 
   /**
-   * Executes a Google_Http_Request and returns the resulting populated Google_Http_Request
-   * @param Google_Http_Request $request
-   * @return Google_Http_Request $request
+   * Executes a Postman_Google_Http_Request and returns the resulting populated Postman_Google_Http_Request
+   * @param Postman_Google_Http_Request $request
+   * @return Postman_Google_Http_Request $request
    */
-  abstract public function executeRequest(Google_Http_Request $request);
+  abstract public function executeRequest(Postman_Google_Http_Request $request);
 
   /**
    * Set options that update the transport implementation's behavior.
@@ -82,14 +82,14 @@ abstract class Google_IO_Abstract
   /**
    * @visible for testing.
    * Cache the response to an HTTP request if it is cacheable.
-   * @param Google_Http_Request $request
+   * @param Postman_Google_Http_Request $request
    * @return bool Returns true if the insertion was successful.
    * Otherwise, return false.
    */
-  public function setCachedRequest(Google_Http_Request $request)
+  public function setCachedRequest(Postman_Google_Http_Request $request)
   {
     // Determine if the request is cacheable.
-    if (Google_Http_CacheParser::isResponseCacheable($request)) {
+    if (Postman_Google_Http_CacheParser::isResponseCacheable($request)) {
       $this->client->getCache()->set($request->getCacheKey(), $request);
       return true;
     }
@@ -100,16 +100,16 @@ abstract class Google_IO_Abstract
   /**
    * Execute an HTTP Request
    *
-   * @param Google_HttpRequest $request the http request to be executed
-   * @return Google_HttpRequest http request with the response http code,
+   * @param Postman_Google_HttpRequest $request the http request to be executed
+   * @return Postman_Google_HttpRequest http request with the response http code,
    * response headers and response body filled in
-   * @throws Google_IO_Exception on curl or IO error
+   * @throws Postman_Google_IO_Exception on curl or IO error
    */
-  public function makeRequest(Google_Http_Request $request)
+  public function makeRequest(Postman_Google_Http_Request $request)
   {
     // First, check to see if we have a valid cached version.
     $cached = $this->getCachedRequest($request);
-    if ($cached !== false && $cached instanceof Google_Http_Request) {
+    if ($cached !== false && $cached instanceof Postman_Google_Http_Request) {
       if (!$this->checkMustRevalidateCachedRequest($cached, $request)) {
         return $cached;
       }
@@ -142,13 +142,13 @@ abstract class Google_IO_Abstract
 
   /**
    * @visible for testing.
-   * @param Google_Http_Request $request
-   * @return Google_Http_Request|bool Returns the cached object or
+   * @param Postman_Google_Http_Request $request
+   * @return Postman_Google_Http_Request|bool Returns the cached object or
    * false if the operation was unsuccessful.
    */
-  public function getCachedRequest(Google_Http_Request $request)
+  public function getCachedRequest(Postman_Google_Http_Request $request)
   {
-    if (false === Google_Http_CacheParser::isRequestCacheable($request)) {
+    if (false === Postman_Google_Http_CacheParser::isRequestCacheable($request)) {
       return false;
     }
 
@@ -158,10 +158,10 @@ abstract class Google_IO_Abstract
   /**
    * @visible for testing
    * Process an http request that contains an enclosed entity.
-   * @param Google_Http_Request $request
-   * @return Google_Http_Request Processed request with the enclosed entity.
+   * @param Postman_Google_Http_Request $request
+   * @return Postman_Google_Http_Request Processed request with the enclosed entity.
    */
-  public function processEntityRequest(Google_Http_Request $request)
+  public function processEntityRequest(Postman_Google_Http_Request $request)
   {
     $postBody = $request->getPostBody();
     $contentType = $request->getRequestHeader("content-type");
@@ -190,14 +190,14 @@ abstract class Google_IO_Abstract
   /**
    * Check if an already cached request must be revalidated, and if so update
    * the request with the correct ETag headers.
-   * @param Google_Http_Request $cached A previously cached response.
-   * @param Google_Http_Request $request The outbound request.
+   * @param Postman_Google_Http_Request $cached A previously cached response.
+   * @param Postman_Google_Http_Request $request The outbound request.
    * return bool If the cached object needs to be revalidated, false if it is
    * still current and can be re-used.
    */
   protected function checkMustRevalidateCachedRequest($cached, $request)
   {
-    if (Google_Http_CacheParser::mustRevalidate($cached)) {
+    if (Postman_Google_Http_CacheParser::mustRevalidate($cached)) {
       $addHeaders = array();
       if ($cached->getResponseHeader('etag')) {
         // [13.3.4] If an entity tag has been provided by the origin server,
@@ -216,7 +216,7 @@ abstract class Google_IO_Abstract
 
   /**
    * Update a cached request, using the headers from the last response.
-   * @param Google_HttpRequest $cached A previously cached response.
+   * @param Postman_Google_HttpRequest $cached A previously cached response.
    * @param mixed Associative array of response headers from the last request.
    */
   protected function updateCachedRequest($cached, $responseHeaders)

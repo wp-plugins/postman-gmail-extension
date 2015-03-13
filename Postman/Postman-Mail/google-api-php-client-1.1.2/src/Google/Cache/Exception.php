@@ -17,6 +17,6 @@
 
 require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
-class Google_Cache_Exception extends Google_Exception
+class Postman_Google_Cache_Exception extends Postman_Google_Exception
 {
 }

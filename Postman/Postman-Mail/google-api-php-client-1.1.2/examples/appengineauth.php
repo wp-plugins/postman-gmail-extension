@@ -25,17 +25,17 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
 
 echo pageHeader("AppIdentity Account Access");
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setApplicationName("Client_Library_Examples");
 
-$auth = new Google_Auth_AppIdentity($client);
-$token = $auth->authenticateForScope(Google_Service_Storage::DEVSTORAGE_READ_ONLY);
+$auth = new Postman_Google_Auth_AppIdentity($client);
+$token = $auth->authenticateForScope(Postman_Google_Service_Storage::DEVSTORAGE_READ_ONLY);
 if (!$token) {
   die("Could not authenticate to AppIdentity service");
 }
 $client->setAuth($auth);
 
-$service = new Google_Service_Storage($client);
+$service = new Postman_Google_Service_Storage($client);
 $results = $service->buckets->listBuckets(str_replace("s~", "", $_SERVER['APPLICATION_ID']));
 
 echo "<h3>Results Of Call:</h3>";

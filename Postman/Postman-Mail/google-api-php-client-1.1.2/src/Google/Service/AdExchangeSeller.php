@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_AdExchangeSeller extends Google_Service
+class Postman_Google_Service_AdExchangeSeller extends Postman_Google_Service
 {
   /** View and manage your Ad Exchange data. */
   const ADEXCHANGE_SELLER =
@@ -53,16 +53,16 @@ class Google_Service_AdExchangeSeller extends Google_Service
   /**
    * Constructs the internal representation of the AdExchangeSeller service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'adexchangeseller/v2.0/';
     $this->version = 'v2.0';
     $this->serviceName = 'adexchangeseller';
 
-    $this->accounts = new Google_Service_AdExchangeSeller_Accounts_Resource(
+    $this->accounts = new Postman_Google_Service_AdExchangeSeller_Accounts_Resource(
         $this,
         $this->serviceName,
         'accounts',
@@ -95,7 +95,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_adclients = new Google_Service_AdExchangeSeller_AccountsAdclients_Resource(
+    $this->accounts_adclients = new Postman_Google_Service_AdExchangeSeller_AccountsAdclients_Resource(
         $this,
         $this->serviceName,
         'adclients',
@@ -123,7 +123,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_alerts = new Google_Service_AdExchangeSeller_AccountsAlerts_Resource(
+    $this->accounts_alerts = new Postman_Google_Service_AdExchangeSeller_AccountsAlerts_Resource(
         $this,
         $this->serviceName,
         'alerts',
@@ -147,7 +147,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_customchannels = new Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource(
+    $this->accounts_customchannels = new Postman_Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource(
         $this,
         $this->serviceName,
         'customchannels',
@@ -200,7 +200,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_metadata_dimensions = new Google_Service_AdExchangeSeller_AccountsMetadataDimensions_Resource(
+    $this->accounts_metadata_dimensions = new Postman_Google_Service_AdExchangeSeller_AccountsMetadataDimensions_Resource(
         $this,
         $this->serviceName,
         'dimensions',
@@ -220,7 +220,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_metadata_metrics = new Google_Service_AdExchangeSeller_AccountsMetadataMetrics_Resource(
+    $this->accounts_metadata_metrics = new Postman_Google_Service_AdExchangeSeller_AccountsMetadataMetrics_Resource(
         $this,
         $this->serviceName,
         'metrics',
@@ -240,7 +240,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_preferreddeals = new Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource(
+    $this->accounts_preferreddeals = new Postman_Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource(
         $this,
         $this->serviceName,
         'preferreddeals',
@@ -275,7 +275,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_reports = new Google_Service_AdExchangeSeller_AccountsReports_Resource(
+    $this->accounts_reports = new Postman_Google_Service_AdExchangeSeller_AccountsReports_Resource(
         $this,
         $this->serviceName,
         'reports',
@@ -337,7 +337,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_reports_saved = new Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource(
+    $this->accounts_reports_saved = new Postman_Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource(
         $this,
         $this->serviceName,
         'saved',
@@ -392,7 +392,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_urlchannels = new Google_Service_AdExchangeSeller_AccountsUrlchannels_Resource(
+    $this->accounts_urlchannels = new Postman_Google_Service_AdExchangeSeller_AccountsUrlchannels_Resource(
         $this,
         $this->serviceName,
         'urlchannels',
@@ -433,11 +433,11 @@ class Google_Service_AdExchangeSeller extends Google_Service
  * The "accounts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $accounts = $adexchangesellerService->accounts;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_Accounts_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_Accounts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -446,13 +446,13 @@ class Google_Service_AdExchangeSeller_Accounts_Resource extends Google_Service_R
    * @param string $accountId Account to get information about. Tip: 'myaccount'
    * is a valid ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_Account
+   * @return Postman_Google_Service_AdExchangeSeller_Account
    */
   public function get($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeSeller_Account");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeSeller_Account");
   }
 
   /**
@@ -466,13 +466,13 @@ class Google_Service_AdExchangeSeller_Accounts_Resource extends Google_Service_R
    * "nextPageToken" from the previous response.
    * @opt_param int maxResults The maximum number of accounts to include in the
    * response, used for paging.
-   * @return Google_Service_AdExchangeSeller_Accounts
+   * @return Postman_Google_Service_AdExchangeSeller_Accounts
    */
   public function listAccounts($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Accounts");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_Accounts");
   }
 }
 
@@ -480,11 +480,11 @@ class Google_Service_AdExchangeSeller_Accounts_Resource extends Google_Service_R
  * The "adclients" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $adclients = $adexchangesellerService->adclients;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsAdclients_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsAdclients_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -499,24 +499,24 @@ class Google_Service_AdExchangeSeller_AccountsAdclients_Resource extends Google_
    * "nextPageToken" from the previous response.
    * @opt_param string maxResults The maximum number of ad clients to include in
    * the response, used for paging.
-   * @return Google_Service_AdExchangeSeller_AdClients
+   * @return Postman_Google_Service_AdExchangeSeller_AdClients
    */
   public function listAccountsAdclients($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_AdClients");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_AdClients");
   }
 }
 /**
  * The "alerts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $alerts = $adexchangesellerService->alerts;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsAlerts_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsAlerts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -528,24 +528,24 @@ class Google_Service_AdExchangeSeller_AccountsAlerts_Resource extends Google_Ser
    * @opt_param string locale The locale to use for translating alert messages.
    * The account locale will be used if this is not supplied. The AdSense default
    * (English) will be used if the supplied locale is invalid or unsupported.
-   * @return Google_Service_AdExchangeSeller_Alerts
+   * @return Postman_Google_Service_AdExchangeSeller_Alerts
    */
   public function listAccountsAlerts($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Alerts");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_Alerts");
   }
 }
 /**
  * The "customchannels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $customchannels = $adexchangesellerService->customchannels;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -556,13 +556,13 @@ class Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource extends Go
    * @param string $adClientId Ad client which contains the custom channel.
    * @param string $customChannelId Custom channel to retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_CustomChannel
+   * @return Postman_Google_Service_AdExchangeSeller_CustomChannel
    */
   public function get($accountId, $adClientId, $customChannelId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'adClientId' => $adClientId, 'customChannelId' => $customChannelId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeSeller_CustomChannel");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeSeller_CustomChannel");
   }
 
   /**
@@ -578,24 +578,24 @@ class Google_Service_AdExchangeSeller_AccountsCustomchannels_Resource extends Go
    * "nextPageToken" from the previous response.
    * @opt_param string maxResults The maximum number of custom channels to include
    * in the response, used for paging.
-   * @return Google_Service_AdExchangeSeller_CustomChannels
+   * @return Postman_Google_Service_AdExchangeSeller_CustomChannels
    */
   public function listAccountsCustomchannels($accountId, $adClientId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_CustomChannels");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_CustomChannels");
   }
 }
 /**
  * The "metadata" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $metadata = $adexchangesellerService->metadata;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsMetadata_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsMetadata_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -603,11 +603,11 @@ class Google_Service_AdExchangeSeller_AccountsMetadata_Resource extends Google_S
  * The "dimensions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $dimensions = $adexchangesellerService->dimensions;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsMetadataDimensions_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsMetadataDimensions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -616,24 +616,24 @@ class Google_Service_AdExchangeSeller_AccountsMetadataDimensions_Resource extend
    *
    * @param string $accountId Account with visibility to the dimensions.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_Metadata
+   * @return Postman_Google_Service_AdExchangeSeller_Metadata
    */
   public function listAccountsMetadataDimensions($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Metadata");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_Metadata");
   }
 }
 /**
  * The "metrics" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $metrics = $adexchangesellerService->metrics;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsMetadataMetrics_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsMetadataMetrics_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -642,24 +642,24 @@ class Google_Service_AdExchangeSeller_AccountsMetadataMetrics_Resource extends G
    *
    * @param string $accountId Account with visibility to the metrics.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_Metadata
+   * @return Postman_Google_Service_AdExchangeSeller_Metadata
    */
   public function listAccountsMetadataMetrics($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Metadata");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_Metadata");
   }
 }
 /**
  * The "preferreddeals" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $preferreddeals = $adexchangesellerService->preferreddeals;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -669,13 +669,13 @@ class Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource extends Go
    * @param string $accountId Account owning the deal.
    * @param string $dealId Preferred deal to get information about.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_PreferredDeal
+   * @return Postman_Google_Service_AdExchangeSeller_PreferredDeal
    */
   public function get($accountId, $dealId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'dealId' => $dealId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeSeller_PreferredDeal");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeSeller_PreferredDeal");
   }
 
   /**
@@ -684,24 +684,24 @@ class Google_Service_AdExchangeSeller_AccountsPreferreddeals_Resource extends Go
    *
    * @param string $accountId Account owning the deals.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeSeller_PreferredDeals
+   * @return Postman_Google_Service_AdExchangeSeller_PreferredDeals
    */
   public function listAccountsPreferreddeals($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_PreferredDeals");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_PreferredDeals");
   }
 }
 /**
  * The "reports" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $reports = $adexchangesellerService->reports;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsReports_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsReports_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -727,13 +727,13 @@ class Google_Service_AdExchangeSeller_AccountsReports_Resource extends Google_Se
    * @opt_param string filter Filters to be run on the report.
    * @opt_param string startIndex Index of the first row of report data to return.
    * @opt_param string dimension Dimensions to base the report on.
-   * @return Google_Service_AdExchangeSeller_Report
+   * @return Postman_Google_Service_AdExchangeSeller_Report
    */
   public function generate($accountId, $startDate, $endDate, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'startDate' => $startDate, 'endDate' => $endDate);
     $params = array_merge($params, $optParams);
-    return $this->call('generate', array($params), "Google_Service_AdExchangeSeller_Report");
+    return $this->call('generate', array($params), "Postman_Google_Service_AdExchangeSeller_Report");
   }
 }
 
@@ -741,11 +741,11 @@ class Google_Service_AdExchangeSeller_AccountsReports_Resource extends Google_Se
  * The "saved" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $saved = $adexchangesellerService->saved;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -761,13 +761,13 @@ class Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource extends Goog
    * @opt_param int startIndex Index of the first row of report data to return.
    * @opt_param int maxResults The maximum number of rows of report data to
    * return.
-   * @return Google_Service_AdExchangeSeller_Report
+   * @return Postman_Google_Service_AdExchangeSeller_Report
    */
   public function generate($accountId, $savedReportId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'savedReportId' => $savedReportId);
     $params = array_merge($params, $optParams);
-    return $this->call('generate', array($params), "Google_Service_AdExchangeSeller_Report");
+    return $this->call('generate', array($params), "Postman_Google_Service_AdExchangeSeller_Report");
   }
 
   /**
@@ -782,24 +782,24 @@ class Google_Service_AdExchangeSeller_AccountsReportsSaved_Resource extends Goog
    * "nextPageToken" from the previous response.
    * @opt_param int maxResults The maximum number of saved reports to include in
    * the response, used for paging.
-   * @return Google_Service_AdExchangeSeller_SavedReports
+   * @return Postman_Google_Service_AdExchangeSeller_SavedReports
    */
   public function listAccountsReportsSaved($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_SavedReports");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_SavedReports");
   }
 }
 /**
  * The "urlchannels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
+ *   $adexchangesellerService = new Postman_Google_Service_AdExchangeSeller(...);
  *   $urlchannels = $adexchangesellerService->urlchannels;
  *  </code>
  */
-class Google_Service_AdExchangeSeller_AccountsUrlchannels_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeSeller_AccountsUrlchannels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -815,20 +815,20 @@ class Google_Service_AdExchangeSeller_AccountsUrlchannels_Resource extends Googl
    * "nextPageToken" from the previous response.
    * @opt_param string maxResults The maximum number of URL channels to include in
    * the response, used for paging.
-   * @return Google_Service_AdExchangeSeller_UrlChannels
+   * @return Postman_Google_Service_AdExchangeSeller_UrlChannels
    */
   public function listAccountsUrlchannels($accountId, $adClientId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'adClientId' => $adClientId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_UrlChannels");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeSeller_UrlChannels");
   }
 }
 
 
 
 
-class Google_Service_AdExchangeSeller_Account extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_Account extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -863,13 +863,13 @@ class Google_Service_AdExchangeSeller_Account extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_Accounts extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_Accounts extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_AdExchangeSeller_Account';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_Account';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -909,7 +909,7 @@ class Google_Service_AdExchangeSeller_Accounts extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_AdClient extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_AdClient extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -962,13 +962,13 @@ class Google_Service_AdExchangeSeller_AdClient extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_AdClients extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_AdClients extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_AdExchangeSeller_AdClient';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_AdClient';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1008,7 +1008,7 @@ class Google_Service_AdExchangeSeller_AdClients extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_Alert extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_Alert extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1061,12 +1061,12 @@ class Google_Service_AdExchangeSeller_Alert extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_Alerts extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_Alerts extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeSeller_Alert';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_Alert';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1089,7 +1089,7 @@ class Google_Service_AdExchangeSeller_Alerts extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_CustomChannel extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_CustomChannel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1097,7 +1097,7 @@ class Google_Service_AdExchangeSeller_CustomChannel extends Google_Model
   public $id;
   public $kind;
   public $name;
-  protected $targetingInfoType = 'Google_Service_AdExchangeSeller_CustomChannelTargetingInfo';
+  protected $targetingInfoType = 'Postman_Google_Service_AdExchangeSeller_CustomChannelTargetingInfo';
   protected $targetingInfoDataType = '';
 
 
@@ -1133,7 +1133,7 @@ class Google_Service_AdExchangeSeller_CustomChannel extends Google_Model
   {
     return $this->name;
   }
-  public function setTargetingInfo(Google_Service_AdExchangeSeller_CustomChannelTargetingInfo $targetingInfo)
+  public function setTargetingInfo(Postman_Google_Service_AdExchangeSeller_CustomChannelTargetingInfo $targetingInfo)
   {
     $this->targetingInfo = $targetingInfo;
   }
@@ -1143,7 +1143,7 @@ class Google_Service_AdExchangeSeller_CustomChannel extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_CustomChannelTargetingInfo extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_CustomChannelTargetingInfo extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1187,13 +1187,13 @@ class Google_Service_AdExchangeSeller_CustomChannelTargetingInfo extends Google_
   }
 }
 
-class Google_Service_AdExchangeSeller_CustomChannels extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_CustomChannels extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_AdExchangeSeller_CustomChannel';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_CustomChannel';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1233,12 +1233,12 @@ class Google_Service_AdExchangeSeller_CustomChannels extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_Metadata extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_Metadata extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeSeller_ReportingMetadataEntry';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_ReportingMetadataEntry';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1261,7 +1261,7 @@ class Google_Service_AdExchangeSeller_Metadata extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_PreferredDeal extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_PreferredDeal extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1341,12 +1341,12 @@ class Google_Service_AdExchangeSeller_PreferredDeal extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_PreferredDeals extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_PreferredDeals extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeSeller_PreferredDeal';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_PreferredDeal';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1369,13 +1369,13 @@ class Google_Service_AdExchangeSeller_PreferredDeals extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_Report extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_Report extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
   );
   public $averages;
-  protected $headersType = 'Google_Service_AdExchangeSeller_ReportHeaders';
+  protected $headersType = 'Postman_Google_Service_AdExchangeSeller_ReportHeaders';
   protected $headersDataType = 'array';
   public $kind;
   public $rows;
@@ -1442,7 +1442,7 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_ReportHeaders extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_ReportHeaders extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1477,7 +1477,7 @@ class Google_Service_AdExchangeSeller_ReportHeaders extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Postman_Google_Collection
 {
   protected $collection_key = 'supportedProducts';
   protected $internal_gapi_mappings = array(
@@ -1549,7 +1549,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   }
 }
 
-class Google_Service_AdExchangeSeller_SavedReport extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_SavedReport extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1584,13 +1584,13 @@ class Google_Service_AdExchangeSeller_SavedReport extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_SavedReports extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_SavedReports extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_AdExchangeSeller_SavedReport';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_SavedReport';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1630,7 +1630,7 @@ class Google_Service_AdExchangeSeller_SavedReports extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeSeller_UrlChannel extends Google_Model
+class Postman_Google_Service_AdExchangeSeller_UrlChannel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1665,13 +1665,13 @@ class Google_Service_AdExchangeSeller_UrlChannel extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeSeller_UrlChannels extends Google_Collection
+class Postman_Google_Service_AdExchangeSeller_UrlChannels extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_AdExchangeSeller_UrlChannel';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeSeller_UrlChannel';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;

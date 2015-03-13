@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_CloudMonitoring extends Google_Service
+class Postman_Google_Service_CloudMonitoring extends Postman_Google_Service
 {
   /** View monitoring data for all of your Google Cloud and API projects. */
   const MONITORING_READONLY =
@@ -42,16 +42,16 @@ class Google_Service_CloudMonitoring extends Google_Service
   /**
    * Constructs the internal representation of the CloudMonitoring service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'cloudmonitoring/v2beta1/projects/';
     $this->version = 'v2beta1';
     $this->serviceName = 'cloudmonitoring';
 
-    $this->metricDescriptors = new Google_Service_CloudMonitoring_MetricDescriptors_Resource(
+    $this->metricDescriptors = new Postman_Google_Service_CloudMonitoring_MetricDescriptors_Resource(
         $this,
         $this->serviceName,
         'metricDescriptors',
@@ -83,7 +83,7 @@ class Google_Service_CloudMonitoring extends Google_Service
           )
         )
     );
-    $this->timeseries = new Google_Service_CloudMonitoring_Timeseries_Resource(
+    $this->timeseries = new Postman_Google_Service_CloudMonitoring_Timeseries_Resource(
         $this,
         $this->serviceName,
         'timeseries',
@@ -134,7 +134,7 @@ class Google_Service_CloudMonitoring extends Google_Service
           )
         )
     );
-    $this->timeseriesDescriptors = new Google_Service_CloudMonitoring_TimeseriesDescriptors_Resource(
+    $this->timeseriesDescriptors = new Postman_Google_Service_CloudMonitoring_TimeseriesDescriptors_Resource(
         $this,
         $this->serviceName,
         'timeseriesDescriptors',
@@ -193,11 +193,11 @@ class Google_Service_CloudMonitoring extends Google_Service
  * The "metricDescriptors" collection of methods.
  * Typical usage is:
  *  <code>
- *   $cloudmonitoringService = new Google_Service_CloudMonitoring(...);
+ *   $cloudmonitoringService = new Postman_Google_Service_CloudMonitoring(...);
  *   $metricDescriptors = $cloudmonitoringService->metricDescriptors;
  *  </code>
  */
-class Google_Service_CloudMonitoring_MetricDescriptors_Resource extends Google_Service_Resource
+class Postman_Google_Service_CloudMonitoring_MetricDescriptors_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -221,13 +221,13 @@ class Google_Service_CloudMonitoring_MetricDescriptors_Resource extends Google_S
    * meaning that all keywords must match for a metric to be returned. If this
    * field is omitted, all metrics are returned. If an empty string is passed with
    * this field, no metrics are returned.
-   * @return Google_Service_CloudMonitoring_ListMetricDescriptorsResponse
+   * @return Postman_Google_Service_CloudMonitoring_ListMetricDescriptorsResponse
    */
   public function listMetricDescriptors($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListMetricDescriptorsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_CloudMonitoring_ListMetricDescriptorsResponse");
   }
 }
 
@@ -235,11 +235,11 @@ class Google_Service_CloudMonitoring_MetricDescriptors_Resource extends Google_S
  * The "timeseries" collection of methods.
  * Typical usage is:
  *  <code>
- *   $cloudmonitoringService = new Google_Service_CloudMonitoring(...);
+ *   $cloudmonitoringService = new Postman_Google_Service_CloudMonitoring(...);
  *   $timeseries = $cloudmonitoringService->timeseries;
  *  </code>
  */
-class Google_Service_CloudMonitoring_Timeseries_Resource extends Google_Service_Resource
+class Postman_Google_Service_CloudMonitoring_Timeseries_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -281,13 +281,13 @@ class Google_Service_CloudMonitoring_Timeseries_Resource extends Google_Service_
    * @opt_param string oldest Start of the time interval (exclusive), which is
    * expressed as an RFC 3339 timestamp. If neither oldest nor timespan is
    * specified, the default time interval will be (youngest - 4 hours, youngest]
-   * @return Google_Service_CloudMonitoring_ListTimeseriesResponse
+   * @return Postman_Google_Service_CloudMonitoring_ListTimeseriesResponse
    */
   public function listTimeseries($project, $metric, $youngest, $optParams = array())
   {
     $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_CloudMonitoring_ListTimeseriesResponse");
   }
 }
 
@@ -295,11 +295,11 @@ class Google_Service_CloudMonitoring_Timeseries_Resource extends Google_Service_
  * The "timeseriesDescriptors" collection of methods.
  * Typical usage is:
  *  <code>
- *   $cloudmonitoringService = new Google_Service_CloudMonitoring(...);
+ *   $cloudmonitoringService = new Postman_Google_Service_CloudMonitoring(...);
  *   $timeseriesDescriptors = $cloudmonitoringService->timeseriesDescriptors;
  *  </code>
  */
-class Google_Service_CloudMonitoring_TimeseriesDescriptors_Resource extends Google_Service_Resource
+class Postman_Google_Service_CloudMonitoring_TimeseriesDescriptors_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -341,20 +341,20 @@ class Google_Service_CloudMonitoring_TimeseriesDescriptors_Resource extends Goog
    * @opt_param string oldest Start of the time interval (exclusive), which is
    * expressed as an RFC 3339 timestamp. If neither oldest nor timespan is
    * specified, the default time interval will be (youngest - 4 hours, youngest]
-   * @return Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse
+   * @return Postman_Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse
    */
   public function listTimeseriesDescriptors($project, $metric, $youngest, $optParams = array())
   {
     $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse");
   }
 }
 
 
 
 
-class Google_Service_CloudMonitoring_ListMetricDescriptorsRequest extends Google_Model
+class Postman_Google_Service_CloudMonitoring_ListMetricDescriptorsRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -371,13 +371,13 @@ class Google_Service_CloudMonitoring_ListMetricDescriptorsRequest extends Google
   }
 }
 
-class Google_Service_CloudMonitoring_ListMetricDescriptorsResponse extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_ListMetricDescriptorsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'metrics';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $metricsType = 'Google_Service_CloudMonitoring_MetricDescriptor';
+  protected $metricsType = 'Postman_Google_Service_CloudMonitoring_MetricDescriptor';
   protected $metricsDataType = 'array';
   public $nextPageToken;
 
@@ -408,7 +408,7 @@ class Google_Service_CloudMonitoring_ListMetricDescriptorsResponse extends Googl
   }
 }
 
-class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsRequest extends Google_Model
+class Postman_Google_Service_CloudMonitoring_ListTimeseriesDescriptorsRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -425,7 +425,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsRequest extends Go
   }
 }
 
-class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'timeseries';
   protected $internal_gapi_mappings = array(
@@ -433,7 +433,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends G
   public $kind;
   public $nextPageToken;
   public $oldest;
-  protected $timeseriesType = 'Google_Service_CloudMonitoring_TimeseriesDescriptor';
+  protected $timeseriesType = 'Postman_Google_Service_CloudMonitoring_TimeseriesDescriptor';
   protected $timeseriesDataType = 'array';
   public $youngest;
 
@@ -480,7 +480,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends G
   }
 }
 
-class Google_Service_CloudMonitoring_ListTimeseriesRequest extends Google_Model
+class Postman_Google_Service_CloudMonitoring_ListTimeseriesRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -497,7 +497,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesRequest extends Google_Model
   }
 }
 
-class Google_Service_CloudMonitoring_ListTimeseriesResponse extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_ListTimeseriesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'timeseries';
   protected $internal_gapi_mappings = array(
@@ -505,7 +505,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesResponse extends Google_Colle
   public $kind;
   public $nextPageToken;
   public $oldest;
-  protected $timeseriesType = 'Google_Service_CloudMonitoring_Timeseries';
+  protected $timeseriesType = 'Postman_Google_Service_CloudMonitoring_Timeseries';
   protected $timeseriesDataType = 'array';
   public $youngest;
 
@@ -552,17 +552,17 @@ class Google_Service_CloudMonitoring_ListTimeseriesResponse extends Google_Colle
   }
 }
 
-class Google_Service_CloudMonitoring_MetricDescriptor extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_MetricDescriptor extends Postman_Google_Collection
 {
   protected $collection_key = 'labels';
   protected $internal_gapi_mappings = array(
   );
   public $description;
-  protected $labelsType = 'Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor';
+  protected $labelsType = 'Postman_Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor';
   protected $labelsDataType = 'array';
   public $name;
   public $project;
-  protected $typeDescriptorType = 'Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor';
+  protected $typeDescriptorType = 'Postman_Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor';
   protected $typeDescriptorDataType = '';
 
 
@@ -598,7 +598,7 @@ class Google_Service_CloudMonitoring_MetricDescriptor extends Google_Collection
   {
     return $this->project;
   }
-  public function setTypeDescriptor(Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor $typeDescriptor)
+  public function setTypeDescriptor(Postman_Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor $typeDescriptor)
   {
     $this->typeDescriptor = $typeDescriptor;
   }
@@ -608,7 +608,7 @@ class Google_Service_CloudMonitoring_MetricDescriptor extends Google_Collection
   }
 }
 
-class Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor extends Google_Model
+class Postman_Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -634,7 +634,7 @@ class Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor extends Goo
   }
 }
 
-class Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor extends Google_Model
+class Postman_Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -660,12 +660,12 @@ class Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor extends Goog
   }
 }
 
-class Google_Service_CloudMonitoring_Point extends Google_Model
+class Postman_Google_Service_CloudMonitoring_Point extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $boolValue;
-  protected $distributionValueType = 'Google_Service_CloudMonitoring_PointDistribution';
+  protected $distributionValueType = 'Postman_Google_Service_CloudMonitoring_PointDistribution';
   protected $distributionValueDataType = '';
   public $doubleValue;
   public $end;
@@ -682,7 +682,7 @@ class Google_Service_CloudMonitoring_Point extends Google_Model
   {
     return $this->boolValue;
   }
-  public function setDistributionValue(Google_Service_CloudMonitoring_PointDistribution $distributionValue)
+  public function setDistributionValue(Postman_Google_Service_CloudMonitoring_PointDistribution $distributionValue)
   {
     $this->distributionValue = $distributionValue;
   }
@@ -732,16 +732,16 @@ class Google_Service_CloudMonitoring_Point extends Google_Model
   }
 }
 
-class Google_Service_CloudMonitoring_PointDistribution extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_PointDistribution extends Postman_Google_Collection
 {
   protected $collection_key = 'buckets';
   protected $internal_gapi_mappings = array(
   );
-  protected $bucketsType = 'Google_Service_CloudMonitoring_PointDistributionBucket';
+  protected $bucketsType = 'Postman_Google_Service_CloudMonitoring_PointDistributionBucket';
   protected $bucketsDataType = 'array';
-  protected $overflowBucketType = 'Google_Service_CloudMonitoring_PointDistributionOverflowBucket';
+  protected $overflowBucketType = 'Postman_Google_Service_CloudMonitoring_PointDistributionOverflowBucket';
   protected $overflowBucketDataType = '';
-  protected $underflowBucketType = 'Google_Service_CloudMonitoring_PointDistributionUnderflowBucket';
+  protected $underflowBucketType = 'Postman_Google_Service_CloudMonitoring_PointDistributionUnderflowBucket';
   protected $underflowBucketDataType = '';
 
 
@@ -753,7 +753,7 @@ class Google_Service_CloudMonitoring_PointDistribution extends Google_Collection
   {
     return $this->buckets;
   }
-  public function setOverflowBucket(Google_Service_CloudMonitoring_PointDistributionOverflowBucket $overflowBucket)
+  public function setOverflowBucket(Postman_Google_Service_CloudMonitoring_PointDistributionOverflowBucket $overflowBucket)
   {
     $this->overflowBucket = $overflowBucket;
   }
@@ -761,7 +761,7 @@ class Google_Service_CloudMonitoring_PointDistribution extends Google_Collection
   {
     return $this->overflowBucket;
   }
-  public function setUnderflowBucket(Google_Service_CloudMonitoring_PointDistributionUnderflowBucket $underflowBucket)
+  public function setUnderflowBucket(Postman_Google_Service_CloudMonitoring_PointDistributionUnderflowBucket $underflowBucket)
   {
     $this->underflowBucket = $underflowBucket;
   }
@@ -771,7 +771,7 @@ class Google_Service_CloudMonitoring_PointDistribution extends Google_Collection
   }
 }
 
-class Google_Service_CloudMonitoring_PointDistributionBucket extends Google_Model
+class Postman_Google_Service_CloudMonitoring_PointDistributionBucket extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -806,7 +806,7 @@ class Google_Service_CloudMonitoring_PointDistributionBucket extends Google_Mode
   }
 }
 
-class Google_Service_CloudMonitoring_PointDistributionOverflowBucket extends Google_Model
+class Postman_Google_Service_CloudMonitoring_PointDistributionOverflowBucket extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -832,7 +832,7 @@ class Google_Service_CloudMonitoring_PointDistributionOverflowBucket extends Goo
   }
 }
 
-class Google_Service_CloudMonitoring_PointDistributionUnderflowBucket extends Google_Model
+class Postman_Google_Service_CloudMonitoring_PointDistributionUnderflowBucket extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -858,14 +858,14 @@ class Google_Service_CloudMonitoring_PointDistributionUnderflowBucket extends Go
   }
 }
 
-class Google_Service_CloudMonitoring_Timeseries extends Google_Collection
+class Postman_Google_Service_CloudMonitoring_Timeseries extends Postman_Google_Collection
 {
   protected $collection_key = 'points';
   protected $internal_gapi_mappings = array(
   );
-  protected $pointsType = 'Google_Service_CloudMonitoring_Point';
+  protected $pointsType = 'Postman_Google_Service_CloudMonitoring_Point';
   protected $pointsDataType = 'array';
-  protected $timeseriesDescType = 'Google_Service_CloudMonitoring_TimeseriesDescriptor';
+  protected $timeseriesDescType = 'Postman_Google_Service_CloudMonitoring_TimeseriesDescriptor';
   protected $timeseriesDescDataType = '';
 
 
@@ -877,7 +877,7 @@ class Google_Service_CloudMonitoring_Timeseries extends Google_Collection
   {
     return $this->points;
   }
-  public function setTimeseriesDesc(Google_Service_CloudMonitoring_TimeseriesDescriptor $timeseriesDesc)
+  public function setTimeseriesDesc(Postman_Google_Service_CloudMonitoring_TimeseriesDescriptor $timeseriesDesc)
   {
     $this->timeseriesDesc = $timeseriesDesc;
   }
@@ -887,7 +887,7 @@ class Google_Service_CloudMonitoring_Timeseries extends Google_Collection
   }
 }
 
-class Google_Service_CloudMonitoring_TimeseriesDescriptor extends Google_Model
+class Postman_Google_Service_CloudMonitoring_TimeseriesDescriptor extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -922,7 +922,7 @@ class Google_Service_CloudMonitoring_TimeseriesDescriptor extends Google_Model
   }
 }
 
-class Google_Service_CloudMonitoring_TimeseriesDescriptorLabel extends Google_Model
+class Postman_Google_Service_CloudMonitoring_TimeseriesDescriptorLabel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -948,6 +948,6 @@ class Google_Service_CloudMonitoring_TimeseriesDescriptorLabel extends Google_Mo
   }
 }
 
-class Google_Service_CloudMonitoring_TimeseriesDescriptorLabels extends Google_Model
+class Postman_Google_Service_CloudMonitoring_TimeseriesDescriptorLabels extends Postman_Google_Model
 {
 }

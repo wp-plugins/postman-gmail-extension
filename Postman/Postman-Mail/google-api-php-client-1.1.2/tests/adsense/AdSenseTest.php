@@ -21,7 +21,7 @@ class AdSenseManagementTest extends BaseTest
   public function __construct()
   {
     parent::__construct();
-    $this->adsense = new Google_Service_AdSense($this->getClient());
+    $this->adsense = new Postman_Google_Service_AdSense($this->getClient());
   }
 
   public function testAccountsList()

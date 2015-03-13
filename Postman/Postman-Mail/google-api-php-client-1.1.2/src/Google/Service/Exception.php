@@ -2,7 +2,7 @@
 
 require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
-class Google_Service_Exception extends Google_Exception
+class Postman_Google_Service_Exception extends Postman_Google_Exception
 {
   /**
    * Optional list of errors returned in a JSON body of an HTTP error response.

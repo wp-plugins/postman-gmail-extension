@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Resourceviews extends Google_Service
+class Postman_Google_Service_Resourceviews extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -54,16 +54,16 @@ class Google_Service_Resourceviews extends Google_Service
   /**
    * Constructs the internal representation of the Resourceviews service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'resourceviews/v1beta2/projects/';
     $this->version = 'v1beta2';
     $this->serviceName = 'resourceviews';
 
-    $this->zoneOperations = new Google_Service_Resourceviews_ZoneOperations_Resource(
+    $this->zoneOperations = new Postman_Google_Service_Resourceviews_ZoneOperations_Resource(
         $this,
         $this->serviceName,
         'zoneOperations',
@@ -120,7 +120,7 @@ class Google_Service_Resourceviews extends Google_Service
           )
         )
     );
-    $this->zoneViews = new Google_Service_Resourceviews_ZoneViews_Resource(
+    $this->zoneViews = new Postman_Google_Service_Resourceviews_ZoneViews_Resource(
         $this,
         $this->serviceName,
         'zoneViews',
@@ -340,11 +340,11 @@ class Google_Service_Resourceviews extends Google_Service
  * The "zoneOperations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourceviewsService = new Google_Service_Resourceviews(...);
+ *   $resourceviewsService = new Postman_Google_Service_Resourceviews(...);
  *   $zoneOperations = $resourceviewsService->zoneOperations;
  *  </code>
  */
-class Google_Service_Resourceviews_ZoneOperations_Resource extends Google_Service_Resource
+class Postman_Google_Service_Resourceviews_ZoneOperations_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -355,13 +355,13 @@ class Google_Service_Resourceviews_ZoneOperations_Resource extends Google_Servic
    * @param string $zone Name of the zone scoping this request.
    * @param string $operation Name of the operation resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
   public function get($project, $zone, $operation, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('get', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 
   /**
@@ -378,13 +378,13 @@ class Google_Service_Resourceviews_ZoneOperations_Resource extends Google_Servic
    * truncated by maxResults. Used to continue a previous list request.
    * @opt_param string maxResults Optional. Maximum count of results to be
    * returned. Maximum value is 500 and default value is 500.
-   * @return Google_Service_Resourceviews_OperationList
+   * @return Postman_Google_Service_Resourceviews_OperationList
    */
   public function listZoneOperations($project, $zone, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Resourceviews_OperationList");
+    return $this->call('list', array($params), "Postman_Google_Service_Resourceviews_OperationList");
   }
 }
 
@@ -392,11 +392,11 @@ class Google_Service_Resourceviews_ZoneOperations_Resource extends Google_Servic
  * The "zoneViews" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourceviewsService = new Google_Service_Resourceviews(...);
+ *   $resourceviewsService = new Postman_Google_Service_Resourceviews(...);
  *   $zoneViews = $resourceviewsService->zoneViews;
  *  </code>
  */
-class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Resource
+class Postman_Google_Service_Resourceviews_ZoneViews_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -405,15 +405,15 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsAddResourcesRequest $postBody
+   * @param Postman_Google_ZoneViewsAddResourcesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
-  public function addResources($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsAddResourcesRequest $postBody, $optParams = array())
+  public function addResources($project, $zone, $resourceView, Postman_Google_Service_Resourceviews_ZoneViewsAddResourcesRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('addResources', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('addResources', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 
   /**
@@ -423,13 +423,13 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
   public function delete($project, $zone, $resourceView, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView);
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('delete', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 
   /**
@@ -439,13 +439,13 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_ResourceView
+   * @return Postman_Google_Service_Resourceviews_ResourceView
    */
   public function get($project, $zone, $resourceView, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Resourceviews_ResourceView");
+    return $this->call('get', array($params), "Postman_Google_Service_Resourceviews_ResourceView");
   }
 
   /**
@@ -459,13 +459,13 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    *
    * @opt_param string resourceName The name of the resource if user wants to get
    * the service information of the resource.
-   * @return Google_Service_Resourceviews_ZoneViewsGetServiceResponse
+   * @return Postman_Google_Service_Resourceviews_ZoneViewsGetServiceResponse
    */
   public function getService($project, $zone, $resourceView, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView);
     $params = array_merge($params, $optParams);
-    return $this->call('getService', array($params), "Google_Service_Resourceviews_ZoneViewsGetServiceResponse");
+    return $this->call('getService', array($params), "Postman_Google_Service_Resourceviews_ZoneViewsGetServiceResponse");
   }
 
   /**
@@ -473,15 +473,15 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    *
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
-   * @param Google_ResourceView $postBody
+   * @param Postman_Google_ResourceView $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
-  public function insert($project, $zone, Google_Service_Resourceviews_ResourceView $postBody, $optParams = array())
+  public function insert($project, $zone, Postman_Google_Service_Resourceviews_ResourceView $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('insert', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 
   /**
@@ -496,13 +496,13 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * a previous list request.
    * @opt_param int maxResults Maximum count of results to be returned. Acceptable
    * values are 0 to 5000, inclusive. (Default: 5000)
-   * @return Google_Service_Resourceviews_ZoneViewsList
+   * @return Postman_Google_Service_Resourceviews_ZoneViewsList
    */
   public function listZoneViews($project, $zone, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Resourceviews_ZoneViewsList");
+    return $this->call('list', array($params), "Postman_Google_Service_Resourceviews_ZoneViewsList");
   }
 
   /**
@@ -526,13 +526,13 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @opt_param string serviceName The service name to return in the response. It
    * is optional and if it is not set, all the service end points will be
    * returned.
-   * @return Google_Service_Resourceviews_ZoneViewsListResourcesResponse
+   * @return Postman_Google_Service_Resourceviews_ZoneViewsListResourcesResponse
    */
   public function listResources($project, $zone, $resourceView, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView);
     $params = array_merge($params, $optParams);
-    return $this->call('listResources', array($params), "Google_Service_Resourceviews_ZoneViewsListResourcesResponse");
+    return $this->call('listResources', array($params), "Postman_Google_Service_Resourceviews_ZoneViewsListResourcesResponse");
   }
 
   /**
@@ -541,15 +541,15 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsRemoveResourcesRequest $postBody
+   * @param Postman_Google_ZoneViewsRemoveResourcesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
-  public function removeResources($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest $postBody, $optParams = array())
+  public function removeResources($project, $zone, $resourceView, Postman_Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('removeResources', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('removeResources', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 
   /**
@@ -559,22 +559,22 @@ class Google_Service_Resourceviews_ZoneViews_Resource extends Google_Service_Res
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsSetServiceRequest $postBody
+   * @param Postman_Google_ZoneViewsSetServiceRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Resourceviews_Operation
+   * @return Postman_Google_Service_Resourceviews_Operation
    */
-  public function setService($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsSetServiceRequest $postBody, $optParams = array())
+  public function setService($project, $zone, $resourceView, Postman_Google_Service_Resourceviews_ZoneViewsSetServiceRequest $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'zone' => $zone, 'resourceView' => $resourceView, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('setService', array($params), "Google_Service_Resourceviews_Operation");
+    return $this->call('setService', array($params), "Postman_Google_Service_Resourceviews_Operation");
   }
 }
 
 
 
 
-class Google_Service_Resourceviews_Label extends Google_Model
+class Postman_Google_Service_Resourceviews_Label extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -600,7 +600,7 @@ class Google_Service_Resourceviews_Label extends Google_Model
   }
 }
 
-class Google_Service_Resourceviews_ListResourceResponseItem extends Google_Model
+class Postman_Google_Service_Resourceviews_ListResourceResponseItem extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -626,11 +626,11 @@ class Google_Service_Resourceviews_ListResourceResponseItem extends Google_Model
   }
 }
 
-class Google_Service_Resourceviews_ListResourceResponseItemEndpoints extends Google_Model
+class Postman_Google_Service_Resourceviews_ListResourceResponseItemEndpoints extends Postman_Google_Model
 {
 }
 
-class Google_Service_Resourceviews_Operation extends Google_Collection
+class Postman_Google_Service_Resourceviews_Operation extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
@@ -638,7 +638,7 @@ class Google_Service_Resourceviews_Operation extends Google_Collection
   public $clientOperationId;
   public $creationTimestamp;
   public $endTime;
-  protected $errorType = 'Google_Service_Resourceviews_OperationError';
+  protected $errorType = 'Postman_Google_Service_Resourceviews_OperationError';
   protected $errorDataType = '';
   public $httpErrorMessage;
   public $httpErrorStatusCode;
@@ -656,7 +656,7 @@ class Google_Service_Resourceviews_Operation extends Google_Collection
   public $targetId;
   public $targetLink;
   public $user;
-  protected $warningsType = 'Google_Service_Resourceviews_OperationWarnings';
+  protected $warningsType = 'Postman_Google_Service_Resourceviews_OperationWarnings';
   protected $warningsDataType = 'array';
   public $zone;
 
@@ -685,7 +685,7 @@ class Google_Service_Resourceviews_Operation extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setError(Google_Service_Resourceviews_OperationError $error)
+  public function setError(Postman_Google_Service_Resourceviews_OperationError $error)
   {
     $this->error = $error;
   }
@@ -839,12 +839,12 @@ class Google_Service_Resourceviews_Operation extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_OperationError extends Google_Collection
+class Postman_Google_Service_Resourceviews_OperationError extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
   );
-  protected $errorsType = 'Google_Service_Resourceviews_OperationErrorErrors';
+  protected $errorsType = 'Postman_Google_Service_Resourceviews_OperationErrorErrors';
   protected $errorsDataType = 'array';
 
 
@@ -858,7 +858,7 @@ class Google_Service_Resourceviews_OperationError extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_OperationErrorErrors extends Google_Model
+class Postman_Google_Service_Resourceviews_OperationErrorErrors extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -893,13 +893,13 @@ class Google_Service_Resourceviews_OperationErrorErrors extends Google_Model
   }
 }
 
-class Google_Service_Resourceviews_OperationList extends Google_Collection
+class Postman_Google_Service_Resourceviews_OperationList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $itemsType = 'Google_Service_Resourceviews_Operation';
+  protected $itemsType = 'Postman_Google_Service_Resourceviews_Operation';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -948,13 +948,13 @@ class Google_Service_Resourceviews_OperationList extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_OperationWarnings extends Google_Collection
+class Postman_Google_Service_Resourceviews_OperationWarnings extends Postman_Google_Collection
 {
   protected $collection_key = 'data';
   protected $internal_gapi_mappings = array(
   );
   public $code;
-  protected $dataType = 'Google_Service_Resourceviews_OperationWarningsData';
+  protected $dataType = 'Postman_Google_Service_Resourceviews_OperationWarningsData';
   protected $dataDataType = 'array';
   public $message;
 
@@ -985,7 +985,7 @@ class Google_Service_Resourceviews_OperationWarnings extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_OperationWarningsData extends Google_Model
+class Postman_Google_Service_Resourceviews_OperationWarningsData extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1011,19 +1011,19 @@ class Google_Service_Resourceviews_OperationWarningsData extends Google_Model
   }
 }
 
-class Google_Service_Resourceviews_ResourceView extends Google_Collection
+class Postman_Google_Service_Resourceviews_ResourceView extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $creationTimestamp;
   public $description;
-  protected $endpointsType = 'Google_Service_Resourceviews_ServiceEndpoint';
+  protected $endpointsType = 'Postman_Google_Service_Resourceviews_ServiceEndpoint';
   protected $endpointsDataType = 'array';
   public $fingerprint;
   public $id;
   public $kind;
-  protected $labelsType = 'Google_Service_Resourceviews_Label';
+  protected $labelsType = 'Postman_Google_Service_Resourceviews_Label';
   protected $labelsDataType = 'array';
   public $name;
   public $network;
@@ -1130,7 +1130,7 @@ class Google_Service_Resourceviews_ResourceView extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_ServiceEndpoint extends Google_Model
+class Postman_Google_Service_Resourceviews_ServiceEndpoint extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1156,7 +1156,7 @@ class Google_Service_Resourceviews_ServiceEndpoint extends Google_Model
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsAddResourcesRequest extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsAddResourcesRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
@@ -1174,12 +1174,12 @@ class Google_Service_Resourceviews_ZoneViewsAddResourcesRequest extends Google_C
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsGetServiceResponse extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsGetServiceResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'endpoints';
   protected $internal_gapi_mappings = array(
   );
-  protected $endpointsType = 'Google_Service_Resourceviews_ServiceEndpoint';
+  protected $endpointsType = 'Postman_Google_Service_Resourceviews_ServiceEndpoint';
   protected $endpointsDataType = 'array';
   public $fingerprint;
 
@@ -1202,12 +1202,12 @@ class Google_Service_Resourceviews_ZoneViewsGetServiceResponse extends Google_Co
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsList extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Resourceviews_ResourceView';
+  protected $itemsType = 'Postman_Google_Service_Resourceviews_ResourceView';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1248,12 +1248,12 @@ class Google_Service_Resourceviews_ZoneViewsList extends Google_Collection
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsListResourcesResponse extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsListResourcesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Resourceviews_ListResourceResponseItem';
+  protected $itemsType = 'Postman_Google_Service_Resourceviews_ListResourceResponseItem';
   protected $itemsDataType = 'array';
   public $network;
   public $nextPageToken;
@@ -1285,7 +1285,7 @@ class Google_Service_Resourceviews_ZoneViewsListResourcesResponse extends Google
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
@@ -1303,12 +1303,12 @@ class Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest extends Googl
   }
 }
 
-class Google_Service_Resourceviews_ZoneViewsSetServiceRequest extends Google_Collection
+class Postman_Google_Service_Resourceviews_ZoneViewsSetServiceRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'endpoints';
   protected $internal_gapi_mappings = array(
   );
-  protected $endpointsType = 'Google_Service_Resourceviews_ServiceEndpoint';
+  protected $endpointsType = 'Postman_Google_Service_Resourceviews_ServiceEndpoint';
   protected $endpointsDataType = 'array';
   public $fingerprint;
   public $resourceName;

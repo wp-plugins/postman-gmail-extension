@@ -25,11 +25,11 @@ class CacheTest extends BaseTest
     $dir = sys_get_temp_dir() . '/google-api-php-client/tests';
     $client = $this->getClient();
     $client->setClassConfig(
-        'Google_Cache_File',
+        'Postman_Google_Cache_File',
         'directory',
         $dir
     );
-    $cache = new Google_Cache_File($client);
+    $cache = new Postman_Google_Cache_File($client);
     $cache->set('foo', 'bar');
     $this->assertEquals($cache->get('foo'), 'bar');
 
@@ -42,7 +42,7 @@ class CacheTest extends BaseTest
   public function testNull()
   {
     $client = $this->getClient();
-    $cache = new Google_Cache_Null($client);
+    $cache = new Postman_Google_Cache_Null($client);
     $client->setCache($cache);
 
     $cache->set('foo', 'bar');
@@ -66,11 +66,11 @@ class CacheTest extends BaseTest
   public function testMemcache()
   {
     $client = $this->getClient();
-    if (!$client->getClassConfig('Google_Cache_Memcache', 'host')) {
+    if (!$client->getClassConfig('Postman_Google_Cache_Memcache', 'host')) {
       $this->markTestSkipped('Test requires memcache host specified');
     }
 
-    $cache = new Google_Cache_Memcache($client);
+    $cache = new Postman_Google_Cache_Memcache($client);
 
     $this->getSetDelete($cache);
   }
@@ -84,7 +84,7 @@ class CacheTest extends BaseTest
       $this->markTestSkipped('Test requires APC enabled for CLI');
     }
     $client = $this->getClient();
-    $cache = new Google_Cache_Apc($client);
+    $cache = new Postman_Google_Cache_Apc($client);
 
     $this->getSetDelete($cache);
   }

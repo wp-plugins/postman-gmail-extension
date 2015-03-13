@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Genomics extends Google_Service
+class Postman_Google_Service_Genomics extends Postman_Google_Service
 {
   /** View and manage your data in Google BigQuery. */
   const BIGQUERY =
@@ -60,16 +60,16 @@ class Google_Service_Genomics extends Google_Service
   /**
    * Constructs the internal representation of the Genomics service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'genomics/v1beta2/';
     $this->version = 'v1beta2';
     $this->serviceName = 'genomics';
 
-    $this->callsets = new Google_Service_Genomics_Callsets_Resource(
+    $this->callsets = new Postman_Google_Service_Genomics_Callsets_Resource(
         $this,
         $this->serviceName,
         'callsets',
@@ -127,7 +127,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->datasets = new Google_Service_Genomics_Datasets_Resource(
+    $this->datasets = new Postman_Google_Service_Genomics_Datasets_Resource(
         $this,
         $this->serviceName,
         'datasets',
@@ -208,7 +208,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->experimental_jobs = new Google_Service_Genomics_ExperimentalJobs_Resource(
+    $this->experimental_jobs = new Postman_Google_Service_Genomics_ExperimentalJobs_Resource(
         $this,
         $this->serviceName,
         'jobs',
@@ -222,7 +222,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->jobs = new Google_Service_Genomics_Jobs_Resource(
+    $this->jobs = new Postman_Google_Service_Genomics_Jobs_Resource(
         $this,
         $this->serviceName,
         'jobs',
@@ -256,7 +256,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->readgroupsets = new Google_Service_Genomics_Readgroupsets_Resource(
+    $this->readgroupsets = new Postman_Google_Service_Genomics_Readgroupsets_Resource(
         $this,
         $this->serviceName,
         'readgroupsets',
@@ -326,7 +326,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->readgroupsets_coveragebuckets = new Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource(
+    $this->readgroupsets_coveragebuckets = new Postman_Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource(
         $this,
         $this->serviceName,
         'coveragebuckets',
@@ -370,7 +370,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->reads = new Google_Service_Genomics_Reads_Resource(
+    $this->reads = new Postman_Google_Service_Genomics_Reads_Resource(
         $this,
         $this->serviceName,
         'reads',
@@ -384,7 +384,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->references = new Google_Service_Genomics_References_Resource(
+    $this->references = new Postman_Google_Service_Genomics_References_Resource(
         $this,
         $this->serviceName,
         'references',
@@ -408,7 +408,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->references_bases = new Google_Service_Genomics_ReferencesBases_Resource(
+    $this->references_bases = new Postman_Google_Service_Genomics_ReferencesBases_Resource(
         $this,
         $this->serviceName,
         'bases',
@@ -444,7 +444,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->referencesets = new Google_Service_Genomics_Referencesets_Resource(
+    $this->referencesets = new Postman_Google_Service_Genomics_Referencesets_Resource(
         $this,
         $this->serviceName,
         'referencesets',
@@ -468,7 +468,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->variants = new Google_Service_Genomics_Variants_Resource(
+    $this->variants = new Postman_Google_Service_Genomics_Variants_Resource(
         $this,
         $this->serviceName,
         'variants',
@@ -516,7 +516,7 @@ class Google_Service_Genomics extends Google_Service
           )
         )
     );
-    $this->variantsets = new Google_Service_Genomics_Variantsets_Resource(
+    $this->variantsets = new Postman_Google_Service_Genomics_Variantsets_Resource(
         $this,
         $this->serviceName,
         'variantsets',
@@ -608,25 +608,25 @@ class Google_Service_Genomics extends Google_Service
  * The "callsets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $callsets = $genomicsService->callsets;
  *  </code>
  */
-class Google_Service_Genomics_Callsets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Callsets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates a new call set. (callsets.create)
    *
-   * @param Google_CallSet $postBody
+   * @param Postman_Google_CallSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_CallSet
+   * @return Postman_Google_Service_Genomics_CallSet
    */
-  public function create(Google_Service_Genomics_CallSet $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Genomics_CallSet $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Genomics_CallSet");
+    return $this->call('create', array($params), "Postman_Google_Service_Genomics_CallSet");
   }
 
   /**
@@ -647,28 +647,28 @@ class Google_Service_Genomics_Callsets_Resource extends Google_Service_Resource
    *
    * @param string $callSetId The ID of the call set.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_CallSet
+   * @return Postman_Google_Service_Genomics_CallSet
    */
   public function get($callSetId, $optParams = array())
   {
     $params = array('callSetId' => $callSetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_CallSet");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_CallSet");
   }
 
   /**
    * Updates a call set. This method supports patch semantics. (callsets.patch)
    *
    * @param string $callSetId The ID of the call set to be updated.
-   * @param Google_CallSet $postBody
+   * @param Postman_Google_CallSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_CallSet
+   * @return Postman_Google_Service_Genomics_CallSet
    */
-  public function patch($callSetId, Google_Service_Genomics_CallSet $postBody, $optParams = array())
+  public function patch($callSetId, Postman_Google_Service_Genomics_CallSet $postBody, $optParams = array())
   {
     $params = array('callSetId' => $callSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Genomics_CallSet");
+    return $this->call('patch', array($params), "Postman_Google_Service_Genomics_CallSet");
   }
 
   /**
@@ -676,30 +676,30 @@ class Google_Service_Genomics_Callsets_Resource extends Google_Service_Resource
    *
    * Implements GlobalAllianceApi.searchCallSets. (callsets.search)
    *
-   * @param Google_SearchCallSetsRequest $postBody
+   * @param Postman_Google_SearchCallSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchCallSetsResponse
+   * @return Postman_Google_Service_Genomics_SearchCallSetsResponse
    */
-  public function search(Google_Service_Genomics_SearchCallSetsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchCallSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchCallSetsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchCallSetsResponse");
   }
 
   /**
    * Updates a call set. (callsets.update)
    *
    * @param string $callSetId The ID of the call set to be updated.
-   * @param Google_CallSet $postBody
+   * @param Postman_Google_CallSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_CallSet
+   * @return Postman_Google_Service_Genomics_CallSet
    */
-  public function update($callSetId, Google_Service_Genomics_CallSet $postBody, $optParams = array())
+  public function update($callSetId, Postman_Google_Service_Genomics_CallSet $postBody, $optParams = array())
   {
     $params = array('callSetId' => $callSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Genomics_CallSet");
+    return $this->call('update', array($params), "Postman_Google_Service_Genomics_CallSet");
   }
 }
 
@@ -707,25 +707,25 @@ class Google_Service_Genomics_Callsets_Resource extends Google_Service_Resource
  * The "datasets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $datasets = $genomicsService->datasets;
  *  </code>
  */
-class Google_Service_Genomics_Datasets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Datasets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates a new dataset. (datasets.create)
    *
-   * @param Google_Dataset $postBody
+   * @param Postman_Google_Dataset $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Dataset
+   * @return Postman_Google_Service_Genomics_Dataset
    */
-  public function create(Google_Service_Genomics_Dataset $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Genomics_Dataset $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Genomics_Dataset");
+    return $this->call('create', array($params), "Postman_Google_Service_Genomics_Dataset");
   }
 
   /**
@@ -746,13 +746,13 @@ class Google_Service_Genomics_Datasets_Resource extends Google_Service_Resource
    *
    * @param string $datasetId The ID of the dataset.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Dataset
+   * @return Postman_Google_Service_Genomics_Dataset
    */
   public function get($datasetId, $optParams = array())
   {
     $params = array('datasetId' => $datasetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_Dataset");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_Dataset");
   }
 
   /**
@@ -768,28 +768,28 @@ class Google_Service_Genomics_Datasets_Resource extends Google_Service_Resource
    * public projects if no project number is specified.
    * @opt_param int pageSize The maximum number of results returned by this
    * request.
-   * @return Google_Service_Genomics_ListDatasetsResponse
+   * @return Postman_Google_Service_Genomics_ListDatasetsResponse
    */
   public function listDatasets($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Genomics_ListDatasetsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Genomics_ListDatasetsResponse");
   }
 
   /**
    * Updates a dataset. This method supports patch semantics. (datasets.patch)
    *
    * @param string $datasetId The ID of the dataset to be updated.
-   * @param Google_Dataset $postBody
+   * @param Postman_Google_Dataset $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Dataset
+   * @return Postman_Google_Service_Genomics_Dataset
    */
-  public function patch($datasetId, Google_Service_Genomics_Dataset $postBody, $optParams = array())
+  public function patch($datasetId, Postman_Google_Service_Genomics_Dataset $postBody, $optParams = array())
   {
     $params = array('datasetId' => $datasetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Genomics_Dataset");
+    return $this->call('patch', array($params), "Postman_Google_Service_Genomics_Dataset");
   }
 
   /**
@@ -799,28 +799,28 @@ class Google_Service_Genomics_Datasets_Resource extends Google_Service_Resource
    *
    * @param string $datasetId The ID of the dataset to be undeleted.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Dataset
+   * @return Postman_Google_Service_Genomics_Dataset
    */
   public function undelete($datasetId, $optParams = array())
   {
     $params = array('datasetId' => $datasetId);
     $params = array_merge($params, $optParams);
-    return $this->call('undelete', array($params), "Google_Service_Genomics_Dataset");
+    return $this->call('undelete', array($params), "Postman_Google_Service_Genomics_Dataset");
   }
 
   /**
    * Updates a dataset. (datasets.update)
    *
    * @param string $datasetId The ID of the dataset to be updated.
-   * @param Google_Dataset $postBody
+   * @param Postman_Google_Dataset $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Dataset
+   * @return Postman_Google_Service_Genomics_Dataset
    */
-  public function update($datasetId, Google_Service_Genomics_Dataset $postBody, $optParams = array())
+  public function update($datasetId, Postman_Google_Service_Genomics_Dataset $postBody, $optParams = array())
   {
     $params = array('datasetId' => $datasetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Genomics_Dataset");
+    return $this->call('update', array($params), "Postman_Google_Service_Genomics_Dataset");
   }
 }
 
@@ -828,11 +828,11 @@ class Google_Service_Genomics_Datasets_Resource extends Google_Service_Resource
  * The "experimental" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $experimental = $genomicsService->experimental;
  *  </code>
  */
-class Google_Service_Genomics_Experimental_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Experimental_Resource extends Postman_Google_Service_Resource
 {
 }
 
@@ -840,26 +840,26 @@ class Google_Service_Genomics_Experimental_Resource extends Google_Service_Resou
  * The "jobs" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $jobs = $genomicsService->jobs;
  *  </code>
  */
-class Google_Service_Genomics_ExperimentalJobs_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_ExperimentalJobs_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates and asynchronously runs an ad-hoc job. This is an experimental call
    * and may be removed or changed at any time. (jobs.create)
    *
-   * @param Google_ExperimentalCreateJobRequest $postBody
+   * @param Postman_Google_ExperimentalCreateJobRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ExperimentalCreateJobResponse
+   * @return Postman_Google_Service_Genomics_ExperimentalCreateJobResponse
    */
-  public function create(Google_Service_Genomics_ExperimentalCreateJobRequest $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Genomics_ExperimentalCreateJobRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Genomics_ExperimentalCreateJobResponse");
+    return $this->call('create', array($params), "Postman_Google_Service_Genomics_ExperimentalCreateJobResponse");
   }
 }
 
@@ -867,11 +867,11 @@ class Google_Service_Genomics_ExperimentalJobs_Resource extends Google_Service_R
  * The "jobs" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $jobs = $genomicsService->jobs;
  *  </code>
  */
-class Google_Service_Genomics_Jobs_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Jobs_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -893,27 +893,27 @@ class Google_Service_Genomics_Jobs_Resource extends Google_Service_Resource
    *
    * @param string $jobId Required. The ID of the job.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Job
+   * @return Postman_Google_Service_Genomics_Job
    */
   public function get($jobId, $optParams = array())
   {
     $params = array('jobId' => $jobId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_Job");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_Job");
   }
 
   /**
    * Gets a list of jobs matching the criteria. (jobs.search)
    *
-   * @param Google_SearchJobsRequest $postBody
+   * @param Postman_Google_SearchJobsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchJobsResponse
+   * @return Postman_Google_Service_Genomics_SearchJobsResponse
    */
-  public function search(Google_Service_Genomics_SearchJobsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchJobsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchJobsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchJobsResponse");
   }
 }
 
@@ -921,11 +921,11 @@ class Google_Service_Genomics_Jobs_Resource extends Google_Service_Resource
  * The "readgroupsets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $readgroupsets = $genomicsService->readgroupsets;
  *  </code>
  */
-class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Readgroupsets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -933,15 +933,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * Storage. See the  alignment and variant calling documentation for more
    * details. (readgroupsets.align)
    *
-   * @param Google_AlignReadGroupSetsRequest $postBody
+   * @param Postman_Google_AlignReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_AlignReadGroupSetsResponse
+   * @return Postman_Google_Service_Genomics_AlignReadGroupSetsResponse
    */
-  public function align(Google_Service_Genomics_AlignReadGroupSetsRequest $postBody, $optParams = array())
+  public function align(Postman_Google_Service_Genomics_AlignReadGroupSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('align', array($params), "Google_Service_Genomics_AlignReadGroupSetsResponse");
+    return $this->call('align', array($params), "Postman_Google_Service_Genomics_AlignReadGroupSetsResponse");
   }
 
   /**
@@ -949,15 +949,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * Google Cloud Storage. See the  alignment and variant calling documentation
    * for more details. (readgroupsets.callReadgroupsets)
    *
-   * @param Google_CallReadGroupSetsRequest $postBody
+   * @param Postman_Google_CallReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_CallReadGroupSetsResponse
+   * @return Postman_Google_Service_Genomics_CallReadGroupSetsResponse
    */
-  public function callReadgroupsets(Google_Service_Genomics_CallReadGroupSetsRequest $postBody, $optParams = array())
+  public function callReadgroupsets(Postman_Google_Service_Genomics_CallReadGroupSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('call', array($params), "Google_Service_Genomics_CallReadGroupSetsResponse");
+    return $this->call('call', array($params), "Postman_Google_Service_Genomics_CallReadGroupSetsResponse");
   }
 
   /**
@@ -983,15 +983,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * the input file header will not be preserved, and some custom tags will be
    * converted to strings. (readgroupsets.export)
    *
-   * @param Google_ExportReadGroupSetsRequest $postBody
+   * @param Postman_Google_ExportReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ExportReadGroupSetsResponse
+   * @return Postman_Google_Service_Genomics_ExportReadGroupSetsResponse
    */
-  public function export(Google_Service_Genomics_ExportReadGroupSetsRequest $postBody, $optParams = array())
+  public function export(Postman_Google_Service_Genomics_ExportReadGroupSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('export', array($params), "Google_Service_Genomics_ExportReadGroupSetsResponse");
+    return $this->call('export', array($params), "Postman_Google_Service_Genomics_ExportReadGroupSetsResponse");
   }
 
   /**
@@ -999,13 +999,13 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    *
    * @param string $readGroupSetId The ID of the read group set.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ReadGroupSet
+   * @return Postman_Google_Service_Genomics_ReadGroupSet
    */
   public function get($readGroupSetId, $optParams = array())
   {
     $params = array('readGroupSetId' => $readGroupSetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_ReadGroupSet");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_ReadGroupSet");
   }
 
   /**
@@ -1016,15 +1016,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * types. The caller must have WRITE permissions to the dataset.
    * (readgroupsets.import)
    *
-   * @param Google_ImportReadGroupSetsRequest $postBody
+   * @param Postman_Google_ImportReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ImportReadGroupSetsResponse
+   * @return Postman_Google_Service_Genomics_ImportReadGroupSetsResponse
    */
-  public function import(Google_Service_Genomics_ImportReadGroupSetsRequest $postBody, $optParams = array())
+  public function import(Postman_Google_Service_Genomics_ImportReadGroupSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('import', array($params), "Google_Service_Genomics_ImportReadGroupSetsResponse");
+    return $this->call('import', array($params), "Postman_Google_Service_Genomics_ImportReadGroupSetsResponse");
   }
 
   /**
@@ -1034,15 +1034,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * @param string $readGroupSetId The ID of the read group set to be updated. The
    * caller must have WRITE permissions to the dataset associated with this read
    * group set.
-   * @param Google_ReadGroupSet $postBody
+   * @param Postman_Google_ReadGroupSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ReadGroupSet
+   * @return Postman_Google_Service_Genomics_ReadGroupSet
    */
-  public function patch($readGroupSetId, Google_Service_Genomics_ReadGroupSet $postBody, $optParams = array())
+  public function patch($readGroupSetId, Postman_Google_Service_Genomics_ReadGroupSet $postBody, $optParams = array())
   {
     $params = array('readGroupSetId' => $readGroupSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Genomics_ReadGroupSet");
+    return $this->call('patch', array($params), "Postman_Google_Service_Genomics_ReadGroupSet");
   }
 
   /**
@@ -1050,15 +1050,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    *
    * Implements GlobalAllianceApi.searchReadGroupSets. (readgroupsets.search)
    *
-   * @param Google_SearchReadGroupSetsRequest $postBody
+   * @param Postman_Google_SearchReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchReadGroupSetsResponse
+   * @return Postman_Google_Service_Genomics_SearchReadGroupSetsResponse
    */
-  public function search(Google_Service_Genomics_SearchReadGroupSetsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchReadGroupSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchReadGroupSetsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchReadGroupSetsResponse");
   }
 
   /**
@@ -1067,15 +1067,15 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
    * @param string $readGroupSetId The ID of the read group set to be updated. The
    * caller must have WRITE permissions to the dataset associated with this read
    * group set.
-   * @param Google_ReadGroupSet $postBody
+   * @param Postman_Google_ReadGroupSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ReadGroupSet
+   * @return Postman_Google_Service_Genomics_ReadGroupSet
    */
-  public function update($readGroupSetId, Google_Service_Genomics_ReadGroupSet $postBody, $optParams = array())
+  public function update($readGroupSetId, Postman_Google_Service_Genomics_ReadGroupSet $postBody, $optParams = array())
   {
     $params = array('readGroupSetId' => $readGroupSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Genomics_ReadGroupSet");
+    return $this->call('update', array($params), "Postman_Google_Service_Genomics_ReadGroupSet");
   }
 }
 
@@ -1083,11 +1083,11 @@ class Google_Service_Genomics_Readgroupsets_Resource extends Google_Service_Reso
  * The "coveragebuckets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $coveragebuckets = $genomicsService->coveragebuckets;
  *  </code>
  */
-class Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1124,13 +1124,13 @@ class Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource extends Goog
    * sequence) or the length of the target range, if specified. The smallest
    * precomputed bucketWidth is currently 2048 base pairs; this is subject to
    * change.
-   * @return Google_Service_Genomics_ListCoverageBucketsResponse
+   * @return Postman_Google_Service_Genomics_ListCoverageBucketsResponse
    */
   public function listReadgroupsetsCoveragebuckets($readGroupSetId, $optParams = array())
   {
     $params = array('readGroupSetId' => $readGroupSetId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Genomics_ListCoverageBucketsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Genomics_ListCoverageBucketsResponse");
   }
 }
 
@@ -1138,11 +1138,11 @@ class Google_Service_Genomics_ReadgroupsetsCoveragebuckets_Resource extends Goog
  * The "reads" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $reads = $genomicsService->reads;
  *  </code>
  */
-class Google_Service_Genomics_Reads_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Reads_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1161,15 +1161,15 @@ class Google_Service_Genomics_Reads_Resource extends Google_Service_Resource
    *
    * Implements GlobalAllianceApi.searchReads. (reads.search)
    *
-   * @param Google_SearchReadsRequest $postBody
+   * @param Postman_Google_SearchReadsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchReadsResponse
+   * @return Postman_Google_Service_Genomics_SearchReadsResponse
    */
-  public function search(Google_Service_Genomics_SearchReadsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchReadsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchReadsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchReadsResponse");
   }
 }
 
@@ -1177,11 +1177,11 @@ class Google_Service_Genomics_Reads_Resource extends Google_Service_Resource
  * The "references" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $references = $genomicsService->references;
  *  </code>
  */
-class Google_Service_Genomics_References_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_References_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1191,13 +1191,13 @@ class Google_Service_Genomics_References_Resource extends Google_Service_Resourc
    *
    * @param string $referenceId The ID of the reference.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Reference
+   * @return Postman_Google_Service_Genomics_Reference
    */
   public function get($referenceId, $optParams = array())
   {
     $params = array('referenceId' => $referenceId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_Reference");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_Reference");
   }
 
   /**
@@ -1205,15 +1205,15 @@ class Google_Service_Genomics_References_Resource extends Google_Service_Resourc
    *
    * Implements GlobalAllianceApi.searchReferences. (references.search)
    *
-   * @param Google_SearchReferencesRequest $postBody
+   * @param Postman_Google_SearchReferencesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchReferencesResponse
+   * @return Postman_Google_Service_Genomics_SearchReferencesResponse
    */
-  public function search(Google_Service_Genomics_SearchReferencesRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchReferencesRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchReferencesResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchReferencesResponse");
   }
 }
 
@@ -1221,11 +1221,11 @@ class Google_Service_Genomics_References_Resource extends Google_Service_Resourc
  * The "bases" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $bases = $genomicsService->bases;
  *  </code>
  */
-class Google_Service_Genomics_ReferencesBases_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_ReferencesBases_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1245,13 +1245,13 @@ class Google_Service_Genomics_ReferencesBases_Resource extends Google_Service_Re
    * single page.
    * @opt_param string start The start position (0-based) of this query. Defaults
    * to 0.
-   * @return Google_Service_Genomics_ListBasesResponse
+   * @return Postman_Google_Service_Genomics_ListBasesResponse
    */
   public function listReferencesBases($referenceId, $optParams = array())
   {
     $params = array('referenceId' => $referenceId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Genomics_ListBasesResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Genomics_ListBasesResponse");
   }
 }
 
@@ -1259,11 +1259,11 @@ class Google_Service_Genomics_ReferencesBases_Resource extends Google_Service_Re
  * The "referencesets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $referencesets = $genomicsService->referencesets;
  *  </code>
  */
-class Google_Service_Genomics_Referencesets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Referencesets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1273,13 +1273,13 @@ class Google_Service_Genomics_Referencesets_Resource extends Google_Service_Reso
    *
    * @param string $referenceSetId The ID of the reference set.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ReferenceSet
+   * @return Postman_Google_Service_Genomics_ReferenceSet
    */
   public function get($referenceSetId, $optParams = array())
   {
     $params = array('referenceSetId' => $referenceSetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_ReferenceSet");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_ReferenceSet");
   }
 
   /**
@@ -1287,15 +1287,15 @@ class Google_Service_Genomics_Referencesets_Resource extends Google_Service_Reso
    *
    * Implements GlobalAllianceApi.searchReferenceSets. (referencesets.search)
    *
-   * @param Google_SearchReferenceSetsRequest $postBody
+   * @param Postman_Google_SearchReferenceSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchReferenceSetsResponse
+   * @return Postman_Google_Service_Genomics_SearchReferenceSetsResponse
    */
-  public function search(Google_Service_Genomics_SearchReferenceSetsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchReferenceSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchReferenceSetsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchReferenceSetsResponse");
   }
 }
 
@@ -1303,25 +1303,25 @@ class Google_Service_Genomics_Referencesets_Resource extends Google_Service_Reso
  * The "variants" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $variants = $genomicsService->variants;
  *  </code>
  */
-class Google_Service_Genomics_Variants_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Variants_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates a new variant. (variants.create)
    *
-   * @param Google_Variant $postBody
+   * @param Postman_Google_Variant $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Variant
+   * @return Postman_Google_Service_Genomics_Variant
    */
-  public function create(Google_Service_Genomics_Variant $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Genomics_Variant $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Genomics_Variant");
+    return $this->call('create', array($params), "Postman_Google_Service_Genomics_Variant");
   }
 
   /**
@@ -1342,13 +1342,13 @@ class Google_Service_Genomics_Variants_Resource extends Google_Service_Resource
    *
    * @param string $variantId The ID of the variant.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Variant
+   * @return Postman_Google_Service_Genomics_Variant
    */
   public function get($variantId, $optParams = array())
   {
     $params = array('variantId' => $variantId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_Variant");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_Variant");
   }
 
   /**
@@ -1356,15 +1356,15 @@ class Google_Service_Genomics_Variants_Resource extends Google_Service_Resource
    *
    * Implements GlobalAllianceApi.searchVariants. (variants.search)
    *
-   * @param Google_SearchVariantsRequest $postBody
+   * @param Postman_Google_SearchVariantsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchVariantsResponse
+   * @return Postman_Google_Service_Genomics_SearchVariantsResponse
    */
-  public function search(Google_Service_Genomics_SearchVariantsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchVariantsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchVariantsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchVariantsResponse");
   }
 
   /**
@@ -1373,15 +1373,15 @@ class Google_Service_Genomics_Variants_Resource extends Google_Service_Resource
    * (variants.update)
    *
    * @param string $variantId The ID of the variant to be updated.
-   * @param Google_Variant $postBody
+   * @param Postman_Google_Variant $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_Variant
+   * @return Postman_Google_Service_Genomics_Variant
    */
-  public function update($variantId, Google_Service_Genomics_Variant $postBody, $optParams = array())
+  public function update($variantId, Postman_Google_Service_Genomics_Variant $postBody, $optParams = array())
   {
     $params = array('variantId' => $variantId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Genomics_Variant");
+    return $this->call('update', array($params), "Postman_Google_Service_Genomics_Variant");
   }
 }
 
@@ -1389,11 +1389,11 @@ class Google_Service_Genomics_Variants_Resource extends Google_Service_Resource
  * The "variantsets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $genomicsService = new Google_Service_Genomics(...);
+ *   $genomicsService = new Postman_Google_Service_Genomics(...);
  *   $variantsets = $genomicsService->variantsets;
  *  </code>
  */
-class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Genomics_Variantsets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1416,15 +1416,15 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    * @param string $variantSetId Required. The ID of the variant set that contains
    * variant data which should be exported. The caller must have READ access to
    * this variant set.
-   * @param Google_ExportVariantSetRequest $postBody
+   * @param Postman_Google_ExportVariantSetRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ExportVariantSetResponse
+   * @return Postman_Google_Service_Genomics_ExportVariantSetResponse
    */
-  public function export($variantSetId, Google_Service_Genomics_ExportVariantSetRequest $postBody, $optParams = array())
+  public function export($variantSetId, Postman_Google_Service_Genomics_ExportVariantSetRequest $postBody, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('export', array($params), "Google_Service_Genomics_ExportVariantSetResponse");
+    return $this->call('export', array($params), "Postman_Google_Service_Genomics_ExportVariantSetResponse");
   }
 
   /**
@@ -1432,13 +1432,13 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    *
    * @param string $variantSetId Required. The ID of the variant set.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_VariantSet
+   * @return Postman_Google_Service_Genomics_VariantSet
    */
   public function get($variantSetId, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Genomics_VariantSet");
+    return $this->call('get', array($params), "Postman_Google_Service_Genomics_VariantSet");
   }
 
   /**
@@ -1454,15 +1454,15 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    *
    * @param string $variantSetId Required. The variant set to which variant data
    * should be imported.
-   * @param Google_ImportVariantsRequest $postBody
+   * @param Postman_Google_ImportVariantsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_ImportVariantsResponse
+   * @return Postman_Google_Service_Genomics_ImportVariantsResponse
    */
-  public function importVariants($variantSetId, Google_Service_Genomics_ImportVariantsRequest $postBody, $optParams = array())
+  public function importVariants($variantSetId, Postman_Google_Service_Genomics_ImportVariantsRequest $postBody, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('importVariants', array($params), "Google_Service_Genomics_ImportVariantsResponse");
+    return $this->call('importVariants', array($params), "Postman_Google_Service_Genomics_ImportVariantsResponse");
   }
 
   /**
@@ -1476,10 +1476,10 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    * discarded. (variantsets.mergeVariants)
    *
    * @param string $variantSetId The destination variant set.
-   * @param Google_MergeVariantsRequest $postBody
+   * @param Postman_Google_MergeVariantsRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function mergeVariants($variantSetId, Google_Service_Genomics_MergeVariantsRequest $postBody, $optParams = array())
+  public function mergeVariants($variantSetId, Postman_Google_Service_Genomics_MergeVariantsRequest $postBody, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1491,15 +1491,15 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    * ignored. This method supports patch semantics. (variantsets.patch)
    *
    * @param string $variantSetId The ID of the variant to be updated.
-   * @param Google_VariantSet $postBody
+   * @param Postman_Google_VariantSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_VariantSet
+   * @return Postman_Google_Service_Genomics_VariantSet
    */
-  public function patch($variantSetId, Google_Service_Genomics_VariantSet $postBody, $optParams = array())
+  public function patch($variantSetId, Postman_Google_Service_Genomics_VariantSet $postBody, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Genomics_VariantSet");
+    return $this->call('patch', array($params), "Postman_Google_Service_Genomics_VariantSet");
   }
 
   /**
@@ -1507,15 +1507,15 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    *
    * Implements GlobalAllianceApi.searchVariantSets. (variantsets.search)
    *
-   * @param Google_SearchVariantSetsRequest $postBody
+   * @param Postman_Google_SearchVariantSetsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_SearchVariantSetsResponse
+   * @return Postman_Google_Service_Genomics_SearchVariantSetsResponse
    */
-  public function search(Google_Service_Genomics_SearchVariantSetsRequest $postBody, $optParams = array())
+  public function search(Postman_Google_Service_Genomics_SearchVariantSetsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_Genomics_SearchVariantSetsResponse");
+    return $this->call('search', array($params), "Postman_Google_Service_Genomics_SearchVariantSetsResponse");
   }
 
   /**
@@ -1523,31 +1523,31 @@ class Google_Service_Genomics_Variantsets_Resource extends Google_Service_Resour
    * ignored. (variantsets.update)
    *
    * @param string $variantSetId The ID of the variant to be updated.
-   * @param Google_VariantSet $postBody
+   * @param Postman_Google_VariantSet $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Genomics_VariantSet
+   * @return Postman_Google_Service_Genomics_VariantSet
    */
-  public function update($variantSetId, Google_Service_Genomics_VariantSet $postBody, $optParams = array())
+  public function update($variantSetId, Postman_Google_Service_Genomics_VariantSet $postBody, $optParams = array())
   {
     $params = array('variantSetId' => $variantSetId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Genomics_VariantSet");
+    return $this->call('update', array($params), "Postman_Google_Service_Genomics_VariantSet");
   }
 }
 
 
 
 
-class Google_Service_Genomics_AlignReadGroupSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_AlignReadGroupSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'readGroupSetIds';
   protected $internal_gapi_mappings = array(
   );
   public $bamSourceUris;
   public $datasetId;
-  protected $interleavedFastqSourceType = 'Google_Service_Genomics_InterleavedFastqSource';
+  protected $interleavedFastqSourceType = 'Postman_Google_Service_Genomics_InterleavedFastqSource';
   protected $interleavedFastqSourceDataType = '';
-  protected $pairedFastqSourceType = 'Google_Service_Genomics_PairedFastqSource';
+  protected $pairedFastqSourceType = 'Postman_Google_Service_Genomics_PairedFastqSource';
   protected $pairedFastqSourceDataType = '';
   public $readGroupSetIds;
 
@@ -1568,7 +1568,7 @@ class Google_Service_Genomics_AlignReadGroupSetsRequest extends Google_Collectio
   {
     return $this->datasetId;
   }
-  public function setInterleavedFastqSource(Google_Service_Genomics_InterleavedFastqSource $interleavedFastqSource)
+  public function setInterleavedFastqSource(Postman_Google_Service_Genomics_InterleavedFastqSource $interleavedFastqSource)
   {
     $this->interleavedFastqSource = $interleavedFastqSource;
   }
@@ -1576,7 +1576,7 @@ class Google_Service_Genomics_AlignReadGroupSetsRequest extends Google_Collectio
   {
     return $this->interleavedFastqSource;
   }
-  public function setPairedFastqSource(Google_Service_Genomics_PairedFastqSource $pairedFastqSource)
+  public function setPairedFastqSource(Postman_Google_Service_Genomics_PairedFastqSource $pairedFastqSource)
   {
     $this->pairedFastqSource = $pairedFastqSource;
   }
@@ -1594,7 +1594,7 @@ class Google_Service_Genomics_AlignReadGroupSetsRequest extends Google_Collectio
   }
 }
 
-class Google_Service_Genomics_AlignReadGroupSetsResponse extends Google_Model
+class Postman_Google_Service_Genomics_AlignReadGroupSetsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1611,7 +1611,7 @@ class Google_Service_Genomics_AlignReadGroupSetsResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_CallReadGroupSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_CallReadGroupSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceUris';
   protected $internal_gapi_mappings = array(
@@ -1647,7 +1647,7 @@ class Google_Service_Genomics_CallReadGroupSetsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_CallReadGroupSetsResponse extends Google_Model
+class Postman_Google_Service_Genomics_CallReadGroupSetsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1664,7 +1664,7 @@ class Google_Service_Genomics_CallReadGroupSetsResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_CallSet extends Google_Collection
+class Postman_Google_Service_Genomics_CallSet extends Postman_Google_Collection
 {
   protected $collection_key = 'variantSetIds';
   protected $internal_gapi_mappings = array(
@@ -1727,11 +1727,11 @@ class Google_Service_Genomics_CallSet extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_CallSetInfo extends Google_Model
+class Postman_Google_Service_Genomics_CallSetInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_CigarUnit extends Google_Model
+class Postman_Google_Service_Genomics_CigarUnit extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1766,12 +1766,12 @@ class Google_Service_Genomics_CigarUnit extends Google_Model
   }
 }
 
-class Google_Service_Genomics_CoverageBucket extends Google_Model
+class Postman_Google_Service_Genomics_CoverageBucket extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $meanCoverage;
-  protected $rangeType = 'Google_Service_Genomics_Range';
+  protected $rangeType = 'Postman_Google_Service_Genomics_Range';
   protected $rangeDataType = '';
 
 
@@ -1783,7 +1783,7 @@ class Google_Service_Genomics_CoverageBucket extends Google_Model
   {
     return $this->meanCoverage;
   }
-  public function setRange(Google_Service_Genomics_Range $range)
+  public function setRange(Postman_Google_Service_Genomics_Range $range)
   {
     $this->range = $range;
   }
@@ -1793,7 +1793,7 @@ class Google_Service_Genomics_CoverageBucket extends Google_Model
   }
 }
 
-class Google_Service_Genomics_Dataset extends Google_Model
+class Postman_Google_Service_Genomics_Dataset extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1837,7 +1837,7 @@ class Google_Service_Genomics_Dataset extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ExperimentalCreateJobRequest extends Google_Collection
+class Postman_Google_Service_Genomics_ExperimentalCreateJobRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceUris';
   protected $internal_gapi_mappings = array(
@@ -1900,7 +1900,7 @@ class Google_Service_Genomics_ExperimentalCreateJobRequest extends Google_Collec
   }
 }
 
-class Google_Service_Genomics_ExperimentalCreateJobResponse extends Google_Model
+class Postman_Google_Service_Genomics_ExperimentalCreateJobResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1917,7 +1917,7 @@ class Google_Service_Genomics_ExperimentalCreateJobResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ExportReadGroupSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_ExportReadGroupSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'referenceNames';
   protected $internal_gapi_mappings = array(
@@ -1962,7 +1962,7 @@ class Google_Service_Genomics_ExportReadGroupSetsRequest extends Google_Collecti
   }
 }
 
-class Google_Service_Genomics_ExportReadGroupSetsResponse extends Google_Model
+class Postman_Google_Service_Genomics_ExportReadGroupSetsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1979,7 +1979,7 @@ class Google_Service_Genomics_ExportReadGroupSetsResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ExportVariantSetRequest extends Google_Collection
+class Postman_Google_Service_Genomics_ExportVariantSetRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'callSetIds';
   protected $internal_gapi_mappings = array(
@@ -2033,7 +2033,7 @@ class Google_Service_Genomics_ExportVariantSetRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ExportVariantSetResponse extends Google_Model
+class Postman_Google_Service_Genomics_ExportVariantSetResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2050,7 +2050,7 @@ class Google_Service_Genomics_ExportVariantSetResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_FastqMetadata extends Google_Model
+class Postman_Google_Service_Genomics_FastqMetadata extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2103,7 +2103,7 @@ class Google_Service_Genomics_FastqMetadata extends Google_Model
   }
 }
 
-class Google_Service_Genomics_GenomicsCall extends Google_Collection
+class Postman_Google_Service_Genomics_GenomicsCall extends Postman_Google_Collection
 {
   protected $collection_key = 'genotypeLikelihood';
   protected $internal_gapi_mappings = array(
@@ -2166,11 +2166,11 @@ class Google_Service_Genomics_GenomicsCall extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_GenomicsCallInfo extends Google_Model
+class Postman_Google_Service_Genomics_GenomicsCallInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_ImportReadGroupSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_ImportReadGroupSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceUris';
   protected $internal_gapi_mappings = array(
@@ -2206,7 +2206,7 @@ class Google_Service_Genomics_ImportReadGroupSetsRequest extends Google_Collecti
   }
 }
 
-class Google_Service_Genomics_ImportReadGroupSetsResponse extends Google_Model
+class Postman_Google_Service_Genomics_ImportReadGroupSetsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2223,7 +2223,7 @@ class Google_Service_Genomics_ImportReadGroupSetsResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ImportVariantsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_ImportVariantsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceUris';
   protected $internal_gapi_mappings = array(
@@ -2250,7 +2250,7 @@ class Google_Service_Genomics_ImportVariantsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ImportVariantsResponse extends Google_Model
+class Postman_Google_Service_Genomics_ImportVariantsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2267,17 +2267,17 @@ class Google_Service_Genomics_ImportVariantsResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_InterleavedFastqSource extends Google_Collection
+class Postman_Google_Service_Genomics_InterleavedFastqSource extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceUris';
   protected $internal_gapi_mappings = array(
   );
-  protected $metadataType = 'Google_Service_Genomics_FastqMetadata';
+  protected $metadataType = 'Postman_Google_Service_Genomics_FastqMetadata';
   protected $metadataDataType = '';
   public $sourceUris;
 
 
-  public function setMetadata(Google_Service_Genomics_FastqMetadata $metadata)
+  public function setMetadata(Postman_Google_Service_Genomics_FastqMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -2295,7 +2295,7 @@ class Google_Service_Genomics_InterleavedFastqSource extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_Job extends Google_Collection
+class Postman_Google_Service_Genomics_Job extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
@@ -2306,7 +2306,7 @@ class Google_Service_Genomics_Job extends Google_Collection
   public $id;
   public $importedIds;
   public $projectNumber;
-  protected $requestType = 'Google_Service_Genomics_JobRequest';
+  protected $requestType = 'Postman_Google_Service_Genomics_JobRequest';
   protected $requestDataType = '';
   public $status;
   public $warnings;
@@ -2360,7 +2360,7 @@ class Google_Service_Genomics_Job extends Google_Collection
   {
     return $this->projectNumber;
   }
-  public function setRequest(Google_Service_Genomics_JobRequest $request)
+  public function setRequest(Postman_Google_Service_Genomics_JobRequest $request)
   {
     $this->request = $request;
   }
@@ -2386,7 +2386,7 @@ class Google_Service_Genomics_Job extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_JobRequest extends Google_Collection
+class Postman_Google_Service_Genomics_JobRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'source';
   protected $internal_gapi_mappings = array(
@@ -2422,15 +2422,15 @@ class Google_Service_Genomics_JobRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_LinearAlignment extends Google_Collection
+class Postman_Google_Service_Genomics_LinearAlignment extends Postman_Google_Collection
 {
   protected $collection_key = 'cigar';
   protected $internal_gapi_mappings = array(
   );
-  protected $cigarType = 'Google_Service_Genomics_CigarUnit';
+  protected $cigarType = 'Postman_Google_Service_Genomics_CigarUnit';
   protected $cigarDataType = 'array';
   public $mappingQuality;
-  protected $positionType = 'Google_Service_Genomics_Position';
+  protected $positionType = 'Postman_Google_Service_Genomics_Position';
   protected $positionDataType = '';
 
 
@@ -2450,7 +2450,7 @@ class Google_Service_Genomics_LinearAlignment extends Google_Collection
   {
     return $this->mappingQuality;
   }
-  public function setPosition(Google_Service_Genomics_Position $position)
+  public function setPosition(Postman_Google_Service_Genomics_Position $position)
   {
     $this->position = $position;
   }
@@ -2460,7 +2460,7 @@ class Google_Service_Genomics_LinearAlignment extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ListBasesResponse extends Google_Model
+class Postman_Google_Service_Genomics_ListBasesResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2495,13 +2495,13 @@ class Google_Service_Genomics_ListBasesResponse extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ListCoverageBucketsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_ListCoverageBucketsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'coverageBuckets';
   protected $internal_gapi_mappings = array(
   );
   public $bucketWidth;
-  protected $coverageBucketsType = 'Google_Service_Genomics_CoverageBucket';
+  protected $coverageBucketsType = 'Postman_Google_Service_Genomics_CoverageBucket';
   protected $coverageBucketsDataType = 'array';
   public $nextPageToken;
 
@@ -2532,12 +2532,12 @@ class Google_Service_Genomics_ListCoverageBucketsResponse extends Google_Collect
   }
 }
 
-class Google_Service_Genomics_ListDatasetsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_ListDatasetsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'datasets';
   protected $internal_gapi_mappings = array(
   );
-  protected $datasetsType = 'Google_Service_Genomics_Dataset';
+  protected $datasetsType = 'Postman_Google_Service_Genomics_Dataset';
   protected $datasetsDataType = 'array';
   public $nextPageToken;
 
@@ -2560,12 +2560,12 @@ class Google_Service_Genomics_ListDatasetsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_MergeVariantsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_MergeVariantsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'variants';
   protected $internal_gapi_mappings = array(
   );
-  protected $variantsType = 'Google_Service_Genomics_Variant';
+  protected $variantsType = 'Postman_Google_Service_Genomics_Variant';
   protected $variantsDataType = 'array';
 
 
@@ -2579,7 +2579,7 @@ class Google_Service_Genomics_MergeVariantsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_Metadata extends Google_Model
+class Postman_Google_Service_Genomics_Metadata extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2650,17 +2650,17 @@ class Google_Service_Genomics_Metadata extends Google_Model
   }
 }
 
-class Google_Service_Genomics_MetadataInfo extends Google_Model
+class Postman_Google_Service_Genomics_MetadataInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_PairedFastqSource extends Google_Collection
+class Postman_Google_Service_Genomics_PairedFastqSource extends Postman_Google_Collection
 {
   protected $collection_key = 'secondSourceUris';
   protected $internal_gapi_mappings = array(
   );
   public $firstSourceUris;
-  protected $metadataType = 'Google_Service_Genomics_FastqMetadata';
+  protected $metadataType = 'Postman_Google_Service_Genomics_FastqMetadata';
   protected $metadataDataType = '';
   public $secondSourceUris;
 
@@ -2673,7 +2673,7 @@ class Google_Service_Genomics_PairedFastqSource extends Google_Collection
   {
     return $this->firstSourceUris;
   }
-  public function setMetadata(Google_Service_Genomics_FastqMetadata $metadata)
+  public function setMetadata(Postman_Google_Service_Genomics_FastqMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -2691,7 +2691,7 @@ class Google_Service_Genomics_PairedFastqSource extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_Position extends Google_Model
+class Postman_Google_Service_Genomics_Position extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2726,7 +2726,7 @@ class Google_Service_Genomics_Position extends Google_Model
   }
 }
 
-class Google_Service_Genomics_Range extends Google_Model
+class Postman_Google_Service_Genomics_Range extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2761,14 +2761,14 @@ class Google_Service_Genomics_Range extends Google_Model
   }
 }
 
-class Google_Service_Genomics_Read extends Google_Collection
+class Postman_Google_Service_Genomics_Read extends Postman_Google_Collection
 {
   protected $collection_key = 'alignedQuality';
   protected $internal_gapi_mappings = array(
   );
   public $alignedQuality;
   public $alignedSequence;
-  protected $alignmentType = 'Google_Service_Genomics_LinearAlignment';
+  protected $alignmentType = 'Postman_Google_Service_Genomics_LinearAlignment';
   protected $alignmentDataType = '';
   public $duplicateFragment;
   public $failedVendorQualityChecks;
@@ -2776,7 +2776,7 @@ class Google_Service_Genomics_Read extends Google_Collection
   public $fragmentName;
   public $id;
   public $info;
-  protected $nextMatePositionType = 'Google_Service_Genomics_Position';
+  protected $nextMatePositionType = 'Postman_Google_Service_Genomics_Position';
   protected $nextMatePositionDataType = '';
   public $numberReads;
   public $properPlacement;
@@ -2803,7 +2803,7 @@ class Google_Service_Genomics_Read extends Google_Collection
   {
     return $this->alignedSequence;
   }
-  public function setAlignment(Google_Service_Genomics_LinearAlignment $alignment)
+  public function setAlignment(Postman_Google_Service_Genomics_LinearAlignment $alignment)
   {
     $this->alignment = $alignment;
   }
@@ -2859,7 +2859,7 @@ class Google_Service_Genomics_Read extends Google_Collection
   {
     return $this->info;
   }
-  public function setNextMatePosition(Google_Service_Genomics_Position $nextMatePosition)
+  public function setNextMatePosition(Postman_Google_Service_Genomics_Position $nextMatePosition)
   {
     $this->nextMatePosition = $nextMatePosition;
   }
@@ -2925,20 +2925,20 @@ class Google_Service_Genomics_Read extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ReadGroup extends Google_Collection
+class Postman_Google_Service_Genomics_ReadGroup extends Postman_Google_Collection
 {
   protected $collection_key = 'programs';
   protected $internal_gapi_mappings = array(
   );
   public $datasetId;
   public $description;
-  protected $experimentType = 'Google_Service_Genomics_ReadGroupExperiment';
+  protected $experimentType = 'Postman_Google_Service_Genomics_ReadGroupExperiment';
   protected $experimentDataType = '';
   public $id;
   public $info;
   public $name;
   public $predictedInsertSize;
-  protected $programsType = 'Google_Service_Genomics_ReadGroupProgram';
+  protected $programsType = 'Postman_Google_Service_Genomics_ReadGroupProgram';
   protected $programsDataType = 'array';
   public $referenceSetId;
   public $sampleId;
@@ -2960,7 +2960,7 @@ class Google_Service_Genomics_ReadGroup extends Google_Collection
   {
     return $this->description;
   }
-  public function setExperiment(Google_Service_Genomics_ReadGroupExperiment $experiment)
+  public function setExperiment(Postman_Google_Service_Genomics_ReadGroupExperiment $experiment)
   {
     $this->experiment = $experiment;
   }
@@ -3026,7 +3026,7 @@ class Google_Service_Genomics_ReadGroup extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ReadGroupExperiment extends Google_Model
+class Postman_Google_Service_Genomics_ReadGroupExperiment extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3070,11 +3070,11 @@ class Google_Service_Genomics_ReadGroupExperiment extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ReadGroupInfo extends Google_Model
+class Postman_Google_Service_Genomics_ReadGroupInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_ReadGroupProgram extends Google_Model
+class Postman_Google_Service_Genomics_ReadGroupProgram extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3127,7 +3127,7 @@ class Google_Service_Genomics_ReadGroupProgram extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ReadGroupSet extends Google_Collection
+class Postman_Google_Service_Genomics_ReadGroupSet extends Postman_Google_Collection
 {
   protected $collection_key = 'readGroups';
   protected $internal_gapi_mappings = array(
@@ -3136,7 +3136,7 @@ class Google_Service_Genomics_ReadGroupSet extends Google_Collection
   public $filename;
   public $id;
   public $name;
-  protected $readGroupsType = 'Google_Service_Genomics_ReadGroup';
+  protected $readGroupsType = 'Postman_Google_Service_Genomics_ReadGroup';
   protected $readGroupsDataType = 'array';
   public $referenceSetId;
 
@@ -3191,11 +3191,11 @@ class Google_Service_Genomics_ReadGroupSet extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ReadInfo extends Google_Model
+class Postman_Google_Service_Genomics_ReadInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_Reference extends Google_Collection
+class Postman_Google_Service_Genomics_Reference extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceAccessions';
   protected $internal_gapi_mappings = array(
@@ -3267,7 +3267,7 @@ class Google_Service_Genomics_Reference extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_ReferenceBound extends Google_Model
+class Postman_Google_Service_Genomics_ReferenceBound extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3293,7 +3293,7 @@ class Google_Service_Genomics_ReferenceBound extends Google_Model
   }
 }
 
-class Google_Service_Genomics_ReferenceSet extends Google_Collection
+class Postman_Google_Service_Genomics_ReferenceSet extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceAccessions';
   protected $internal_gapi_mappings = array(
@@ -3374,7 +3374,7 @@ class Google_Service_Genomics_ReferenceSet extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchCallSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchCallSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'variantSetIds';
   protected $internal_gapi_mappings = array(
@@ -3419,12 +3419,12 @@ class Google_Service_Genomics_SearchCallSetsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchCallSetsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchCallSetsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'callSets';
   protected $internal_gapi_mappings = array(
   );
-  protected $callSetsType = 'Google_Service_Genomics_CallSet';
+  protected $callSetsType = 'Postman_Google_Service_Genomics_CallSet';
   protected $callSetsDataType = 'array';
   public $nextPageToken;
 
@@ -3447,7 +3447,7 @@ class Google_Service_Genomics_SearchCallSetsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchJobsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchJobsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'status';
   protected $internal_gapi_mappings = array(
@@ -3510,12 +3510,12 @@ class Google_Service_Genomics_SearchJobsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchJobsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchJobsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'jobs';
   protected $internal_gapi_mappings = array(
   );
-  protected $jobsType = 'Google_Service_Genomics_Job';
+  protected $jobsType = 'Postman_Google_Service_Genomics_Job';
   protected $jobsDataType = 'array';
   public $nextPageToken;
 
@@ -3538,7 +3538,7 @@ class Google_Service_Genomics_SearchJobsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchReadGroupSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReadGroupSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'datasetIds';
   protected $internal_gapi_mappings = array(
@@ -3583,13 +3583,13 @@ class Google_Service_Genomics_SearchReadGroupSetsRequest extends Google_Collecti
   }
 }
 
-class Google_Service_Genomics_SearchReadGroupSetsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReadGroupSetsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'readGroupSets';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $readGroupSetsType = 'Google_Service_Genomics_ReadGroupSet';
+  protected $readGroupSetsType = 'Postman_Google_Service_Genomics_ReadGroupSet';
   protected $readGroupSetsDataType = 'array';
 
 
@@ -3611,7 +3611,7 @@ class Google_Service_Genomics_SearchReadGroupSetsResponse extends Google_Collect
   }
 }
 
-class Google_Service_Genomics_SearchReadsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReadsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'readGroupSetIds';
   protected $internal_gapi_mappings = array(
@@ -3683,12 +3683,12 @@ class Google_Service_Genomics_SearchReadsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchReadsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReadsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'alignments';
   protected $internal_gapi_mappings = array(
   );
-  protected $alignmentsType = 'Google_Service_Genomics_Read';
+  protected $alignmentsType = 'Postman_Google_Service_Genomics_Read';
   protected $alignmentsDataType = 'array';
   public $nextPageToken;
 
@@ -3711,7 +3711,7 @@ class Google_Service_Genomics_SearchReadsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchReferenceSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReferenceSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'md5checksums';
   protected $internal_gapi_mappings = array(
@@ -3756,13 +3756,13 @@ class Google_Service_Genomics_SearchReferenceSetsRequest extends Google_Collecti
   }
 }
 
-class Google_Service_Genomics_SearchReferenceSetsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReferenceSetsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'referenceSets';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $referenceSetsType = 'Google_Service_Genomics_ReferenceSet';
+  protected $referenceSetsType = 'Postman_Google_Service_Genomics_ReferenceSet';
   protected $referenceSetsDataType = 'array';
 
 
@@ -3784,7 +3784,7 @@ class Google_Service_Genomics_SearchReferenceSetsResponse extends Google_Collect
   }
 }
 
-class Google_Service_Genomics_SearchReferencesRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReferencesRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'md5checksums';
   protected $internal_gapi_mappings = array(
@@ -3838,13 +3838,13 @@ class Google_Service_Genomics_SearchReferencesRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchReferencesResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchReferencesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'references';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $referencesType = 'Google_Service_Genomics_Reference';
+  protected $referencesType = 'Postman_Google_Service_Genomics_Reference';
   protected $referencesDataType = 'array';
 
 
@@ -3866,7 +3866,7 @@ class Google_Service_Genomics_SearchReferencesResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchVariantSetsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchVariantSetsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'datasetIds';
   protected $internal_gapi_mappings = array(
@@ -3902,13 +3902,13 @@ class Google_Service_Genomics_SearchVariantSetsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchVariantSetsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchVariantSetsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'variantSets';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $variantSetsType = 'Google_Service_Genomics_VariantSet';
+  protected $variantSetsType = 'Postman_Google_Service_Genomics_VariantSet';
   protected $variantSetsDataType = 'array';
 
 
@@ -3930,7 +3930,7 @@ class Google_Service_Genomics_SearchVariantSetsResponse extends Google_Collectio
   }
 }
 
-class Google_Service_Genomics_SearchVariantsRequest extends Google_Collection
+class Postman_Google_Service_Genomics_SearchVariantsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'variantSetIds';
   protected $internal_gapi_mappings = array(
@@ -4020,13 +4020,13 @@ class Google_Service_Genomics_SearchVariantsRequest extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_SearchVariantsResponse extends Google_Collection
+class Postman_Google_Service_Genomics_SearchVariantsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'variants';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $variantsType = 'Google_Service_Genomics_Variant';
+  protected $variantsType = 'Postman_Google_Service_Genomics_Variant';
   protected $variantsDataType = 'array';
 
 
@@ -4048,13 +4048,13 @@ class Google_Service_Genomics_SearchVariantsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_Variant extends Google_Collection
+class Postman_Google_Service_Genomics_Variant extends Postman_Google_Collection
 {
   protected $collection_key = 'names';
   protected $internal_gapi_mappings = array(
   );
   public $alternateBases;
-  protected $callsType = 'Google_Service_Genomics_GenomicsCall';
+  protected $callsType = 'Postman_Google_Service_Genomics_GenomicsCall';
   protected $callsDataType = 'array';
   public $created;
   public $end;
@@ -4175,20 +4175,20 @@ class Google_Service_Genomics_Variant extends Google_Collection
   }
 }
 
-class Google_Service_Genomics_VariantInfo extends Google_Model
+class Postman_Google_Service_Genomics_VariantInfo extends Postman_Google_Model
 {
 }
 
-class Google_Service_Genomics_VariantSet extends Google_Collection
+class Postman_Google_Service_Genomics_VariantSet extends Postman_Google_Collection
 {
   protected $collection_key = 'referenceBounds';
   protected $internal_gapi_mappings = array(
   );
   public $datasetId;
   public $id;
-  protected $metadataType = 'Google_Service_Genomics_Metadata';
+  protected $metadataType = 'Postman_Google_Service_Genomics_Metadata';
   protected $metadataDataType = 'array';
-  protected $referenceBoundsType = 'Google_Service_Genomics_ReferenceBound';
+  protected $referenceBoundsType = 'Postman_Google_Service_Genomics_ReferenceBound';
   protected $referenceBoundsDataType = 'array';
 
 

@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Pubsub extends Google_Service
+class Postman_Google_Service_Pubsub extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -44,16 +44,16 @@ class Google_Service_Pubsub extends Google_Service
   /**
    * Constructs the internal representation of the Pubsub service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'pubsub/v1beta1/';
     $this->version = 'v1beta1';
     $this->serviceName = 'pubsub';
 
-    $this->subscriptions = new Google_Service_Pubsub_Subscriptions_Resource(
+    $this->subscriptions = new Postman_Google_Service_Pubsub_Subscriptions_Resource(
         $this,
         $this->serviceName,
         'subscriptions',
@@ -124,7 +124,7 @@ class Google_Service_Pubsub extends Google_Service
           )
         )
     );
-    $this->topics = new Google_Service_Pubsub_Topics_Resource(
+    $this->topics = new Postman_Google_Service_Pubsub_Topics_Resource(
         $this,
         $this->serviceName,
         'topics',
@@ -191,11 +191,11 @@ class Google_Service_Pubsub extends Google_Service
  * The "subscriptions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $pubsubService = new Google_Service_Pubsub(...);
+ *   $pubsubService = new Postman_Google_Service_Pubsub(...);
  *   $subscriptions = $pubsubService->subscriptions;
  *  </code>
  */
-class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resource
+class Postman_Google_Service_Pubsub_Subscriptions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -206,10 +206,10 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * error. This is only used for messages received via pull.
    * (subscriptions.acknowledge)
    *
-   * @param Google_AcknowledgeRequest $postBody
+   * @param Postman_Google_AcknowledgeRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function acknowledge(Google_Service_Pubsub_AcknowledgeRequest $postBody, $optParams = array())
+  public function acknowledge(Postman_Google_Service_Pubsub_AcknowledgeRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -225,15 +225,15 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * name for this subscription on the same project as the topic.
    * (subscriptions.create)
    *
-   * @param Google_Subscription $postBody
+   * @param Postman_Google_Subscription $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_Subscription
+   * @return Postman_Google_Service_Pubsub_Subscription
    */
-  public function create(Google_Service_Pubsub_Subscription $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Pubsub_Subscription $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Pubsub_Subscription");
+    return $this->call('create', array($params), "Postman_Google_Service_Pubsub_Subscription");
   }
 
   /**
@@ -256,13 +256,13 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    *
    * @param string $subscription The name of the subscription to get.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_Subscription
+   * @return Postman_Google_Service_Pubsub_Subscription
    */
   public function get($subscription, $optParams = array())
   {
     $params = array('subscription' => $subscription);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Pubsub_Subscription");
+    return $this->call('get', array($params), "Postman_Google_Service_Pubsub_Subscription");
   }
 
   /**
@@ -274,23 +274,23 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * ListSubscriptionsResponse for continuation.
    * @opt_param int maxResults Maximum number of subscriptions to return.
    * @opt_param string query A valid label query expression.
-   * @return Google_Service_Pubsub_ListSubscriptionsResponse
+   * @return Postman_Google_Service_Pubsub_ListSubscriptionsResponse
    */
   public function listSubscriptions($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Pubsub_ListSubscriptionsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Pubsub_ListSubscriptionsResponse");
   }
 
   /**
    * Modifies the Ack deadline for a message received from a pull request.
    * (subscriptions.modifyAckDeadline)
    *
-   * @param Google_ModifyAckDeadlineRequest $postBody
+   * @param Postman_Google_ModifyAckDeadlineRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function modifyAckDeadline(Google_Service_Pubsub_ModifyAckDeadlineRequest $postBody, $optParams = array())
+  public function modifyAckDeadline(Postman_Google_Service_Pubsub_ModifyAckDeadlineRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -304,10 +304,10 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * push configuration is defined or while the configuration is modified.
    * (subscriptions.modifyPushConfig)
    *
-   * @param Google_ModifyPushConfigRequest $postBody
+   * @param Postman_Google_ModifyPushConfigRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function modifyPushConfig(Google_Service_Pubsub_ModifyPushConfigRequest $postBody, $optParams = array())
+  public function modifyPushConfig(Postman_Google_Service_Pubsub_ModifyPushConfigRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -321,15 +321,15 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * messages are available in a reasonable amount of time (to reduce system
    * load). (subscriptions.pull)
    *
-   * @param Google_PullRequest $postBody
+   * @param Postman_Google_PullRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_PullResponse
+   * @return Postman_Google_Service_Pubsub_PullResponse
    */
-  public function pull(Google_Service_Pubsub_PullRequest $postBody, $optParams = array())
+  public function pull(Postman_Google_Service_Pubsub_PullRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('pull', array($params), "Google_Service_Pubsub_PullResponse");
+    return $this->call('pull', array($params), "Postman_Google_Service_Pubsub_PullResponse");
   }
 
   /**
@@ -338,15 +338,15 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
    * if there too many pull requests outstanding for a given subscription.
    * (subscriptions.pullBatch)
    *
-   * @param Google_PullBatchRequest $postBody
+   * @param Postman_Google_PullBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_PullBatchResponse
+   * @return Postman_Google_Service_Pubsub_PullBatchResponse
    */
-  public function pullBatch(Google_Service_Pubsub_PullBatchRequest $postBody, $optParams = array())
+  public function pullBatch(Postman_Google_Service_Pubsub_PullBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('pullBatch', array($params), "Google_Service_Pubsub_PullBatchResponse");
+    return $this->call('pullBatch', array($params), "Postman_Google_Service_Pubsub_PullBatchResponse");
   }
 }
 
@@ -354,25 +354,25 @@ class Google_Service_Pubsub_Subscriptions_Resource extends Google_Service_Resour
  * The "topics" collection of methods.
  * Typical usage is:
  *  <code>
- *   $pubsubService = new Google_Service_Pubsub(...);
+ *   $pubsubService = new Postman_Google_Service_Pubsub(...);
  *   $topics = $pubsubService->topics;
  *  </code>
  */
-class Google_Service_Pubsub_Topics_Resource extends Google_Service_Resource
+class Postman_Google_Service_Pubsub_Topics_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates the given topic with the given name. (topics.create)
    *
-   * @param Google_Topic $postBody
+   * @param Postman_Google_Topic $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_Topic
+   * @return Postman_Google_Service_Pubsub_Topic
    */
-  public function create(Google_Service_Pubsub_Topic $postBody, $optParams = array())
+  public function create(Postman_Google_Service_Pubsub_Topic $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Pubsub_Topic");
+    return $this->call('create', array($params), "Postman_Google_Service_Pubsub_Topic");
   }
 
   /**
@@ -398,13 +398,13 @@ class Google_Service_Pubsub_Topics_Resource extends Google_Service_Resource
    *
    * @param string $topic The name of the topic to get.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_Topic
+   * @return Postman_Google_Service_Pubsub_Topic
    */
   public function get($topic, $optParams = array())
   {
     $params = array('topic' => $topic);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Pubsub_Topic");
+    return $this->call('get', array($params), "Postman_Google_Service_Pubsub_Topic");
   }
 
   /**
@@ -416,23 +416,23 @@ class Google_Service_Pubsub_Topics_Resource extends Google_Service_Resource
    * for continuation.
    * @opt_param int maxResults Maximum number of topics to return.
    * @opt_param string query A valid label query expression.
-   * @return Google_Service_Pubsub_ListTopicsResponse
+   * @return Postman_Google_Service_Pubsub_ListTopicsResponse
    */
   public function listTopics($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Pubsub_ListTopicsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Pubsub_ListTopicsResponse");
   }
 
   /**
    * Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
    * (topics.publish)
    *
-   * @param Google_PublishRequest $postBody
+   * @param Postman_Google_PublishRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function publish(Google_Service_Pubsub_PublishRequest $postBody, $optParams = array())
+  public function publish(Postman_Google_Service_Pubsub_PublishRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -443,22 +443,22 @@ class Google_Service_Pubsub_Topics_Resource extends Google_Service_Resource
    * Adds one or more messages to the topic. Returns NOT_FOUND if the topic does
    * not exist. (topics.publishBatch)
    *
-   * @param Google_PublishBatchRequest $postBody
+   * @param Postman_Google_PublishBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Pubsub_PublishBatchResponse
+   * @return Postman_Google_Service_Pubsub_PublishBatchResponse
    */
-  public function publishBatch(Google_Service_Pubsub_PublishBatchRequest $postBody, $optParams = array())
+  public function publishBatch(Postman_Google_Service_Pubsub_PublishBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('publishBatch', array($params), "Google_Service_Pubsub_PublishBatchResponse");
+    return $this->call('publishBatch', array($params), "Postman_Google_Service_Pubsub_PublishBatchResponse");
   }
 }
 
 
 
 
-class Google_Service_Pubsub_AcknowledgeRequest extends Google_Collection
+class Postman_Google_Service_Pubsub_AcknowledgeRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'ackId';
   protected $internal_gapi_mappings = array(
@@ -485,7 +485,7 @@ class Google_Service_Pubsub_AcknowledgeRequest extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_Label extends Google_Model
+class Postman_Google_Service_Pubsub_Label extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -520,13 +520,13 @@ class Google_Service_Pubsub_Label extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_ListSubscriptionsResponse extends Google_Collection
+class Postman_Google_Service_Pubsub_ListSubscriptionsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'subscription';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $subscriptionType = 'Google_Service_Pubsub_Subscription';
+  protected $subscriptionType = 'Postman_Google_Service_Pubsub_Subscription';
   protected $subscriptionDataType = 'array';
 
 
@@ -548,13 +548,13 @@ class Google_Service_Pubsub_ListSubscriptionsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_ListTopicsResponse extends Google_Collection
+class Postman_Google_Service_Pubsub_ListTopicsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'topic';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
-  protected $topicType = 'Google_Service_Pubsub_Topic';
+  protected $topicType = 'Postman_Google_Service_Pubsub_Topic';
   protected $topicDataType = 'array';
 
 
@@ -576,7 +576,7 @@ class Google_Service_Pubsub_ListTopicsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_ModifyAckDeadlineRequest extends Google_Model
+class Postman_Google_Service_Pubsub_ModifyAckDeadlineRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -611,16 +611,16 @@ class Google_Service_Pubsub_ModifyAckDeadlineRequest extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_ModifyPushConfigRequest extends Google_Model
+class Postman_Google_Service_Pubsub_ModifyPushConfigRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $pushConfigType = 'Google_Service_Pubsub_PushConfig';
+  protected $pushConfigType = 'Postman_Google_Service_Pubsub_PushConfig';
   protected $pushConfigDataType = '';
   public $subscription;
 
 
-  public function setPushConfig(Google_Service_Pubsub_PushConfig $pushConfig)
+  public function setPushConfig(Postman_Google_Service_Pubsub_PushConfig $pushConfig)
   {
     $this->pushConfig = $pushConfig;
   }
@@ -638,12 +638,12 @@ class Google_Service_Pubsub_ModifyPushConfigRequest extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PublishBatchRequest extends Google_Collection
+class Postman_Google_Service_Pubsub_PublishBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'messages';
   protected $internal_gapi_mappings = array(
   );
-  protected $messagesType = 'Google_Service_Pubsub_PubsubMessage';
+  protected $messagesType = 'Postman_Google_Service_Pubsub_PubsubMessage';
   protected $messagesDataType = 'array';
   public $topic;
 
@@ -666,7 +666,7 @@ class Google_Service_Pubsub_PublishBatchRequest extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_PublishBatchResponse extends Google_Collection
+class Postman_Google_Service_Pubsub_PublishBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'messageIds';
   protected $internal_gapi_mappings = array(
@@ -684,16 +684,16 @@ class Google_Service_Pubsub_PublishBatchResponse extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_PublishRequest extends Google_Model
+class Postman_Google_Service_Pubsub_PublishRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $messageType = 'Google_Service_Pubsub_PubsubMessage';
+  protected $messageType = 'Postman_Google_Service_Pubsub_PubsubMessage';
   protected $messageDataType = '';
   public $topic;
 
 
-  public function setMessage(Google_Service_Pubsub_PubsubMessage $message)
+  public function setMessage(Postman_Google_Service_Pubsub_PubsubMessage $message)
   {
     $this->message = $message;
   }
@@ -711,12 +711,12 @@ class Google_Service_Pubsub_PublishRequest extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PubsubEvent extends Google_Model
+class Postman_Google_Service_Pubsub_PubsubEvent extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $deleted;
-  protected $messageType = 'Google_Service_Pubsub_PubsubMessage';
+  protected $messageType = 'Postman_Google_Service_Pubsub_PubsubMessage';
   protected $messageDataType = '';
   public $subscription;
   public $truncated;
@@ -730,7 +730,7 @@ class Google_Service_Pubsub_PubsubEvent extends Google_Model
   {
     return $this->deleted;
   }
-  public function setMessage(Google_Service_Pubsub_PubsubMessage $message)
+  public function setMessage(Postman_Google_Service_Pubsub_PubsubMessage $message)
   {
     $this->message = $message;
   }
@@ -756,13 +756,13 @@ class Google_Service_Pubsub_PubsubEvent extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PubsubMessage extends Google_Collection
+class Postman_Google_Service_Pubsub_PubsubMessage extends Postman_Google_Collection
 {
   protected $collection_key = 'label';
   protected $internal_gapi_mappings = array(
   );
   public $data;
-  protected $labelType = 'Google_Service_Pubsub_Label';
+  protected $labelType = 'Postman_Google_Service_Pubsub_Label';
   protected $labelDataType = 'array';
   public $messageId;
 
@@ -793,7 +793,7 @@ class Google_Service_Pubsub_PubsubMessage extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_PullBatchRequest extends Google_Model
+class Postman_Google_Service_Pubsub_PullBatchRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -828,12 +828,12 @@ class Google_Service_Pubsub_PullBatchRequest extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PullBatchResponse extends Google_Collection
+class Postman_Google_Service_Pubsub_PullBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'pullResponses';
   protected $internal_gapi_mappings = array(
   );
-  protected $pullResponsesType = 'Google_Service_Pubsub_PullResponse';
+  protected $pullResponsesType = 'Postman_Google_Service_Pubsub_PullResponse';
   protected $pullResponsesDataType = 'array';
 
 
@@ -847,7 +847,7 @@ class Google_Service_Pubsub_PullBatchResponse extends Google_Collection
   }
 }
 
-class Google_Service_Pubsub_PullRequest extends Google_Model
+class Postman_Google_Service_Pubsub_PullRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -873,12 +873,12 @@ class Google_Service_Pubsub_PullRequest extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PullResponse extends Google_Model
+class Postman_Google_Service_Pubsub_PullResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $ackId;
-  protected $pubsubEventType = 'Google_Service_Pubsub_PubsubEvent';
+  protected $pubsubEventType = 'Postman_Google_Service_Pubsub_PubsubEvent';
   protected $pubsubEventDataType = '';
 
 
@@ -890,7 +890,7 @@ class Google_Service_Pubsub_PullResponse extends Google_Model
   {
     return $this->ackId;
   }
-  public function setPubsubEvent(Google_Service_Pubsub_PubsubEvent $pubsubEvent)
+  public function setPubsubEvent(Postman_Google_Service_Pubsub_PubsubEvent $pubsubEvent)
   {
     $this->pubsubEvent = $pubsubEvent;
   }
@@ -900,7 +900,7 @@ class Google_Service_Pubsub_PullResponse extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_PushConfig extends Google_Model
+class Postman_Google_Service_Pubsub_PushConfig extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -917,13 +917,13 @@ class Google_Service_Pubsub_PushConfig extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_Subscription extends Google_Model
+class Postman_Google_Service_Pubsub_Subscription extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $ackDeadlineSeconds;
   public $name;
-  protected $pushConfigType = 'Google_Service_Pubsub_PushConfig';
+  protected $pushConfigType = 'Postman_Google_Service_Pubsub_PushConfig';
   protected $pushConfigDataType = '';
   public $topic;
 
@@ -944,7 +944,7 @@ class Google_Service_Pubsub_Subscription extends Google_Model
   {
     return $this->name;
   }
-  public function setPushConfig(Google_Service_Pubsub_PushConfig $pushConfig)
+  public function setPushConfig(Postman_Google_Service_Pubsub_PushConfig $pushConfig)
   {
     $this->pushConfig = $pushConfig;
   }
@@ -962,7 +962,7 @@ class Google_Service_Pubsub_Subscription extends Google_Model
   }
 }
 
-class Google_Service_Pubsub_Topic extends Google_Model
+class Postman_Google_Service_Pubsub_Topic extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

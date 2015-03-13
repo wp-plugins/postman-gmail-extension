@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_ShoppingContent extends Google_Service
+class Postman_Google_Service_ShoppingContent extends Postman_Google_Service
 {
   /** Manage your product listings and accounts for Google Shopping. */
   const CONTENT =
@@ -47,16 +47,16 @@ class Google_Service_ShoppingContent extends Google_Service
   /**
    * Constructs the internal representation of the ShoppingContent service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'content/v2/';
     $this->version = 'v2';
     $this->serviceName = 'content';
 
-    $this->accounts = new Google_Service_ShoppingContent_Accounts_Resource(
+    $this->accounts = new Postman_Google_Service_ShoppingContent_Accounts_Resource(
         $this,
         $this->serviceName,
         'accounts',
@@ -158,7 +158,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->accountstatuses = new Google_Service_ShoppingContent_Accountstatuses_Resource(
+    $this->accountstatuses = new Postman_Google_Service_ShoppingContent_Accountstatuses_Resource(
         $this,
         $this->serviceName,
         'accountstatuses',
@@ -205,7 +205,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->datafeeds = new Google_Service_ShoppingContent_Datafeeds_Resource(
+    $this->datafeeds = new Postman_Google_Service_ShoppingContent_Datafeeds_Resource(
         $this,
         $this->serviceName,
         'datafeeds',
@@ -307,7 +307,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->datafeedstatuses = new Google_Service_ShoppingContent_Datafeedstatuses_Resource(
+    $this->datafeedstatuses = new Postman_Google_Service_ShoppingContent_Datafeedstatuses_Resource(
         $this,
         $this->serviceName,
         'datafeedstatuses',
@@ -354,7 +354,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->inventory = new Google_Service_ShoppingContent_Inventory_Resource(
+    $this->inventory = new Postman_Google_Service_ShoppingContent_Inventory_Resource(
         $this,
         $this->serviceName,
         'inventory',
@@ -388,7 +388,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->products = new Google_Service_ShoppingContent_Products_Resource(
+    $this->products = new Postman_Google_Service_ShoppingContent_Products_Resource(
         $this,
         $this->serviceName,
         'products',
@@ -473,7 +473,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->productstatuses = new Google_Service_ShoppingContent_Productstatuses_Resource(
+    $this->productstatuses = new Postman_Google_Service_ShoppingContent_Productstatuses_Resource(
         $this,
         $this->serviceName,
         'productstatuses',
@@ -528,26 +528,26 @@ class Google_Service_ShoppingContent extends Google_Service
  * The "accounts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $accounts = $contentService->accounts;
  *  </code>
  */
-class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Accounts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Retrieves, inserts, updates, and deletes multiple Merchant Center
    * (sub-)accounts in a single request. (accounts.custombatch)
    *
-   * @param Google_AccountsCustomBatchRequest $postBody
+   * @param Postman_Google_AccountsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_AccountsCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_AccountsCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_AccountsCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_AccountsCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_AccountsCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_AccountsCustomBatchResponse");
   }
 
   /**
@@ -570,28 +570,28 @@ class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Re
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Account
+   * @return Postman_Google_Service_ShoppingContent_Account
    */
   public function get($merchantId, $accountId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_Account");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_Account");
   }
 
   /**
    * Creates a Merchant Center sub-account. (accounts.insert)
    *
    * @param string $merchantId The ID of the managing account.
-   * @param Google_Account $postBody
+   * @param Postman_Google_Account $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Account
+   * @return Postman_Google_Service_ShoppingContent_Account
    */
-  public function insert($merchantId, Google_Service_ShoppingContent_Account $postBody, $optParams = array())
+  public function insert($merchantId, Postman_Google_Service_ShoppingContent_Account $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_ShoppingContent_Account");
+    return $this->call('insert', array($params), "Postman_Google_Service_ShoppingContent_Account");
   }
 
   /**
@@ -604,13 +604,13 @@ class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Re
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of accounts to return in the
    * response, used for paging.
-   * @return Google_Service_ShoppingContent_AccountsListResponse
+   * @return Postman_Google_Service_ShoppingContent_AccountsListResponse
    */
   public function listAccounts($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_AccountsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_AccountsListResponse");
   }
 
   /**
@@ -619,15 +619,15 @@ class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Re
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
-   * @param Google_Account $postBody
+   * @param Postman_Google_Account $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Account
+   * @return Postman_Google_Service_ShoppingContent_Account
    */
-  public function patch($merchantId, $accountId, Google_Service_ShoppingContent_Account $postBody, $optParams = array())
+  public function patch($merchantId, $accountId, Postman_Google_Service_ShoppingContent_Account $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'accountId' => $accountId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_ShoppingContent_Account");
+    return $this->call('patch', array($params), "Postman_Google_Service_ShoppingContent_Account");
   }
 
   /**
@@ -635,15 +635,15 @@ class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Re
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
-   * @param Google_Account $postBody
+   * @param Postman_Google_Account $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Account
+   * @return Postman_Google_Service_ShoppingContent_Account
    */
-  public function update($merchantId, $accountId, Google_Service_ShoppingContent_Account $postBody, $optParams = array())
+  public function update($merchantId, $accountId, Postman_Google_Service_ShoppingContent_Account $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'accountId' => $accountId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_ShoppingContent_Account");
+    return $this->call('update', array($params), "Postman_Google_Service_ShoppingContent_Account");
   }
 }
 
@@ -651,25 +651,25 @@ class Google_Service_ShoppingContent_Accounts_Resource extends Google_Service_Re
  * The "accountstatuses" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $accountstatuses = $contentService->accountstatuses;
  *  </code>
  */
-class Google_Service_ShoppingContent_Accountstatuses_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Accountstatuses_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * (accountstatuses.custombatch)
    *
-   * @param Google_AccountstatusesCustomBatchRequest $postBody
+   * @param Postman_Google_AccountstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse");
   }
 
   /**
@@ -678,13 +678,13 @@ class Google_Service_ShoppingContent_Accountstatuses_Resource extends Google_Ser
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_AccountStatus
+   * @return Postman_Google_Service_ShoppingContent_AccountStatus
    */
   public function get($merchantId, $accountId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_AccountStatus");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_AccountStatus");
   }
 
   /**
@@ -697,13 +697,13 @@ class Google_Service_ShoppingContent_Accountstatuses_Resource extends Google_Ser
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of account statuses to return
    * in the response, used for paging.
-   * @return Google_Service_ShoppingContent_AccountstatusesListResponse
+   * @return Postman_Google_Service_ShoppingContent_AccountstatusesListResponse
    */
   public function listAccountstatuses($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_AccountstatusesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_AccountstatusesListResponse");
   }
 }
 
@@ -711,25 +711,25 @@ class Google_Service_ShoppingContent_Accountstatuses_Resource extends Google_Ser
  * The "datafeeds" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $datafeeds = $contentService->datafeeds;
  *  </code>
  */
-class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Datafeeds_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * (datafeeds.custombatch)
    *
-   * @param Google_DatafeedsCustomBatchRequest $postBody
+   * @param Postman_Google_DatafeedsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_DatafeedsCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_DatafeedsCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_DatafeedsCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchResponse");
   }
 
   /**
@@ -752,28 +752,28 @@ class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_R
    * @param string $merchantId
    * @param string $datafeedId
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Datafeed
+   * @return Postman_Google_Service_ShoppingContent_Datafeed
    */
   public function get($merchantId, $datafeedId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'datafeedId' => $datafeedId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_Datafeed");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_Datafeed");
   }
 
   /**
    * Registers a datafeed with your Merchant Center account. (datafeeds.insert)
    *
    * @param string $merchantId
-   * @param Google_Datafeed $postBody
+   * @param Postman_Google_Datafeed $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Datafeed
+   * @return Postman_Google_Service_ShoppingContent_Datafeed
    */
-  public function insert($merchantId, Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
+  public function insert($merchantId, Postman_Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_ShoppingContent_Datafeed");
+    return $this->call('insert', array($params), "Postman_Google_Service_ShoppingContent_Datafeed");
   }
 
   /**
@@ -786,13 +786,13 @@ class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_R
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of products to return in the
    * response, used for paging.
-   * @return Google_Service_ShoppingContent_DatafeedsListResponse
+   * @return Postman_Google_Service_ShoppingContent_DatafeedsListResponse
    */
   public function listDatafeeds($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_DatafeedsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_DatafeedsListResponse");
   }
 
   /**
@@ -801,15 +801,15 @@ class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_R
    *
    * @param string $merchantId
    * @param string $datafeedId
-   * @param Google_Datafeed $postBody
+   * @param Postman_Google_Datafeed $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Datafeed
+   * @return Postman_Google_Service_ShoppingContent_Datafeed
    */
-  public function patch($merchantId, $datafeedId, Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
+  public function patch($merchantId, $datafeedId, Postman_Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'datafeedId' => $datafeedId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_ShoppingContent_Datafeed");
+    return $this->call('patch', array($params), "Postman_Google_Service_ShoppingContent_Datafeed");
   }
 
   /**
@@ -817,15 +817,15 @@ class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_R
    *
    * @param string $merchantId
    * @param string $datafeedId
-   * @param Google_Datafeed $postBody
+   * @param Postman_Google_Datafeed $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Datafeed
+   * @return Postman_Google_Service_ShoppingContent_Datafeed
    */
-  public function update($merchantId, $datafeedId, Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
+  public function update($merchantId, $datafeedId, Postman_Google_Service_ShoppingContent_Datafeed $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'datafeedId' => $datafeedId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_ShoppingContent_Datafeed");
+    return $this->call('update', array($params), "Postman_Google_Service_ShoppingContent_Datafeed");
   }
 }
 
@@ -833,25 +833,25 @@ class Google_Service_ShoppingContent_Datafeeds_Resource extends Google_Service_R
  * The "datafeedstatuses" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $datafeedstatuses = $contentService->datafeedstatuses;
  *  </code>
  */
-class Google_Service_ShoppingContent_Datafeedstatuses_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Datafeedstatuses_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * (datafeedstatuses.custombatch)
    *
-   * @param Google_DatafeedstatusesCustomBatchRequest $postBody
+   * @param Postman_Google_DatafeedstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse");
   }
 
   /**
@@ -861,13 +861,13 @@ class Google_Service_ShoppingContent_Datafeedstatuses_Resource extends Google_Se
    * @param string $merchantId
    * @param string $datafeedId
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_DatafeedStatus
+   * @return Postman_Google_Service_ShoppingContent_DatafeedStatus
    */
   public function get($merchantId, $datafeedId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'datafeedId' => $datafeedId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_DatafeedStatus");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_DatafeedStatus");
   }
 
   /**
@@ -880,13 +880,13 @@ class Google_Service_ShoppingContent_Datafeedstatuses_Resource extends Google_Se
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of products to return in the
    * response, used for paging.
-   * @return Google_Service_ShoppingContent_DatafeedstatusesListResponse
+   * @return Postman_Google_Service_ShoppingContent_DatafeedstatusesListResponse
    */
   public function listDatafeedstatuses($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_DatafeedstatusesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_DatafeedstatusesListResponse");
   }
 }
 
@@ -894,26 +894,26 @@ class Google_Service_ShoppingContent_Datafeedstatuses_Resource extends Google_Se
  * The "inventory" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $inventory = $contentService->inventory;
  *  </code>
  */
-class Google_Service_ShoppingContent_Inventory_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Inventory_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Updates price and availability for multiple products or stores in a single
    * request. (inventory.custombatch)
    *
-   * @param Google_InventoryCustomBatchRequest $postBody
+   * @param Postman_Google_InventoryCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_InventoryCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_InventoryCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_InventoryCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_InventoryCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_InventoryCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_InventoryCustomBatchResponse");
   }
 
   /**
@@ -926,15 +926,15 @@ class Google_Service_ShoppingContent_Inventory_Resource extends Google_Service_R
    * product.
    * @param string $productId The ID of the product for which to update price and
    * availability.
-   * @param Google_InventorySetRequest $postBody
+   * @param Postman_Google_InventorySetRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_InventorySetResponse
+   * @return Postman_Google_Service_ShoppingContent_InventorySetResponse
    */
-  public function set($merchantId, $storeCode, $productId, Google_Service_ShoppingContent_InventorySetRequest $postBody, $optParams = array())
+  public function set($merchantId, $storeCode, $productId, Postman_Google_Service_ShoppingContent_InventorySetRequest $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'storeCode' => $storeCode, 'productId' => $productId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('set', array($params), "Google_Service_ShoppingContent_InventorySetResponse");
+    return $this->call('set', array($params), "Postman_Google_Service_ShoppingContent_InventorySetResponse");
   }
 }
 
@@ -942,28 +942,28 @@ class Google_Service_ShoppingContent_Inventory_Resource extends Google_Service_R
  * The "products" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $products = $contentService->products;
  *  </code>
  */
-class Google_Service_ShoppingContent_Products_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Products_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Retrieves, inserts, and deletes multiple products in a single request.
    * (products.custombatch)
    *
-   * @param Google_ProductsCustomBatchRequest $postBody
+   * @param Postman_Google_ProductsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
-   * @return Google_Service_ShoppingContent_ProductsCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_ProductsCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_ProductsCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_ProductsCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_ProductsCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_ProductsCustomBatchResponse");
   }
 
   /**
@@ -988,30 +988,30 @@ class Google_Service_ShoppingContent_Products_Resource extends Google_Service_Re
    * @param string $merchantId The ID of the managing account.
    * @param string $productId The ID of the product.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_Product
+   * @return Postman_Google_Service_ShoppingContent_Product
    */
   public function get($merchantId, $productId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'productId' => $productId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_Product");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_Product");
   }
 
   /**
    * Uploads a product to your Merchant Center account. (products.insert)
    *
    * @param string $merchantId The ID of the managing account.
-   * @param Google_Product $postBody
+   * @param Postman_Google_Product $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
-   * @return Google_Service_ShoppingContent_Product
+   * @return Postman_Google_Service_ShoppingContent_Product
    */
-  public function insert($merchantId, Google_Service_ShoppingContent_Product $postBody, $optParams = array())
+  public function insert($merchantId, Postman_Google_Service_ShoppingContent_Product $postBody, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_ShoppingContent_Product");
+    return $this->call('insert', array($params), "Postman_Google_Service_ShoppingContent_Product");
   }
 
   /**
@@ -1023,13 +1023,13 @@ class Google_Service_ShoppingContent_Products_Resource extends Google_Service_Re
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of products to return in the
    * response, used for paging.
-   * @return Google_Service_ShoppingContent_ProductsListResponse
+   * @return Postman_Google_Service_ShoppingContent_ProductsListResponse
    */
   public function listProducts($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_ProductsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_ProductsListResponse");
   }
 }
 
@@ -1037,26 +1037,26 @@ class Google_Service_ShoppingContent_Products_Resource extends Google_Service_Re
  * The "productstatuses" collection of methods.
  * Typical usage is:
  *  <code>
- *   $contentService = new Google_Service_ShoppingContent(...);
+ *   $contentService = new Postman_Google_Service_ShoppingContent(...);
  *   $productstatuses = $contentService->productstatuses;
  *  </code>
  */
-class Google_Service_ShoppingContent_Productstatuses_Resource extends Google_Service_Resource
+class Postman_Google_Service_ShoppingContent_Productstatuses_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Gets the statuses of multiple products in a single request.
    * (productstatuses.custombatch)
    *
-   * @param Google_ProductstatusesCustomBatchRequest $postBody
+   * @param Postman_Google_ProductstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse
+   * @return Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse
    */
-  public function custombatch(Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest $postBody, $optParams = array())
+  public function custombatch(Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse");
+    return $this->call('custombatch', array($params), "Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse");
   }
 
   /**
@@ -1066,13 +1066,13 @@ class Google_Service_ShoppingContent_Productstatuses_Resource extends Google_Ser
    * @param string $merchantId The ID of the managing account.
    * @param string $productId The ID of the product.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ShoppingContent_ProductStatus
+   * @return Postman_Google_Service_ShoppingContent_ProductStatus
    */
   public function get($merchantId, $productId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId, 'productId' => $productId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ShoppingContent_ProductStatus");
+    return $this->call('get', array($params), "Postman_Google_Service_ShoppingContent_ProductStatus");
   }
 
   /**
@@ -1085,33 +1085,33 @@ class Google_Service_ShoppingContent_Productstatuses_Resource extends Google_Ser
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of product statuses to return
    * in the response, used for paging.
-   * @return Google_Service_ShoppingContent_ProductstatusesListResponse
+   * @return Postman_Google_Service_ShoppingContent_ProductstatusesListResponse
    */
   public function listProductstatuses($merchantId, $optParams = array())
   {
     $params = array('merchantId' => $merchantId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ShoppingContent_ProductstatusesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_ShoppingContent_ProductstatusesListResponse");
   }
 }
 
 
 
 
-class Google_Service_ShoppingContent_Account extends Google_Collection
+class Postman_Google_Service_ShoppingContent_Account extends Postman_Google_Collection
 {
   protected $collection_key = 'users';
   protected $internal_gapi_mappings = array(
   );
   public $adultContent;
-  protected $adwordsLinksType = 'Google_Service_ShoppingContent_AccountAdwordsLink';
+  protected $adwordsLinksType = 'Postman_Google_Service_ShoppingContent_AccountAdwordsLink';
   protected $adwordsLinksDataType = 'array';
   public $id;
   public $kind;
   public $name;
   public $reviewsUrl;
   public $sellerId;
-  protected $usersType = 'Google_Service_ShoppingContent_AccountUser';
+  protected $usersType = 'Postman_Google_Service_ShoppingContent_AccountUser';
   protected $usersDataType = 'array';
   public $websiteUrl;
 
@@ -1190,7 +1190,7 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_AccountAdwordsLink extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountAdwordsLink extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1216,13 +1216,13 @@ class Google_Service_ShoppingContent_AccountAdwordsLink extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_AccountStatus extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountStatus extends Postman_Google_Collection
 {
   protected $collection_key = 'dataQualityIssues';
   protected $internal_gapi_mappings = array(
   );
   public $accountId;
-  protected $dataQualityIssuesType = 'Google_Service_ShoppingContent_AccountStatusDataQualityIssue';
+  protected $dataQualityIssuesType = 'Postman_Google_Service_ShoppingContent_AccountStatusDataQualityIssue';
   protected $dataQualityIssuesDataType = 'array';
   public $kind;
 
@@ -1253,14 +1253,14 @@ class Google_Service_ShoppingContent_AccountStatus extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_AccountStatusDataQualityIssue extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountStatusDataQualityIssue extends Postman_Google_Collection
 {
   protected $collection_key = 'exampleItems';
   protected $internal_gapi_mappings = array(
   );
   public $country;
   public $displayedValue;
-  protected $exampleItemsType = 'Google_Service_ShoppingContent_AccountStatusExampleItem';
+  protected $exampleItemsType = 'Postman_Google_Service_ShoppingContent_AccountStatusExampleItem';
   protected $exampleItemsDataType = 'array';
   public $id;
   public $lastChecked;
@@ -1335,7 +1335,7 @@ class Google_Service_ShoppingContent_AccountStatusDataQualityIssue extends Googl
   }
 }
 
-class Google_Service_ShoppingContent_AccountStatusExampleItem extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountStatusExampleItem extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1388,7 +1388,7 @@ class Google_Service_ShoppingContent_AccountStatusExampleItem extends Google_Mod
   }
 }
 
-class Google_Service_ShoppingContent_AccountUser extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountUser extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1414,12 +1414,12 @@ class Google_Service_ShoppingContent_AccountUser extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_AccountsCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountsCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -1433,11 +1433,11 @@ class Google_Service_ShoppingContent_AccountsCustomBatchRequest extends Google_C
   }
 }
 
-class Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $accountType = 'Google_Service_ShoppingContent_Account';
+  protected $accountType = 'Postman_Google_Service_ShoppingContent_Account';
   protected $accountDataType = '';
   public $accountId;
   public $batchId;
@@ -1445,7 +1445,7 @@ class Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry extends Goo
   public $method;
 
 
-  public function setAccount(Google_Service_ShoppingContent_Account $account)
+  public function setAccount(Postman_Google_Service_ShoppingContent_Account $account)
   {
     $this->account = $account;
   }
@@ -1487,12 +1487,12 @@ class Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry extends Goo
   }
 }
 
-class Google_Service_ShoppingContent_AccountsCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountsCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -1515,19 +1515,19 @@ class Google_Service_ShoppingContent_AccountsCustomBatchResponse extends Google_
   }
 }
 
-class Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $accountType = 'Google_Service_ShoppingContent_Account';
+  protected $accountType = 'Postman_Google_Service_ShoppingContent_Account';
   protected $accountDataType = '';
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
   public $kind;
 
 
-  public function setAccount(Google_Service_ShoppingContent_Account $account)
+  public function setAccount(Postman_Google_Service_ShoppingContent_Account $account)
   {
     $this->account = $account;
   }
@@ -1543,7 +1543,7 @@ class Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry extends Go
   {
     return $this->batchId;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -1561,14 +1561,14 @@ class Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry extends Go
   }
 }
 
-class Google_Service_ShoppingContent_AccountsListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_Account';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_Account';
   protected $resourcesDataType = 'array';
 
 
@@ -1598,12 +1598,12 @@ class Google_Service_ShoppingContent_AccountsListResponse extends Google_Collect
   }
 }
 
-class Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_AccountstatusesCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -1617,7 +1617,7 @@ class Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest extends G
   }
 }
 
-class Google_Service_ShoppingContent_AccountstatusesCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1661,12 +1661,12 @@ class Google_Service_ShoppingContent_AccountstatusesCustomBatchRequestEntry exte
   }
 }
 
-class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -1689,18 +1689,18 @@ class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse extends 
   }
 }
 
-class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $accountStatusType = 'Google_Service_ShoppingContent_AccountStatus';
+  protected $accountStatusType = 'Postman_Google_Service_ShoppingContent_AccountStatus';
   protected $accountStatusDataType = '';
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
 
 
-  public function setAccountStatus(Google_Service_ShoppingContent_AccountStatus $accountStatus)
+  public function setAccountStatus(Postman_Google_Service_ShoppingContent_AccountStatus $accountStatus)
   {
     $this->accountStatus = $accountStatus;
   }
@@ -1716,7 +1716,7 @@ class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry ext
   {
     return $this->batchId;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -1726,14 +1726,14 @@ class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry ext
   }
 }
 
-class Google_Service_ShoppingContent_AccountstatusesListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_AccountstatusesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_AccountStatus';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_AccountStatus';
   protected $resourcesDataType = 'array';
 
 
@@ -1763,7 +1763,7 @@ class Google_Service_ShoppingContent_AccountstatusesListResponse extends Google_
   }
 }
 
-class Google_Service_ShoppingContent_Datafeed extends Google_Collection
+class Postman_Google_Service_ShoppingContent_Datafeed extends Postman_Google_Collection
 {
   protected $collection_key = 'intendedDestinations';
   protected $internal_gapi_mappings = array(
@@ -1771,10 +1771,10 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   public $attributeLanguage;
   public $contentLanguage;
   public $contentType;
-  protected $fetchScheduleType = 'Google_Service_ShoppingContent_DatafeedFetchSchedule';
+  protected $fetchScheduleType = 'Postman_Google_Service_ShoppingContent_DatafeedFetchSchedule';
   protected $fetchScheduleDataType = '';
   public $fileName;
-  protected $formatType = 'Google_Service_ShoppingContent_DatafeedFormat';
+  protected $formatType = 'Postman_Google_Service_ShoppingContent_DatafeedFormat';
   protected $formatDataType = '';
   public $id;
   public $intendedDestinations;
@@ -1807,7 +1807,7 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   {
     return $this->contentType;
   }
-  public function setFetchSchedule(Google_Service_ShoppingContent_DatafeedFetchSchedule $fetchSchedule)
+  public function setFetchSchedule(Postman_Google_Service_ShoppingContent_DatafeedFetchSchedule $fetchSchedule)
   {
     $this->fetchSchedule = $fetchSchedule;
   }
@@ -1823,7 +1823,7 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   {
     return $this->fileName;
   }
-  public function setFormat(Google_Service_ShoppingContent_DatafeedFormat $format)
+  public function setFormat(Postman_Google_Service_ShoppingContent_DatafeedFormat $format)
   {
     $this->format = $format;
   }
@@ -1873,7 +1873,7 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedFetchSchedule extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedFetchSchedule extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1944,7 +1944,7 @@ class Google_Service_ShoppingContent_DatafeedFetchSchedule extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedFormat extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedFormat extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1979,19 +1979,19 @@ class Google_Service_ShoppingContent_DatafeedFormat extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedStatus extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedStatus extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
   );
   public $datafeedId;
-  protected $errorsType = 'Google_Service_ShoppingContent_DatafeedStatusError';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_DatafeedStatusError';
   protected $errorsDataType = 'array';
   public $itemsTotal;
   public $itemsValid;
   public $kind;
   public $processingStatus;
-  protected $warningsType = 'Google_Service_ShoppingContent_DatafeedStatusError';
+  protected $warningsType = 'Postman_Google_Service_ShoppingContent_DatafeedStatusError';
   protected $warningsDataType = 'array';
 
 
@@ -2053,14 +2053,14 @@ class Google_Service_ShoppingContent_DatafeedStatus extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedStatusError extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedStatusError extends Postman_Google_Collection
 {
   protected $collection_key = 'examples';
   protected $internal_gapi_mappings = array(
   );
   public $code;
   public $count;
-  protected $examplesType = 'Google_Service_ShoppingContent_DatafeedStatusExample';
+  protected $examplesType = 'Postman_Google_Service_ShoppingContent_DatafeedStatusExample';
   protected $examplesDataType = 'array';
   public $message;
 
@@ -2099,7 +2099,7 @@ class Google_Service_ShoppingContent_DatafeedStatusError extends Google_Collecti
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedStatusExample extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedStatusExample extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2134,12 +2134,12 @@ class Google_Service_ShoppingContent_DatafeedStatusExample extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedsCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -2153,12 +2153,12 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchRequest extends Google_
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $datafeedType = 'Google_Service_ShoppingContent_Datafeed';
+  protected $datafeedType = 'Postman_Google_Service_ShoppingContent_Datafeed';
   protected $datafeedDataType = '';
   public $datafeedId;
   public $merchantId;
@@ -2173,7 +2173,7 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry extends Go
   {
     return $this->batchId;
   }
-  public function setDatafeed(Google_Service_ShoppingContent_Datafeed $datafeed)
+  public function setDatafeed(Postman_Google_Service_ShoppingContent_Datafeed $datafeed)
   {
     $this->datafeed = $datafeed;
   }
@@ -2207,12 +2207,12 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry extends Go
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedsCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -2235,14 +2235,14 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchResponse extends Google
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $datafeedType = 'Google_Service_ShoppingContent_Datafeed';
+  protected $datafeedType = 'Postman_Google_Service_ShoppingContent_Datafeed';
   protected $datafeedDataType = '';
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
 
 
@@ -2254,7 +2254,7 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry extends G
   {
     return $this->batchId;
   }
-  public function setDatafeed(Google_Service_ShoppingContent_Datafeed $datafeed)
+  public function setDatafeed(Postman_Google_Service_ShoppingContent_Datafeed $datafeed)
   {
     $this->datafeed = $datafeed;
   }
@@ -2262,7 +2262,7 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry extends G
   {
     return $this->datafeed;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -2272,14 +2272,14 @@ class Google_Service_ShoppingContent_DatafeedsCustomBatchResponseEntry extends G
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedsListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_Datafeed';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_Datafeed';
   protected $resourcesDataType = 'array';
 
 
@@ -2309,12 +2309,12 @@ class Google_Service_ShoppingContent_DatafeedsListResponse extends Google_Collec
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -2328,7 +2328,7 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest extends 
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2372,12 +2372,12 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequestEntry ext
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -2400,14 +2400,14 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse extends
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $datafeedStatusType = 'Google_Service_ShoppingContent_DatafeedStatus';
+  protected $datafeedStatusType = 'Postman_Google_Service_ShoppingContent_DatafeedStatus';
   protected $datafeedStatusDataType = '';
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
 
 
@@ -2419,7 +2419,7 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry ex
   {
     return $this->batchId;
   }
-  public function setDatafeedStatus(Google_Service_ShoppingContent_DatafeedStatus $datafeedStatus)
+  public function setDatafeedStatus(Postman_Google_Service_ShoppingContent_DatafeedStatus $datafeedStatus)
   {
     $this->datafeedStatus = $datafeedStatus;
   }
@@ -2427,7 +2427,7 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry ex
   {
     return $this->datafeedStatus;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -2437,14 +2437,14 @@ class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry ex
   }
 }
 
-class Google_Service_ShoppingContent_DatafeedstatusesListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_DatafeedstatusesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_DatafeedStatus';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_DatafeedStatus';
   protected $resourcesDataType = 'array';
 
 
@@ -2474,7 +2474,7 @@ class Google_Service_ShoppingContent_DatafeedstatusesListResponse extends Google
   }
 }
 
-class Google_Service_ShoppingContent_Error extends Google_Model
+class Postman_Google_Service_ShoppingContent_Error extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2509,13 +2509,13 @@ class Google_Service_ShoppingContent_Error extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_Errors extends Google_Collection
+class Postman_Google_Service_ShoppingContent_Errors extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
   );
   public $code;
-  protected $errorsType = 'Google_Service_ShoppingContent_Error';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Error';
   protected $errorsDataType = 'array';
   public $message;
 
@@ -2546,16 +2546,16 @@ class Google_Service_ShoppingContent_Errors extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_Inventory extends Google_Model
+class Postman_Google_Service_ShoppingContent_Inventory extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $availability;
   public $kind;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
+  protected $priceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $priceDataType = '';
   public $quantity;
-  protected $salePriceType = 'Google_Service_ShoppingContent_Price';
+  protected $salePriceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $salePriceDataType = '';
   public $salePriceEffectiveDate;
 
@@ -2576,7 +2576,7 @@ class Google_Service_ShoppingContent_Inventory extends Google_Model
   {
     return $this->kind;
   }
-  public function setPrice(Google_Service_ShoppingContent_Price $price)
+  public function setPrice(Postman_Google_Service_ShoppingContent_Price $price)
   {
     $this->price = $price;
   }
@@ -2592,7 +2592,7 @@ class Google_Service_ShoppingContent_Inventory extends Google_Model
   {
     return $this->quantity;
   }
-  public function setSalePrice(Google_Service_ShoppingContent_Price $salePrice)
+  public function setSalePrice(Postman_Google_Service_ShoppingContent_Price $salePrice)
   {
     $this->salePrice = $salePrice;
   }
@@ -2610,12 +2610,12 @@ class Google_Service_ShoppingContent_Inventory extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_InventoryCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_InventoryCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -2629,12 +2629,12 @@ class Google_Service_ShoppingContent_InventoryCustomBatchRequest extends Google_
   }
 }
 
-class Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $inventoryType = 'Google_Service_ShoppingContent_Inventory';
+  protected $inventoryType = 'Postman_Google_Service_ShoppingContent_Inventory';
   protected $inventoryDataType = '';
   public $merchantId;
   public $productId;
@@ -2649,7 +2649,7 @@ class Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry extends Go
   {
     return $this->batchId;
   }
-  public function setInventory(Google_Service_ShoppingContent_Inventory $inventory)
+  public function setInventory(Postman_Google_Service_ShoppingContent_Inventory $inventory)
   {
     $this->inventory = $inventory;
   }
@@ -2683,12 +2683,12 @@ class Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry extends Go
   }
 }
 
-class Google_Service_ShoppingContent_InventoryCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_InventoryCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -2711,12 +2711,12 @@ class Google_Service_ShoppingContent_InventoryCustomBatchResponse extends Google
   }
 }
 
-class Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
   public $kind;
 
@@ -2729,7 +2729,7 @@ class Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry extends G
   {
     return $this->batchId;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -2747,15 +2747,15 @@ class Google_Service_ShoppingContent_InventoryCustomBatchResponseEntry extends G
   }
 }
 
-class Google_Service_ShoppingContent_InventorySetRequest extends Google_Model
+class Postman_Google_Service_ShoppingContent_InventorySetRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $availability;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
+  protected $priceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $priceDataType = '';
   public $quantity;
-  protected $salePriceType = 'Google_Service_ShoppingContent_Price';
+  protected $salePriceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $salePriceDataType = '';
   public $salePriceEffectiveDate;
 
@@ -2768,7 +2768,7 @@ class Google_Service_ShoppingContent_InventorySetRequest extends Google_Model
   {
     return $this->availability;
   }
-  public function setPrice(Google_Service_ShoppingContent_Price $price)
+  public function setPrice(Postman_Google_Service_ShoppingContent_Price $price)
   {
     $this->price = $price;
   }
@@ -2784,7 +2784,7 @@ class Google_Service_ShoppingContent_InventorySetRequest extends Google_Model
   {
     return $this->quantity;
   }
-  public function setSalePrice(Google_Service_ShoppingContent_Price $salePrice)
+  public function setSalePrice(Postman_Google_Service_ShoppingContent_Price $salePrice)
   {
     $this->salePrice = $salePrice;
   }
@@ -2802,7 +2802,7 @@ class Google_Service_ShoppingContent_InventorySetRequest extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_InventorySetResponse extends Google_Model
+class Postman_Google_Service_ShoppingContent_InventorySetResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2819,7 +2819,7 @@ class Google_Service_ShoppingContent_InventorySetResponse extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_LoyaltyPoints extends Google_Model
+class Postman_Google_Service_ShoppingContent_LoyaltyPoints extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2854,7 +2854,7 @@ class Google_Service_ShoppingContent_LoyaltyPoints extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_Price extends Google_Model
+class Postman_Google_Service_ShoppingContent_Price extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2880,7 +2880,7 @@ class Google_Service_ShoppingContent_Price extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_Product extends Google_Collection
+class Postman_Google_Service_ShoppingContent_Product extends Postman_Google_Collection
 {
   protected $collection_key = 'warnings';
   protected $internal_gapi_mappings = array(
@@ -2898,9 +2898,9 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $color;
   public $condition;
   public $contentLanguage;
-  protected $customAttributesType = 'Google_Service_ShoppingContent_ProductCustomAttribute';
+  protected $customAttributesType = 'Postman_Google_Service_ShoppingContent_ProductCustomAttribute';
   protected $customAttributesDataType = 'array';
-  protected $customGroupsType = 'Google_Service_ShoppingContent_ProductCustomGroup';
+  protected $customGroupsType = 'Postman_Google_Service_ShoppingContent_ProductCustomGroup';
   protected $customGroupsDataType = 'array';
   public $customLabel0;
   public $customLabel1;
@@ -2908,7 +2908,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $customLabel3;
   public $customLabel4;
   public $description;
-  protected $destinationsType = 'Google_Service_ShoppingContent_ProductDestination';
+  protected $destinationsType = 'Postman_Google_Service_ShoppingContent_ProductDestination';
   protected $destinationsDataType = 'array';
   public $energyEfficiencyClass;
   public $expirationDate;
@@ -2918,13 +2918,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $id;
   public $identifierExists;
   public $imageLink;
-  protected $installmentType = 'Google_Service_ShoppingContent_ProductInstallment';
+  protected $installmentType = 'Postman_Google_Service_ShoppingContent_ProductInstallment';
   protected $installmentDataType = '';
   public $isBundle;
   public $itemGroupId;
   public $kind;
   public $link;
-  protected $loyaltyPointsType = 'Google_Service_ShoppingContent_LoyaltyPoints';
+  protected $loyaltyPointsType = 'Postman_Google_Service_ShoppingContent_LoyaltyPoints';
   protected $loyaltyPointsDataType = '';
   public $material;
   public $mobileLink;
@@ -2933,30 +2933,30 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $offerId;
   public $onlineOnly;
   public $pattern;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
+  protected $priceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $priceDataType = '';
   public $productType;
-  protected $salePriceType = 'Google_Service_ShoppingContent_Price';
+  protected $salePriceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $salePriceDataType = '';
   public $salePriceEffectiveDate;
-  protected $shippingType = 'Google_Service_ShoppingContent_ProductShipping';
+  protected $shippingType = 'Postman_Google_Service_ShoppingContent_ProductShipping';
   protected $shippingDataType = 'array';
   public $shippingLabel;
-  protected $shippingWeightType = 'Google_Service_ShoppingContent_ProductShippingWeight';
+  protected $shippingWeightType = 'Postman_Google_Service_ShoppingContent_ProductShippingWeight';
   protected $shippingWeightDataType = '';
   public $sizeSystem;
   public $sizeType;
   public $sizes;
   public $targetCountry;
-  protected $taxesType = 'Google_Service_ShoppingContent_ProductTax';
+  protected $taxesType = 'Postman_Google_Service_ShoppingContent_ProductTax';
   protected $taxesDataType = 'array';
   public $title;
-  protected $unitPricingBaseMeasureType = 'Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure';
+  protected $unitPricingBaseMeasureType = 'Postman_Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure';
   protected $unitPricingBaseMeasureDataType = '';
-  protected $unitPricingMeasureType = 'Google_Service_ShoppingContent_ProductUnitPricingMeasure';
+  protected $unitPricingMeasureType = 'Postman_Google_Service_ShoppingContent_ProductUnitPricingMeasure';
   protected $unitPricingMeasureDataType = '';
   public $validatedDestinations;
-  protected $warningsType = 'Google_Service_ShoppingContent_Error';
+  protected $warningsType = 'Postman_Google_Service_ShoppingContent_Error';
   protected $warningsDataType = 'array';
 
 
@@ -3200,7 +3200,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->imageLink;
   }
-  public function setInstallment(Google_Service_ShoppingContent_ProductInstallment $installment)
+  public function setInstallment(Postman_Google_Service_ShoppingContent_ProductInstallment $installment)
   {
     $this->installment = $installment;
   }
@@ -3240,7 +3240,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->link;
   }
-  public function setLoyaltyPoints(Google_Service_ShoppingContent_LoyaltyPoints $loyaltyPoints)
+  public function setLoyaltyPoints(Postman_Google_Service_ShoppingContent_LoyaltyPoints $loyaltyPoints)
   {
     $this->loyaltyPoints = $loyaltyPoints;
   }
@@ -3304,7 +3304,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->pattern;
   }
-  public function setPrice(Google_Service_ShoppingContent_Price $price)
+  public function setPrice(Postman_Google_Service_ShoppingContent_Price $price)
   {
     $this->price = $price;
   }
@@ -3320,7 +3320,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->productType;
   }
-  public function setSalePrice(Google_Service_ShoppingContent_Price $salePrice)
+  public function setSalePrice(Postman_Google_Service_ShoppingContent_Price $salePrice)
   {
     $this->salePrice = $salePrice;
   }
@@ -3352,7 +3352,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->shippingLabel;
   }
-  public function setShippingWeight(Google_Service_ShoppingContent_ProductShippingWeight $shippingWeight)
+  public function setShippingWeight(Postman_Google_Service_ShoppingContent_ProductShippingWeight $shippingWeight)
   {
     $this->shippingWeight = $shippingWeight;
   }
@@ -3408,7 +3408,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->title;
   }
-  public function setUnitPricingBaseMeasure(Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure $unitPricingBaseMeasure)
+  public function setUnitPricingBaseMeasure(Postman_Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure $unitPricingBaseMeasure)
   {
     $this->unitPricingBaseMeasure = $unitPricingBaseMeasure;
   }
@@ -3416,7 +3416,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->unitPricingBaseMeasure;
   }
-  public function setUnitPricingMeasure(Google_Service_ShoppingContent_ProductUnitPricingMeasure $unitPricingMeasure)
+  public function setUnitPricingMeasure(Postman_Google_Service_ShoppingContent_ProductUnitPricingMeasure $unitPricingMeasure)
   {
     $this->unitPricingMeasure = $unitPricingMeasure;
   }
@@ -3442,7 +3442,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_ProductCustomAttribute extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductCustomAttribute extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3486,12 +3486,12 @@ class Google_Service_ShoppingContent_ProductCustomAttribute extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductCustomGroup extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductCustomGroup extends Postman_Google_Collection
 {
   protected $collection_key = 'attributes';
   protected $internal_gapi_mappings = array(
   );
-  protected $attributesType = 'Google_Service_ShoppingContent_ProductCustomAttribute';
+  protected $attributesType = 'Postman_Google_Service_ShoppingContent_ProductCustomAttribute';
   protected $attributesDataType = 'array';
   public $name;
 
@@ -3514,7 +3514,7 @@ class Google_Service_ShoppingContent_ProductCustomGroup extends Google_Collectio
   }
 }
 
-class Google_Service_ShoppingContent_ProductDestination extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductDestination extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3540,16 +3540,16 @@ class Google_Service_ShoppingContent_ProductDestination extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductInstallment extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductInstallment extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $amountType = 'Google_Service_ShoppingContent_Price';
+  protected $amountType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $amountDataType = '';
   public $months;
 
 
-  public function setAmount(Google_Service_ShoppingContent_Price $amount)
+  public function setAmount(Postman_Google_Service_ShoppingContent_Price $amount)
   {
     $this->amount = $amount;
   }
@@ -3567,7 +3567,7 @@ class Google_Service_ShoppingContent_ProductInstallment extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductShipping extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductShipping extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3575,7 +3575,7 @@ class Google_Service_ShoppingContent_ProductShipping extends Google_Model
   public $locationGroupName;
   public $locationId;
   public $postalCode;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
+  protected $priceType = 'Postman_Google_Service_ShoppingContent_Price';
   protected $priceDataType = '';
   public $region;
   public $service;
@@ -3613,7 +3613,7 @@ class Google_Service_ShoppingContent_ProductShipping extends Google_Model
   {
     return $this->postalCode;
   }
-  public function setPrice(Google_Service_ShoppingContent_Price $price)
+  public function setPrice(Postman_Google_Service_ShoppingContent_Price $price)
   {
     $this->price = $price;
   }
@@ -3639,7 +3639,7 @@ class Google_Service_ShoppingContent_ProductShipping extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductShippingWeight extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductShippingWeight extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3665,14 +3665,14 @@ class Google_Service_ShoppingContent_ProductShippingWeight extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductStatus extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductStatus extends Postman_Google_Collection
 {
   protected $collection_key = 'destinationStatuses';
   protected $internal_gapi_mappings = array(
   );
-  protected $dataQualityIssuesType = 'Google_Service_ShoppingContent_ProductStatusDataQualityIssue';
+  protected $dataQualityIssuesType = 'Postman_Google_Service_ShoppingContent_ProductStatusDataQualityIssue';
   protected $dataQualityIssuesDataType = 'array';
-  protected $destinationStatusesType = 'Google_Service_ShoppingContent_ProductStatusDestinationStatus';
+  protected $destinationStatusesType = 'Postman_Google_Service_ShoppingContent_ProductStatusDestinationStatus';
   protected $destinationStatusesDataType = 'array';
   public $kind;
   public $link;
@@ -3730,7 +3730,7 @@ class Google_Service_ShoppingContent_ProductStatus extends Google_Collection
   }
 }
 
-class Google_Service_ShoppingContent_ProductStatusDataQualityIssue extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductStatusDataQualityIssue extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3801,7 +3801,7 @@ class Google_Service_ShoppingContent_ProductStatusDataQualityIssue extends Googl
   }
 }
 
-class Google_Service_ShoppingContent_ProductStatusDestinationStatus extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductStatusDestinationStatus extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3836,7 +3836,7 @@ class Google_Service_ShoppingContent_ProductStatusDestinationStatus extends Goog
   }
 }
 
-class Google_Service_ShoppingContent_ProductTax extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductTax extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3898,7 +3898,7 @@ class Google_Service_ShoppingContent_ProductTax extends Google_Model
   }
 }
 
-class Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3924,7 +3924,7 @@ class Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure extends Googl
   }
 }
 
-class Google_Service_ShoppingContent_ProductUnitPricingMeasure extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductUnitPricingMeasure extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3950,12 +3950,12 @@ class Google_Service_ShoppingContent_ProductUnitPricingMeasure extends Google_Mo
   }
 }
 
-class Google_Service_ShoppingContent_ProductsCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductsCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -3969,14 +3969,14 @@ class Google_Service_ShoppingContent_ProductsCustomBatchRequest extends Google_C
   }
 }
 
-class Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
   public $merchantId;
   public $method;
-  protected $productType = 'Google_Service_ShoppingContent_Product';
+  protected $productType = 'Postman_Google_Service_ShoppingContent_Product';
   protected $productDataType = '';
   public $productId;
 
@@ -4005,7 +4005,7 @@ class Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry extends Goo
   {
     return $this->method;
   }
-  public function setProduct(Google_Service_ShoppingContent_Product $product)
+  public function setProduct(Postman_Google_Service_ShoppingContent_Product $product)
   {
     $this->product = $product;
   }
@@ -4023,12 +4023,12 @@ class Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry extends Goo
   }
 }
 
-class Google_Service_ShoppingContent_ProductsCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductsCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -4051,15 +4051,15 @@ class Google_Service_ShoppingContent_ProductsCustomBatchResponse extends Google_
   }
 }
 
-class Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
   public $kind;
-  protected $productType = 'Google_Service_ShoppingContent_Product';
+  protected $productType = 'Postman_Google_Service_ShoppingContent_Product';
   protected $productDataType = '';
 
 
@@ -4071,7 +4071,7 @@ class Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry extends Go
   {
     return $this->batchId;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -4087,7 +4087,7 @@ class Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry extends Go
   {
     return $this->kind;
   }
-  public function setProduct(Google_Service_ShoppingContent_Product $product)
+  public function setProduct(Postman_Google_Service_ShoppingContent_Product $product)
   {
     $this->product = $product;
   }
@@ -4097,14 +4097,14 @@ class Google_Service_ShoppingContent_ProductsCustomBatchResponseEntry extends Go
   }
 }
 
-class Google_Service_ShoppingContent_ProductsListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_Product';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_Product';
   protected $resourcesDataType = 'array';
 
 
@@ -4134,12 +4134,12 @@ class Google_Service_ShoppingContent_ProductsListResponse extends Google_Collect
   }
 }
 
-class Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_ProductstatusesCustomBatchRequestEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchRequestEntry';
   protected $entriesDataType = 'array';
 
 
@@ -4153,7 +4153,7 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest extends G
   }
 }
 
-class Google_Service_ShoppingContent_ProductstatusesCustomBatchRequestEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchRequestEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4197,12 +4197,12 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchRequestEntry exte
   }
 }
 
-class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'entries';
   protected $internal_gapi_mappings = array(
   );
-  protected $entriesType = 'Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry';
+  protected $entriesType = 'Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry';
   protected $entriesDataType = 'array';
   public $kind;
 
@@ -4225,15 +4225,15 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse extends 
   }
 }
 
-class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry extends Google_Model
+class Postman_Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
+  protected $errorsType = 'Postman_Google_Service_ShoppingContent_Errors';
   protected $errorsDataType = '';
   public $kind;
-  protected $productStatusType = 'Google_Service_ShoppingContent_ProductStatus';
+  protected $productStatusType = 'Postman_Google_Service_ShoppingContent_ProductStatus';
   protected $productStatusDataType = '';
 
 
@@ -4245,7 +4245,7 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry ext
   {
     return $this->batchId;
   }
-  public function setErrors(Google_Service_ShoppingContent_Errors $errors)
+  public function setErrors(Postman_Google_Service_ShoppingContent_Errors $errors)
   {
     $this->errors = $errors;
   }
@@ -4261,7 +4261,7 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry ext
   {
     return $this->kind;
   }
-  public function setProductStatus(Google_Service_ShoppingContent_ProductStatus $productStatus)
+  public function setProductStatus(Postman_Google_Service_ShoppingContent_ProductStatus $productStatus)
   {
     $this->productStatus = $productStatus;
   }
@@ -4271,14 +4271,14 @@ class Google_Service_ShoppingContent_ProductstatusesCustomBatchResponseEntry ext
   }
 }
 
-class Google_Service_ShoppingContent_ProductstatusesListResponse extends Google_Collection
+class Postman_Google_Service_ShoppingContent_ProductstatusesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resources';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_ProductStatus';
+  protected $resourcesType = 'Postman_Google_Service_ShoppingContent_ProductStatus';
   protected $resourcesDataType = 'array';
 
 

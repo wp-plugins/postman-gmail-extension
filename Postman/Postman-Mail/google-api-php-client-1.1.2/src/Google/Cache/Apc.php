@@ -25,20 +25,20 @@ require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Google_Cache_Apc extends Google_Cache_Abstract
+class Postman_Google_Cache_Apc extends Postman_Google_Cache_Abstract
 {
   /**
-   * @var Google_Client the current client
+   * @var Postman_Google_Client the current client
    */
   private $client;
 
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     if (! function_exists('apc_add') ) {
       $error = "Apc functions not available";
 
       $client->getLogger()->error($error);
-      throw new Google_Cache_Exception($error);
+      throw new Postman_Google_Cache_Exception($error);
     }
 
     $this->client = $client;
@@ -87,7 +87,7 @@ class Google_Cache_Apc extends Google_Cache_Abstract
           'APC cache set failed',
           array('key' => $key, 'var' => $var)
       );
-      throw new Google_Cache_Exception("Couldn't store data");
+      throw new Postman_Google_Cache_Exception("Couldn't store data");
     }
 
     $this->client->getLogger()->debug(

@@ -16,14 +16,14 @@
  */
 
 /**
- * Http Streams based implementation of Google_IO.
+ * Http Streams based implementation of Postman_Google_IO.
  *
  * @author Stuart Langley <slangley@google.com>
  */
 
 require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
-class Google_IO_Stream extends Google_IO_Abstract
+class Postman_Google_IO_Stream extends Postman_Google_IO_Abstract
 {
   const TIMEOUT = "timeout";
   const ZLIB = "compress.zlib://";
@@ -43,12 +43,12 @@ class Google_IO_Stream extends Google_IO_Abstract
   /**
    * Execute an HTTP Request
    *
-   * @param Google_HttpRequest $request the http request to be executed
-   * @return Google_HttpRequest http request with the response http code,
+   * @param Postman_Google_HttpRequest $request the http request to be executed
+   * @return Postman_Google_HttpRequest http request with the response http code,
    * response headers and response body filled in
-   * @throws Google_IO_Exception on curl or IO error
+   * @throws Postman_Google_IO_Exception on curl or IO error
    */
-  public function executeRequest(Google_Http_Request $request)
+  public function executeRequest(Postman_Google_Http_Request $request)
   {
     $default_options = stream_context_get_options(stream_context_get_default());
 
@@ -125,7 +125,7 @@ class Google_IO_Stream extends Google_IO_Abstract
       );
 
       $this->client->getLogger()->error('Stream ' . $error);
-      throw new Google_IO_Exception($error, $this->trappedErrorNumber);
+      throw new Postman_Google_IO_Exception($error, $this->trappedErrorNumber);
     }
 
     $response_data = false;
@@ -148,7 +148,7 @@ class Google_IO_Stream extends Google_IO_Abstract
       );
 
       $this->client->getLogger()->error('Stream ' . $error);
-      throw new Google_IO_Exception($error, $respHttpCode);
+      throw new Postman_Google_IO_Exception($error, $respHttpCode);
     }
 
     $responseHeaders = $this->getHttpResponseHeaders($http_response_header);

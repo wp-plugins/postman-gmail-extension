@@ -26,7 +26,7 @@ require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class Google_Service_Resource
+class Postman_Google_Service_Resource
 {
   // Valid query parameters that work, but don't appear in discovery.
   private $stackParameters = array(
@@ -42,10 +42,10 @@ class Google_Service_Resource
       'mediaUpload' => array('type' => 'complex', 'location' => 'query'),
   );
 
-  /** @var Google_Service $service */
+  /** @var Postman_Google_Service $service */
   private $service;
 
-  /** @var Google_Client $client */
+  /** @var Postman_Google_Client $client */
   private $client;
 
   /** @var string $serviceName */
@@ -73,8 +73,8 @@ class Google_Service_Resource
    * @param $name
    * @param $arguments
    * @param $expected_class - optional, the expected class name
-   * @return Google_Http_Request|expected_class
-   * @throws Google_Exception
+   * @return Postman_Google_Http_Request|expected_class
+   * @throws Postman_Google_Exception
    */
   public function call($name, $arguments, $expected_class = null)
   {
@@ -88,7 +88,7 @@ class Google_Service_Resource
           )
       );
 
-      throw new Google_Exception(
+      throw new Postman_Google_Exception(
           "Unknown function: " .
           "{$this->serviceName}->{$this->resourceName}->{$name}()"
       );
@@ -100,7 +100,7 @@ class Google_Service_Resource
     // document as parameter, but we abuse the param entry for storing it.
     $postBody = null;
     if (isset($parameters['postBody'])) {
-      if ($parameters['postBody'] instanceof Google_Model) {
+      if ($parameters['postBody'] instanceof Postman_Google_Model) {
         // In the cases the post body is an existing object, we want
         // to use the smart method to create a simple object for
         // for JSONification.
@@ -142,7 +142,7 @@ class Google_Service_Resource
                 'parameter' => $key
             )
         );
-        throw new Google_Exception("($name) unknown parameter: '$key'");
+        throw new Postman_Google_Exception("($name) unknown parameter: '$key'");
       }
     }
 
@@ -160,7 +160,7 @@ class Google_Service_Resource
                 'parameter' => $paramName
             )
         );
-        throw new Google_Exception("($name) missing required param: '$paramName'");
+        throw new Postman_Google_Exception("($name) missing required param: '$paramName'");
       }
       if (isset($parameters[$paramName])) {
         $value = $parameters[$paramName];
@@ -185,12 +185,12 @@ class Google_Service_Resource
         )
     );
 
-    $url = Google_Http_REST::createRequestUri(
+    $url = Postman_Google_Http_REST::createRequestUri(
         $servicePath,
         $method['path'],
         $parameters
     );
-    $httpRequest = new Google_Http_Request(
+    $httpRequest = new Postman_Google_Http_Request(
         $url,
         $method['httpMethod'],
         null,
@@ -211,7 +211,7 @@ class Google_Service_Resource
     if (isset($parameters['data']) &&
         ($parameters['uploadType']['value'] == 'media' || $parameters['uploadType']['value'] == 'multipart')) {
       // If we are doing a simple media upload, trigger that as a convenience.
-      $mfu = new Google_Http_MediaFileUpload(
+      $mfu = new Postman_Google_Http_MediaFileUpload(
           $this->client,
           $httpRequest,
           isset($parameters['mimeType']) ? $parameters['mimeType']['value'] : 'application/octet-stream',

@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Pagespeedonline extends Google_Service
+class Postman_Google_Service_Pagespeedonline extends Postman_Google_Service
 {
 
 
@@ -39,16 +39,16 @@ class Google_Service_Pagespeedonline extends Google_Service
   /**
    * Constructs the internal representation of the Pagespeedonline service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'pagespeedonline/v1/';
     $this->version = 'v1';
     $this->serviceName = 'pagespeedonline';
 
-    $this->pagespeedapi = new Google_Service_Pagespeedonline_Pagespeedapi_Resource(
+    $this->pagespeedapi = new Postman_Google_Service_Pagespeedonline_Pagespeedapi_Resource(
         $this,
         $this->serviceName,
         'pagespeedapi',
@@ -97,11 +97,11 @@ class Google_Service_Pagespeedonline extends Google_Service
  * The "pagespeedapi" collection of methods.
  * Typical usage is:
  *  <code>
- *   $pagespeedonlineService = new Google_Service_Pagespeedonline(...);
+ *   $pagespeedonlineService = new Postman_Google_Service_Pagespeedonline(...);
  *   $pagespeedapi = $pagespeedonlineService->pagespeedapi;
  *  </code>
  */
-class Google_Service_Pagespeedonline_Pagespeedapi_Resource extends Google_Service_Resource
+class Postman_Google_Service_Pagespeedonline_Pagespeedapi_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -120,41 +120,41 @@ class Google_Service_Pagespeedonline_Pagespeedapi_Resource extends Google_Servic
    * @opt_param string strategy The analysis strategy to use
    * @opt_param bool filter_third_party_resources Indicates if third party
    * resources should be filtered out before PageSpeed analysis.
-   * @return Google_Service_Pagespeedonline_Result
+   * @return Postman_Google_Service_Pagespeedonline_Result
    */
   public function runpagespeed($url, $optParams = array())
   {
     $params = array('url' => $url);
     $params = array_merge($params, $optParams);
-    return $this->call('runpagespeed', array($params), "Google_Service_Pagespeedonline_Result");
+    return $this->call('runpagespeed', array($params), "Postman_Google_Service_Pagespeedonline_Result");
   }
 }
 
 
 
 
-class Google_Service_Pagespeedonline_Result extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_Result extends Postman_Google_Collection
 {
   protected $collection_key = 'invalidRules';
   protected $internal_gapi_mappings = array(
   );
-  protected $formattedResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResults';
+  protected $formattedResultsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResults';
   protected $formattedResultsDataType = '';
   public $id;
   public $invalidRules;
   public $kind;
-  protected $pageStatsType = 'Google_Service_Pagespeedonline_ResultPageStats';
+  protected $pageStatsType = 'Postman_Google_Service_Pagespeedonline_ResultPageStats';
   protected $pageStatsDataType = '';
   public $responseCode;
   public $score;
-  protected $screenshotType = 'Google_Service_Pagespeedonline_ResultScreenshot';
+  protected $screenshotType = 'Postman_Google_Service_Pagespeedonline_ResultScreenshot';
   protected $screenshotDataType = '';
   public $title;
-  protected $versionType = 'Google_Service_Pagespeedonline_ResultVersion';
+  protected $versionType = 'Postman_Google_Service_Pagespeedonline_ResultVersion';
   protected $versionDataType = '';
 
 
-  public function setFormattedResults(Google_Service_Pagespeedonline_ResultFormattedResults $formattedResults)
+  public function setFormattedResults(Postman_Google_Service_Pagespeedonline_ResultFormattedResults $formattedResults)
   {
     $this->formattedResults = $formattedResults;
   }
@@ -186,7 +186,7 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPageStats(Google_Service_Pagespeedonline_ResultPageStats $pageStats)
+  public function setPageStats(Postman_Google_Service_Pagespeedonline_ResultPageStats $pageStats)
   {
     $this->pageStats = $pageStats;
   }
@@ -210,7 +210,7 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   {
     return $this->score;
   }
-  public function setScreenshot(Google_Service_Pagespeedonline_ResultScreenshot $screenshot)
+  public function setScreenshot(Postman_Google_Service_Pagespeedonline_ResultScreenshot $screenshot)
   {
     $this->screenshot = $screenshot;
   }
@@ -226,7 +226,7 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   {
     return $this->title;
   }
-  public function setVersion(Google_Service_Pagespeedonline_ResultVersion $version)
+  public function setVersion(Postman_Google_Service_Pagespeedonline_ResultVersion $version)
   {
     $this->version = $version;
   }
@@ -236,12 +236,12 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResults extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResults extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $locale;
-  protected $ruleResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement';
+  protected $ruleResultsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement';
   protected $ruleResultsDataType = 'map';
 
 
@@ -263,18 +263,18 @@ class Google_Service_Pagespeedonline_ResultFormattedResults extends Google_Model
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResults extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResults extends Postman_Google_Model
 {
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement extends Postman_Google_Collection
 {
   protected $collection_key = 'urlBlocks';
   protected $internal_gapi_mappings = array(
   );
   public $localizedRuleName;
   public $ruleImpact;
-  protected $urlBlocksType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks';
+  protected $urlBlocksType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks';
   protected $urlBlocksDataType = 'array';
 
 
@@ -304,18 +304,18 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement ex
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks extends Postman_Google_Collection
 {
   protected $collection_key = 'urls';
   protected $internal_gapi_mappings = array(
   );
-  protected $headerType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader';
+  protected $headerType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader';
   protected $headerDataType = '';
-  protected $urlsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
+  protected $urlsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
   protected $urlsDataType = 'array';
 
 
-  public function setHeader(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader $header)
+  public function setHeader(Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader $header)
   {
     $this->header = $header;
   }
@@ -333,12 +333,12 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Postman_Google_Collection
 {
   protected $collection_key = 'args';
   protected $internal_gapi_mappings = array(
   );
-  protected $argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs';
+  protected $argsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs';
   protected $argsDataType = 'array';
   public $format;
 
@@ -361,7 +361,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -387,14 +387,14 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Postman_Google_Collection
 {
   protected $collection_key = 'details';
   protected $internal_gapi_mappings = array(
   );
-  protected $detailsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails';
+  protected $detailsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails';
   protected $detailsDataType = 'array';
-  protected $resultType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult';
+  protected $resultType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult';
   protected $resultDataType = '';
 
 
@@ -406,7 +406,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   {
     return $this->details;
   }
-  public function setResult(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult $result)
+  public function setResult(Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult $result)
   {
     $this->result = $result;
   }
@@ -416,12 +416,12 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extends Postman_Google_Collection
 {
   protected $collection_key = 'args';
   protected $internal_gapi_mappings = array(
   );
-  protected $argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs';
+  protected $argsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs';
   protected $argsDataType = 'array';
   public $format;
 
@@ -444,7 +444,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -470,12 +470,12 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends Google_Collection
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends Postman_Google_Collection
 {
   protected $collection_key = 'args';
   protected $internal_gapi_mappings = array(
   );
-  protected $argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs';
+  protected $argsType = 'Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs';
   protected $argsDataType = 'array';
   public $format;
 
@@ -498,7 +498,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -524,7 +524,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   }
 }
 
-class Google_Service_Pagespeedonline_ResultPageStats extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultPageStats extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -649,7 +649,7 @@ class Google_Service_Pagespeedonline_ResultPageStats extends Google_Model
   }
 }
 
-class Google_Service_Pagespeedonline_ResultScreenshot extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultScreenshot extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
         "mimeType" => "mime_type",
@@ -694,7 +694,7 @@ class Google_Service_Pagespeedonline_ResultScreenshot extends Google_Model
   }
 }
 
-class Google_Service_Pagespeedonline_ResultVersion extends Google_Model
+class Postman_Google_Service_Pagespeedonline_ResultVersion extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

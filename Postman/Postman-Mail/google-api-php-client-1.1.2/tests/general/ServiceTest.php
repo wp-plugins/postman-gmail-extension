@@ -18,7 +18,7 @@
  * under the License.
  */
 
-class TestModel extends Google_Model
+class TestModel extends Postman_Google_Model
 {
   public function mapTypes($array)
   {
@@ -47,7 +47,7 @@ class ServiceTest extends BaseTest
     $this->assertEquals('z', $model->gender);
     $model->mapTypes(
         array(
-          '__infoType' => 'Google_Model',
+          '__infoType' => 'Postman_Google_Model',
           '__infoDataType' => 'map',
           'info' => array (
             'location' => 'mars',
@@ -73,12 +73,12 @@ class ServiceTest extends BaseTest
 
   public function testStrLen()
   {
-    $this->assertEquals(0, Google_Utils::getStrLen(null));
-    $this->assertEquals(0, Google_Utils::getStrLen(false));
-    $this->assertEquals(0, Google_Utils::getStrLen(""));
+    $this->assertEquals(0, Postman_Google_Utils::getStrLen(null));
+    $this->assertEquals(0, Postman_Google_Utils::getStrLen(false));
+    $this->assertEquals(0, Postman_Google_Utils::getStrLen(""));
 
-    $this->assertEquals(1, Google_Utils::getStrLen(" "));
-    $this->assertEquals(2, Google_Utils::getStrLen(" 1"));
-    $this->assertEquals(7, Google_Utils::getStrLen("0a\\n\n\r\n"));
+    $this->assertEquals(1, Postman_Google_Utils::getStrLen(" "));
+    $this->assertEquals(2, Postman_Google_Utils::getStrLen(" 1"));
+    $this->assertEquals(7, Postman_Google_Utils::getStrLen("0a\\n\n\r\n"));
   }
 }

@@ -35,21 +35,21 @@ class BaseTest extends PHPUnit_Framework_TestCase
 
   public function getClient()
   {
-    $client = new Google_Client();
+    $client = new Postman_Google_Client();
     $client->setDeveloperKey(self::KEY);
     if (strlen($this->token)) {
       $client->setAccessToken($this->token);
     }
     if (strlen($this->memcacheHost)) {
-      $client->setClassConfig('Google_Cache_Memcache', 'host', $this->memcacheHost);
-      $client->setClassConfig('Google_Cache_Memcache', 'port', $this->memcachePort);
+      $client->setClassConfig('Postman_Google_Cache_Memcache', 'host', $this->memcacheHost);
+      $client->setClassConfig('Postman_Google_Cache_Memcache', 'port', $this->memcachePort);
     }
     return $client;
   }
 
   public function testClientConstructor()
   {
-    $this->assertInstanceOf('Google_Client', $this->getClient());
+    $this->assertInstanceOf('Postman_Google_Client', $this->getClient());
   }
 
   public function testIncludes()

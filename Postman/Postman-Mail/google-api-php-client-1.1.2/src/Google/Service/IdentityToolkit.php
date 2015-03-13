@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_IdentityToolkit extends Google_Service
+class Postman_Google_Service_IdentityToolkit extends Postman_Google_Service
 {
 
 
@@ -38,16 +38,16 @@ class Google_Service_IdentityToolkit extends Google_Service
   /**
    * Constructs the internal representation of the IdentityToolkit service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'identitytoolkit/v3/relyingparty/';
     $this->version = 'v3';
     $this->serviceName = 'identitytoolkit';
 
-    $this->relyingparty = new Google_Service_IdentityToolkit_Relyingparty_Resource(
+    $this->relyingparty = new Postman_Google_Service_IdentityToolkit_Relyingparty_Resource(
         $this,
         $this->serviceName,
         'relyingparty',
@@ -109,173 +109,173 @@ class Google_Service_IdentityToolkit extends Google_Service
  * The "relyingparty" collection of methods.
  * Typical usage is:
  *  <code>
- *   $identitytoolkitService = new Google_Service_IdentityToolkit(...);
+ *   $identitytoolkitService = new Postman_Google_Service_IdentityToolkit(...);
  *   $relyingparty = $identitytoolkitService->relyingparty;
  *  </code>
  */
-class Google_Service_IdentityToolkit_Relyingparty_Resource extends Google_Service_Resource
+class Postman_Google_Service_IdentityToolkit_Relyingparty_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates the URI used by the IdP to authenticate the user.
    * (relyingparty.createAuthUri)
    *
-   * @param Google_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_CreateAuthUriResponse
+   * @return Postman_Google_Service_IdentityToolkit_CreateAuthUriResponse
    */
-  public function createAuthUri(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody, $optParams = array())
+  public function createAuthUri(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('createAuthUri', array($params), "Google_Service_IdentityToolkit_CreateAuthUriResponse");
+    return $this->call('createAuthUri', array($params), "Postman_Google_Service_IdentityToolkit_CreateAuthUriResponse");
   }
 
   /**
    * Delete user account. (relyingparty.deleteAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_DeleteAccountResponse
+   * @return Postman_Google_Service_IdentityToolkit_DeleteAccountResponse
    */
-  public function deleteAccount(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody, $optParams = array())
+  public function deleteAccount(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('deleteAccount', array($params), "Google_Service_IdentityToolkit_DeleteAccountResponse");
+    return $this->call('deleteAccount', array($params), "Postman_Google_Service_IdentityToolkit_DeleteAccountResponse");
   }
 
   /**
    * Batch download user accounts. (relyingparty.downloadAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_DownloadAccountResponse
+   * @return Postman_Google_Service_IdentityToolkit_DownloadAccountResponse
    */
-  public function downloadAccount(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody, $optParams = array())
+  public function downloadAccount(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('downloadAccount', array($params), "Google_Service_IdentityToolkit_DownloadAccountResponse");
+    return $this->call('downloadAccount', array($params), "Postman_Google_Service_IdentityToolkit_DownloadAccountResponse");
   }
 
   /**
    * Returns the account info. (relyingparty.getAccountInfo)
    *
-   * @param Google_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_GetAccountInfoResponse
+   * @return Postman_Google_Service_IdentityToolkit_GetAccountInfoResponse
    */
-  public function getAccountInfo(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody, $optParams = array())
+  public function getAccountInfo(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('getAccountInfo', array($params), "Google_Service_IdentityToolkit_GetAccountInfoResponse");
+    return $this->call('getAccountInfo', array($params), "Postman_Google_Service_IdentityToolkit_GetAccountInfoResponse");
   }
 
   /**
    * Get a code for user action confirmation.
    * (relyingparty.getOobConfirmationCode)
    *
-   * @param Google_Relyingparty $postBody
+   * @param Postman_Google_Relyingparty $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse
+   * @return Postman_Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse
    */
-  public function getOobConfirmationCode(Google_Service_IdentityToolkit_Relyingparty $postBody, $optParams = array())
+  public function getOobConfirmationCode(Postman_Google_Service_IdentityToolkit_Relyingparty $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('getOobConfirmationCode', array($params), "Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse");
+    return $this->call('getOobConfirmationCode', array($params), "Postman_Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse");
   }
 
   /**
    * Get token signing public key. (relyingparty.getPublicKeys)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse
+   * @return Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse
    */
   public function getPublicKeys($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('getPublicKeys', array($params), "Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse");
+    return $this->call('getPublicKeys', array($params), "Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse");
   }
 
   /**
    * Reset password for a user. (relyingparty.resetPassword)
    *
-   * @param Google_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_ResetPasswordResponse
+   * @return Postman_Google_Service_IdentityToolkit_ResetPasswordResponse
    */
-  public function resetPassword(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody, $optParams = array())
+  public function resetPassword(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('resetPassword', array($params), "Google_Service_IdentityToolkit_ResetPasswordResponse");
+    return $this->call('resetPassword', array($params), "Postman_Google_Service_IdentityToolkit_ResetPasswordResponse");
   }
 
   /**
    * Set account info for a user. (relyingparty.setAccountInfo)
    *
-   * @param Google_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_SetAccountInfoResponse
+   * @return Postman_Google_Service_IdentityToolkit_SetAccountInfoResponse
    */
-  public function setAccountInfo(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody, $optParams = array())
+  public function setAccountInfo(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('setAccountInfo', array($params), "Google_Service_IdentityToolkit_SetAccountInfoResponse");
+    return $this->call('setAccountInfo', array($params), "Postman_Google_Service_IdentityToolkit_SetAccountInfoResponse");
   }
 
   /**
    * Batch upload existing user accounts. (relyingparty.uploadAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_UploadAccountResponse
+   * @return Postman_Google_Service_IdentityToolkit_UploadAccountResponse
    */
-  public function uploadAccount(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody, $optParams = array())
+  public function uploadAccount(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('uploadAccount', array($params), "Google_Service_IdentityToolkit_UploadAccountResponse");
+    return $this->call('uploadAccount', array($params), "Postman_Google_Service_IdentityToolkit_UploadAccountResponse");
   }
 
   /**
    * Verifies the assertion returned by the IdP. (relyingparty.verifyAssertion)
    *
-   * @param Google_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_VerifyAssertionResponse
+   * @return Postman_Google_Service_IdentityToolkit_VerifyAssertionResponse
    */
-  public function verifyAssertion(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody, $optParams = array())
+  public function verifyAssertion(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('verifyAssertion', array($params), "Google_Service_IdentityToolkit_VerifyAssertionResponse");
+    return $this->call('verifyAssertion', array($params), "Postman_Google_Service_IdentityToolkit_VerifyAssertionResponse");
   }
 
   /**
    * Verifies the user entered password. (relyingparty.verifyPassword)
    *
-   * @param Google_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody
+   * @param Postman_Google_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_IdentityToolkit_VerifyPasswordResponse
+   * @return Postman_Google_Service_IdentityToolkit_VerifyPasswordResponse
    */
-  public function verifyPassword(Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody, $optParams = array())
+  public function verifyPassword(Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('verifyPassword', array($params), "Google_Service_IdentityToolkit_VerifyPasswordResponse");
+    return $this->call('verifyPassword', array($params), "Postman_Google_Service_IdentityToolkit_VerifyPasswordResponse");
   }
 }
 
 
 
 
-class Google_Service_IdentityToolkit_CreateAuthUriResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_CreateAuthUriResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -337,7 +337,7 @@ class Google_Service_IdentityToolkit_CreateAuthUriResponse extends Google_Model
   }
 }
 
-class Google_Service_IdentityToolkit_DeleteAccountResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_DeleteAccountResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -354,14 +354,14 @@ class Google_Service_IdentityToolkit_DeleteAccountResponse extends Google_Model
   }
 }
 
-class Google_Service_IdentityToolkit_DownloadAccountResponse extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_DownloadAccountResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'users';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $usersType = 'Google_Service_IdentityToolkit_UserInfo';
+  protected $usersType = 'Postman_Google_Service_IdentityToolkit_UserInfo';
   protected $usersDataType = 'array';
 
 
@@ -391,13 +391,13 @@ class Google_Service_IdentityToolkit_DownloadAccountResponse extends Google_Coll
   }
 }
 
-class Google_Service_IdentityToolkit_GetAccountInfoResponse extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_GetAccountInfoResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'users';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $usersType = 'Google_Service_IdentityToolkit_UserInfo';
+  protected $usersType = 'Postman_Google_Service_IdentityToolkit_UserInfo';
   protected $usersDataType = 'array';
 
 
@@ -419,7 +419,7 @@ class Google_Service_IdentityToolkit_GetAccountInfoResponse extends Google_Colle
   }
 }
 
-class Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -445,7 +445,7 @@ class Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse extends Goog
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -525,7 +525,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriReq
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -542,7 +542,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountReq
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -568,7 +568,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountR
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRequest extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'localId';
   protected $internal_gapi_mappings = array(
@@ -604,11 +604,11 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRe
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetPublicKeysResponse extends Postman_Google_Model
 {
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -652,7 +652,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordReq
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRequest extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'provider';
   protected $internal_gapi_mappings = array(
@@ -760,7 +760,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRe
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountRequest extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'users';
   protected $internal_gapi_mappings = array(
@@ -770,7 +770,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountReq
   public $rounds;
   public $saltSeparator;
   public $signerKey;
-  protected $usersType = 'Google_Service_IdentityToolkit_UserInfo';
+  protected $usersType = 'Postman_Google_Service_IdentityToolkit_UserInfo';
   protected $usersDataType = 'array';
 
 
@@ -824,7 +824,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountReq
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -859,7 +859,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionR
   }
 }
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRequest extends Google_Model
+class Postman_Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -912,7 +912,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRe
   }
 }
 
-class Google_Service_IdentityToolkit_Relyingparty extends Google_Model
+class Postman_Google_Service_IdentityToolkit_Relyingparty extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -992,7 +992,7 @@ class Google_Service_IdentityToolkit_Relyingparty extends Google_Model
   }
 }
 
-class Google_Service_IdentityToolkit_ResetPasswordResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_ResetPasswordResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1018,7 +1018,7 @@ class Google_Service_IdentityToolkit_ResetPasswordResponse extends Google_Model
   }
 }
 
-class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_SetAccountInfoResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'providerUserInfo';
   protected $internal_gapi_mappings = array(
@@ -1027,7 +1027,7 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   public $email;
   public $idToken;
   public $kind;
-  protected $providerUserInfoType = 'Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo';
+  protected $providerUserInfoType = 'Postman_Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo';
   protected $providerUserInfoDataType = 'array';
 
 
@@ -1073,7 +1073,7 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   }
 }
 
-class Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo extends Google_Model
+class Postman_Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1108,12 +1108,12 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo exte
   }
 }
 
-class Google_Service_IdentityToolkit_UploadAccountResponse extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_UploadAccountResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'error';
   protected $internal_gapi_mappings = array(
   );
-  protected $errorType = 'Google_Service_IdentityToolkit_UploadAccountResponseError';
+  protected $errorType = 'Postman_Google_Service_IdentityToolkit_UploadAccountResponseError';
   protected $errorDataType = 'array';
   public $kind;
 
@@ -1136,7 +1136,7 @@ class Google_Service_IdentityToolkit_UploadAccountResponse extends Google_Collec
   }
 }
 
-class Google_Service_IdentityToolkit_UploadAccountResponseError extends Google_Model
+class Postman_Google_Service_IdentityToolkit_UploadAccountResponseError extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1162,7 +1162,7 @@ class Google_Service_IdentityToolkit_UploadAccountResponseError extends Google_M
   }
 }
 
-class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_UserInfo extends Postman_Google_Collection
 {
   protected $collection_key = 'providerUserInfo';
   protected $internal_gapi_mappings = array(
@@ -1174,7 +1174,7 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   public $passwordHash;
   public $passwordUpdatedAt;
   public $photoUrl;
-  protected $providerUserInfoType = 'Google_Service_IdentityToolkit_UserInfoProviderUserInfo';
+  protected $providerUserInfoType = 'Postman_Google_Service_IdentityToolkit_UserInfoProviderUserInfo';
   protected $providerUserInfoDataType = 'array';
   public $salt;
   public $version;
@@ -1262,7 +1262,7 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   }
 }
 
-class Google_Service_IdentityToolkit_UserInfoProviderUserInfo extends Google_Model
+class Postman_Google_Service_IdentityToolkit_UserInfoProviderUserInfo extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1306,7 +1306,7 @@ class Google_Service_IdentityToolkit_UserInfoProviderUserInfo extends Google_Mod
   }
 }
 
-class Google_Service_IdentityToolkit_VerifyAssertionResponse extends Google_Collection
+class Postman_Google_Service_IdentityToolkit_VerifyAssertionResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'verifiedProvider';
   protected $internal_gapi_mappings = array(
@@ -1558,7 +1558,7 @@ class Google_Service_IdentityToolkit_VerifyAssertionResponse extends Google_Coll
   }
 }
 
-class Google_Service_IdentityToolkit_VerifyPasswordResponse extends Google_Model
+class Postman_Google_Service_IdentityToolkit_VerifyPasswordResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

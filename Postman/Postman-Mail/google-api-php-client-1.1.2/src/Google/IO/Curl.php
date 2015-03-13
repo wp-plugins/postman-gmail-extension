@@ -16,14 +16,14 @@
  */
 
 /**
- * Curl based implementation of Google_IO.
+ * Curl based implementation of Postman_Google_IO.
  *
  * @author Stuart Langley <slangley@google.com>
  */
 
 require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
 
-class Google_IO_Curl extends Google_IO_Abstract
+class Postman_Google_IO_Curl extends Postman_Google_IO_Abstract
 {
   // cURL hex representation of version 7.30.0
   const NO_QUIRK_VERSION = 0x071E00;
@@ -32,12 +32,12 @@ class Google_IO_Curl extends Google_IO_Abstract
   /**
    * Execute an HTTP Request
    *
-   * @param Google_HttpRequest $request the http request to be executed
-   * @return Google_HttpRequest http request with the response http code,
+   * @param Postman_Google_HttpRequest $request the http request to be executed
+   * @return Postman_Google_HttpRequest http request with the response http code,
    * response headers and response body filled in
-   * @throws Google_IO_Exception on curl or IO error
+   * @throws Postman_Google_IO_Exception on curl or IO error
    */
-  public function executeRequest(Google_Http_Request $request)
+  public function executeRequest(Postman_Google_Http_Request $request)
   {
     $curl = curl_init();
 
@@ -92,7 +92,7 @@ class Google_IO_Curl extends Google_IO_Abstract
       $error = curl_error($curl);
 
       $this->client->getLogger()->error('cURL ' . $error);
-      throw new Google_IO_Exception($error);
+      throw new Postman_Google_IO_Exception($error);
     }
     $headerSize = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 
@@ -154,6 +154,6 @@ class Google_IO_Curl extends Google_IO_Abstract
   {
     $ver = curl_version();
     $versionNum = $ver['version_number'];
-    return $versionNum < Google_IO_Curl::NO_QUIRK_VERSION;
+    return $versionNum < Postman_Google_IO_Curl::NO_QUIRK_VERSION;
   }
 }

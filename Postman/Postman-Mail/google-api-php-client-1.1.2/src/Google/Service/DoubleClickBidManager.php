@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_DoubleClickBidManager extends Google_Service
+class Postman_Google_Service_DoubleClickBidManager extends Postman_Google_Service
 {
 
 
@@ -41,16 +41,16 @@ class Google_Service_DoubleClickBidManager extends Google_Service
    * Constructs the internal representation of the DoubleClickBidManager
    * service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'doubleclickbidmanager/v1/';
     $this->version = 'v1';
     $this->serviceName = 'doubleclickbidmanager';
 
-    $this->lineitems = new Google_Service_DoubleClickBidManager_Lineitems_Resource(
+    $this->lineitems = new Postman_Google_Service_DoubleClickBidManager_Lineitems_Resource(
         $this,
         $this->serviceName,
         'lineitems',
@@ -68,7 +68,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->queries = new Google_Service_DoubleClickBidManager_Queries_Resource(
+    $this->queries = new Postman_Google_Service_DoubleClickBidManager_Queries_Resource(
         $this,
         $this->serviceName,
         'queries',
@@ -116,7 +116,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_DoubleClickBidManager_Reports_Resource(
+    $this->reports = new Postman_Google_Service_DoubleClickBidManager_Reports_Resource(
         $this,
         $this->serviceName,
         'reports',
@@ -144,39 +144,39 @@ class Google_Service_DoubleClickBidManager extends Google_Service
  * The "lineitems" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclickbidmanagerService = new Google_Service_DoubleClickBidManager(...);
+ *   $doubleclickbidmanagerService = new Postman_Google_Service_DoubleClickBidManager(...);
  *   $lineitems = $doubleclickbidmanagerService->lineitems;
  *  </code>
  */
-class Google_Service_DoubleClickBidManager_Lineitems_Resource extends Google_Service_Resource
+class Postman_Google_Service_DoubleClickBidManager_Lineitems_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Retrieves line items in CSV format. (lineitems.downloadlineitems)
    *
-   * @param Google_DownloadLineItemsRequest $postBody
+   * @param Postman_Google_DownloadLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_DownloadLineItemsResponse
+   * @return Postman_Google_Service_DoubleClickBidManager_DownloadLineItemsResponse
    */
-  public function downloadlineitems(Google_Service_DoubleClickBidManager_DownloadLineItemsRequest $postBody, $optParams = array())
+  public function downloadlineitems(Postman_Google_Service_DoubleClickBidManager_DownloadLineItemsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('downloadlineitems', array($params), "Google_Service_DoubleClickBidManager_DownloadLineItemsResponse");
+    return $this->call('downloadlineitems', array($params), "Postman_Google_Service_DoubleClickBidManager_DownloadLineItemsResponse");
   }
 
   /**
    * Uploads line items in CSV format. (lineitems.uploadlineitems)
    *
-   * @param Google_UploadLineItemsRequest $postBody
+   * @param Postman_Google_UploadLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_UploadLineItemsResponse
+   * @return Postman_Google_Service_DoubleClickBidManager_UploadLineItemsResponse
    */
-  public function uploadlineitems(Google_Service_DoubleClickBidManager_UploadLineItemsRequest $postBody, $optParams = array())
+  public function uploadlineitems(Postman_Google_Service_DoubleClickBidManager_UploadLineItemsRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('uploadlineitems', array($params), "Google_Service_DoubleClickBidManager_UploadLineItemsResponse");
+    return $this->call('uploadlineitems', array($params), "Postman_Google_Service_DoubleClickBidManager_UploadLineItemsResponse");
   }
 }
 
@@ -184,25 +184,25 @@ class Google_Service_DoubleClickBidManager_Lineitems_Resource extends Google_Ser
  * The "queries" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclickbidmanagerService = new Google_Service_DoubleClickBidManager(...);
+ *   $doubleclickbidmanagerService = new Postman_Google_Service_DoubleClickBidManager(...);
  *   $queries = $doubleclickbidmanagerService->queries;
  *  </code>
  */
-class Google_Service_DoubleClickBidManager_Queries_Resource extends Google_Service_Resource
+class Postman_Google_Service_DoubleClickBidManager_Queries_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates a query. (queries.createquery)
    *
-   * @param Google_Query $postBody
+   * @param Postman_Google_Query $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_Query
+   * @return Postman_Google_Service_DoubleClickBidManager_Query
    */
-  public function createquery(Google_Service_DoubleClickBidManager_Query $postBody, $optParams = array())
+  public function createquery(Postman_Google_Service_DoubleClickBidManager_Query $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('createquery', array($params), "Google_Service_DoubleClickBidManager_Query");
+    return $this->call('createquery', array($params), "Postman_Google_Service_DoubleClickBidManager_Query");
   }
 
   /**
@@ -224,36 +224,36 @@ class Google_Service_DoubleClickBidManager_Queries_Resource extends Google_Servi
    *
    * @param string $queryId Query ID to retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_Query
+   * @return Postman_Google_Service_DoubleClickBidManager_Query
    */
   public function getquery($queryId, $optParams = array())
   {
     $params = array('queryId' => $queryId);
     $params = array_merge($params, $optParams);
-    return $this->call('getquery', array($params), "Google_Service_DoubleClickBidManager_Query");
+    return $this->call('getquery', array($params), "Postman_Google_Service_DoubleClickBidManager_Query");
   }
 
   /**
    * Retrieves stored queries. (queries.listqueries)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_ListQueriesResponse
+   * @return Postman_Google_Service_DoubleClickBidManager_ListQueriesResponse
    */
   public function listqueries($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('listqueries', array($params), "Google_Service_DoubleClickBidManager_ListQueriesResponse");
+    return $this->call('listqueries', array($params), "Postman_Google_Service_DoubleClickBidManager_ListQueriesResponse");
   }
 
   /**
    * Runs a stored query to generate a report. (queries.runquery)
    *
    * @param string $queryId Query ID to run.
-   * @param Google_RunQueryRequest $postBody
+   * @param Postman_Google_RunQueryRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function runquery($queryId, Google_Service_DoubleClickBidManager_RunQueryRequest $postBody, $optParams = array())
+  public function runquery($queryId, Postman_Google_Service_DoubleClickBidManager_RunQueryRequest $postBody, $optParams = array())
   {
     $params = array('queryId' => $queryId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -265,11 +265,11 @@ class Google_Service_DoubleClickBidManager_Queries_Resource extends Google_Servi
  * The "reports" collection of methods.
  * Typical usage is:
  *  <code>
- *   $doubleclickbidmanagerService = new Google_Service_DoubleClickBidManager(...);
+ *   $doubleclickbidmanagerService = new Postman_Google_Service_DoubleClickBidManager(...);
  *   $reports = $doubleclickbidmanagerService->reports;
  *  </code>
  */
-class Google_Service_DoubleClickBidManager_Reports_Resource extends Google_Service_Resource
+class Postman_Google_Service_DoubleClickBidManager_Reports_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -277,20 +277,20 @@ class Google_Service_DoubleClickBidManager_Reports_Resource extends Google_Servi
    *
    * @param string $queryId Query ID with which the reports are associated.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DoubleClickBidManager_ListReportsResponse
+   * @return Postman_Google_Service_DoubleClickBidManager_ListReportsResponse
    */
   public function listreports($queryId, $optParams = array())
   {
     $params = array('queryId' => $queryId);
     $params = array_merge($params, $optParams);
-    return $this->call('listreports', array($params), "Google_Service_DoubleClickBidManager_ListReportsResponse");
+    return $this->call('listreports', array($params), "Postman_Google_Service_DoubleClickBidManager_ListReportsResponse");
   }
 }
 
 
 
 
-class Google_Service_DoubleClickBidManager_DownloadLineItemsRequest extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_DownloadLineItemsRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'filterIds';
   protected $internal_gapi_mappings = array(
@@ -326,7 +326,7 @@ class Google_Service_DoubleClickBidManager_DownloadLineItemsRequest extends Goog
   }
 }
 
-class Google_Service_DoubleClickBidManager_DownloadLineItemsResponse extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_DownloadLineItemsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -343,7 +343,7 @@ class Google_Service_DoubleClickBidManager_DownloadLineItemsResponse extends Goo
   }
 }
 
-class Google_Service_DoubleClickBidManager_FilterPair extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_FilterPair extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -369,13 +369,13 @@ class Google_Service_DoubleClickBidManager_FilterPair extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_ListQueriesResponse extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_ListQueriesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'queries';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $queriesType = 'Google_Service_DoubleClickBidManager_Query';
+  protected $queriesType = 'Postman_Google_Service_DoubleClickBidManager_Query';
   protected $queriesDataType = 'array';
 
 
@@ -397,13 +397,13 @@ class Google_Service_DoubleClickBidManager_ListQueriesResponse extends Google_Co
   }
 }
 
-class Google_Service_DoubleClickBidManager_ListReportsResponse extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_ListReportsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'reports';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $reportsType = 'Google_Service_DoubleClickBidManager_Report';
+  protected $reportsType = 'Postman_Google_Service_DoubleClickBidManager_Report';
   protected $reportsDataType = 'array';
 
 
@@ -425,12 +425,12 @@ class Google_Service_DoubleClickBidManager_ListReportsResponse extends Google_Co
   }
 }
 
-class Google_Service_DoubleClickBidManager_Parameters extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_Parameters extends Postman_Google_Collection
 {
   protected $collection_key = 'metrics';
   protected $internal_gapi_mappings = array(
   );
-  protected $filtersType = 'Google_Service_DoubleClickBidManager_FilterPair';
+  protected $filtersType = 'Postman_Google_Service_DoubleClickBidManager_FilterPair';
   protected $filtersDataType = 'array';
   public $groupBys;
   public $includeInviteData;
@@ -480,19 +480,19 @@ class Google_Service_DoubleClickBidManager_Parameters extends Google_Collection
   }
 }
 
-class Google_Service_DoubleClickBidManager_Query extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_Query extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $metadataType = 'Google_Service_DoubleClickBidManager_QueryMetadata';
+  protected $metadataType = 'Postman_Google_Service_DoubleClickBidManager_QueryMetadata';
   protected $metadataDataType = '';
-  protected $paramsType = 'Google_Service_DoubleClickBidManager_Parameters';
+  protected $paramsType = 'Postman_Google_Service_DoubleClickBidManager_Parameters';
   protected $paramsDataType = '';
   public $queryId;
   public $reportDataEndTimeMs;
   public $reportDataStartTimeMs;
-  protected $scheduleType = 'Google_Service_DoubleClickBidManager_QuerySchedule';
+  protected $scheduleType = 'Postman_Google_Service_DoubleClickBidManager_QuerySchedule';
   protected $scheduleDataType = '';
   public $timezoneCode;
 
@@ -505,7 +505,7 @@ class Google_Service_DoubleClickBidManager_Query extends Google_Model
   {
     return $this->kind;
   }
-  public function setMetadata(Google_Service_DoubleClickBidManager_QueryMetadata $metadata)
+  public function setMetadata(Postman_Google_Service_DoubleClickBidManager_QueryMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -513,7 +513,7 @@ class Google_Service_DoubleClickBidManager_Query extends Google_Model
   {
     return $this->metadata;
   }
-  public function setParams(Google_Service_DoubleClickBidManager_Parameters $params)
+  public function setParams(Postman_Google_Service_DoubleClickBidManager_Parameters $params)
   {
     $this->params = $params;
   }
@@ -545,7 +545,7 @@ class Google_Service_DoubleClickBidManager_Query extends Google_Model
   {
     return $this->reportDataStartTimeMs;
   }
-  public function setSchedule(Google_Service_DoubleClickBidManager_QuerySchedule $schedule)
+  public function setSchedule(Postman_Google_Service_DoubleClickBidManager_QuerySchedule $schedule)
   {
     $this->schedule = $schedule;
   }
@@ -563,7 +563,7 @@ class Google_Service_DoubleClickBidManager_Query extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_QueryMetadata extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_QueryMetadata extends Postman_Google_Collection
 {
   protected $collection_key = 'shareEmailAddress';
   protected $internal_gapi_mappings = array(
@@ -662,7 +662,7 @@ class Google_Service_DoubleClickBidManager_QueryMetadata extends Google_Collecti
   }
 }
 
-class Google_Service_DoubleClickBidManager_QuerySchedule extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_QuerySchedule extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -706,19 +706,19 @@ class Google_Service_DoubleClickBidManager_QuerySchedule extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_Report extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_Report extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $keyType = 'Google_Service_DoubleClickBidManager_ReportKey';
+  protected $keyType = 'Postman_Google_Service_DoubleClickBidManager_ReportKey';
   protected $keyDataType = '';
-  protected $metadataType = 'Google_Service_DoubleClickBidManager_ReportMetadata';
+  protected $metadataType = 'Postman_Google_Service_DoubleClickBidManager_ReportMetadata';
   protected $metadataDataType = '';
-  protected $paramsType = 'Google_Service_DoubleClickBidManager_Parameters';
+  protected $paramsType = 'Postman_Google_Service_DoubleClickBidManager_Parameters';
   protected $paramsDataType = '';
 
 
-  public function setKey(Google_Service_DoubleClickBidManager_ReportKey $key)
+  public function setKey(Postman_Google_Service_DoubleClickBidManager_ReportKey $key)
   {
     $this->key = $key;
   }
@@ -726,7 +726,7 @@ class Google_Service_DoubleClickBidManager_Report extends Google_Model
   {
     return $this->key;
   }
-  public function setMetadata(Google_Service_DoubleClickBidManager_ReportMetadata $metadata)
+  public function setMetadata(Postman_Google_Service_DoubleClickBidManager_ReportMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -734,7 +734,7 @@ class Google_Service_DoubleClickBidManager_Report extends Google_Model
   {
     return $this->metadata;
   }
-  public function setParams(Google_Service_DoubleClickBidManager_Parameters $params)
+  public function setParams(Postman_Google_Service_DoubleClickBidManager_Parameters $params)
   {
     $this->params = $params;
   }
@@ -744,7 +744,7 @@ class Google_Service_DoubleClickBidManager_Report extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_ReportFailure extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_ReportFailure extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -761,7 +761,7 @@ class Google_Service_DoubleClickBidManager_ReportFailure extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_ReportKey extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_ReportKey extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -787,14 +787,14 @@ class Google_Service_DoubleClickBidManager_ReportKey extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_ReportMetadata extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_ReportMetadata extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $googleCloudStoragePath;
   public $reportDataEndTimeMs;
   public $reportDataStartTimeMs;
-  protected $statusType = 'Google_Service_DoubleClickBidManager_ReportStatus';
+  protected $statusType = 'Postman_Google_Service_DoubleClickBidManager_ReportStatus';
   protected $statusDataType = '';
 
 
@@ -822,7 +822,7 @@ class Google_Service_DoubleClickBidManager_ReportMetadata extends Google_Model
   {
     return $this->reportDataStartTimeMs;
   }
-  public function setStatus(Google_Service_DoubleClickBidManager_ReportStatus $status)
+  public function setStatus(Postman_Google_Service_DoubleClickBidManager_ReportStatus $status)
   {
     $this->status = $status;
   }
@@ -832,18 +832,18 @@ class Google_Service_DoubleClickBidManager_ReportMetadata extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_ReportStatus extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_ReportStatus extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $failureType = 'Google_Service_DoubleClickBidManager_ReportFailure';
+  protected $failureType = 'Postman_Google_Service_DoubleClickBidManager_ReportFailure';
   protected $failureDataType = '';
   public $finishTimeMs;
   public $format;
   public $state;
 
 
-  public function setFailure(Google_Service_DoubleClickBidManager_ReportFailure $failure)
+  public function setFailure(Postman_Google_Service_DoubleClickBidManager_ReportFailure $failure)
   {
     $this->failure = $failure;
   }
@@ -877,7 +877,7 @@ class Google_Service_DoubleClickBidManager_ReportStatus extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_RowStatus extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_RowStatus extends Postman_Google_Collection
 {
   protected $collection_key = 'errors';
   protected $internal_gapi_mappings = array(
@@ -940,7 +940,7 @@ class Google_Service_DoubleClickBidManager_RowStatus extends Google_Collection
   }
 }
 
-class Google_Service_DoubleClickBidManager_RunQueryRequest extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_RunQueryRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -984,7 +984,7 @@ class Google_Service_DoubleClickBidManager_RunQueryRequest extends Google_Model
   }
 }
 
-class Google_Service_DoubleClickBidManager_UploadLineItemsRequest extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_UploadLineItemsRequest extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1019,15 +1019,15 @@ class Google_Service_DoubleClickBidManager_UploadLineItemsRequest extends Google
   }
 }
 
-class Google_Service_DoubleClickBidManager_UploadLineItemsResponse extends Google_Model
+class Postman_Google_Service_DoubleClickBidManager_UploadLineItemsResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $uploadStatusType = 'Google_Service_DoubleClickBidManager_UploadStatus';
+  protected $uploadStatusType = 'Postman_Google_Service_DoubleClickBidManager_UploadStatus';
   protected $uploadStatusDataType = '';
 
 
-  public function setUploadStatus(Google_Service_DoubleClickBidManager_UploadStatus $uploadStatus)
+  public function setUploadStatus(Postman_Google_Service_DoubleClickBidManager_UploadStatus $uploadStatus)
   {
     $this->uploadStatus = $uploadStatus;
   }
@@ -1037,13 +1037,13 @@ class Google_Service_DoubleClickBidManager_UploadLineItemsResponse extends Googl
   }
 }
 
-class Google_Service_DoubleClickBidManager_UploadStatus extends Google_Collection
+class Postman_Google_Service_DoubleClickBidManager_UploadStatus extends Postman_Google_Collection
 {
   protected $collection_key = 'rowStatus';
   protected $internal_gapi_mappings = array(
   );
   public $errors;
-  protected $rowStatusType = 'Google_Service_DoubleClickBidManager_RowStatus';
+  protected $rowStatusType = 'Postman_Google_Service_DoubleClickBidManager_RowStatus';
   protected $rowStatusDataType = 'array';
 
 

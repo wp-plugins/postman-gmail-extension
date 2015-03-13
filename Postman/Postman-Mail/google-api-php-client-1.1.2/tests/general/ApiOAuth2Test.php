@@ -24,7 +24,7 @@ class ApiOAuth2Test extends BaseTest
   public function testSign()
   {
     $client = $this->getClient();
-    $oauth = new Google_Auth_OAuth2($client);
+    $oauth = new Postman_Google_Auth_OAuth2($client);
 
     $client->setClientId('clientId1');
     $client->setClientSecret('clientSecret1');
@@ -34,7 +34,7 @@ class ApiOAuth2Test extends BaseTest
     $client->setApprovalPrompt('force');
     $client->setRequestVisibleActions('http://foo');
 
-    $req = new Google_Http_Request('http://localhost');
+    $req = new Postman_Google_Http_Request('http://localhost');
     $req = $oauth->sign($req);
 
     $this->assertEquals('http://localhost?key=devKey', $req->getUrl());
@@ -63,11 +63,11 @@ class ApiOAuth2Test extends BaseTest
     $token = "";
 
     $client = $this->getClient();
-    $response = $this->getMock("Google_Http_Request", array(), array(''));
+    $response = $this->getMock("Postman_Google_Http_Request", array(), array(''));
     $response->expects($this->any())
             ->method('getResponseHttpCode')
             ->will($this->returnValue(200));
-    $io = $this->getMock("Google_IO_Stream", array(), array($client));
+    $io = $this->getMock("Postman_Google_IO_Stream", array(), array($client));
     $io->expects($this->any())
         ->method('makeRequest')
         ->will(
@@ -83,7 +83,7 @@ class ApiOAuth2Test extends BaseTest
     $client->setIo($io);
 
     // Test with access token.
-    $oauth  = new Google_Auth_OAuth2($client);
+    $oauth  = new Postman_Google_Auth_OAuth2($client);
     $oauth->setAccessToken(
         json_encode(
             array(
@@ -97,7 +97,7 @@ class ApiOAuth2Test extends BaseTest
     $this->assertEquals($accessToken, $token);
 
     // Test with refresh token.
-    $oauth  = new Google_Auth_OAuth2($client);
+    $oauth  = new Postman_Google_Auth_OAuth2($client);
     $oauth->setAccessToken(
         json_encode(
             array(
@@ -119,7 +119,7 @@ class ApiOAuth2Test extends BaseTest
   public function testCreateAuthUrl()
   {
     $client = $this->getClient();
-    $oauth = new Google_Auth_OAuth2($client);
+    $oauth = new Postman_Google_Auth_OAuth2($client);
 
     $client->setClientId('clientId1');
     $client->setClientSecret('clientSecret1');
@@ -177,11 +177,11 @@ class ApiOAuth2Test extends BaseTest
     $segments = explode(".", $token->id_token);
     $this->assertEquals(3, count($segments));
     // Extract the client ID in this case as it wont be set on the test client.
-    $data = json_decode(Google_Utils::urlSafeB64Decode($segments[1]));
-    $oauth = new Google_Auth_OAuth2($client);
+    $data = json_decode(Postman_Google_Utils::urlSafeB64Decode($segments[1]));
+    $oauth = new Postman_Google_Auth_OAuth2($client);
     $ticket = $oauth->verifyIdToken($token->id_token, $data->aud);
     $this->assertInstanceOf(
-        "Google_Auth_LoginTicket",
+        "Postman_Google_Auth_LoginTicket",
         $ticket
     );
     $this->assertTrue(strlen($ticket->getUserId()) > 0);
@@ -190,11 +190,11 @@ class ApiOAuth2Test extends BaseTest
     // caching for this test to make sense. Not sure how to do that
     // at the moment.
     $client = $this->getClient();
-    $client->setIo(new Google_IO_Stream($client));
-    $data = json_decode(Google_Utils::urlSafeB64Decode($segments[1]));
-    $oauth = new Google_Auth_OAuth2($client);
+    $client->setIo(new Postman_Google_IO_Stream($client));
+    $data = json_decode(Postman_Google_Utils::urlSafeB64Decode($segments[1]));
+    $oauth = new Postman_Google_Auth_OAuth2($client);
     $this->assertInstanceOf(
-        "Google_Auth_LoginTicket",
+        "Postman_Google_Auth_LoginTicket",
         $oauth->verifyIdToken($token->id_token, $data->aud)
     );
   }
@@ -204,7 +204,7 @@ class ApiOAuth2Test extends BaseTest
    */
   public function testRevokeWhenNoTokenExists()
   {
-    $client = new Google_Client();
+    $client = new Postman_Google_Client();
     $this->assertFalse($client->revokeToken());
   }
 
@@ -213,7 +213,7 @@ class ApiOAuth2Test extends BaseTest
    */
   public function testRefreshTokenSetsValues()
   {
-    $client = new Google_Client();
+    $client = new Postman_Google_Client();
     $response_data = json_encode(
         array(
           'access_token' => "ACCESS_TOKEN",
@@ -221,14 +221,14 @@ class ApiOAuth2Test extends BaseTest
           'expires_in' => "12345",
         )
     );
-    $response = $this->getMock("Google_Http_Request", array(), array(''));
+    $response = $this->getMock("Postman_Google_Http_Request", array(), array(''));
     $response->expects($this->any())
             ->method('getResponseHttpCode')
             ->will($this->returnValue(200));
     $response->expects($this->any())
             ->method('getResponseBody')
             ->will($this->returnValue($response_data));
-    $io = $this->getMock("Google_IO_Stream", array(), array($client));
+    $io = $this->getMock("Postman_Google_IO_Stream", array(), array($client));
     $io->expects($this->any())
         ->method('makeRequest')
         ->will(
@@ -248,7 +248,7 @@ class ApiOAuth2Test extends BaseTest
             )
         );
     $client->setIo($io);
-    $oauth = new Google_Auth_OAuth2($client);
+    $oauth = new Postman_Google_Auth_OAuth2($client);
     $oauth->refreshToken("REFRESH_TOKEN");
     $token = json_decode($oauth->getAccessToken(), true);
     $this->assertEquals($token['id_token'], "ID_TOKEN");

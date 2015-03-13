@@ -25,23 +25,23 @@ class AuthTest extends BaseTest
   const PUBLIC_KEY_FILE = "testdata/cacert.pem";
   const USER_ID = "102102479283111695822";
 
-  /** @var Google_Signer_P12  */
+  /** @var Postman_Google_Signer_P12  */
   private $signer;
 
   /** @var string */
   private $pem;
 
-  /** @var Google_Verifier_Pem */
+  /** @var Postman_Google_Verifier_Pem */
   private $verifier;
 
   public function setUp()
   {
-    $this->signer = new Google_Signer_P12(
+    $this->signer = new Postman_Google_Signer_P12(
         file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true),
         "notasecret"
     );
     $this->pem = file_get_contents(__DIR__.'/'.self::PUBLIC_KEY_FILE, true);
-    $this->verifier = new Google_Verifier_Pem($this->pem);
+    $this->verifier = new Postman_Google_Verifier_Pem($this->pem);
   }
 
   public function testDirectInject()
@@ -63,23 +63,23 @@ k9Cv+GcNoggnMlWycwJAHMVgaBmNc+RVCMar/gN6i5sENjN9Itu7U1V4Qj/mG6+4
 MHOXhXSKhtTe0Bqm/MssVvCmc8AraKwBMs0rkMadsA==
 -----END RSA PRIVATE KEY-----
 PK;
-    $sign = new Google_Signer_P12($privateKeyString, null);
+    $sign = new Postman_Google_Signer_P12($privateKeyString, null);
   }
 
   public function testCantOpenP12()
   {
     try {
-      new Google_Signer_P12(
+      new Postman_Google_Signer_P12(
           file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true),
           "badpassword"
       );
       $this->fail("Should have thrown");
-    } catch (Google_Auth_Exception $e) {
+    } catch (Postman_Google_Auth_Exception $e) {
       $this->assertContains("mac verify failure", $e->getMessage());
     }
 
     try {
-      new Google_Signer_P12(
+      new Postman_Google_Signer_P12(
           file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true) . "foo",
           "badpassword"
       );
@@ -111,12 +111,12 @@ PK;
   {
     $header = array("typ" => "JWT", "alg" => "RS256");
     $segments = array();
-    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($header));
-    $segments[] = Google_Utils::urlSafeB64Encode(json_encode($payload));
+    $segments[] = Postman_Google_Utils::urlSafeB64Encode(json_encode($header));
+    $segments[] = Postman_Google_Utils::urlSafeB64Encode(json_encode($payload));
     $signing_input = implode(".", $segments);
 
     $signature = $this->signer->sign($signing_input);
-    $segments[] = Google_Utils::urlSafeB64Encode($signature);
+    $segments[] = Postman_Google_Utils::urlSafeB64Encode($signature);
 
     return implode(".", $segments);
   }
@@ -139,7 +139,7 @@ PK;
         )
     );
     $certs = $this->getSignonCerts();
-    $oauth2 = new Google_Auth_OAuth2($this->getClient());
+    $oauth2 = new Postman_Google_Auth_OAuth2($this->getClient());
     $ticket = $oauth2->verifySignedJwtWithCerts($id_token, $certs, "client_id");
     $this->assertEquals(self::USER_ID, $ticket->getUserId());
     // Check that payload and envelope got filled in.
@@ -152,11 +152,11 @@ PK;
   private function checkIdTokenFailure($id_token, $msg)
   {
     $certs = $this->getSignonCerts();
-    $oauth2 = new Google_Auth_OAuth2($this->getClient());
+    $oauth2 = new Postman_Google_Auth_OAuth2($this->getClient());
     try {
       $oauth2->verifySignedJwtWithCerts($id_token, $certs, "client_id");
       $this->fail("Should have thrown for $id_token");
-    } catch (Google_Auth_Exception $e) {
+    } catch (Postman_Google_Auth_Exception $e) {
       $this->assertContains($msg, $e->getMessage());
     }
   }
@@ -270,12 +270,12 @@ PK;
 
   public function testNoAuth()
   {
-    /** @var $noAuth Google_Auth_Simple */
-    $noAuth = new Google_Auth_Simple($this->getClient());
+    /** @var $noAuth Postman_Google_Auth_Simple */
+    $noAuth = new Postman_Google_Auth_Simple($this->getClient());
     $oldAuth = $this->getClient()->getAuth();
     $this->getClient()->setAuth($noAuth);
     $this->getClient()->setDeveloperKey(null);
-    $req = new Google_Http_Request("http://example.com");
+    $req = new Postman_Google_Http_Request("http://example.com");
 
     $resp = $noAuth->sign($req);
     $this->assertEquals("http://example.com", $resp->getUrl());
@@ -284,7 +284,7 @@ PK;
 
   public function testAssertionCredentials()
   {
-    $assertion = new Google_Auth_AssertionCredentials(
+    $assertion = new Postman_Google_Auth_AssertionCredentials(
         'name',
         'scope',
         file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true)
@@ -300,7 +300,7 @@ PK;
 
     $key = $assertion->getCacheKey();
     $this->assertTrue($key != false);
-    $assertion = new Google_Auth_AssertionCredentials(
+    $assertion = new Postman_Google_Auth_AssertionCredentials(
         'name2',
         'scope',
         file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true)
@@ -310,7 +310,7 @@ PK;
 
   public function testVerifySignedJWT()
   {
-    $assertion = new Google_Auth_AssertionCredentials(
+    $assertion = new Postman_Google_Auth_AssertionCredentials(
         'issuer',
         'scope',
         file_get_contents(__DIR__.'/'.self::PRIVATE_KEY_FILE, true)
@@ -318,7 +318,7 @@ PK;
     $client = $this->getClient();
 
     $this->assertInstanceOf(
-        'Google_Auth_LoginTicket',
+        'Postman_Google_Auth_LoginTicket',
         $client->verifySignedJwt(
             $assertion->generateAssertion(),
             __DIR__ . DIRECTORY_SEPARATOR .  self::PUBLIC_KEY_FILE_JSON,

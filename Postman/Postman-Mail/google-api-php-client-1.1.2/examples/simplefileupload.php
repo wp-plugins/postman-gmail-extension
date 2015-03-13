@@ -39,12 +39,12 @@ $client_id = '<YOUR_CLIENT_ID>';
 $client_secret = '<YOUR_CLIENT_SECRET>';
 $redirect_uri = '<YOUR_REDIRECT_URI>';
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
 $client->setRedirectUri($redirect_uri);
 $client->addScope("https://www.googleapis.com/auth/drive");
-$service = new Google_Service_Drive($client);
+$service = new Postman_Google_Service_Drive($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['upload_token']);
@@ -72,7 +72,7 @@ if (isset($_SESSION['upload_token']) && $_SESSION['upload_token']) {
  ************************************************/
 if ($client->getAccessToken()) {
   // This is uploading a file directly, with no metadata associated.
-  $file = new Google_Service_Drive_DriveFile();
+  $file = new Postman_Google_Service_Drive_DriveFile();
   $result = $service->files->insert(
       $file,
       array(
@@ -83,7 +83,7 @@ if ($client->getAccessToken()) {
   );
 
   // Now lets try and send the metadata as well using multipart!
-  $file = new Google_Service_Drive_DriveFile();
+  $file = new Postman_Google_Service_Drive_DriveFile();
   $file->setTitle("Hello World!");
   $result2 = $service->files->insert(
       $file,

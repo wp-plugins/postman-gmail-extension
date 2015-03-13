@@ -33,7 +33,7 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
   setDeveloperKey, the request may still succeed
   using the anonymous quota.
  ************************************************/
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setApplicationName("Client_Library_Examples");
 $apiKey = "<YOUR_API_KEY>"; // Change this line.
 // Warn if the API key isn't changed.
@@ -42,7 +42,7 @@ if ($apiKey == '<YOUR_API_KEY>') {
 }
 $client->setDeveloperKey($apiKey);
 
-$service = new Google_Service_Books($client);
+$service = new Postman_Google_Service_Books($client);
 
 /************************************************
   We make a call to our service, which will
@@ -62,7 +62,7 @@ $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
   array.
   Some calls will return a single item which we
   can immediately use. The individual responses
-  are typed as Google_Service_Books_Volume, but
+  are typed as Postman_Google_Service_Books_Volume, but
   can be treated as an array.
  ***********************************************/
 echo "<h3>Results Of Call:</h3>";

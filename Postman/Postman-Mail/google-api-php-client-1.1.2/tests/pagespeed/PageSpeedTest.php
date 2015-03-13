@@ -21,7 +21,7 @@ class PageSpeedTest extends BaseTest
   public function __construct()
   {
     parent::__construct();
-    $this->service = new Google_Service_Pagespeedonline($this->getClient());
+    $this->service = new Postman_Google_Service_Pagespeedonline($this->getClient());
   }
 
   public function testPageSpeed()
@@ -34,7 +34,7 @@ class PageSpeedTest extends BaseTest
     $this->assertArrayHasKey('responseCode', $result);
     $this->assertArrayHasKey('title', $result);
     $this->assertArrayHasKey('score', $result);
-    $this->assertInstanceOf('Google_Service_Pagespeedonline_ResultPageStats', $result->pageStats);
+    $this->assertInstanceOf('Postman_Google_Service_Pagespeedonline_ResultPageStats', $result->pageStats);
     $this->assertArrayHasKey('minor', $result['version']);
   }
 }

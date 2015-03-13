@@ -25,18 +25,18 @@ require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Google_Cache_File extends Google_Cache_Abstract
+class Postman_Google_Cache_File extends Postman_Google_Cache_Abstract
 {
   const MAX_LOCK_RETRIES = 10;
   private $path;
   private $fh;
 
   /**
-   * @var Google_Client the current client
+   * @var Postman_Google_Client the current client
    */
   private $client;
 
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     $this->client = $client;
     $this->path = $this->client->getClassConfig($this, 'directory');
@@ -111,7 +111,7 @@ class Google_Cache_File extends Google_Cache_Abstract
           'File cache delete failed',
           array('key' => $key, 'file' => $file)
       );
-      throw new Google_Cache_Exception("Cache file could not be deleted");
+      throw new Postman_Google_Cache_Exception("Cache file could not be deleted");
     }
 
     $this->client->getLogger()->debug(
@@ -142,7 +142,7 @@ class Google_Cache_File extends Google_Cache_Abstract
             'File cache creation failed',
             array('dir' => $storageDir)
         );
-        throw new Google_Cache_Exception("Could not create storage directory: $storageDir");
+        throw new Postman_Google_Cache_Exception("Could not create storage directory: $storageDir");
       }
     }
     return $storageDir;

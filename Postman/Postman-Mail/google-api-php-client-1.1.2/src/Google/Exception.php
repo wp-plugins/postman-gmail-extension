@@ -15,6 +15,6 @@
  * limitations under the License.
  */
 
-class Google_Exception extends Exception
+class Postman_Google_Exception extends Exception
 {
 }

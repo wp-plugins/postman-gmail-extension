@@ -28,8 +28,8 @@ class ApiBatchRequestTest extends BaseTest
       return;
     }
     $client = $this->getClient();
-    $batch = new Google_Http_Batch($client);
-    $this->plus = new Google_Service_Plus($client);
+    $batch = new Postman_Google_Http_Batch($client);
+    $this->plus = new Postman_Google_Service_Plus($client);
 
     $client->setUseBatch(true);
     $batch->add($this->plus->people->get('me'), 'key1');
@@ -45,8 +45,8 @@ class ApiBatchRequestTest extends BaseTest
   public function testBatchRequest()
   {
     $client = $this->getClient();
-    $batch = new Google_Http_Batch($client);
-    $this->plus = new Google_Service_Plus($client);
+    $batch = new Postman_Google_Http_Batch($client);
+    $this->plus = new Postman_Google_Service_Plus($client);
 
     $client->setUseBatch(true);
     $batch->add($this->plus->people->get('+LarryPage'), 'key1');
@@ -62,8 +62,8 @@ class ApiBatchRequestTest extends BaseTest
   public function testInvalidBatchRequest()
   {
     $client = $this->getClient();
-    $batch = new Google_Http_Batch($client);
-    $this->plus = new Google_Service_Plus($client);
+    $batch = new Postman_Google_Http_Batch($client);
+    $this->plus = new Postman_Google_Service_Plus($client);
 
     $client->setUseBatch(true);
     $batch->add($this->plus->people->get('123456789987654321'), 'key1');
@@ -72,7 +72,7 @@ class ApiBatchRequestTest extends BaseTest
     $result = $batch->execute();
     $this->assertTrue(isset($result['response-key2']));
     $this->assertInstanceOf(
-        'Google_Service_Exception',
+        'Postman_Google_Service_Exception',
         $result['response-key1']
     );
   }

@@ -39,12 +39,12 @@ $client_id = '<YOUR_CLIENT_ID>';
 $client_secret = '<YOUR_CLIENT_SECRET>';
 $redirect_uri = '<YOUR_REDIRECT_URI>';
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setClientId($client_id);
 $client->setClientSecret($client_secret);
 $client->setRedirectUri($redirect_uri);
 $client->addScope("https://www.googleapis.com/auth/drive");
-$service = new Google_Service_Drive($client);
+$service = new Postman_Google_Service_Drive($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['upload_token ']);
@@ -71,7 +71,7 @@ if (isset($_SESSION['upload_token']) && $_SESSION['upload_token']) {
   file.
  ************************************************/
 if ($client->getAccessToken()) {
-  $file = new Google_Service_Drive_DriveFile();
+  $file = new Postman_Google_Service_Drive_DriveFile();
   $file->title = "Big File";
   $chunkSizeBytes = 1 * 1024 * 1024;
 
@@ -80,7 +80,7 @@ if ($client->getAccessToken()) {
   $request = $service->files->insert($file);
 
   // Create a media file upload to represent our upload process.
-  $media = new Google_Http_MediaFileUpload(
+  $media = new Postman_Google_Http_MediaFileUpload(
       $client,
       $request,
       'text/plain',

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-class Google_Service
+class Postman_Google_Service
 {
   public $version;
   public $servicePath;
@@ -23,14 +23,14 @@ class Google_Service
   public $resource;
   private $client;
 
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     $this->client = $client;
   }
 
   /**
-   * Return the associated Google_Client class.
-   * @return Google_Client
+   * Return the associated Postman_Google_Client class.
+   * @return Postman_Google_Client
    */
   public function getClient()
   {

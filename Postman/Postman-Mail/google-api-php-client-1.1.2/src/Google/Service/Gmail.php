@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Gmail extends Google_Service
+class Postman_Google_Service_Gmail extends Postman_Google_Service
 {
   /** View and manage your mail. */
   const MAIL_GOOGLE_COM =
@@ -55,16 +55,16 @@ class Google_Service_Gmail extends Google_Service
   /**
    * Constructs the internal representation of the Gmail service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'gmail/v1/users/';
     $this->version = 'v1';
     $this->serviceName = 'gmail';
 
-    $this->users = new Google_Service_Gmail_Users_Resource(
+    $this->users = new Postman_Google_Service_Gmail_Users_Resource(
         $this,
         $this->serviceName,
         'users',
@@ -84,7 +84,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_drafts = new Google_Service_Gmail_UsersDrafts_Resource(
+    $this->users_drafts = new Postman_Google_Service_Gmail_UsersDrafts_Resource(
         $this,
         $this->serviceName,
         'drafts',
@@ -181,7 +181,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_history = new Google_Service_Gmail_UsersHistory_Resource(
+    $this->users_history = new Postman_Google_Service_Gmail_UsersHistory_Resource(
         $this,
         $this->serviceName,
         'history',
@@ -217,7 +217,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_labels = new Google_Service_Gmail_UsersLabels_Resource(
+    $this->users_labels = new Postman_Google_Service_Gmail_UsersLabels_Resource(
         $this,
         $this->serviceName,
         'labels',
@@ -307,7 +307,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_messages = new Google_Service_Gmail_UsersMessages_Resource(
+    $this->users_messages = new Postman_Google_Service_Gmail_UsersMessages_Resource(
         $this,
         $this->serviceName,
         'messages',
@@ -470,7 +470,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_messages_attachments = new Google_Service_Gmail_UsersMessagesAttachments_Resource(
+    $this->users_messages_attachments = new Postman_Google_Service_Gmail_UsersMessagesAttachments_Resource(
         $this,
         $this->serviceName,
         'attachments',
@@ -500,7 +500,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_threads = new Google_Service_Gmail_UsersThreads_Resource(
+    $this->users_threads = new Postman_Google_Service_Gmail_UsersThreads_Resource(
         $this,
         $this->serviceName,
         'threads',
@@ -633,11 +633,11 @@ class Google_Service_Gmail extends Google_Service
  * The "users" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $users = $gmailService->users;
  *  </code>
  */
-class Google_Service_Gmail_Users_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_Users_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -646,13 +646,13 @@ class Google_Service_Gmail_Users_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Profile
+   * @return Postman_Google_Service_Gmail_Profile
    */
   public function getProfile($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('getProfile', array($params), "Google_Service_Gmail_Profile");
+    return $this->call('getProfile', array($params), "Postman_Google_Service_Gmail_Profile");
   }
 }
 
@@ -660,11 +660,11 @@ class Google_Service_Gmail_Users_Resource extends Google_Service_Resource
  * The "drafts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $drafts = $gmailService->drafts;
  *  </code>
  */
-class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersDrafts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -672,15 +672,15 @@ class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Draft $postBody
+   * @param Postman_Google_Draft $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Draft
+   * @return Postman_Google_Service_Gmail_Draft
    */
-  public function create($userId, Google_Service_Gmail_Draft $postBody, $optParams = array())
+  public function create($userId, Postman_Google_Service_Gmail_Draft $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Gmail_Draft");
+    return $this->call('create', array($params), "Postman_Google_Service_Gmail_Draft");
   }
 
   /**
@@ -708,13 +708,13 @@ class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string format The format to return the draft in.
-   * @return Google_Service_Gmail_Draft
+   * @return Postman_Google_Service_Gmail_Draft
    */
   public function get($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_Draft");
+    return $this->call('get', array($params), "Postman_Google_Service_Gmail_Draft");
   }
 
   /**
@@ -727,13 +727,13 @@ class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
    * @opt_param string pageToken Page token to retrieve a specific page of results
    * in the list.
    * @opt_param string maxResults Maximum number of drafts to return.
-   * @return Google_Service_Gmail_ListDraftsResponse
+   * @return Postman_Google_Service_Gmail_ListDraftsResponse
    */
   public function listUsersDrafts($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Gmail_ListDraftsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Gmail_ListDraftsResponse");
   }
 
   /**
@@ -742,15 +742,15 @@ class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Draft $postBody
+   * @param Postman_Google_Draft $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
-  public function send($userId, Google_Service_Gmail_Draft $postBody, $optParams = array())
+  public function send($userId, Postman_Google_Service_Gmail_Draft $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('send', array($params), "Google_Service_Gmail_Message");
+    return $this->call('send', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -759,26 +759,26 @@ class Google_Service_Gmail_UsersDrafts_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the draft to update.
-   * @param Google_Draft $postBody
+   * @param Postman_Google_Draft $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Draft
+   * @return Postman_Google_Service_Gmail_Draft
    */
-  public function update($userId, $id, Google_Service_Gmail_Draft $postBody, $optParams = array())
+  public function update($userId, $id, Postman_Google_Service_Gmail_Draft $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Gmail_Draft");
+    return $this->call('update', array($params), "Postman_Google_Service_Gmail_Draft");
   }
 }
 /**
  * The "history" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $history = $gmailService->history;
  *  </code>
  */
-class Google_Service_Gmail_UsersHistory_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersHistory_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -804,24 +804,24 @@ class Google_Service_Gmail_UsersHistory_Resource extends Google_Service_Resource
    * receive an HTTP 404 error response, your application should perform a full
    * sync. If you receive no nextPageToken in the response, there are no updates
    * to retrieve and you can store the returned historyId for a future request.
-   * @return Google_Service_Gmail_ListHistoryResponse
+   * @return Postman_Google_Service_Gmail_ListHistoryResponse
    */
   public function listUsersHistory($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Gmail_ListHistoryResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Gmail_ListHistoryResponse");
   }
 }
 /**
  * The "labels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $labels = $gmailService->labels;
  *  </code>
  */
-class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersLabels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -829,15 +829,15 @@ class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Label $postBody
+   * @param Postman_Google_Label $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Label
+   * @return Postman_Google_Service_Gmail_Label
    */
-  public function create($userId, Google_Service_Gmail_Label $postBody, $optParams = array())
+  public function create($userId, Postman_Google_Service_Gmail_Label $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Gmail_Label");
+    return $this->call('create', array($params), "Postman_Google_Service_Gmail_Label");
   }
 
   /**
@@ -863,13 +863,13 @@ class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
    * used to indicate the authenticated user.
    * @param string $id The ID of the label to retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Label
+   * @return Postman_Google_Service_Gmail_Label
    */
   public function get($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_Label");
+    return $this->call('get', array($params), "Postman_Google_Service_Gmail_Label");
   }
 
   /**
@@ -878,13 +878,13 @@ class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_ListLabelsResponse
+   * @return Postman_Google_Service_Gmail_ListLabelsResponse
    */
   public function listUsersLabels($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Gmail_ListLabelsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Gmail_ListLabelsResponse");
   }
 
   /**
@@ -894,15 +894,15 @@ class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the label to update.
-   * @param Google_Label $postBody
+   * @param Postman_Google_Label $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Label
+   * @return Postman_Google_Service_Gmail_Label
    */
-  public function patch($userId, $id, Google_Service_Gmail_Label $postBody, $optParams = array())
+  public function patch($userId, $id, Postman_Google_Service_Gmail_Label $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Gmail_Label");
+    return $this->call('patch', array($params), "Postman_Google_Service_Gmail_Label");
   }
 
   /**
@@ -911,26 +911,26 @@ class Google_Service_Gmail_UsersLabels_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the label to update.
-   * @param Google_Label $postBody
+   * @param Postman_Google_Label $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Label
+   * @return Postman_Google_Service_Gmail_Label
    */
-  public function update($userId, $id, Google_Service_Gmail_Label $postBody, $optParams = array())
+  public function update($userId, $id, Postman_Google_Service_Gmail_Label $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Gmail_Label");
+    return $this->call('update', array($params), "Postman_Google_Service_Gmail_Label");
   }
 }
 /**
  * The "messages" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $messages = $gmailService->messages;
  *  </code>
  */
-class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersMessages_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -960,13 +960,13 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    * @opt_param string metadataHeaders When given and format is METADATA, only
    * include headers specified.
    * @opt_param string format The format to return the message in.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
   public function get($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_Message");
+    return $this->call('get', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -976,18 +976,18 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Postman_Google_Message $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string internalDateSource Source for Gmail's internal date of the
    * message.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
-  public function import($userId, Google_Service_Gmail_Message $postBody, $optParams = array())
+  public function import($userId, Postman_Google_Service_Gmail_Message $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('import', array($params), "Google_Service_Gmail_Message");
+    return $this->call('import', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -997,18 +997,18 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Postman_Google_Message $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string internalDateSource Source for Gmail's internal date of the
    * message.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
-  public function insert($userId, Google_Service_Gmail_Message $postBody, $optParams = array())
+  public function insert($userId, Postman_Google_Service_Gmail_Message $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Gmail_Message");
+    return $this->call('insert', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -1028,13 +1028,13 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    * results.
    * @opt_param string labelIds Only return messages with labels that match all of
    * the specified label IDs.
-   * @return Google_Service_Gmail_ListMessagesResponse
+   * @return Postman_Google_Service_Gmail_ListMessagesResponse
    */
   public function listUsersMessages($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Gmail_ListMessagesResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Gmail_ListMessagesResponse");
   }
 
   /**
@@ -1043,15 +1043,15 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the message to modify.
-   * @param Google_ModifyMessageRequest $postBody
+   * @param Postman_Google_ModifyMessageRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
-  public function modify($userId, $id, Google_Service_Gmail_ModifyMessageRequest $postBody, $optParams = array())
+  public function modify($userId, $id, Postman_Google_Service_Gmail_ModifyMessageRequest $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('modify', array($params), "Google_Service_Gmail_Message");
+    return $this->call('modify', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -1060,15 +1060,15 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Postman_Google_Message $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
-  public function send($userId, Google_Service_Gmail_Message $postBody, $optParams = array())
+  public function send($userId, Postman_Google_Service_Gmail_Message $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('send', array($params), "Google_Service_Gmail_Message");
+    return $this->call('send', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -1078,13 +1078,13 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    * used to indicate the authenticated user.
    * @param string $id The ID of the message to Trash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
   public function trash($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('trash', array($params), "Google_Service_Gmail_Message");
+    return $this->call('trash', array($params), "Postman_Google_Service_Gmail_Message");
   }
 
   /**
@@ -1094,13 +1094,13 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
    * used to indicate the authenticated user.
    * @param string $id The ID of the message to remove from Trash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Message
+   * @return Postman_Google_Service_Gmail_Message
    */
   public function untrash($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('untrash', array($params), "Google_Service_Gmail_Message");
+    return $this->call('untrash', array($params), "Postman_Google_Service_Gmail_Message");
   }
 }
 
@@ -1108,11 +1108,11 @@ class Google_Service_Gmail_UsersMessages_Resource extends Google_Service_Resourc
  * The "attachments" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $attachments = $gmailService->attachments;
  *  </code>
  */
-class Google_Service_Gmail_UsersMessagesAttachments_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersMessagesAttachments_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1123,24 +1123,24 @@ class Google_Service_Gmail_UsersMessagesAttachments_Resource extends Google_Serv
    * @param string $messageId The ID of the message containing the attachment.
    * @param string $id The ID of the attachment.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_MessagePartBody
+   * @return Postman_Google_Service_Gmail_MessagePartBody
    */
   public function get($userId, $messageId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'messageId' => $messageId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_MessagePartBody");
+    return $this->call('get', array($params), "Postman_Google_Service_Gmail_MessagePartBody");
   }
 }
 /**
  * The "threads" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gmailService = new Google_Service_Gmail(...);
+ *   $gmailService = new Postman_Google_Service_Gmail(...);
  *   $threads = $gmailService->threads;
  *  </code>
  */
-class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
+class Postman_Google_Service_Gmail_UsersThreads_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1170,13 +1170,13 @@ class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
    * @opt_param string metadataHeaders When given and format is METADATA, only
    * include headers specified.
    * @opt_param string format The format to return the messages in.
-   * @return Google_Service_Gmail_Thread
+   * @return Postman_Google_Service_Gmail_Thread
    */
   public function get($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Gmail_Thread");
+    return $this->call('get', array($params), "Postman_Google_Service_Gmail_Thread");
   }
 
   /**
@@ -1196,13 +1196,13 @@ class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
    * results.
    * @opt_param string labelIds Only return threads with labels that match all of
    * the specified label IDs.
-   * @return Google_Service_Gmail_ListThreadsResponse
+   * @return Postman_Google_Service_Gmail_ListThreadsResponse
    */
   public function listUsersThreads($userId, $optParams = array())
   {
     $params = array('userId' => $userId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Gmail_ListThreadsResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Gmail_ListThreadsResponse");
   }
 
   /**
@@ -1212,15 +1212,15 @@ class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the thread to modify.
-   * @param Google_ModifyThreadRequest $postBody
+   * @param Postman_Google_ModifyThreadRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Thread
+   * @return Postman_Google_Service_Gmail_Thread
    */
-  public function modify($userId, $id, Google_Service_Gmail_ModifyThreadRequest $postBody, $optParams = array())
+  public function modify($userId, $id, Postman_Google_Service_Gmail_ModifyThreadRequest $postBody, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('modify', array($params), "Google_Service_Gmail_Thread");
+    return $this->call('modify', array($params), "Postman_Google_Service_Gmail_Thread");
   }
 
   /**
@@ -1230,13 +1230,13 @@ class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
    * used to indicate the authenticated user.
    * @param string $id The ID of the thread to Trash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Thread
+   * @return Postman_Google_Service_Gmail_Thread
    */
   public function trash($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('trash', array($params), "Google_Service_Gmail_Thread");
+    return $this->call('trash', array($params), "Postman_Google_Service_Gmail_Thread");
   }
 
   /**
@@ -1246,25 +1246,25 @@ class Google_Service_Gmail_UsersThreads_Resource extends Google_Service_Resource
    * used to indicate the authenticated user.
    * @param string $id The ID of the thread to remove from Trash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Gmail_Thread
+   * @return Postman_Google_Service_Gmail_Thread
    */
   public function untrash($userId, $id, $optParams = array())
   {
     $params = array('userId' => $userId, 'id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('untrash', array($params), "Google_Service_Gmail_Thread");
+    return $this->call('untrash', array($params), "Postman_Google_Service_Gmail_Thread");
   }
 }
 
 
 
 
-class Google_Service_Gmail_Draft extends Google_Model
+class Postman_Google_Service_Gmail_Draft extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $messageType = 'Google_Service_Gmail_Message';
+  protected $messageType = 'Postman_Google_Service_Gmail_Message';
   protected $messageDataType = '';
 
 
@@ -1276,7 +1276,7 @@ class Google_Service_Gmail_Draft extends Google_Model
   {
     return $this->id;
   }
-  public function setMessage(Google_Service_Gmail_Message $message)
+  public function setMessage(Postman_Google_Service_Gmail_Message $message)
   {
     $this->message = $message;
   }
@@ -1286,13 +1286,13 @@ class Google_Service_Gmail_Draft extends Google_Model
   }
 }
 
-class Google_Service_Gmail_History extends Google_Collection
+class Postman_Google_Service_Gmail_History extends Postman_Google_Collection
 {
   protected $collection_key = 'messages';
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $messagesType = 'Google_Service_Gmail_Message';
+  protected $messagesType = 'Postman_Google_Service_Gmail_Message';
   protected $messagesDataType = 'array';
 
 
@@ -1314,7 +1314,7 @@ class Google_Service_Gmail_History extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_Label extends Google_Model
+class Postman_Google_Service_Gmail_Label extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1403,12 +1403,12 @@ class Google_Service_Gmail_Label extends Google_Model
   }
 }
 
-class Google_Service_Gmail_ListDraftsResponse extends Google_Collection
+class Postman_Google_Service_Gmail_ListDraftsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'drafts';
   protected $internal_gapi_mappings = array(
   );
-  protected $draftsType = 'Google_Service_Gmail_Draft';
+  protected $draftsType = 'Postman_Google_Service_Gmail_Draft';
   protected $draftsDataType = 'array';
   public $nextPageToken;
   public $resultSizeEstimate;
@@ -1440,12 +1440,12 @@ class Google_Service_Gmail_ListDraftsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_ListHistoryResponse extends Google_Collection
+class Postman_Google_Service_Gmail_ListHistoryResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'history';
   protected $internal_gapi_mappings = array(
   );
-  protected $historyType = 'Google_Service_Gmail_History';
+  protected $historyType = 'Postman_Google_Service_Gmail_History';
   protected $historyDataType = 'array';
   public $historyId;
   public $nextPageToken;
@@ -1477,12 +1477,12 @@ class Google_Service_Gmail_ListHistoryResponse extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_ListLabelsResponse extends Google_Collection
+class Postman_Google_Service_Gmail_ListLabelsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'labels';
   protected $internal_gapi_mappings = array(
   );
-  protected $labelsType = 'Google_Service_Gmail_Label';
+  protected $labelsType = 'Postman_Google_Service_Gmail_Label';
   protected $labelsDataType = 'array';
 
 
@@ -1496,12 +1496,12 @@ class Google_Service_Gmail_ListLabelsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_ListMessagesResponse extends Google_Collection
+class Postman_Google_Service_Gmail_ListMessagesResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'messages';
   protected $internal_gapi_mappings = array(
   );
-  protected $messagesType = 'Google_Service_Gmail_Message';
+  protected $messagesType = 'Postman_Google_Service_Gmail_Message';
   protected $messagesDataType = 'array';
   public $nextPageToken;
   public $resultSizeEstimate;
@@ -1533,14 +1533,14 @@ class Google_Service_Gmail_ListMessagesResponse extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_ListThreadsResponse extends Google_Collection
+class Postman_Google_Service_Gmail_ListThreadsResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'threads';
   protected $internal_gapi_mappings = array(
   );
   public $nextPageToken;
   public $resultSizeEstimate;
-  protected $threadsType = 'Google_Service_Gmail_Thread';
+  protected $threadsType = 'Postman_Google_Service_Gmail_Thread';
   protected $threadsDataType = 'array';
 
 
@@ -1570,7 +1570,7 @@ class Google_Service_Gmail_ListThreadsResponse extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_Message extends Google_Collection
+class Postman_Google_Service_Gmail_Message extends Postman_Google_Collection
 {
   protected $collection_key = 'labelIds';
   protected $internal_gapi_mappings = array(
@@ -1578,7 +1578,7 @@ class Google_Service_Gmail_Message extends Google_Collection
   public $historyId;
   public $id;
   public $labelIds;
-  protected $payloadType = 'Google_Service_Gmail_MessagePart';
+  protected $payloadType = 'Postman_Google_Service_Gmail_MessagePart';
   protected $payloadDataType = '';
   public $raw;
   public $sizeEstimate;
@@ -1610,7 +1610,7 @@ class Google_Service_Gmail_Message extends Google_Collection
   {
     return $this->labelIds;
   }
-  public function setPayload(Google_Service_Gmail_MessagePart $payload)
+  public function setPayload(Postman_Google_Service_Gmail_MessagePart $payload)
   {
     $this->payload = $payload;
   }
@@ -1652,23 +1652,23 @@ class Google_Service_Gmail_Message extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_MessagePart extends Google_Collection
+class Postman_Google_Service_Gmail_MessagePart extends Postman_Google_Collection
 {
   protected $collection_key = 'parts';
   protected $internal_gapi_mappings = array(
   );
-  protected $bodyType = 'Google_Service_Gmail_MessagePartBody';
+  protected $bodyType = 'Postman_Google_Service_Gmail_MessagePartBody';
   protected $bodyDataType = '';
   public $filename;
-  protected $headersType = 'Google_Service_Gmail_MessagePartHeader';
+  protected $headersType = 'Postman_Google_Service_Gmail_MessagePartHeader';
   protected $headersDataType = 'array';
   public $mimeType;
   public $partId;
-  protected $partsType = 'Google_Service_Gmail_MessagePart';
+  protected $partsType = 'Postman_Google_Service_Gmail_MessagePart';
   protected $partsDataType = 'array';
 
 
-  public function setBody(Google_Service_Gmail_MessagePartBody $body)
+  public function setBody(Postman_Google_Service_Gmail_MessagePartBody $body)
   {
     $this->body = $body;
   }
@@ -1718,7 +1718,7 @@ class Google_Service_Gmail_MessagePart extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_MessagePartBody extends Google_Model
+class Postman_Google_Service_Gmail_MessagePartBody extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1753,7 +1753,7 @@ class Google_Service_Gmail_MessagePartBody extends Google_Model
   }
 }
 
-class Google_Service_Gmail_MessagePartHeader extends Google_Model
+class Postman_Google_Service_Gmail_MessagePartHeader extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1779,7 +1779,7 @@ class Google_Service_Gmail_MessagePartHeader extends Google_Model
   }
 }
 
-class Google_Service_Gmail_ModifyMessageRequest extends Google_Collection
+class Postman_Google_Service_Gmail_ModifyMessageRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'removeLabelIds';
   protected $internal_gapi_mappings = array(
@@ -1806,7 +1806,7 @@ class Google_Service_Gmail_ModifyMessageRequest extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_ModifyThreadRequest extends Google_Collection
+class Postman_Google_Service_Gmail_ModifyThreadRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'removeLabelIds';
   protected $internal_gapi_mappings = array(
@@ -1833,7 +1833,7 @@ class Google_Service_Gmail_ModifyThreadRequest extends Google_Collection
   }
 }
 
-class Google_Service_Gmail_Profile extends Google_Model
+class Postman_Google_Service_Gmail_Profile extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1877,14 +1877,14 @@ class Google_Service_Gmail_Profile extends Google_Model
   }
 }
 
-class Google_Service_Gmail_Thread extends Google_Collection
+class Postman_Google_Service_Gmail_Thread extends Postman_Google_Collection
 {
   protected $collection_key = 'messages';
   protected $internal_gapi_mappings = array(
   );
   public $historyId;
   public $id;
-  protected $messagesType = 'Google_Service_Gmail_Message';
+  protected $messagesType = 'Postman_Google_Service_Gmail_Message';
   protected $messagesDataType = 'array';
   public $snippet;
 

@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Groupssettings extends Google_Service
+class Postman_Google_Service_Groupssettings extends Postman_Google_Service
 {
   /** View and manage the settings of a Google Apps Group. */
   const APPS_GROUPS_SETTINGS =
@@ -40,16 +40,16 @@ class Google_Service_Groupssettings extends Google_Service
   /**
    * Constructs the internal representation of the Groupssettings service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'groups/v1/groups/';
     $this->version = 'v1';
     $this->serviceName = 'groupssettings';
 
-    $this->groups = new Google_Service_Groupssettings_Groups_Resource(
+    $this->groups = new Postman_Google_Service_Groupssettings_Groups_Resource(
         $this,
         $this->serviceName,
         'groups',
@@ -97,11 +97,11 @@ class Google_Service_Groupssettings extends Google_Service
  * The "groups" collection of methods.
  * Typical usage is:
  *  <code>
- *   $groupssettingsService = new Google_Service_Groupssettings(...);
+ *   $groupssettingsService = new Postman_Google_Service_Groupssettings(...);
  *   $groups = $groupssettingsService->groups;
  *  </code>
  */
-class Google_Service_Groupssettings_Groups_Resource extends Google_Service_Resource
+class Postman_Google_Service_Groupssettings_Groups_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -109,13 +109,13 @@ class Google_Service_Groupssettings_Groups_Resource extends Google_Service_Resou
    *
    * @param string $groupUniqueId The resource ID
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Groupssettings_Groups
+   * @return Postman_Google_Service_Groupssettings_Groups
    */
   public function get($groupUniqueId, $optParams = array())
   {
     $params = array('groupUniqueId' => $groupUniqueId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Groupssettings_Groups");
+    return $this->call('get', array($params), "Postman_Google_Service_Groupssettings_Groups");
   }
 
   /**
@@ -123,37 +123,37 @@ class Google_Service_Groupssettings_Groups_Resource extends Google_Service_Resou
    * (groups.patch)
    *
    * @param string $groupUniqueId The resource ID
-   * @param Google_Groups $postBody
+   * @param Postman_Google_Groups $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Groupssettings_Groups
+   * @return Postman_Google_Service_Groupssettings_Groups
    */
-  public function patch($groupUniqueId, Google_Service_Groupssettings_Groups $postBody, $optParams = array())
+  public function patch($groupUniqueId, Postman_Google_Service_Groupssettings_Groups $postBody, $optParams = array())
   {
     $params = array('groupUniqueId' => $groupUniqueId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Groupssettings_Groups");
+    return $this->call('patch', array($params), "Postman_Google_Service_Groupssettings_Groups");
   }
 
   /**
    * Updates an existing resource. (groups.update)
    *
    * @param string $groupUniqueId The resource ID
-   * @param Google_Groups $postBody
+   * @param Postman_Google_Groups $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Groupssettings_Groups
+   * @return Postman_Google_Service_Groupssettings_Groups
    */
-  public function update($groupUniqueId, Google_Service_Groupssettings_Groups $postBody, $optParams = array())
+  public function update($groupUniqueId, Postman_Google_Service_Groupssettings_Groups $postBody, $optParams = array())
   {
     $params = array('groupUniqueId' => $groupUniqueId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Groupssettings_Groups");
+    return $this->call('update', array($params), "Postman_Google_Service_Groupssettings_Groups");
   }
 }
 
 
 
 
-class Google_Service_Groupssettings_Groups extends Google_Model
+class Postman_Google_Service_Groupssettings_Groups extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

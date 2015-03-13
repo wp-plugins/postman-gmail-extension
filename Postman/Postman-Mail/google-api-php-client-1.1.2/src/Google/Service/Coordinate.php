@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Coordinate extends Google_Service
+class Postman_Google_Service_Coordinate extends Postman_Google_Service
 {
   /** View and manage your Google Maps Coordinate jobs. */
   const COORDINATE =
@@ -47,16 +47,16 @@ class Google_Service_Coordinate extends Google_Service
   /**
    * Constructs the internal representation of the Coordinate service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'coordinate/v1/teams/';
     $this->version = 'v1';
     $this->serviceName = 'coordinate';
 
-    $this->customFieldDef = new Google_Service_Coordinate_CustomFieldDef_Resource(
+    $this->customFieldDef = new Postman_Google_Service_Coordinate_CustomFieldDef_Resource(
         $this,
         $this->serviceName,
         'customFieldDef',
@@ -76,7 +76,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->jobs = new Google_Service_Coordinate_Jobs_Resource(
+    $this->jobs = new Postman_Google_Service_Coordinate_Jobs_Resource(
         $this,
         $this->serviceName,
         'jobs',
@@ -286,7 +286,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->location = new Google_Service_Coordinate_Location_Resource(
+    $this->location = new Postman_Google_Service_Coordinate_Location_Resource(
         $this,
         $this->serviceName,
         'location',
@@ -324,7 +324,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->schedule = new Google_Service_Coordinate_Schedule_Resource(
+    $this->schedule = new Postman_Google_Service_Coordinate_Schedule_Resource(
         $this,
         $this->serviceName,
         'schedule',
@@ -411,7 +411,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->worker = new Google_Service_Coordinate_Worker_Resource(
+    $this->worker = new Postman_Google_Service_Coordinate_Worker_Resource(
         $this,
         $this->serviceName,
         'worker',
@@ -439,11 +439,11 @@ class Google_Service_Coordinate extends Google_Service
  * The "customFieldDef" collection of methods.
  * Typical usage is:
  *  <code>
- *   $coordinateService = new Google_Service_Coordinate(...);
+ *   $coordinateService = new Postman_Google_Service_Coordinate(...);
  *   $customFieldDef = $coordinateService->customFieldDef;
  *  </code>
  */
-class Google_Service_Coordinate_CustomFieldDef_Resource extends Google_Service_Resource
+class Postman_Google_Service_Coordinate_CustomFieldDef_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -452,13 +452,13 @@ class Google_Service_Coordinate_CustomFieldDef_Resource extends Google_Service_R
    *
    * @param string $teamId Team ID
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Coordinate_CustomFieldDefListResponse
+   * @return Postman_Google_Service_Coordinate_CustomFieldDefListResponse
    */
   public function listCustomFieldDef($teamId, $optParams = array())
   {
     $params = array('teamId' => $teamId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Coordinate_CustomFieldDefListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Coordinate_CustomFieldDefListResponse");
   }
 }
 
@@ -466,11 +466,11 @@ class Google_Service_Coordinate_CustomFieldDef_Resource extends Google_Service_R
  * The "jobs" collection of methods.
  * Typical usage is:
  *  <code>
- *   $coordinateService = new Google_Service_Coordinate(...);
+ *   $coordinateService = new Postman_Google_Service_Coordinate(...);
  *   $jobs = $coordinateService->jobs;
  *  </code>
  */
-class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
+class Postman_Google_Service_Coordinate_Jobs_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -479,13 +479,13 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * @param string $teamId Team ID
    * @param string $jobId Job number
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Coordinate_Job
+   * @return Postman_Google_Service_Coordinate_Job
    */
   public function get($teamId, $jobId, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Coordinate_Job");
+    return $this->call('get', array($params), "Postman_Google_Service_Coordinate_Job");
   }
 
   /**
@@ -497,7 +497,7 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * @param double $lat The latitude coordinate of this job's location.
    * @param double $lng The longitude coordinate of this job's location.
    * @param string $title Job title
-   * @param Google_Job $postBody
+   * @param Postman_Google_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customerName Customer name
@@ -507,13 +507,13 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * @opt_param string customerPhoneNumber Customer phone number
    * @opt_param string customField Map from custom field id (from
    * /team//custom_fields) to the field value. For example '123=Alice'
-   * @return Google_Service_Coordinate_Job
+   * @return Postman_Google_Service_Coordinate_Job
    */
-  public function insert($teamId, $address, $lat, $lng, $title, Google_Service_Coordinate_Job $postBody, $optParams = array())
+  public function insert($teamId, $address, $lat, $lng, $title, Postman_Google_Service_Coordinate_Job $postBody, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'address' => $address, 'lat' => $lat, 'lng' => $lng, 'title' => $title, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Coordinate_Job");
+    return $this->call('insert', array($params), "Postman_Google_Service_Coordinate_Job");
   }
 
   /**
@@ -526,13 +526,13 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * milliseconds since epoch.
    * @opt_param string maxResults Maximum number of results to return in one page.
    * @opt_param string pageToken Continuation token
-   * @return Google_Service_Coordinate_JobListResponse
+   * @return Postman_Google_Service_Coordinate_JobListResponse
    */
   public function listJobs($teamId, $optParams = array())
   {
     $params = array('teamId' => $teamId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Coordinate_JobListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Coordinate_JobListResponse");
   }
 
   /**
@@ -541,7 +541,7 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Job $postBody
+   * @param Postman_Google_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customerName Customer name
@@ -556,13 +556,13 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * @opt_param double lng The longitude coordinate of this job's location.
    * @opt_param string customField Map from custom field id (from
    * /team//custom_fields) to the field value. For example '123=Alice'
-   * @return Google_Service_Coordinate_Job
+   * @return Postman_Google_Service_Coordinate_Job
    */
-  public function patch($teamId, $jobId, Google_Service_Coordinate_Job $postBody, $optParams = array())
+  public function patch($teamId, $jobId, Postman_Google_Service_Coordinate_Job $postBody, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Coordinate_Job");
+    return $this->call('patch', array($params), "Postman_Google_Service_Coordinate_Job");
   }
 
   /**
@@ -571,7 +571,7 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Job $postBody
+   * @param Postman_Google_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customerName Customer name
@@ -586,13 +586,13 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
    * @opt_param double lng The longitude coordinate of this job's location.
    * @opt_param string customField Map from custom field id (from
    * /team//custom_fields) to the field value. For example '123=Alice'
-   * @return Google_Service_Coordinate_Job
+   * @return Postman_Google_Service_Coordinate_Job
    */
-  public function update($teamId, $jobId, Google_Service_Coordinate_Job $postBody, $optParams = array())
+  public function update($teamId, $jobId, Postman_Google_Service_Coordinate_Job $postBody, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Coordinate_Job");
+    return $this->call('update', array($params), "Postman_Google_Service_Coordinate_Job");
   }
 }
 
@@ -600,11 +600,11 @@ class Google_Service_Coordinate_Jobs_Resource extends Google_Service_Resource
  * The "location" collection of methods.
  * Typical usage is:
  *  <code>
- *   $coordinateService = new Google_Service_Coordinate(...);
+ *   $coordinateService = new Postman_Google_Service_Coordinate(...);
  *   $location = $coordinateService->location;
  *  </code>
  */
-class Google_Service_Coordinate_Location_Resource extends Google_Service_Resource
+class Postman_Google_Service_Coordinate_Location_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -618,13 +618,13 @@ class Google_Service_Coordinate_Location_Resource extends Google_Service_Resourc
    *
    * @opt_param string pageToken Continuation token
    * @opt_param string maxResults Maximum number of results to return in one page.
-   * @return Google_Service_Coordinate_LocationListResponse
+   * @return Postman_Google_Service_Coordinate_LocationListResponse
    */
   public function listLocation($teamId, $workerEmail, $startTimestampMs, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'workerEmail' => $workerEmail, 'startTimestampMs' => $startTimestampMs);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Coordinate_LocationListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Coordinate_LocationListResponse");
   }
 }
 
@@ -632,11 +632,11 @@ class Google_Service_Coordinate_Location_Resource extends Google_Service_Resourc
  * The "schedule" collection of methods.
  * Typical usage is:
  *  <code>
- *   $coordinateService = new Google_Service_Coordinate(...);
+ *   $coordinateService = new Postman_Google_Service_Coordinate(...);
  *   $schedule = $coordinateService->schedule;
  *  </code>
  */
-class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resource
+class Postman_Google_Service_Coordinate_Schedule_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -645,13 +645,13 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
    * @param string $teamId Team ID
    * @param string $jobId Job number
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Coordinate_Schedule
+   * @return Postman_Google_Service_Coordinate_Schedule
    */
   public function get($teamId, $jobId, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Coordinate_Schedule");
+    return $this->call('get', array($params), "Postman_Google_Service_Coordinate_Schedule");
   }
 
   /**
@@ -660,7 +660,7 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Schedule $postBody
+   * @param Postman_Google_Schedule $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allDay Whether the job is scheduled for the whole day. Time
@@ -668,13 +668,13 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
    * @opt_param string startTime Scheduled start time in milliseconds since epoch.
    * @opt_param string duration Job duration in milliseconds.
    * @opt_param string endTime Scheduled end time in milliseconds since epoch.
-   * @return Google_Service_Coordinate_Schedule
+   * @return Postman_Google_Service_Coordinate_Schedule
    */
-  public function patch($teamId, $jobId, Google_Service_Coordinate_Schedule $postBody, $optParams = array())
+  public function patch($teamId, $jobId, Postman_Google_Service_Coordinate_Schedule $postBody, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Coordinate_Schedule");
+    return $this->call('patch', array($params), "Postman_Google_Service_Coordinate_Schedule");
   }
 
   /**
@@ -682,7 +682,7 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Schedule $postBody
+   * @param Postman_Google_Schedule $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allDay Whether the job is scheduled for the whole day. Time
@@ -690,13 +690,13 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
    * @opt_param string startTime Scheduled start time in milliseconds since epoch.
    * @opt_param string duration Job duration in milliseconds.
    * @opt_param string endTime Scheduled end time in milliseconds since epoch.
-   * @return Google_Service_Coordinate_Schedule
+   * @return Postman_Google_Service_Coordinate_Schedule
    */
-  public function update($teamId, $jobId, Google_Service_Coordinate_Schedule $postBody, $optParams = array())
+  public function update($teamId, $jobId, Postman_Google_Service_Coordinate_Schedule $postBody, $optParams = array())
   {
     $params = array('teamId' => $teamId, 'jobId' => $jobId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Coordinate_Schedule");
+    return $this->call('update', array($params), "Postman_Google_Service_Coordinate_Schedule");
   }
 }
 
@@ -704,11 +704,11 @@ class Google_Service_Coordinate_Schedule_Resource extends Google_Service_Resourc
  * The "worker" collection of methods.
  * Typical usage is:
  *  <code>
- *   $coordinateService = new Google_Service_Coordinate(...);
+ *   $coordinateService = new Postman_Google_Service_Coordinate(...);
  *   $worker = $coordinateService->worker;
  *  </code>
  */
-class Google_Service_Coordinate_Worker_Resource extends Google_Service_Resource
+class Postman_Google_Service_Coordinate_Worker_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -716,20 +716,20 @@ class Google_Service_Coordinate_Worker_Resource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Coordinate_WorkerListResponse
+   * @return Postman_Google_Service_Coordinate_WorkerListResponse
    */
   public function listWorker($teamId, $optParams = array())
   {
     $params = array('teamId' => $teamId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Coordinate_WorkerListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Coordinate_WorkerListResponse");
   }
 }
 
 
 
 
-class Google_Service_Coordinate_CustomField extends Google_Model
+class Postman_Google_Service_Coordinate_CustomField extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -764,7 +764,7 @@ class Google_Service_Coordinate_CustomField extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_CustomFieldDef extends Google_Model
+class Postman_Google_Service_Coordinate_CustomFieldDef extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -826,12 +826,12 @@ class Google_Service_Coordinate_CustomFieldDef extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_CustomFieldDefListResponse extends Google_Collection
+class Postman_Google_Service_Coordinate_CustomFieldDefListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Coordinate_CustomFieldDef';
+  protected $itemsType = 'Postman_Google_Service_Coordinate_CustomFieldDef';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -854,12 +854,12 @@ class Google_Service_Coordinate_CustomFieldDefListResponse extends Google_Collec
   }
 }
 
-class Google_Service_Coordinate_CustomFields extends Google_Collection
+class Postman_Google_Service_Coordinate_CustomFields extends Postman_Google_Collection
 {
   protected $collection_key = 'customField';
   protected $internal_gapi_mappings = array(
   );
-  protected $customFieldType = 'Google_Service_Coordinate_CustomField';
+  protected $customFieldType = 'Postman_Google_Service_Coordinate_CustomField';
   protected $customFieldDataType = 'array';
   public $kind;
 
@@ -882,16 +882,16 @@ class Google_Service_Coordinate_CustomFields extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_Job extends Google_Collection
+class Postman_Google_Service_Coordinate_Job extends Postman_Google_Collection
 {
   protected $collection_key = 'jobChange';
   protected $internal_gapi_mappings = array(
   );
   public $id;
-  protected $jobChangeType = 'Google_Service_Coordinate_JobChange';
+  protected $jobChangeType = 'Postman_Google_Service_Coordinate_JobChange';
   protected $jobChangeDataType = 'array';
   public $kind;
-  protected $stateType = 'Google_Service_Coordinate_JobState';
+  protected $stateType = 'Postman_Google_Service_Coordinate_JobState';
   protected $stateDataType = '';
 
 
@@ -919,7 +919,7 @@ class Google_Service_Coordinate_Job extends Google_Collection
   {
     return $this->kind;
   }
-  public function setState(Google_Service_Coordinate_JobState $state)
+  public function setState(Postman_Google_Service_Coordinate_JobState $state)
   {
     $this->state = $state;
   }
@@ -929,12 +929,12 @@ class Google_Service_Coordinate_Job extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_JobChange extends Google_Model
+class Postman_Google_Service_Coordinate_JobChange extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $stateType = 'Google_Service_Coordinate_JobState';
+  protected $stateType = 'Postman_Google_Service_Coordinate_JobState';
   protected $stateDataType = '';
   public $timestamp;
 
@@ -947,7 +947,7 @@ class Google_Service_Coordinate_JobChange extends Google_Model
   {
     return $this->kind;
   }
-  public function setState(Google_Service_Coordinate_JobState $state)
+  public function setState(Postman_Google_Service_Coordinate_JobState $state)
   {
     $this->state = $state;
   }
@@ -965,12 +965,12 @@ class Google_Service_Coordinate_JobChange extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_JobListResponse extends Google_Collection
+class Postman_Google_Service_Coordinate_JobListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Coordinate_Job';
+  protected $itemsType = 'Postman_Google_Service_Coordinate_Job';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1002,18 +1002,18 @@ class Google_Service_Coordinate_JobListResponse extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_JobState extends Google_Collection
+class Postman_Google_Service_Coordinate_JobState extends Postman_Google_Collection
 {
   protected $collection_key = 'note';
   protected $internal_gapi_mappings = array(
   );
   public $assignee;
-  protected $customFieldsType = 'Google_Service_Coordinate_CustomFields';
+  protected $customFieldsType = 'Postman_Google_Service_Coordinate_CustomFields';
   protected $customFieldsDataType = '';
   public $customerName;
   public $customerPhoneNumber;
   public $kind;
-  protected $locationType = 'Google_Service_Coordinate_Location';
+  protected $locationType = 'Postman_Google_Service_Coordinate_Location';
   protected $locationDataType = '';
   public $note;
   public $progress;
@@ -1028,7 +1028,7 @@ class Google_Service_Coordinate_JobState extends Google_Collection
   {
     return $this->assignee;
   }
-  public function setCustomFields(Google_Service_Coordinate_CustomFields $customFields)
+  public function setCustomFields(Postman_Google_Service_Coordinate_CustomFields $customFields)
   {
     $this->customFields = $customFields;
   }
@@ -1060,7 +1060,7 @@ class Google_Service_Coordinate_JobState extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLocation(Google_Service_Coordinate_Location $location)
+  public function setLocation(Postman_Google_Service_Coordinate_Location $location)
   {
     $this->location = $location;
   }
@@ -1094,7 +1094,7 @@ class Google_Service_Coordinate_JobState extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_Location extends Google_Collection
+class Postman_Google_Service_Coordinate_Location extends Postman_Google_Collection
 {
   protected $collection_key = 'addressLine';
   protected $internal_gapi_mappings = array(
@@ -1139,16 +1139,16 @@ class Google_Service_Coordinate_Location extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_LocationListResponse extends Google_Collection
+class Postman_Google_Service_Coordinate_LocationListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Coordinate_LocationRecord';
+  protected $itemsType = 'Postman_Google_Service_Coordinate_LocationRecord';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
-  protected $tokenPaginationType = 'Google_Service_Coordinate_TokenPagination';
+  protected $tokenPaginationType = 'Postman_Google_Service_Coordinate_TokenPagination';
   protected $tokenPaginationDataType = '';
 
 
@@ -1176,7 +1176,7 @@ class Google_Service_Coordinate_LocationListResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setTokenPagination(Google_Service_Coordinate_TokenPagination $tokenPagination)
+  public function setTokenPagination(Postman_Google_Service_Coordinate_TokenPagination $tokenPagination)
   {
     $this->tokenPagination = $tokenPagination;
   }
@@ -1186,7 +1186,7 @@ class Google_Service_Coordinate_LocationListResponse extends Google_Collection
   }
 }
 
-class Google_Service_Coordinate_LocationRecord extends Google_Model
+class Postman_Google_Service_Coordinate_LocationRecord extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1239,7 +1239,7 @@ class Google_Service_Coordinate_LocationRecord extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_Schedule extends Google_Model
+class Postman_Google_Service_Coordinate_Schedule extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1292,7 +1292,7 @@ class Google_Service_Coordinate_Schedule extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_TokenPagination extends Google_Model
+class Postman_Google_Service_Coordinate_TokenPagination extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1327,7 +1327,7 @@ class Google_Service_Coordinate_TokenPagination extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_Worker extends Google_Model
+class Postman_Google_Service_Coordinate_Worker extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1353,12 +1353,12 @@ class Google_Service_Coordinate_Worker extends Google_Model
   }
 }
 
-class Google_Service_Coordinate_WorkerListResponse extends Google_Collection
+class Postman_Google_Service_Coordinate_WorkerListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Coordinate_Worker';
+  protected $itemsType = 'Postman_Google_Service_Coordinate_Worker';
   protected $itemsDataType = 'array';
   public $kind;
 

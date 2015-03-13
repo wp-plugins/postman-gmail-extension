@@ -18,20 +18,20 @@
 class RestTest extends BaseTest
 {
   /**
-   * @var Google_Http_REST $rest
+   * @var Postman_Google_Http_REST $rest
    */
   private $rest;
 
   public function setUp()
   {
-    $this->rest = new Google_Http_REST();
+    $this->rest = new Postman_Google_Http_REST();
   }
 
   public function testDecodeResponse()
   {
     $url = 'http://localhost';
     $client = $this->getClient();
-    $response = new Google_Http_Request($url);
+    $response = new Postman_Google_Http_Request($url);
     $response->setResponseHttpCode(204);
     $decoded = $this->rest->decodeHttpResponse($response, $client);
     $this->assertEquals(null, $decoded);
@@ -39,7 +39,7 @@ class RestTest extends BaseTest
 
     foreach (array(200, 201) as $code) {
       $headers = array('foo', 'bar');
-      $response = new Google_Http_Request($url, 'GET', $headers);
+      $response = new Postman_Google_Http_Request($url, 'GET', $headers);
       $response->setResponseBody('{"a": 1}');
 
       $response->setResponseHttpCode($code);
@@ -47,7 +47,7 @@ class RestTest extends BaseTest
       $this->assertEquals(array("a" => 1), $decoded);
     }
 
-    $response = new Google_Http_Request($url);
+    $response = new Postman_Google_Http_Request($url);
     $response->setResponseHttpCode(500);
 
     $error = "";
@@ -65,7 +65,7 @@ class RestTest extends BaseTest
   {
     $url = 'http://localhost';
 
-    $response = new Google_Http_Request($url, 'GET', array());
+    $response = new Postman_Google_Http_Request($url, 'GET', array());
     $response->setResponseBody('{}');
 
     $response->setResponseHttpCode(200);
@@ -116,11 +116,11 @@ class RestTest extends BaseTest
   }
 
   /**
-   * @expectedException Google_Service_Exception
+   * @expectedException Postman_Google_Service_Exception
    */
   public function testBadErrorFormatting()
   {
-    $request = new Google_Http_Request("/a/b");
+    $request = new Postman_Google_Http_Request("/a/b");
     $request->setResponseHttpCode(500);
     $request->setResponseBody(
         '{
@@ -130,15 +130,15 @@ class RestTest extends BaseTest
          }
         }'
     );
-    Google_Http_Rest::decodeHttpResponse($request);
+    Postman_Google_Http_Rest::decodeHttpResponse($request);
   }
 
   /**
-   * @expectedException Google_Service_Exception
+   * @expectedException Postman_Google_Service_Exception
    */
   public function tesProperErrorFormatting()
   {
-    $request = new Google_Http_Request("/a/b");
+    $request = new Postman_Google_Http_Request("/a/b");
     $request->setResponseHttpCode(401);
     $request->setResponseBody(
         '{
@@ -156,6 +156,6 @@ class RestTest extends BaseTest
           "message": "Invalid Credentials"
         }'
     );
-    Google_Http_Rest::decodeHttpResponse($request);
+    Postman_Google_Http_Rest::decodeHttpResponse($request);
   }
 }

@@ -10,6 +10,7 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 	class PostmanGmailApiTransport implements PostmanTransport {
 		const SLUG = 'gmail_api';
 		const PORT = 443;
+		const HOST = 'www.googleapis.com';
 		const ENCRYPTION_TYPE = 'ssl';
 		
 		// this should be standard across all transports
@@ -100,7 +101,7 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 			require_once 'google-api-php-client-1.1.2/src/Google/Service/Gmail.php';
 			$options = PostmanOptions::getInstance ();
 			$authToken = PostmanOAuthToken::getInstance ();
-			$client = new Google_Client ();
+			$client = new Postman_Google_Client ();
 			$client->setClientId ( $options->getClientId () );
 			$client->setClientSecret ( $options->getClientSecret () );
 			$client->setRedirectUri ( '' );
@@ -115,7 +116,7 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 			$client->setAccessToken ( json_encode ( $token ) );
 			// We only need permissions to compose and send emails
 			$client->addScope ( "https://www.googleapis.com/auth/gmail.compose" );
-			$service = new Google_Service_Gmail ( $client );
+			$service = new Postman_Google_Service_Gmail ( $client );
 			$config [PostmanZendMailTransportGmailApi::SERVICE_OPTION] = $service;
 			return new PostmanZendMailTransportGmailApi ( $hostname, $config );
 		}
@@ -197,7 +198,7 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 			if (endswith ( $hostname, 'gmail.com' )) {
 				$hosts = array (
 						array (
-								'host' => 'www.googleapis.com',
+								'host' => self::HOST,
 								'port' => self::PORT 
 						) 
 				);
@@ -206,16 +207,16 @@ if (! class_exists ( 'PostmanGmailApiTransport' )) {
 		}
 		
 		/**
-		 * SMTP supports sending with these combinations in this order of preferences:
+		 * Postman Gmail API supports delivering mail with these parameters:
 		 *
-		 * 90 gmail api on port 465 to www.googleapis.com
+		 * 70 gmail api on port 465 to www.googleapis.com
 		 *
 		 * @param unknown $hostData        	
 		 */
 		public function getConfigurationRecommendation($hostData) {
 			$port = $hostData ['port'];
 			$hostname = $hostData ['host'];
-			$oauthPotential = endsWith ( $hostname, 'googleapis.com' );
+			$oauthPotential = ($hostname == self::HOST);
 			if ($oauthPotential) {
 				if ($port == self::PORT) {
 					$recommendation ['success'] = true;

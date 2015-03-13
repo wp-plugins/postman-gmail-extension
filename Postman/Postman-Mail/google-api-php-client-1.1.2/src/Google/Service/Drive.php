@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Drive extends Google_Service
+class Postman_Google_Service_Drive extends Postman_Google_Service
 {
   /** View and manage the files and documents in your Google Drive. */
   const DRIVE =
@@ -70,16 +70,16 @@ class Google_Service_Drive extends Google_Service
   /**
    * Constructs the internal representation of the Drive service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'drive/v2/';
     $this->version = 'v2';
     $this->serviceName = 'drive';
 
-    $this->about = new Google_Service_Drive_About_Resource(
+    $this->about = new Postman_Google_Service_Drive_About_Resource(
         $this,
         $this->serviceName,
         'about',
@@ -106,7 +106,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->apps = new Google_Service_Drive_Apps_Resource(
+    $this->apps = new Postman_Google_Service_Drive_Apps_Resource(
         $this,
         $this->serviceName,
         'apps',
@@ -143,7 +143,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->changes = new Google_Service_Drive_Changes_Resource(
+    $this->changes = new Postman_Google_Service_Drive_Changes_Resource(
         $this,
         $this->serviceName,
         'changes',
@@ -213,7 +213,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Drive_Channels_Resource(
+    $this->channels = new Postman_Google_Service_Drive_Channels_Resource(
         $this,
         $this->serviceName,
         'channels',
@@ -227,7 +227,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->children = new Google_Service_Drive_Children_Resource(
+    $this->children = new Postman_Google_Service_Drive_Children_Resource(
         $this,
         $this->serviceName,
         'children',
@@ -299,7 +299,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->comments = new Google_Service_Drive_Comments_Resource(
+    $this->comments = new Postman_Google_Service_Drive_Comments_Resource(
         $this,
         $this->serviceName,
         'comments',
@@ -409,7 +409,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->files = new Google_Service_Drive_Files_Resource(
+    $this->files = new Postman_Google_Service_Drive_Files_Resource(
         $this,
         $this->serviceName,
         'files',
@@ -723,7 +723,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->parents = new Google_Service_Drive_Parents_Resource(
+    $this->parents = new Postman_Google_Service_Drive_Parents_Resource(
         $this,
         $this->serviceName,
         'parents',
@@ -783,7 +783,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->permissions = new Google_Service_Drive_Permissions_Resource(
+    $this->permissions = new Postman_Google_Service_Drive_Permissions_Resource(
         $this,
         $this->serviceName,
         'permissions',
@@ -899,7 +899,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->properties = new Google_Service_Drive_Properties_Resource(
+    $this->properties = new Postman_Google_Service_Drive_Properties_Resource(
         $this,
         $this->serviceName,
         'properties',
@@ -1005,7 +1005,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->realtime = new Google_Service_Drive_Realtime_Resource(
+    $this->realtime = new Postman_Google_Service_Drive_Realtime_Resource(
         $this,
         $this->serviceName,
         'realtime',
@@ -1043,7 +1043,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->replies = new Google_Service_Drive_Replies_Resource(
+    $this->replies = new Postman_Google_Service_Drive_Replies_Resource(
         $this,
         $this->serviceName,
         'replies',
@@ -1179,7 +1179,7 @@ class Google_Service_Drive extends Google_Service
           )
         )
     );
-    $this->revisions = new Google_Service_Drive_Revisions_Resource(
+    $this->revisions = new Postman_Google_Service_Drive_Revisions_Resource(
         $this,
         $this->serviceName,
         'revisions',
@@ -1267,11 +1267,11 @@ class Google_Service_Drive extends Google_Service
  * The "about" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $about = $driveService->about;
  *  </code>
  */
-class Google_Service_Drive_About_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_About_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1289,13 +1289,13 @@ class Google_Service_Drive_About_Resource extends Google_Service_Resource
    * count
    * @opt_param string startChangeId Change ID to start counting from when
    * calculating number of remaining change IDs
-   * @return Google_Service_Drive_About
+   * @return Postman_Google_Service_Drive_About
    */
   public function get($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_About");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_About");
   }
 }
 
@@ -1303,11 +1303,11 @@ class Google_Service_Drive_About_Resource extends Google_Service_Resource
  * The "apps" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $apps = $driveService->apps;
  *  </code>
  */
-class Google_Service_Drive_Apps_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Apps_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1315,13 +1315,13 @@ class Google_Service_Drive_Apps_Resource extends Google_Service_Resource
    *
    * @param string $appId The ID of the app.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_App
+   * @return Postman_Google_Service_Drive_App
    */
   public function get($appId, $optParams = array())
   {
     $params = array('appId' => $appId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_App");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_App");
   }
 
   /**
@@ -1342,13 +1342,13 @@ class Google_Service_Drive_Apps_Resource extends Google_Service_Resource
    * any of the given MIME types will be included in the response. If
    * appFilterExtensions are provided as well, the result is a union of the two
    * resulting app lists.
-   * @return Google_Service_Drive_AppList
+   * @return Postman_Google_Service_Drive_AppList
    */
   public function listApps($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_AppList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_AppList");
   }
 }
 
@@ -1356,11 +1356,11 @@ class Google_Service_Drive_Apps_Resource extends Google_Service_Resource
  * The "changes" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $changes = $driveService->changes;
  *  </code>
  */
-class Google_Service_Drive_Changes_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Changes_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1368,13 +1368,13 @@ class Google_Service_Drive_Changes_Resource extends Google_Service_Resource
    *
    * @param string $changeId The ID of the change.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Change
+   * @return Postman_Google_Service_Drive_Change
    */
   public function get($changeId, $optParams = array())
   {
     $params = array('changeId' => $changeId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_Change");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_Change");
   }
 
   /**
@@ -1390,19 +1390,19 @@ class Google_Service_Drive_Changes_Resource extends Google_Service_Resource
    * @opt_param bool includeDeleted Whether to include deleted items.
    * @opt_param int maxResults Maximum number of changes to return.
    * @opt_param string pageToken Page token for changes.
-   * @return Google_Service_Drive_ChangeList
+   * @return Postman_Google_Service_Drive_ChangeList
    */
   public function listChanges($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_ChangeList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_ChangeList");
   }
 
   /**
    * Subscribe to changes for a user. (changes.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool includeSubscribed Whether to include public files the user
@@ -1413,13 +1413,13 @@ class Google_Service_Drive_Changes_Resource extends Google_Service_Resource
    * @opt_param bool includeDeleted Whether to include deleted items.
    * @opt_param int maxResults Maximum number of changes to return.
    * @opt_param string pageToken Page token for changes.
-   * @return Google_Service_Drive_Channel
+   * @return Postman_Google_Service_Drive_Channel
    */
-  public function watch(Google_Service_Drive_Channel $postBody, $optParams = array())
+  public function watch(Postman_Google_Service_Drive_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Drive_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Drive_Channel");
   }
 }
 
@@ -1427,20 +1427,20 @@ class Google_Service_Drive_Changes_Resource extends Google_Service_Resource
  * The "channels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $channels = $driveService->channels;
  *  </code>
  */
-class Google_Service_Drive_Channels_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Channels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Stop watching resources through this channel (channels.stop)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    */
-  public function stop(Google_Service_Drive_Channel $postBody, $optParams = array())
+  public function stop(Postman_Google_Service_Drive_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1452,11 +1452,11 @@ class Google_Service_Drive_Channels_Resource extends Google_Service_Resource
  * The "children" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $children = $driveService->children;
  *  </code>
  */
-class Google_Service_Drive_Children_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Children_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1479,28 +1479,28 @@ class Google_Service_Drive_Children_Resource extends Google_Service_Resource
    * @param string $folderId The ID of the folder.
    * @param string $childId The ID of the child.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_ChildReference
+   * @return Postman_Google_Service_Drive_ChildReference
    */
   public function get($folderId, $childId, $optParams = array())
   {
     $params = array('folderId' => $folderId, 'childId' => $childId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_ChildReference");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_ChildReference");
   }
 
   /**
    * Inserts a file into a folder. (children.insert)
    *
    * @param string $folderId The ID of the folder.
-   * @param Google_ChildReference $postBody
+   * @param Postman_Google_ChildReference $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_ChildReference
+   * @return Postman_Google_Service_Drive_ChildReference
    */
-  public function insert($folderId, Google_Service_Drive_ChildReference $postBody, $optParams = array())
+  public function insert($folderId, Postman_Google_Service_Drive_ChildReference $postBody, $optParams = array())
   {
     $params = array('folderId' => $folderId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_ChildReference");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_ChildReference");
   }
 
   /**
@@ -1512,13 +1512,13 @@ class Google_Service_Drive_Children_Resource extends Google_Service_Resource
    * @opt_param string q Query string for searching children.
    * @opt_param string pageToken Page token for children.
    * @opt_param int maxResults Maximum number of children to return.
-   * @return Google_Service_Drive_ChildList
+   * @return Postman_Google_Service_Drive_ChildList
    */
   public function listChildren($folderId, $optParams = array())
   {
     $params = array('folderId' => $folderId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_ChildList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_ChildList");
   }
 }
 
@@ -1526,11 +1526,11 @@ class Google_Service_Drive_Children_Resource extends Google_Service_Resource
  * The "comments" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $comments = $driveService->comments;
  *  </code>
  */
-class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Comments_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1556,28 +1556,28 @@ class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
    *
    * @opt_param bool includeDeleted If set, this will succeed when retrieving a
    * deleted comment, and will include any deleted replies.
-   * @return Google_Service_Drive_Comment
+   * @return Postman_Google_Service_Drive_Comment
    */
   public function get($fileId, $commentId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_Comment");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_Comment");
   }
 
   /**
    * Creates a new comment on the given file. (comments.insert)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_Comment $postBody
+   * @param Postman_Google_Comment $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Comment
+   * @return Postman_Google_Service_Drive_Comment
    */
-  public function insert($fileId, Google_Service_Drive_Comment $postBody, $optParams = array())
+  public function insert($fileId, Postman_Google_Service_Drive_Comment $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_Comment");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_Comment");
   }
 
   /**
@@ -1595,13 +1595,13 @@ class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
    * deleted comments and replies (with content stripped) will be returned.
    * @opt_param int maxResults The maximum number of discussions to include in the
    * response, used for paging.
-   * @return Google_Service_Drive_CommentList
+   * @return Postman_Google_Service_Drive_CommentList
    */
   public function listComments($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_CommentList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_CommentList");
   }
 
   /**
@@ -1610,15 +1610,15 @@ class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
-   * @param Google_Comment $postBody
+   * @param Postman_Google_Comment $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Comment
+   * @return Postman_Google_Service_Drive_Comment
    */
-  public function patch($fileId, $commentId, Google_Service_Drive_Comment $postBody, $optParams = array())
+  public function patch($fileId, $commentId, Postman_Google_Service_Drive_Comment $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_Comment");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_Comment");
   }
 
   /**
@@ -1626,15 +1626,15 @@ class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
-   * @param Google_Comment $postBody
+   * @param Postman_Google_Comment $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Comment
+   * @return Postman_Google_Service_Drive_Comment
    */
-  public function update($fileId, $commentId, Google_Service_Drive_Comment $postBody, $optParams = array())
+  public function update($fileId, $commentId, Postman_Google_Service_Drive_Comment $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_Comment");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_Comment");
   }
 }
 
@@ -1642,18 +1642,18 @@ class Google_Service_Drive_Comments_Resource extends Google_Service_Resource
  * The "files" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $files = $driveService->files;
  *  </code>
  */
-class Google_Service_Drive_Files_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Files_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Creates a copy of the specified file. (files.copy)
    *
    * @param string $fileId The ID of the file to copy.
-   * @param Google_DriveFile $postBody
+   * @param Postman_Google_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool convert Whether to convert this file to the corresponding
@@ -1669,13 +1669,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * uploads.
    * @opt_param string timedTextTrackName The timed text track name.
    * @opt_param string timedTextLanguage The language of the timed text.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
-  public function copy($fileId, Google_Service_Drive_DriveFile $postBody, $optParams = array())
+  public function copy($fileId, Postman_Google_Service_Drive_DriveFile $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('copy', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('copy', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
@@ -1715,19 +1715,19 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * successfully retrieving the file.
    * @opt_param string projection This parameter is deprecated and has no
    * function.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
   public function get($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
    * Insert a new file. (files.insert)
    *
-   * @param Google_DriveFile $postBody
+   * @param Postman_Google_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool convert Whether to convert this file to the corresponding
@@ -1744,13 +1744,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * uploads.
    * @opt_param string timedTextTrackName The timed text track name.
    * @opt_param string timedTextLanguage The language of the timed text.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
-  public function insert(Google_Service_Drive_DriveFile $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_Drive_DriveFile $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
@@ -1765,13 +1765,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * @opt_param string projection This parameter is deprecated and has no
    * function.
    * @opt_param int maxResults Maximum number of files to return.
-   * @return Google_Service_Drive_FileList
+   * @return Postman_Google_Service_Drive_FileList
    */
   public function listFiles($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_FileList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_FileList");
   }
 
   /**
@@ -1779,7 +1779,7 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * (files.patch)
    *
    * @param string $fileId The ID of the file to update.
-   * @param Google_DriveFile $postBody
+   * @param Postman_Google_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string addParents Comma-separated list of parent IDs to add.
@@ -1805,13 +1805,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * uploads.
    * @opt_param string timedTextLanguage The language of the timed text.
    * @opt_param string timedTextTrackName The timed text track name.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
-  public function patch($fileId, Google_Service_Drive_DriveFile $postBody, $optParams = array())
+  public function patch($fileId, Postman_Google_Service_Drive_DriveFile $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
@@ -1819,13 +1819,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file to update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
   public function touch($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('touch', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('touch', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
@@ -1833,13 +1833,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file to trash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
   public function trash($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('trash', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('trash', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
@@ -1847,20 +1847,20 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file to untrash.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
   public function untrash($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('untrash', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('untrash', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
    * Updates file metadata and/or content. (files.update)
    *
    * @param string $fileId The ID of the file to update.
-   * @param Google_DriveFile $postBody
+   * @param Postman_Google_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string addParents Comma-separated list of parent IDs to add.
@@ -1886,20 +1886,20 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * uploads.
    * @opt_param string timedTextLanguage The language of the timed text.
    * @opt_param string timedTextTrackName The timed text track name.
-   * @return Google_Service_Drive_DriveFile
+   * @return Postman_Google_Service_Drive_DriveFile
    */
-  public function update($fileId, Google_Service_Drive_DriveFile $postBody, $optParams = array())
+  public function update($fileId, Postman_Google_Service_Drive_DriveFile $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_DriveFile");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_DriveFile");
   }
 
   /**
    * Subscribe to changes on a file (files.watch)
    *
    * @param string $fileId The ID for the file in question.
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool acknowledgeAbuse Whether the user is acknowledging the risk
@@ -1908,13 +1908,13 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
    * successfully retrieving the file.
    * @opt_param string projection This parameter is deprecated and has no
    * function.
-   * @return Google_Service_Drive_Channel
+   * @return Postman_Google_Service_Drive_Channel
    */
-  public function watch($fileId, Google_Service_Drive_Channel $postBody, $optParams = array())
+  public function watch($fileId, Postman_Google_Service_Drive_Channel $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Drive_Channel");
+    return $this->call('watch', array($params), "Postman_Google_Service_Drive_Channel");
   }
 }
 
@@ -1922,11 +1922,11 @@ class Google_Service_Drive_Files_Resource extends Google_Service_Resource
  * The "parents" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $parents = $driveService->parents;
  *  </code>
  */
-class Google_Service_Drive_Parents_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Parents_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1949,28 +1949,28 @@ class Google_Service_Drive_Parents_Resource extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param string $parentId The ID of the parent.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_ParentReference
+   * @return Postman_Google_Service_Drive_ParentReference
    */
   public function get($fileId, $parentId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'parentId' => $parentId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_ParentReference");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_ParentReference");
   }
 
   /**
    * Adds a parent folder for a file. (parents.insert)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_ParentReference $postBody
+   * @param Postman_Google_ParentReference $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_ParentReference
+   * @return Postman_Google_Service_Drive_ParentReference
    */
-  public function insert($fileId, Google_Service_Drive_ParentReference $postBody, $optParams = array())
+  public function insert($fileId, Postman_Google_Service_Drive_ParentReference $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_ParentReference");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_ParentReference");
   }
 
   /**
@@ -1978,13 +1978,13 @@ class Google_Service_Drive_Parents_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_ParentList
+   * @return Postman_Google_Service_Drive_ParentList
    */
   public function listParents($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_ParentList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_ParentList");
   }
 }
 
@@ -1992,11 +1992,11 @@ class Google_Service_Drive_Parents_Resource extends Google_Service_Resource
  * The "permissions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $permissions = $driveService->permissions;
  *  </code>
  */
-class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Permissions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2019,13 +2019,13 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    * @param string $fileId The ID for the file.
    * @param string $permissionId The ID for the permission.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Permission
+   * @return Postman_Google_Service_Drive_Permission
    */
   public function get($fileId, $permissionId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'permissionId' => $permissionId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_Permission");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_Permission");
   }
 
   /**
@@ -2033,20 +2033,20 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    *
    * @param string $email The email address for which to return a permission ID
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_PermissionId
+   * @return Postman_Google_Service_Drive_PermissionId
    */
   public function getIdForEmail($email, $optParams = array())
   {
     $params = array('email' => $email);
     $params = array_merge($params, $optParams);
-    return $this->call('getIdForEmail', array($params), "Google_Service_Drive_PermissionId");
+    return $this->call('getIdForEmail', array($params), "Postman_Google_Service_Drive_PermissionId");
   }
 
   /**
    * Inserts a permission for a file. (permissions.insert)
    *
    * @param string $fileId The ID for the file.
-   * @param Google_Permission $postBody
+   * @param Postman_Google_Permission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string emailMessage A custom message to include in notification
@@ -2054,13 +2054,13 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    * @opt_param bool sendNotificationEmails Whether to send notification emails
    * when sharing to users or groups. This parameter is ignored and an email is
    * sent if the role is owner.
-   * @return Google_Service_Drive_Permission
+   * @return Postman_Google_Service_Drive_Permission
    */
-  public function insert($fileId, Google_Service_Drive_Permission $postBody, $optParams = array())
+  public function insert($fileId, Postman_Google_Service_Drive_Permission $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_Permission");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_Permission");
   }
 
   /**
@@ -2068,13 +2068,13 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID for the file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_PermissionList
+   * @return Postman_Google_Service_Drive_PermissionList
    */
   public function listPermissions($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_PermissionList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_PermissionList");
   }
 
   /**
@@ -2083,18 +2083,18 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID for the file.
    * @param string $permissionId The ID for the permission.
-   * @param Google_Permission $postBody
+   * @param Postman_Google_Permission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool transferOwnership Whether changing a role to 'owner' should
    * also downgrade the current owners to writers.
-   * @return Google_Service_Drive_Permission
+   * @return Postman_Google_Service_Drive_Permission
    */
-  public function patch($fileId, $permissionId, Google_Service_Drive_Permission $postBody, $optParams = array())
+  public function patch($fileId, $permissionId, Postman_Google_Service_Drive_Permission $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'permissionId' => $permissionId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_Permission");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_Permission");
   }
 
   /**
@@ -2102,18 +2102,18 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID for the file.
    * @param string $permissionId The ID for the permission.
-   * @param Google_Permission $postBody
+   * @param Postman_Google_Permission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool transferOwnership Whether changing a role to 'owner' should
    * also downgrade the current owners to writers.
-   * @return Google_Service_Drive_Permission
+   * @return Postman_Google_Service_Drive_Permission
    */
-  public function update($fileId, $permissionId, Google_Service_Drive_Permission $postBody, $optParams = array())
+  public function update($fileId, $permissionId, Postman_Google_Service_Drive_Permission $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'permissionId' => $permissionId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_Permission");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_Permission");
   }
 }
 
@@ -2121,11 +2121,11 @@ class Google_Service_Drive_Permissions_Resource extends Google_Service_Resource
  * The "properties" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $properties = $driveService->properties;
  *  </code>
  */
-class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Properties_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2152,28 +2152,28 @@ class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string visibility The visibility of the property.
-   * @return Google_Service_Drive_Property
+   * @return Postman_Google_Service_Drive_Property
    */
   public function get($fileId, $propertyKey, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'propertyKey' => $propertyKey);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_Property");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_Property");
   }
 
   /**
    * Adds a property to a file. (properties.insert)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_Property $postBody
+   * @param Postman_Google_Property $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Property
+   * @return Postman_Google_Service_Drive_Property
    */
-  public function insert($fileId, Google_Service_Drive_Property $postBody, $optParams = array())
+  public function insert($fileId, Postman_Google_Service_Drive_Property $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_Property");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_Property");
   }
 
   /**
@@ -2181,13 +2181,13 @@ class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_PropertyList
+   * @return Postman_Google_Service_Drive_PropertyList
    */
   public function listProperties($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_PropertyList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_PropertyList");
   }
 
   /**
@@ -2195,17 +2195,17 @@ class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $propertyKey The key of the property.
-   * @param Google_Property $postBody
+   * @param Postman_Google_Property $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string visibility The visibility of the property.
-   * @return Google_Service_Drive_Property
+   * @return Postman_Google_Service_Drive_Property
    */
-  public function patch($fileId, $propertyKey, Google_Service_Drive_Property $postBody, $optParams = array())
+  public function patch($fileId, $propertyKey, Postman_Google_Service_Drive_Property $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'propertyKey' => $propertyKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_Property");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_Property");
   }
 
   /**
@@ -2213,17 +2213,17 @@ class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $propertyKey The key of the property.
-   * @param Google_Property $postBody
+   * @param Postman_Google_Property $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string visibility The visibility of the property.
-   * @return Google_Service_Drive_Property
+   * @return Postman_Google_Service_Drive_Property
    */
-  public function update($fileId, $propertyKey, Google_Service_Drive_Property $postBody, $optParams = array())
+  public function update($fileId, $propertyKey, Postman_Google_Service_Drive_Property $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'propertyKey' => $propertyKey, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_Property");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_Property");
   }
 }
 
@@ -2231,11 +2231,11 @@ class Google_Service_Drive_Properties_Resource extends Google_Service_Resource
  * The "realtime" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $realtime = $driveService->realtime;
  *  </code>
  */
-class Google_Service_Drive_Realtime_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Realtime_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2284,11 +2284,11 @@ class Google_Service_Drive_Realtime_Resource extends Google_Service_Resource
  * The "replies" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $replies = $driveService->replies;
  *  </code>
  */
-class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Replies_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2316,13 +2316,13 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
    *
    * @opt_param bool includeDeleted If set, this will succeed when retrieving a
    * deleted reply.
-   * @return Google_Service_Drive_CommentReply
+   * @return Postman_Google_Service_Drive_CommentReply
    */
   public function get($fileId, $commentId, $replyId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'replyId' => $replyId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_CommentReply");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_CommentReply");
   }
 
   /**
@@ -2330,15 +2330,15 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
-   * @param Google_CommentReply $postBody
+   * @param Postman_Google_CommentReply $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_CommentReply
+   * @return Postman_Google_Service_Drive_CommentReply
    */
-  public function insert($fileId, $commentId, Google_Service_Drive_CommentReply $postBody, $optParams = array())
+  public function insert($fileId, $commentId, Postman_Google_Service_Drive_CommentReply $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Drive_CommentReply");
+    return $this->call('insert', array($params), "Postman_Google_Service_Drive_CommentReply");
   }
 
   /**
@@ -2355,13 +2355,13 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
    * (with content stripped) will be returned.
    * @opt_param int maxResults The maximum number of replies to include in the
    * response, used for paging.
-   * @return Google_Service_Drive_CommentReplyList
+   * @return Postman_Google_Service_Drive_CommentReplyList
    */
   public function listReplies($fileId, $commentId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_CommentReplyList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_CommentReplyList");
   }
 
   /**
@@ -2371,15 +2371,15 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
    * @param string $replyId The ID of the reply.
-   * @param Google_CommentReply $postBody
+   * @param Postman_Google_CommentReply $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_CommentReply
+   * @return Postman_Google_Service_Drive_CommentReply
    */
-  public function patch($fileId, $commentId, $replyId, Google_Service_Drive_CommentReply $postBody, $optParams = array())
+  public function patch($fileId, $commentId, $replyId, Postman_Google_Service_Drive_CommentReply $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'replyId' => $replyId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_CommentReply");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_CommentReply");
   }
 
   /**
@@ -2388,15 +2388,15 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
    * @param string $replyId The ID of the reply.
-   * @param Google_CommentReply $postBody
+   * @param Postman_Google_CommentReply $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_CommentReply
+   * @return Postman_Google_Service_Drive_CommentReply
    */
-  public function update($fileId, $commentId, $replyId, Google_Service_Drive_CommentReply $postBody, $optParams = array())
+  public function update($fileId, $commentId, $replyId, Postman_Google_Service_Drive_CommentReply $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'commentId' => $commentId, 'replyId' => $replyId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_CommentReply");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_CommentReply");
   }
 }
 
@@ -2404,11 +2404,11 @@ class Google_Service_Drive_Replies_Resource extends Google_Service_Resource
  * The "revisions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $driveService = new Google_Service_Drive(...);
+ *   $driveService = new Postman_Google_Service_Drive(...);
  *   $revisions = $driveService->revisions;
  *  </code>
  */
-class Google_Service_Drive_Revisions_Resource extends Google_Service_Resource
+class Postman_Google_Service_Drive_Revisions_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -2431,13 +2431,13 @@ class Google_Service_Drive_Revisions_Resource extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param string $revisionId The ID of the revision.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Revision
+   * @return Postman_Google_Service_Drive_Revision
    */
   public function get($fileId, $revisionId, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'revisionId' => $revisionId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Drive_Revision");
+    return $this->call('get', array($params), "Postman_Google_Service_Drive_Revision");
   }
 
   /**
@@ -2445,13 +2445,13 @@ class Google_Service_Drive_Revisions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_RevisionList
+   * @return Postman_Google_Service_Drive_RevisionList
    */
   public function listRevisions($fileId, $optParams = array())
   {
     $params = array('fileId' => $fileId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Drive_RevisionList");
+    return $this->call('list', array($params), "Postman_Google_Service_Drive_RevisionList");
   }
 
   /**
@@ -2459,15 +2459,15 @@ class Google_Service_Drive_Revisions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID for the file.
    * @param string $revisionId The ID for the revision.
-   * @param Google_Revision $postBody
+   * @param Postman_Google_Revision $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Revision
+   * @return Postman_Google_Service_Drive_Revision
    */
-  public function patch($fileId, $revisionId, Google_Service_Drive_Revision $postBody, $optParams = array())
+  public function patch($fileId, $revisionId, Postman_Google_Service_Drive_Revision $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'revisionId' => $revisionId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Drive_Revision");
+    return $this->call('patch', array($params), "Postman_Google_Service_Drive_Revision");
   }
 
   /**
@@ -2475,45 +2475,45 @@ class Google_Service_Drive_Revisions_Resource extends Google_Service_Resource
    *
    * @param string $fileId The ID for the file.
    * @param string $revisionId The ID for the revision.
-   * @param Google_Revision $postBody
+   * @param Postman_Google_Revision $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Drive_Revision
+   * @return Postman_Google_Service_Drive_Revision
    */
-  public function update($fileId, $revisionId, Google_Service_Drive_Revision $postBody, $optParams = array())
+  public function update($fileId, $revisionId, Postman_Google_Service_Drive_Revision $postBody, $optParams = array())
   {
     $params = array('fileId' => $fileId, 'revisionId' => $revisionId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Drive_Revision");
+    return $this->call('update', array($params), "Postman_Google_Service_Drive_Revision");
   }
 }
 
 
 
 
-class Google_Service_Drive_About extends Google_Collection
+class Postman_Google_Service_Drive_About extends Postman_Google_Collection
 {
   protected $collection_key = 'quotaBytesByService';
   protected $internal_gapi_mappings = array(
   );
-  protected $additionalRoleInfoType = 'Google_Service_Drive_AboutAdditionalRoleInfo';
+  protected $additionalRoleInfoType = 'Postman_Google_Service_Drive_AboutAdditionalRoleInfo';
   protected $additionalRoleInfoDataType = 'array';
   public $domainSharingPolicy;
   public $etag;
-  protected $exportFormatsType = 'Google_Service_Drive_AboutExportFormats';
+  protected $exportFormatsType = 'Postman_Google_Service_Drive_AboutExportFormats';
   protected $exportFormatsDataType = 'array';
-  protected $featuresType = 'Google_Service_Drive_AboutFeatures';
+  protected $featuresType = 'Postman_Google_Service_Drive_AboutFeatures';
   protected $featuresDataType = 'array';
-  protected $importFormatsType = 'Google_Service_Drive_AboutImportFormats';
+  protected $importFormatsType = 'Postman_Google_Service_Drive_AboutImportFormats';
   protected $importFormatsDataType = 'array';
   public $isCurrentAppInstalled;
   public $kind;
   public $languageCode;
   public $largestChangeId;
-  protected $maxUploadSizesType = 'Google_Service_Drive_AboutMaxUploadSizes';
+  protected $maxUploadSizesType = 'Postman_Google_Service_Drive_AboutMaxUploadSizes';
   protected $maxUploadSizesDataType = 'array';
   public $name;
   public $permissionId;
-  protected $quotaBytesByServiceType = 'Google_Service_Drive_AboutQuotaBytesByService';
+  protected $quotaBytesByServiceType = 'Postman_Google_Service_Drive_AboutQuotaBytesByService';
   protected $quotaBytesByServiceDataType = 'array';
   public $quotaBytesTotal;
   public $quotaBytesUsed;
@@ -2523,7 +2523,7 @@ class Google_Service_Drive_About extends Google_Collection
   public $remainingChangeIds;
   public $rootFolderId;
   public $selfLink;
-  protected $userType = 'Google_Service_Drive_User';
+  protected $userType = 'Postman_Google_Service_Drive_User';
   protected $userDataType = '';
 
 
@@ -2703,7 +2703,7 @@ class Google_Service_Drive_About extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setUser(Google_Service_Drive_User $user)
+  public function setUser(Postman_Google_Service_Drive_User $user)
   {
     $this->user = $user;
   }
@@ -2713,12 +2713,12 @@ class Google_Service_Drive_About extends Google_Collection
   }
 }
 
-class Google_Service_Drive_AboutAdditionalRoleInfo extends Google_Collection
+class Postman_Google_Service_Drive_AboutAdditionalRoleInfo extends Postman_Google_Collection
 {
   protected $collection_key = 'roleSets';
   protected $internal_gapi_mappings = array(
   );
-  protected $roleSetsType = 'Google_Service_Drive_AboutAdditionalRoleInfoRoleSets';
+  protected $roleSetsType = 'Postman_Google_Service_Drive_AboutAdditionalRoleInfoRoleSets';
   protected $roleSetsDataType = 'array';
   public $type;
 
@@ -2741,7 +2741,7 @@ class Google_Service_Drive_AboutAdditionalRoleInfo extends Google_Collection
   }
 }
 
-class Google_Service_Drive_AboutAdditionalRoleInfoRoleSets extends Google_Collection
+class Postman_Google_Service_Drive_AboutAdditionalRoleInfoRoleSets extends Postman_Google_Collection
 {
   protected $collection_key = 'additionalRoles';
   protected $internal_gapi_mappings = array(
@@ -2768,7 +2768,7 @@ class Google_Service_Drive_AboutAdditionalRoleInfoRoleSets extends Google_Collec
   }
 }
 
-class Google_Service_Drive_AboutExportFormats extends Google_Collection
+class Postman_Google_Service_Drive_AboutExportFormats extends Postman_Google_Collection
 {
   protected $collection_key = 'targets';
   protected $internal_gapi_mappings = array(
@@ -2795,7 +2795,7 @@ class Google_Service_Drive_AboutExportFormats extends Google_Collection
   }
 }
 
-class Google_Service_Drive_AboutFeatures extends Google_Model
+class Postman_Google_Service_Drive_AboutFeatures extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2821,7 +2821,7 @@ class Google_Service_Drive_AboutFeatures extends Google_Model
   }
 }
 
-class Google_Service_Drive_AboutImportFormats extends Google_Collection
+class Postman_Google_Service_Drive_AboutImportFormats extends Postman_Google_Collection
 {
   protected $collection_key = 'targets';
   protected $internal_gapi_mappings = array(
@@ -2848,7 +2848,7 @@ class Google_Service_Drive_AboutImportFormats extends Google_Collection
   }
 }
 
-class Google_Service_Drive_AboutMaxUploadSizes extends Google_Model
+class Postman_Google_Service_Drive_AboutMaxUploadSizes extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2874,7 +2874,7 @@ class Google_Service_Drive_AboutMaxUploadSizes extends Google_Model
   }
 }
 
-class Google_Service_Drive_AboutQuotaBytesByService extends Google_Model
+class Postman_Google_Service_Drive_AboutQuotaBytesByService extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2900,7 +2900,7 @@ class Google_Service_Drive_AboutQuotaBytesByService extends Google_Model
   }
 }
 
-class Google_Service_Drive_App extends Google_Collection
+class Postman_Google_Service_Drive_App extends Postman_Google_Collection
 {
   protected $collection_key = 'secondaryMimeTypes';
   protected $internal_gapi_mappings = array(
@@ -2909,7 +2909,7 @@ class Google_Service_Drive_App extends Google_Collection
   public $createInFolderTemplate;
   public $createUrl;
   public $hasDriveWideScope;
-  protected $iconsType = 'Google_Service_Drive_AppIcons';
+  protected $iconsType = 'Postman_Google_Service_Drive_AppIcons';
   protected $iconsDataType = 'array';
   public $id;
   public $installed;
@@ -3126,7 +3126,7 @@ class Google_Service_Drive_App extends Google_Collection
   }
 }
 
-class Google_Service_Drive_AppIcons extends Google_Model
+class Postman_Google_Service_Drive_AppIcons extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3161,14 +3161,14 @@ class Google_Service_Drive_AppIcons extends Google_Model
   }
 }
 
-class Google_Service_Drive_AppList extends Google_Collection
+class Postman_Google_Service_Drive_AppList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $defaultAppIds;
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_App';
+  protected $itemsType = 'Postman_Google_Service_Drive_App';
   protected $itemsDataType = 'array';
   public $kind;
   public $selfLink;
@@ -3216,12 +3216,12 @@ class Google_Service_Drive_AppList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_Change extends Google_Model
+class Postman_Google_Service_Drive_Change extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $deleted;
-  protected $fileType = 'Google_Service_Drive_DriveFile';
+  protected $fileType = 'Postman_Google_Service_Drive_DriveFile';
   protected $fileDataType = '';
   public $fileId;
   public $id;
@@ -3238,7 +3238,7 @@ class Google_Service_Drive_Change extends Google_Model
   {
     return $this->deleted;
   }
-  public function setFile(Google_Service_Drive_DriveFile $file)
+  public function setFile(Postman_Google_Service_Drive_DriveFile $file)
   {
     $this->file = $file;
   }
@@ -3288,13 +3288,13 @@ class Google_Service_Drive_Change extends Google_Model
   }
 }
 
-class Google_Service_Drive_ChangeList extends Google_Collection
+class Postman_Google_Service_Drive_ChangeList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_Change';
+  protected $itemsType = 'Postman_Google_Service_Drive_Change';
   protected $itemsDataType = 'array';
   public $kind;
   public $largestChangeId;
@@ -3361,7 +3361,7 @@ class Google_Service_Drive_ChangeList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_Channel extends Google_Model
+class Postman_Google_Service_Drive_Channel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3459,17 +3459,17 @@ class Google_Service_Drive_Channel extends Google_Model
   }
 }
 
-class Google_Service_Drive_ChannelParams extends Google_Model
+class Postman_Google_Service_Drive_ChannelParams extends Postman_Google_Model
 {
 }
 
-class Google_Service_Drive_ChildList extends Google_Collection
+class Postman_Google_Service_Drive_ChildList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_ChildReference';
+  protected $itemsType = 'Postman_Google_Service_Drive_ChildReference';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextLink;
@@ -3527,7 +3527,7 @@ class Google_Service_Drive_ChildList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_ChildReference extends Google_Model
+class Postman_Google_Service_Drive_ChildReference extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3571,17 +3571,17 @@ class Google_Service_Drive_ChildReference extends Google_Model
   }
 }
 
-class Google_Service_Drive_Comment extends Google_Collection
+class Postman_Google_Service_Drive_Comment extends Postman_Google_Collection
 {
   protected $collection_key = 'replies';
   protected $internal_gapi_mappings = array(
   );
   public $anchor;
-  protected $authorType = 'Google_Service_Drive_User';
+  protected $authorType = 'Postman_Google_Service_Drive_User';
   protected $authorDataType = '';
   public $commentId;
   public $content;
-  protected $contextType = 'Google_Service_Drive_CommentContext';
+  protected $contextType = 'Postman_Google_Service_Drive_CommentContext';
   protected $contextDataType = '';
   public $createdDate;
   public $deleted;
@@ -3590,7 +3590,7 @@ class Google_Service_Drive_Comment extends Google_Collection
   public $htmlContent;
   public $kind;
   public $modifiedDate;
-  protected $repliesType = 'Google_Service_Drive_CommentReply';
+  protected $repliesType = 'Postman_Google_Service_Drive_CommentReply';
   protected $repliesDataType = 'array';
   public $selfLink;
   public $status;
@@ -3604,7 +3604,7 @@ class Google_Service_Drive_Comment extends Google_Collection
   {
     return $this->anchor;
   }
-  public function setAuthor(Google_Service_Drive_User $author)
+  public function setAuthor(Postman_Google_Service_Drive_User $author)
   {
     $this->author = $author;
   }
@@ -3628,7 +3628,7 @@ class Google_Service_Drive_Comment extends Google_Collection
   {
     return $this->content;
   }
-  public function setContext(Google_Service_Drive_CommentContext $context)
+  public function setContext(Postman_Google_Service_Drive_CommentContext $context)
   {
     $this->context = $context;
   }
@@ -3718,7 +3718,7 @@ class Google_Service_Drive_Comment extends Google_Collection
   }
 }
 
-class Google_Service_Drive_CommentContext extends Google_Model
+class Postman_Google_Service_Drive_CommentContext extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -3744,12 +3744,12 @@ class Google_Service_Drive_CommentContext extends Google_Model
   }
 }
 
-class Google_Service_Drive_CommentList extends Google_Collection
+class Postman_Google_Service_Drive_CommentList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Drive_Comment';
+  protected $itemsType = 'Postman_Google_Service_Drive_Comment';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextLink;
@@ -3799,11 +3799,11 @@ class Google_Service_Drive_CommentList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_CommentReply extends Google_Model
+class Postman_Google_Service_Drive_CommentReply extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $authorType = 'Google_Service_Drive_User';
+  protected $authorType = 'Postman_Google_Service_Drive_User';
   protected $authorDataType = '';
   public $content;
   public $createdDate;
@@ -3815,7 +3815,7 @@ class Google_Service_Drive_CommentReply extends Google_Model
   public $verb;
 
 
-  public function setAuthor(Google_Service_Drive_User $author)
+  public function setAuthor(Postman_Google_Service_Drive_User $author)
   {
     $this->author = $author;
   }
@@ -3889,12 +3889,12 @@ class Google_Service_Drive_CommentReply extends Google_Model
   }
 }
 
-class Google_Service_Drive_CommentReplyList extends Google_Collection
+class Postman_Google_Service_Drive_CommentReplyList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Drive_CommentReply';
+  protected $itemsType = 'Postman_Google_Service_Drive_CommentReply';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextLink;
@@ -3944,7 +3944,7 @@ class Google_Service_Drive_CommentReplyList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_DriveFile extends Google_Collection
+class Postman_Google_Service_Drive_DriveFile extends Postman_Google_Collection
 {
   protected $collection_key = 'properties';
   protected $internal_gapi_mappings = array(
@@ -3966,14 +3966,14 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   public $headRevisionId;
   public $iconLink;
   public $id;
-  protected $imageMediaMetadataType = 'Google_Service_Drive_DriveFileImageMediaMetadata';
+  protected $imageMediaMetadataType = 'Postman_Google_Service_Drive_DriveFileImageMediaMetadata';
   protected $imageMediaMetadataDataType = '';
-  protected $indexableTextType = 'Google_Service_Drive_DriveFileIndexableText';
+  protected $indexableTextType = 'Postman_Google_Service_Drive_DriveFileIndexableText';
   protected $indexableTextDataType = '';
   public $kind;
-  protected $labelsType = 'Google_Service_Drive_DriveFileLabels';
+  protected $labelsType = 'Postman_Google_Service_Drive_DriveFileLabels';
   protected $labelsDataType = '';
-  protected $lastModifyingUserType = 'Google_Service_Drive_User';
+  protected $lastModifyingUserType = 'Postman_Google_Service_Drive_User';
   protected $lastModifyingUserDataType = '';
   public $lastModifyingUserName;
   public $lastViewedByMeDate;
@@ -3985,28 +3985,28 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   public $openWithLinks;
   public $originalFilename;
   public $ownerNames;
-  protected $ownersType = 'Google_Service_Drive_User';
+  protected $ownersType = 'Postman_Google_Service_Drive_User';
   protected $ownersDataType = 'array';
-  protected $parentsType = 'Google_Service_Drive_ParentReference';
+  protected $parentsType = 'Postman_Google_Service_Drive_ParentReference';
   protected $parentsDataType = 'array';
-  protected $permissionsType = 'Google_Service_Drive_Permission';
+  protected $permissionsType = 'Postman_Google_Service_Drive_Permission';
   protected $permissionsDataType = 'array';
-  protected $propertiesType = 'Google_Service_Drive_Property';
+  protected $propertiesType = 'Postman_Google_Service_Drive_Property';
   protected $propertiesDataType = 'array';
   public $quotaBytesUsed;
   public $selfLink;
   public $shared;
   public $sharedWithMeDate;
-  protected $sharingUserType = 'Google_Service_Drive_User';
+  protected $sharingUserType = 'Postman_Google_Service_Drive_User';
   protected $sharingUserDataType = '';
-  protected $thumbnailType = 'Google_Service_Drive_DriveFileThumbnail';
+  protected $thumbnailType = 'Postman_Google_Service_Drive_DriveFileThumbnail';
   protected $thumbnailDataType = '';
   public $thumbnailLink;
   public $title;
-  protected $userPermissionType = 'Google_Service_Drive_Permission';
+  protected $userPermissionType = 'Postman_Google_Service_Drive_Permission';
   protected $userPermissionDataType = '';
   public $version;
-  protected $videoMediaMetadataType = 'Google_Service_Drive_DriveFileVideoMediaMetadata';
+  protected $videoMediaMetadataType = 'Postman_Google_Service_Drive_DriveFileVideoMediaMetadata';
   protected $videoMediaMetadataDataType = '';
   public $webContentLink;
   public $webViewLink;
@@ -4149,7 +4149,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->id;
   }
-  public function setImageMediaMetadata(Google_Service_Drive_DriveFileImageMediaMetadata $imageMediaMetadata)
+  public function setImageMediaMetadata(Postman_Google_Service_Drive_DriveFileImageMediaMetadata $imageMediaMetadata)
   {
     $this->imageMediaMetadata = $imageMediaMetadata;
   }
@@ -4157,7 +4157,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->imageMediaMetadata;
   }
-  public function setIndexableText(Google_Service_Drive_DriveFileIndexableText $indexableText)
+  public function setIndexableText(Postman_Google_Service_Drive_DriveFileIndexableText $indexableText)
   {
     $this->indexableText = $indexableText;
   }
@@ -4173,7 +4173,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels(Google_Service_Drive_DriveFileLabels $labels)
+  public function setLabels(Postman_Google_Service_Drive_DriveFileLabels $labels)
   {
     $this->labels = $labels;
   }
@@ -4181,7 +4181,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->labels;
   }
-  public function setLastModifyingUser(Google_Service_Drive_User $lastModifyingUser)
+  public function setLastModifyingUser(Postman_Google_Service_Drive_User $lastModifyingUser)
   {
     $this->lastModifyingUser = $lastModifyingUser;
   }
@@ -4333,7 +4333,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->sharedWithMeDate;
   }
-  public function setSharingUser(Google_Service_Drive_User $sharingUser)
+  public function setSharingUser(Postman_Google_Service_Drive_User $sharingUser)
   {
     $this->sharingUser = $sharingUser;
   }
@@ -4341,7 +4341,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->sharingUser;
   }
-  public function setThumbnail(Google_Service_Drive_DriveFileThumbnail $thumbnail)
+  public function setThumbnail(Postman_Google_Service_Drive_DriveFileThumbnail $thumbnail)
   {
     $this->thumbnail = $thumbnail;
   }
@@ -4365,7 +4365,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->title;
   }
-  public function setUserPermission(Google_Service_Drive_Permission $userPermission)
+  public function setUserPermission(Postman_Google_Service_Drive_Permission $userPermission)
   {
     $this->userPermission = $userPermission;
   }
@@ -4381,7 +4381,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->version;
   }
-  public function setVideoMediaMetadata(Google_Service_Drive_DriveFileVideoMediaMetadata $videoMediaMetadata)
+  public function setVideoMediaMetadata(Postman_Google_Service_Drive_DriveFileVideoMediaMetadata $videoMediaMetadata)
   {
     $this->videoMediaMetadata = $videoMediaMetadata;
   }
@@ -4415,11 +4415,11 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   }
 }
 
-class Google_Service_Drive_DriveFileExportLinks extends Google_Model
+class Postman_Google_Service_Drive_DriveFileExportLinks extends Postman_Google_Model
 {
 }
 
-class Google_Service_Drive_DriveFileImageMediaMetadata extends Google_Model
+class Postman_Google_Service_Drive_DriveFileImageMediaMetadata extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4436,7 +4436,7 @@ class Google_Service_Drive_DriveFileImageMediaMetadata extends Google_Model
   public $height;
   public $isoSpeed;
   public $lens;
-  protected $locationType = 'Google_Service_Drive_DriveFileImageMediaMetadataLocation';
+  protected $locationType = 'Postman_Google_Service_Drive_DriveFileImageMediaMetadataLocation';
   protected $locationDataType = '';
   public $maxApertureValue;
   public $meteringMode;
@@ -4551,7 +4551,7 @@ class Google_Service_Drive_DriveFileImageMediaMetadata extends Google_Model
   {
     return $this->lens;
   }
-  public function setLocation(Google_Service_Drive_DriveFileImageMediaMetadataLocation $location)
+  public function setLocation(Postman_Google_Service_Drive_DriveFileImageMediaMetadataLocation $location)
   {
     $this->location = $location;
   }
@@ -4617,7 +4617,7 @@ class Google_Service_Drive_DriveFileImageMediaMetadata extends Google_Model
   }
 }
 
-class Google_Service_Drive_DriveFileImageMediaMetadataLocation extends Google_Model
+class Postman_Google_Service_Drive_DriveFileImageMediaMetadataLocation extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4652,7 +4652,7 @@ class Google_Service_Drive_DriveFileImageMediaMetadataLocation extends Google_Mo
   }
 }
 
-class Google_Service_Drive_DriveFileIndexableText extends Google_Model
+class Postman_Google_Service_Drive_DriveFileIndexableText extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4669,7 +4669,7 @@ class Google_Service_Drive_DriveFileIndexableText extends Google_Model
   }
 }
 
-class Google_Service_Drive_DriveFileLabels extends Google_Model
+class Postman_Google_Service_Drive_DriveFileLabels extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4722,11 +4722,11 @@ class Google_Service_Drive_DriveFileLabels extends Google_Model
   }
 }
 
-class Google_Service_Drive_DriveFileOpenWithLinks extends Google_Model
+class Postman_Google_Service_Drive_DriveFileOpenWithLinks extends Postman_Google_Model
 {
 }
 
-class Google_Service_Drive_DriveFileThumbnail extends Google_Model
+class Postman_Google_Service_Drive_DriveFileThumbnail extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4752,7 +4752,7 @@ class Google_Service_Drive_DriveFileThumbnail extends Google_Model
   }
 }
 
-class Google_Service_Drive_DriveFileVideoMediaMetadata extends Google_Model
+class Postman_Google_Service_Drive_DriveFileVideoMediaMetadata extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4787,13 +4787,13 @@ class Google_Service_Drive_DriveFileVideoMediaMetadata extends Google_Model
   }
 }
 
-class Google_Service_Drive_FileList extends Google_Collection
+class Postman_Google_Service_Drive_FileList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_DriveFile';
+  protected $itemsType = 'Postman_Google_Service_Drive_DriveFile';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextLink;
@@ -4851,13 +4851,13 @@ class Google_Service_Drive_FileList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_ParentList extends Google_Collection
+class Postman_Google_Service_Drive_ParentList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_ParentReference';
+  protected $itemsType = 'Postman_Google_Service_Drive_ParentReference';
   protected $itemsDataType = 'array';
   public $kind;
   public $selfLink;
@@ -4897,7 +4897,7 @@ class Google_Service_Drive_ParentList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_ParentReference extends Google_Model
+class Postman_Google_Service_Drive_ParentReference extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -4950,7 +4950,7 @@ class Google_Service_Drive_ParentReference extends Google_Model
   }
 }
 
-class Google_Service_Drive_Permission extends Google_Collection
+class Postman_Google_Service_Drive_Permission extends Postman_Google_Collection
 {
   protected $collection_key = 'additionalRoles';
   protected $internal_gapi_mappings = array(
@@ -5085,7 +5085,7 @@ class Google_Service_Drive_Permission extends Google_Collection
   }
 }
 
-class Google_Service_Drive_PermissionId extends Google_Model
+class Postman_Google_Service_Drive_PermissionId extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5111,13 +5111,13 @@ class Google_Service_Drive_PermissionId extends Google_Model
   }
 }
 
-class Google_Service_Drive_PermissionList extends Google_Collection
+class Postman_Google_Service_Drive_PermissionList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_Permission';
+  protected $itemsType = 'Postman_Google_Service_Drive_Permission';
   protected $itemsDataType = 'array';
   public $kind;
   public $selfLink;
@@ -5157,7 +5157,7 @@ class Google_Service_Drive_PermissionList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_Property extends Google_Model
+class Postman_Google_Service_Drive_Property extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5219,13 +5219,13 @@ class Google_Service_Drive_Property extends Google_Model
   }
 }
 
-class Google_Service_Drive_PropertyList extends Google_Collection
+class Postman_Google_Service_Drive_PropertyList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_Property';
+  protected $itemsType = 'Postman_Google_Service_Drive_Property';
   protected $itemsDataType = 'array';
   public $kind;
   public $selfLink;
@@ -5265,7 +5265,7 @@ class Google_Service_Drive_PropertyList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_Revision extends Google_Model
+class Postman_Google_Service_Drive_Revision extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5275,7 +5275,7 @@ class Google_Service_Drive_Revision extends Google_Model
   public $fileSize;
   public $id;
   public $kind;
-  protected $lastModifyingUserType = 'Google_Service_Drive_User';
+  protected $lastModifyingUserType = 'Postman_Google_Service_Drive_User';
   protected $lastModifyingUserDataType = '';
   public $lastModifyingUserName;
   public $md5Checksum;
@@ -5338,7 +5338,7 @@ class Google_Service_Drive_Revision extends Google_Model
   {
     return $this->kind;
   }
-  public function setLastModifyingUser(Google_Service_Drive_User $lastModifyingUser)
+  public function setLastModifyingUser(Postman_Google_Service_Drive_User $lastModifyingUser)
   {
     $this->lastModifyingUser = $lastModifyingUser;
   }
@@ -5436,17 +5436,17 @@ class Google_Service_Drive_Revision extends Google_Model
   }
 }
 
-class Google_Service_Drive_RevisionExportLinks extends Google_Model
+class Postman_Google_Service_Drive_RevisionExportLinks extends Postman_Google_Model
 {
 }
 
-class Google_Service_Drive_RevisionList extends Google_Collection
+class Postman_Google_Service_Drive_RevisionList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
   public $etag;
-  protected $itemsType = 'Google_Service_Drive_Revision';
+  protected $itemsType = 'Postman_Google_Service_Drive_Revision';
   protected $itemsDataType = 'array';
   public $kind;
   public $selfLink;
@@ -5486,7 +5486,7 @@ class Google_Service_Drive_RevisionList extends Google_Collection
   }
 }
 
-class Google_Service_Drive_User extends Google_Model
+class Postman_Google_Service_Drive_User extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -5495,7 +5495,7 @@ class Google_Service_Drive_User extends Google_Model
   public $isAuthenticatedUser;
   public $kind;
   public $permissionId;
-  protected $pictureType = 'Google_Service_Drive_UserPicture';
+  protected $pictureType = 'Postman_Google_Service_Drive_UserPicture';
   protected $pictureDataType = '';
 
 
@@ -5539,7 +5539,7 @@ class Google_Service_Drive_User extends Google_Model
   {
     return $this->permissionId;
   }
-  public function setPicture(Google_Service_Drive_UserPicture $picture)
+  public function setPicture(Postman_Google_Service_Drive_UserPicture $picture)
   {
     $this->picture = $picture;
   }
@@ -5549,7 +5549,7 @@ class Google_Service_Drive_User extends Google_Model
   }
 }
 
-class Google_Service_Drive_UserPicture extends Google_Model
+class Postman_Google_Service_Drive_UserPicture extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

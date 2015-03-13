@@ -13,7 +13,7 @@
  * to license@zend.com so we can send you a copy immediately.
  *
  * @category   Zend
- * @package    Zend_Mail
+ * @package    Postman_Zend_Mail
  * @subpackage Transport
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
@@ -22,38 +22,37 @@
 
 /**
  *
- * @see Zend_Mime
+ * @see Postman_Zend_Mime
  */
 // require_once 'Zend/Mime.php';
 
 /**
  *
- * @see Zend_Mail_Protocol_Smtp
+ * @see Postman_Zend_Mail_Protocol_Smtp
  */
 // require_once 'Zend/Mail/Protocol/Smtp.php';
 
 /**
  *
- * @see Zend_Mail_Transport_Abstract
+ * @see Postman_Zend_Mail_Transport_Abstract
  */
 // require_once 'Zend/Mail/Transport/Abstract.php';
 
 /**
  * SMTP connection object
  *
- * Loads an instance of Zend_Mail_Protocol_Smtp and forwards smtp transactions
+ * Loads an instance of Postman_Zend_Mail_Protocol_Smtp and forwards smtp transactions
  *
  * @category Zend
- * @package Zend_Mail
+ * @package Postman_Zend_Mail
  * @subpackage Transport
  * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license http://framework.zend.com/license/new-bsd New BSD License
  */
 if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
-	class PostmanZendMailTransportGmailApi extends Zend_Mail_Transport_Abstract {
+	class PostmanZendMailTransportGmailApi extends Postman_Zend_Mail_Transport_Abstract {
 		const SERVICE_OPTION = 'service';
 		const SENDER_EMAIL_OPTION = 'sender_email';
-		
 		private $logger;
 		
 		/**
@@ -100,9 +99,9 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		protected $_config;
 		
 		/**
-		 * Instance of Zend_Mail_Protocol_Smtp
+		 * Instance of Postman_Zend_Mail_Protocol_Smtp
 		 *
-		 * @var Zend_Mail_Protocol_Smtp
+		 * @var Postman_Zend_Mail_Protocol_Smtp
 		 */
 		protected $_connection;
 		
@@ -131,7 +130,7 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 			
 			$this->_host = $host;
 			$this->_config = $config;
-			$this->logger = new PostmanLogger('PostmanZendMailTransportGmailApi');
+			$this->logger = new PostmanLogger ( get_class ( $this ) );
 		}
 		
 		/**
@@ -140,10 +139,10 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		 * @return void
 		 */
 		public function __destruct() {
-			if ($this->_connection instanceof Zend_Mail_Protocol_Smtp) {
+			if ($this->_connection instanceof Postman_Zend_Mail_Protocol_Smtp) {
 				try {
 					$this->_connection->quit ();
-				} catch ( Zend_Mail_Protocol_Exception $e ) {
+				} catch ( Postman_Zend_Mail_Protocol_Exception $e ) {
 					// ignore
 				}
 				$this->_connection->disconnect ();
@@ -153,18 +152,18 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		/**
 		 * Sets the connection protocol instance
 		 *
-		 * @param Zend_Mail_Protocol_Abstract $client        	
+		 * @param Postman_Zend_Mail_Protocol_Abstract $client        	
 		 *
 		 * @return void
 		 */
-		public function setConnection(Zend_Mail_Protocol_Abstract $connection) {
+		public function setConnection(Postman_Zend_Mail_Protocol_Abstract $connection) {
 			$this->_connection = $connection;
 		}
 		
 		/**
 		 * Gets the connection protocol instance
 		 *
-		 * @return Zend_Mail_Protocol|null
+		 * @return Postman_Zend_Mail_Protocol|null
 		 */
 		public function getConnection() {
 			return $this->_connection;
@@ -172,7 +171,7 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		
 		/**
 		 * Send an email via the Gmail API
-		 * 
+		 *
 		 * Uses URI https://www.googleapis.com
 		 *
 		 *
@@ -182,16 +181,15 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		public function _sendMail() {
 			
 			// Prepare the message in message/rfc822
-			$message = $this->header . Zend_Mime::LINEEND . $this->body;
+			$message = $this->header . Postman_Zend_Mime::LINEEND . $this->body;
 			$this->logger->debug ( 'message: ' . $message );
 			
 			// The message needs to be encoded in Base64URL
 			$mime = rtrim ( strtr ( base64_encode ( $message ), '+/', '-_' ), '=' );
-			$msg = new Google_Service_Gmail_Message ();
+			$msg = new Postman_Google_Service_Gmail_Message ();
 			$msg->setRaw ( $mime );
 			$service = $this->_config [self::SERVICE_OPTION];
 			$service->users_messages->send ( 'me', $msg );
-			
 		}
 		
 		/**
@@ -202,16 +200,16 @@ if (! class_exists ( 'PostmanZendMailTransportGmailApi' )) {
 		 * @access protected
 		 * @param array $headers        	
 		 * @return void
-		 * @throws Zend_Transport_Exception
+		 * @throws Postman_Zend_Transport_Exception
 		 */
 		protected function _prepareHeaders($headers) {
 			if (! $this->_mail) {
 				/**
 				 *
-				 * @see Zend_Mail_Transport_Exception
+				 * @see Postman_Zend_Mail_Transport_Exception
 				 */
 				// require_once 'Zend/Mail/Transport/Exception.php';
-				throw new Zend_Mail_Transport_Exception ( '_prepareHeaders requires a registered Zend_Mail object' );
+				throw new Postman_Zend_Mail_Transport_Exception ( '_prepareHeaders requires a registered Postman_Zend_Mail object' );
 			}
 			
 			unset ( $headers ['Bcc'] );

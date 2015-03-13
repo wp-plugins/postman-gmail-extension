@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_GamesManagement extends Google_Service
+class Postman_Google_Service_GamesManagement extends Postman_Google_Service
 {
   /** Share your Google+ profile information and view and manage your game activity. */
   const GAMES =
@@ -50,16 +50,16 @@ class Google_Service_GamesManagement extends Google_Service
   /**
    * Constructs the internal representation of the GamesManagement service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'games/v1management/';
     $this->version = 'v1management';
     $this->serviceName = 'gamesManagement';
 
-    $this->achievements = new Google_Service_GamesManagement_Achievements_Resource(
+    $this->achievements = new Postman_Google_Service_GamesManagement_Achievements_Resource(
         $this,
         $this->serviceName,
         'achievements',
@@ -101,7 +101,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->applications = new Google_Service_GamesManagement_Applications_Resource(
+    $this->applications = new Postman_Google_Service_GamesManagement_Applications_Resource(
         $this,
         $this->serviceName,
         'applications',
@@ -129,7 +129,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->events = new Google_Service_GamesManagement_Events_Resource(
+    $this->events = new Postman_Google_Service_GamesManagement_Events_Resource(
         $this,
         $this->serviceName,
         'events',
@@ -171,7 +171,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->players = new Google_Service_GamesManagement_Players_Resource(
+    $this->players = new Postman_Google_Service_GamesManagement_Players_Resource(
         $this,
         $this->serviceName,
         'players',
@@ -211,7 +211,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->quests = new Google_Service_GamesManagement_Quests_Resource(
+    $this->quests = new Postman_Google_Service_GamesManagement_Quests_Resource(
         $this,
         $this->serviceName,
         'quests',
@@ -253,7 +253,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->rooms = new Google_Service_GamesManagement_Rooms_Resource(
+    $this->rooms = new Postman_Google_Service_GamesManagement_Rooms_Resource(
         $this,
         $this->serviceName,
         'rooms',
@@ -271,7 +271,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->scores = new Google_Service_GamesManagement_Scores_Resource(
+    $this->scores = new Postman_Google_Service_GamesManagement_Scores_Resource(
         $this,
         $this->serviceName,
         'scores',
@@ -313,7 +313,7 @@ class Google_Service_GamesManagement extends Google_Service
           )
         )
     );
-    $this->turnBasedMatches = new Google_Service_GamesManagement_TurnBasedMatches_Resource(
+    $this->turnBasedMatches = new Postman_Google_Service_GamesManagement_TurnBasedMatches_Resource(
         $this,
         $this->serviceName,
         'turnBasedMatches',
@@ -339,11 +339,11 @@ class Google_Service_GamesManagement extends Google_Service
  * The "achievements" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $achievements = $gamesManagementService->achievements;
  *  </code>
  */
-class Google_Service_GamesManagement_Achievements_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Achievements_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -353,13 +353,13 @@ class Google_Service_GamesManagement_Achievements_Resource extends Google_Servic
    *
    * @param string $achievementId The ID of the achievement used by this method.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_GamesManagement_AchievementResetResponse
+   * @return Postman_Google_Service_GamesManagement_AchievementResetResponse
    */
   public function reset($achievementId, $optParams = array())
   {
     $params = array('achievementId' => $achievementId);
     $params = array_merge($params, $optParams);
-    return $this->call('reset', array($params), "Google_Service_GamesManagement_AchievementResetResponse");
+    return $this->call('reset', array($params), "Postman_Google_Service_GamesManagement_AchievementResetResponse");
   }
 
   /**
@@ -368,13 +368,13 @@ class Google_Service_GamesManagement_Achievements_Resource extends Google_Servic
    * for your application. (achievements.resetAll)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_GamesManagement_AchievementResetAllResponse
+   * @return Postman_Google_Service_GamesManagement_AchievementResetAllResponse
    */
   public function resetAll($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('resetAll', array($params), "Google_Service_GamesManagement_AchievementResetAllResponse");
+    return $this->call('resetAll', array($params), "Postman_Google_Service_GamesManagement_AchievementResetAllResponse");
   }
 
   /**
@@ -411,10 +411,10 @@ class Google_Service_GamesManagement_Achievements_Resource extends Google_Servic
    * available to user accounts for your developer console. Only draft
    * achievements may be reset. (achievements.resetMultipleForAllPlayers)
    *
-   * @param Google_AchievementResetMultipleForAllRequest $postBody
+   * @param Postman_Google_AchievementResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function resetMultipleForAllPlayers(Google_Service_GamesManagement_AchievementResetMultipleForAllRequest $postBody, $optParams = array())
+  public function resetMultipleForAllPlayers(Postman_Google_Service_GamesManagement_AchievementResetMultipleForAllRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -426,11 +426,11 @@ class Google_Service_GamesManagement_Achievements_Resource extends Google_Servic
  * The "applications" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $applications = $gamesManagementService->applications;
  *  </code>
  */
-class Google_Service_GamesManagement_Applications_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Applications_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -446,13 +446,13 @@ class Google_Service_GamesManagement_Applications_Resource extends Google_Servic
    * @opt_param int maxResults The maximum number of player resources to return in
    * the response, used for paging. For any response, the actual number of player
    * resources returned may be less than the specified maxResults.
-   * @return Google_Service_GamesManagement_HiddenPlayerList
+   * @return Postman_Google_Service_GamesManagement_HiddenPlayerList
    */
   public function listHidden($applicationId, $optParams = array())
   {
     $params = array('applicationId' => $applicationId);
     $params = array_merge($params, $optParams);
-    return $this->call('listHidden', array($params), "Google_Service_GamesManagement_HiddenPlayerList");
+    return $this->call('listHidden', array($params), "Postman_Google_Service_GamesManagement_HiddenPlayerList");
   }
 }
 
@@ -460,11 +460,11 @@ class Google_Service_GamesManagement_Applications_Resource extends Google_Servic
  * The "events" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $events = $gamesManagementService->events;
  *  </code>
  */
-class Google_Service_GamesManagement_Events_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Events_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -534,10 +534,10 @@ class Google_Service_GamesManagement_Events_Resource extends Google_Service_Reso
    * be reset. All quests that use any of the events will also be reset.
    * (events.resetMultipleForAllPlayers)
    *
-   * @param Google_EventsResetMultipleForAllRequest $postBody
+   * @param Postman_Google_EventsResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function resetMultipleForAllPlayers(Google_Service_GamesManagement_EventsResetMultipleForAllRequest $postBody, $optParams = array())
+  public function resetMultipleForAllPlayers(Postman_Google_Service_GamesManagement_EventsResetMultipleForAllRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -549,11 +549,11 @@ class Google_Service_GamesManagement_Events_Resource extends Google_Service_Reso
  * The "players" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $players = $gamesManagementService->players;
  *  </code>
  */
-class Google_Service_GamesManagement_Players_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Players_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -597,11 +597,11 @@ class Google_Service_GamesManagement_Players_Resource extends Google_Service_Res
  * The "quests" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $quests = $gamesManagementService->quests;
  *  </code>
  */
-class Google_Service_GamesManagement_Quests_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Quests_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -666,10 +666,10 @@ class Google_Service_GamesManagement_Quests_Resource extends Google_Service_Reso
    * available to user accounts for your developer console. Only draft quests may
    * be reset. (quests.resetMultipleForAllPlayers)
    *
-   * @param Google_QuestsResetMultipleForAllRequest $postBody
+   * @param Postman_Google_QuestsResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function resetMultipleForAllPlayers(Google_Service_GamesManagement_QuestsResetMultipleForAllRequest $postBody, $optParams = array())
+  public function resetMultipleForAllPlayers(Postman_Google_Service_GamesManagement_QuestsResetMultipleForAllRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -681,11 +681,11 @@ class Google_Service_GamesManagement_Quests_Resource extends Google_Service_Reso
  * The "rooms" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $rooms = $gamesManagementService->rooms;
  *  </code>
  */
-class Google_Service_GamesManagement_Rooms_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Rooms_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -721,11 +721,11 @@ class Google_Service_GamesManagement_Rooms_Resource extends Google_Service_Resou
  * The "scores" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $scores = $gamesManagementService->scores;
  *  </code>
  */
-class Google_Service_GamesManagement_Scores_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_Scores_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -735,13 +735,13 @@ class Google_Service_GamesManagement_Scores_Resource extends Google_Service_Reso
    *
    * @param string $leaderboardId The ID of the leaderboard.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_GamesManagement_PlayerScoreResetResponse
+   * @return Postman_Google_Service_GamesManagement_PlayerScoreResetResponse
    */
   public function reset($leaderboardId, $optParams = array())
   {
     $params = array('leaderboardId' => $leaderboardId);
     $params = array_merge($params, $optParams);
-    return $this->call('reset', array($params), "Google_Service_GamesManagement_PlayerScoreResetResponse");
+    return $this->call('reset', array($params), "Postman_Google_Service_GamesManagement_PlayerScoreResetResponse");
   }
 
   /**
@@ -750,13 +750,13 @@ class Google_Service_GamesManagement_Scores_Resource extends Google_Service_Reso
    * your application. (scores.resetAll)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_GamesManagement_PlayerScoreResetAllResponse
+   * @return Postman_Google_Service_GamesManagement_PlayerScoreResetAllResponse
    */
   public function resetAll($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('resetAll', array($params), "Google_Service_GamesManagement_PlayerScoreResetAllResponse");
+    return $this->call('resetAll', array($params), "Postman_Google_Service_GamesManagement_PlayerScoreResetAllResponse");
   }
 
   /**
@@ -793,10 +793,10 @@ class Google_Service_GamesManagement_Scores_Resource extends Google_Service_Reso
    * method is only available to user accounts for your developer console. Only
    * draft leaderboards may be reset. (scores.resetMultipleForAllPlayers)
    *
-   * @param Google_ScoresResetMultipleForAllRequest $postBody
+   * @param Postman_Google_ScoresResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
-  public function resetMultipleForAllPlayers(Google_Service_GamesManagement_ScoresResetMultipleForAllRequest $postBody, $optParams = array())
+  public function resetMultipleForAllPlayers(Postman_Google_Service_GamesManagement_ScoresResetMultipleForAllRequest $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -808,11 +808,11 @@ class Google_Service_GamesManagement_Scores_Resource extends Google_Service_Reso
  * The "turnBasedMatches" collection of methods.
  * Typical usage is:
  *  <code>
- *   $gamesManagementService = new Google_Service_GamesManagement(...);
+ *   $gamesManagementService = new Postman_Google_Service_GamesManagement(...);
  *   $turnBasedMatches = $gamesManagementService->turnBasedMatches;
  *  </code>
  */
-class Google_Service_GamesManagement_TurnBasedMatches_Resource extends Google_Service_Resource
+class Postman_Google_Service_GamesManagement_TurnBasedMatches_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -847,13 +847,13 @@ class Google_Service_GamesManagement_TurnBasedMatches_Resource extends Google_Se
 
 
 
-class Google_Service_GamesManagement_AchievementResetAllResponse extends Google_Collection
+class Postman_Google_Service_GamesManagement_AchievementResetAllResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'results';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $resultsType = 'Google_Service_GamesManagement_AchievementResetResponse';
+  protected $resultsType = 'Postman_Google_Service_GamesManagement_AchievementResetResponse';
   protected $resultsDataType = 'array';
 
 
@@ -875,7 +875,7 @@ class Google_Service_GamesManagement_AchievementResetAllResponse extends Google_
   }
 }
 
-class Google_Service_GamesManagement_AchievementResetMultipleForAllRequest extends Google_Collection
+class Postman_Google_Service_GamesManagement_AchievementResetMultipleForAllRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'achievement_ids';
   protected $internal_gapi_mappings = array(
@@ -903,7 +903,7 @@ class Google_Service_GamesManagement_AchievementResetMultipleForAllRequest exten
   }
 }
 
-class Google_Service_GamesManagement_AchievementResetResponse extends Google_Model
+class Postman_Google_Service_GamesManagement_AchievementResetResponse extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -947,7 +947,7 @@ class Google_Service_GamesManagement_AchievementResetResponse extends Google_Mod
   }
 }
 
-class Google_Service_GamesManagement_EventsResetMultipleForAllRequest extends Google_Collection
+class Postman_Google_Service_GamesManagement_EventsResetMultipleForAllRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'event_ids';
   protected $internal_gapi_mappings = array(
@@ -975,7 +975,7 @@ class Google_Service_GamesManagement_EventsResetMultipleForAllRequest extends Go
   }
 }
 
-class Google_Service_GamesManagement_GamesPlayedResource extends Google_Model
+class Postman_Google_Service_GamesManagement_GamesPlayedResource extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1001,15 +1001,15 @@ class Google_Service_GamesManagement_GamesPlayedResource extends Google_Model
   }
 }
 
-class Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends Google_Model
+class Postman_Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $currentExperiencePoints;
-  protected $currentLevelType = 'Google_Service_GamesManagement_GamesPlayerLevelResource';
+  protected $currentLevelType = 'Postman_Google_Service_GamesManagement_GamesPlayerLevelResource';
   protected $currentLevelDataType = '';
   public $lastLevelUpTimestampMillis;
-  protected $nextLevelType = 'Google_Service_GamesManagement_GamesPlayerLevelResource';
+  protected $nextLevelType = 'Postman_Google_Service_GamesManagement_GamesPlayerLevelResource';
   protected $nextLevelDataType = '';
 
 
@@ -1021,7 +1021,7 @@ class Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends G
   {
     return $this->currentExperiencePoints;
   }
-  public function setCurrentLevel(Google_Service_GamesManagement_GamesPlayerLevelResource $currentLevel)
+  public function setCurrentLevel(Postman_Google_Service_GamesManagement_GamesPlayerLevelResource $currentLevel)
   {
     $this->currentLevel = $currentLevel;
   }
@@ -1037,7 +1037,7 @@ class Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends G
   {
     return $this->lastLevelUpTimestampMillis;
   }
-  public function setNextLevel(Google_Service_GamesManagement_GamesPlayerLevelResource $nextLevel)
+  public function setNextLevel(Postman_Google_Service_GamesManagement_GamesPlayerLevelResource $nextLevel)
   {
     $this->nextLevel = $nextLevel;
   }
@@ -1047,7 +1047,7 @@ class Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends G
   }
 }
 
-class Google_Service_GamesManagement_GamesPlayerLevelResource extends Google_Model
+class Postman_Google_Service_GamesManagement_GamesPlayerLevelResource extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1082,13 +1082,13 @@ class Google_Service_GamesManagement_GamesPlayerLevelResource extends Google_Mod
   }
 }
 
-class Google_Service_GamesManagement_HiddenPlayer extends Google_Model
+class Postman_Google_Service_GamesManagement_HiddenPlayer extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $hiddenTimeMillis;
   public $kind;
-  protected $playerType = 'Google_Service_GamesManagement_Player';
+  protected $playerType = 'Postman_Google_Service_GamesManagement_Player';
   protected $playerDataType = '';
 
 
@@ -1108,7 +1108,7 @@ class Google_Service_GamesManagement_HiddenPlayer extends Google_Model
   {
     return $this->kind;
   }
-  public function setPlayer(Google_Service_GamesManagement_Player $player)
+  public function setPlayer(Postman_Google_Service_GamesManagement_Player $player)
   {
     $this->player = $player;
   }
@@ -1118,12 +1118,12 @@ class Google_Service_GamesManagement_HiddenPlayer extends Google_Model
   }
 }
 
-class Google_Service_GamesManagement_HiddenPlayerList extends Google_Collection
+class Postman_Google_Service_GamesManagement_HiddenPlayerList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_GamesManagement_HiddenPlayer';
+  protected $itemsType = 'Postman_Google_Service_GamesManagement_HiddenPlayer';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1155,18 +1155,18 @@ class Google_Service_GamesManagement_HiddenPlayerList extends Google_Collection
   }
 }
 
-class Google_Service_GamesManagement_Player extends Google_Model
+class Postman_Google_Service_GamesManagement_Player extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $avatarImageUrl;
   public $displayName;
-  protected $experienceInfoType = 'Google_Service_GamesManagement_GamesPlayerExperienceInfoResource';
+  protected $experienceInfoType = 'Postman_Google_Service_GamesManagement_GamesPlayerExperienceInfoResource';
   protected $experienceInfoDataType = '';
   public $kind;
-  protected $lastPlayedWithType = 'Google_Service_GamesManagement_GamesPlayedResource';
+  protected $lastPlayedWithType = 'Postman_Google_Service_GamesManagement_GamesPlayedResource';
   protected $lastPlayedWithDataType = '';
-  protected $nameType = 'Google_Service_GamesManagement_PlayerName';
+  protected $nameType = 'Postman_Google_Service_GamesManagement_PlayerName';
   protected $nameDataType = '';
   public $playerId;
   public $title;
@@ -1188,7 +1188,7 @@ class Google_Service_GamesManagement_Player extends Google_Model
   {
     return $this->displayName;
   }
-  public function setExperienceInfo(Google_Service_GamesManagement_GamesPlayerExperienceInfoResource $experienceInfo)
+  public function setExperienceInfo(Postman_Google_Service_GamesManagement_GamesPlayerExperienceInfoResource $experienceInfo)
   {
     $this->experienceInfo = $experienceInfo;
   }
@@ -1204,7 +1204,7 @@ class Google_Service_GamesManagement_Player extends Google_Model
   {
     return $this->kind;
   }
-  public function setLastPlayedWith(Google_Service_GamesManagement_GamesPlayedResource $lastPlayedWith)
+  public function setLastPlayedWith(Postman_Google_Service_GamesManagement_GamesPlayedResource $lastPlayedWith)
   {
     $this->lastPlayedWith = $lastPlayedWith;
   }
@@ -1212,7 +1212,7 @@ class Google_Service_GamesManagement_Player extends Google_Model
   {
     return $this->lastPlayedWith;
   }
-  public function setName(Google_Service_GamesManagement_PlayerName $name)
+  public function setName(Postman_Google_Service_GamesManagement_PlayerName $name)
   {
     $this->name = $name;
   }
@@ -1238,7 +1238,7 @@ class Google_Service_GamesManagement_Player extends Google_Model
   }
 }
 
-class Google_Service_GamesManagement_PlayerName extends Google_Model
+class Postman_Google_Service_GamesManagement_PlayerName extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1264,13 +1264,13 @@ class Google_Service_GamesManagement_PlayerName extends Google_Model
   }
 }
 
-class Google_Service_GamesManagement_PlayerScoreResetAllResponse extends Google_Collection
+class Postman_Google_Service_GamesManagement_PlayerScoreResetAllResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'results';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $resultsType = 'Google_Service_GamesManagement_PlayerScoreResetResponse';
+  protected $resultsType = 'Postman_Google_Service_GamesManagement_PlayerScoreResetResponse';
   protected $resultsDataType = 'array';
 
 
@@ -1292,7 +1292,7 @@ class Google_Service_GamesManagement_PlayerScoreResetAllResponse extends Google_
   }
 }
 
-class Google_Service_GamesManagement_PlayerScoreResetResponse extends Google_Collection
+class Postman_Google_Service_GamesManagement_PlayerScoreResetResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'resetScoreTimeSpans';
   protected $internal_gapi_mappings = array(
@@ -1328,7 +1328,7 @@ class Google_Service_GamesManagement_PlayerScoreResetResponse extends Google_Col
   }
 }
 
-class Google_Service_GamesManagement_QuestsResetMultipleForAllRequest extends Google_Collection
+class Postman_Google_Service_GamesManagement_QuestsResetMultipleForAllRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'quest_ids';
   protected $internal_gapi_mappings = array(
@@ -1356,7 +1356,7 @@ class Google_Service_GamesManagement_QuestsResetMultipleForAllRequest extends Go
   }
 }
 
-class Google_Service_GamesManagement_ScoresResetMultipleForAllRequest extends Google_Collection
+class Postman_Google_Service_GamesManagement_ScoresResetMultipleForAllRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'leaderboard_ids';
   protected $internal_gapi_mappings = array(

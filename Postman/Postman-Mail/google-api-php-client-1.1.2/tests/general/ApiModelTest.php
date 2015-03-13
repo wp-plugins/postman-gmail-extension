@@ -59,8 +59,8 @@ class ApiModelTest extends BaseTest
          }',
         true
     );
-    $event = new Google_Service_Calendar_Event($data);
-    $date = new Google_Service_Calendar_EventDateTime();
+    $event = new Postman_Google_Service_Calendar_Event($data);
+    $date = new Postman_Google_Service_Calendar_EventDateTime();
     date_default_timezone_set('UTC');
     $dateString = Date("c");
     $summary = "hello";
@@ -73,14 +73,14 @@ class ApiModelTest extends BaseTest
     $this->assertEquals($dateString, $simpleEvent->end->date);
     $this->assertEquals($summary, $simpleEvent->summary);
 
-    $event2 = new Google_Service_Calendar_Event();
+    $event2 = new Postman_Google_Service_Calendar_Event();
     $this->assertNull($event2->getStart());
   }
 
   public function testVariantTypes()
   {
-    $feature = new Google_Service_MapsEngine_Feature();
-    $geometry = new Google_Service_MapsEngine_GeoJsonPoint();
+    $feature = new Postman_Google_Service_MapsEngine_Feature();
+    $geometry = new Postman_Google_Service_MapsEngine_GeoJsonPoint();
     $geometry->setCoordinates(array(1, 0));
     $feature->setGeometry($geometry);
     $data = json_decode(json_encode($feature->toSimpleObject()), true);
@@ -90,7 +90,7 @@ class ApiModelTest extends BaseTest
 
   public function testOddMappingNames()
   {
-    $creative = new Google_Service_AdExchangeBuyer_Creative();
+    $creative = new Postman_Google_Service_AdExchangeBuyer_Creative();
     $creative->setAccountId('12345');
     $creative->setBuyerCreativeId('12345');
     $creative->setAdvertiserName('Hi');
@@ -107,13 +107,13 @@ class ApiModelTest extends BaseTest
 
   public function testJsonStructure()
   {
-    $model = new Google_Model();
+    $model = new Postman_Google_Model();
     $model->publicA = "This is a string";
-    $model2 = new Google_Model();
+    $model2 = new Postman_Google_Model();
     $model2->publicC = 12345;
     $model2->publicD = null;
     $model->publicB = $model2;
-    $model3 = new Google_Model();
+    $model3 = new Postman_Google_Model();
     $model3->publicE = 54321;
     $model3->publicF = null;
     $model->publicG = array($model3, "hello", false);
@@ -135,14 +135,14 @@ class ApiModelTest extends BaseTest
 
   public function testIssetPropertyOnModel()
   {
-    $model = new Google_Model();
+    $model = new Postman_Google_Model();
     $model['foo'] = 'bar';
     $this->assertTrue(isset($model->foo));
   }
 
   public function testUnsetPropertyOnModel()
   {
-    $model = new Google_Model();
+    $model = new Postman_Google_Model();
     $model['foo'] = 'bar';
     unset($model->foo);
     $this->assertFalse(isset($model->foo));
@@ -165,7 +165,7 @@ class ApiModelTest extends BaseTest
          }',
         true
     );
-    $collection = new Google_Service_Calendar_Events($data);
+    $collection = new Postman_Google_Service_Calendar_Events($data);
     $this->assertEquals(4, count($collection));
     $count = 0;
     foreach ($collection as $col) {

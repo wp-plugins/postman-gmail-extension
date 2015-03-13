@@ -22,7 +22,7 @@ require_once realpath(dirname(__FILE__) . '/../../../autoload.php');
  *
  * This logger simply discards all messages.
  */
-class Google_Logger_Null extends Google_Logger_Abstract
+class Postman_Google_Logger_Null extends Postman_Google_Logger_Abstract
 {
   /**
    * {@inheritdoc}

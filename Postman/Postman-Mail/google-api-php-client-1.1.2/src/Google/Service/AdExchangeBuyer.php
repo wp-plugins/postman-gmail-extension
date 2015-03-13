@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_AdExchangeBuyer extends Google_Service
+class Postman_Google_Service_AdExchangeBuyer extends Postman_Google_Service
 {
   /** Manage your Ad Exchange buyer account configuration. */
   const ADEXCHANGE_BUYER =
@@ -46,16 +46,16 @@ class Google_Service_AdExchangeBuyer extends Google_Service
   /**
    * Constructs the internal representation of the AdExchangeBuyer service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'adexchangebuyer/v1.3/';
     $this->version = 'v1.3';
     $this->serviceName = 'adexchangebuyer';
 
-    $this->accounts = new Google_Service_AdExchangeBuyer_Accounts_Resource(
+    $this->accounts = new Postman_Google_Service_AdExchangeBuyer_Accounts_Resource(
         $this,
         $this->serviceName,
         'accounts',
@@ -99,7 +99,7 @@ class Google_Service_AdExchangeBuyer extends Google_Service
           )
         )
     );
-    $this->billingInfo = new Google_Service_AdExchangeBuyer_BillingInfo_Resource(
+    $this->billingInfo = new Postman_Google_Service_AdExchangeBuyer_BillingInfo_Resource(
         $this,
         $this->serviceName,
         'billingInfo',
@@ -123,7 +123,7 @@ class Google_Service_AdExchangeBuyer extends Google_Service
           )
         )
     );
-    $this->creatives = new Google_Service_AdExchangeBuyer_Creatives_Resource(
+    $this->creatives = new Postman_Google_Service_AdExchangeBuyer_Creatives_Resource(
         $this,
         $this->serviceName,
         'creatives',
@@ -179,7 +179,7 @@ class Google_Service_AdExchangeBuyer extends Google_Service
           )
         )
     );
-    $this->directDeals = new Google_Service_AdExchangeBuyer_DirectDeals_Resource(
+    $this->directDeals = new Postman_Google_Service_AdExchangeBuyer_DirectDeals_Resource(
         $this,
         $this->serviceName,
         'directDeals',
@@ -203,7 +203,7 @@ class Google_Service_AdExchangeBuyer extends Google_Service
           )
         )
     );
-    $this->performanceReport = new Google_Service_AdExchangeBuyer_PerformanceReport_Resource(
+    $this->performanceReport = new Postman_Google_Service_AdExchangeBuyer_PerformanceReport_Resource(
         $this,
         $this->serviceName,
         'performanceReport',
@@ -241,7 +241,7 @@ class Google_Service_AdExchangeBuyer extends Google_Service
           )
         )
     );
-    $this->pretargetingConfig = new Google_Service_AdExchangeBuyer_PretargetingConfig_Resource(
+    $this->pretargetingConfig = new Postman_Google_Service_AdExchangeBuyer_PretargetingConfig_Resource(
         $this,
         $this->serviceName,
         'pretargetingConfig',
@@ -339,11 +339,11 @@ class Google_Service_AdExchangeBuyer extends Google_Service
  * The "accounts" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $accounts = $adexchangebuyerService->accounts;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_Accounts_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_Accounts_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -351,26 +351,26 @@ class Google_Service_AdExchangeBuyer_Accounts_Resource extends Google_Service_Re
    *
    * @param int $id The account id
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_Account
+   * @return Postman_Google_Service_AdExchangeBuyer_Account
    */
   public function get($id, $optParams = array())
   {
     $params = array('id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeBuyer_Account");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeBuyer_Account");
   }
 
   /**
    * Retrieves the authenticated user's list of accounts. (accounts.listAccounts)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_AccountsList
+   * @return Postman_Google_Service_AdExchangeBuyer_AccountsList
    */
   public function listAccounts($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_AccountsList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_AccountsList");
   }
 
   /**
@@ -378,30 +378,30 @@ class Google_Service_AdExchangeBuyer_Accounts_Resource extends Google_Service_Re
    * (accounts.patch)
    *
    * @param int $id The account id
-   * @param Google_Account $postBody
+   * @param Postman_Google_Account $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_Account
+   * @return Postman_Google_Service_AdExchangeBuyer_Account
    */
-  public function patch($id, Google_Service_AdExchangeBuyer_Account $postBody, $optParams = array())
+  public function patch($id, Postman_Google_Service_AdExchangeBuyer_Account $postBody, $optParams = array())
   {
     $params = array('id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AdExchangeBuyer_Account");
+    return $this->call('patch', array($params), "Postman_Google_Service_AdExchangeBuyer_Account");
   }
 
   /**
    * Updates an existing account. (accounts.update)
    *
    * @param int $id The account id
-   * @param Google_Account $postBody
+   * @param Postman_Google_Account $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_Account
+   * @return Postman_Google_Service_AdExchangeBuyer_Account
    */
-  public function update($id, Google_Service_AdExchangeBuyer_Account $postBody, $optParams = array())
+  public function update($id, Postman_Google_Service_AdExchangeBuyer_Account $postBody, $optParams = array())
   {
     $params = array('id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AdExchangeBuyer_Account");
+    return $this->call('update', array($params), "Postman_Google_Service_AdExchangeBuyer_Account");
   }
 }
 
@@ -409,11 +409,11 @@ class Google_Service_AdExchangeBuyer_Accounts_Resource extends Google_Service_Re
  * The "billingInfo" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $billingInfo = $adexchangebuyerService->billingInfo;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_BillingInfo_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_BillingInfo_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -422,13 +422,13 @@ class Google_Service_AdExchangeBuyer_BillingInfo_Resource extends Google_Service
    *
    * @param int $accountId The account id.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_BillingInfo
+   * @return Postman_Google_Service_AdExchangeBuyer_BillingInfo
    */
   public function get($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeBuyer_BillingInfo");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeBuyer_BillingInfo");
   }
 
   /**
@@ -436,13 +436,13 @@ class Google_Service_AdExchangeBuyer_BillingInfo_Resource extends Google_Service
    * user. (billingInfo.listBillingInfo)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_BillingInfoList
+   * @return Postman_Google_Service_AdExchangeBuyer_BillingInfoList
    */
   public function listBillingInfo($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_BillingInfoList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_BillingInfoList");
   }
 }
 
@@ -450,11 +450,11 @@ class Google_Service_AdExchangeBuyer_BillingInfo_Resource extends Google_Service
  * The "creatives" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $creatives = $adexchangebuyerService->creatives;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_Creatives_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_Creatives_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -464,27 +464,27 @@ class Google_Service_AdExchangeBuyer_Creatives_Resource extends Google_Service_R
    * @param int $accountId The id for the account that will serve this creative.
    * @param string $buyerCreativeId The buyer-specific id for this creative.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_Creative
+   * @return Postman_Google_Service_AdExchangeBuyer_Creative
    */
   public function get($accountId, $buyerCreativeId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'buyerCreativeId' => $buyerCreativeId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeBuyer_Creative");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeBuyer_Creative");
   }
 
   /**
    * Submit a new creative. (creatives.insert)
    *
-   * @param Google_Creative $postBody
+   * @param Postman_Google_Creative $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_Creative
+   * @return Postman_Google_Service_AdExchangeBuyer_Creative
    */
-  public function insert(Google_Service_AdExchangeBuyer_Creative $postBody, $optParams = array())
+  public function insert(Postman_Google_Service_AdExchangeBuyer_Creative $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_AdExchangeBuyer_Creative");
+    return $this->call('insert', array($params), "Postman_Google_Service_AdExchangeBuyer_Creative");
   }
 
   /**
@@ -504,13 +504,13 @@ class Google_Service_AdExchangeBuyer_Creatives_Resource extends Google_Service_R
    * given buyer creative ids are returned.
    * @opt_param int accountId When specified, only creatives for the given account
    * ids are returned.
-   * @return Google_Service_AdExchangeBuyer_CreativesList
+   * @return Postman_Google_Service_AdExchangeBuyer_CreativesList
    */
   public function listCreatives($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_CreativesList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_CreativesList");
   }
 }
 
@@ -518,11 +518,11 @@ class Google_Service_AdExchangeBuyer_Creatives_Resource extends Google_Service_R
  * The "directDeals" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $directDeals = $adexchangebuyerService->directDeals;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_DirectDeals_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_DirectDeals_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -530,13 +530,13 @@ class Google_Service_AdExchangeBuyer_DirectDeals_Resource extends Google_Service
    *
    * @param string $id The direct deal id
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_DirectDeal
+   * @return Postman_Google_Service_AdExchangeBuyer_DirectDeal
    */
   public function get($id, $optParams = array())
   {
     $params = array('id' => $id);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeBuyer_DirectDeal");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeBuyer_DirectDeal");
   }
 
   /**
@@ -544,13 +544,13 @@ class Google_Service_AdExchangeBuyer_DirectDeals_Resource extends Google_Service
    * (directDeals.listDirectDeals)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_DirectDealsList
+   * @return Postman_Google_Service_AdExchangeBuyer_DirectDealsList
    */
   public function listDirectDeals($optParams = array())
   {
     $params = array();
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_DirectDealsList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_DirectDealsList");
   }
 }
 
@@ -558,11 +558,11 @@ class Google_Service_AdExchangeBuyer_DirectDeals_Resource extends Google_Service
  * The "performanceReport" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $performanceReport = $adexchangebuyerService->performanceReport;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_PerformanceReport_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_PerformanceReport_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -581,13 +581,13 @@ class Google_Service_AdExchangeBuyer_PerformanceReport_Resource extends Google_S
    * value of "nextPageToken" from the previous response. Optional.
    * @opt_param string maxResults Maximum number of entries returned on one result
    * page. If not set, the default is 100. Optional.
-   * @return Google_Service_AdExchangeBuyer_PerformanceReportList
+   * @return Postman_Google_Service_AdExchangeBuyer_PerformanceReportList
    */
   public function listPerformanceReport($accountId, $endDateTime, $startDateTime, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'endDateTime' => $endDateTime, 'startDateTime' => $startDateTime);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_PerformanceReportList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_PerformanceReportList");
   }
 }
 
@@ -595,11 +595,11 @@ class Google_Service_AdExchangeBuyer_PerformanceReport_Resource extends Google_S
  * The "pretargetingConfig" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adexchangebuyerService = new Google_Service_AdExchangeBuyer(...);
+ *   $adexchangebuyerService = new Postman_Google_Service_AdExchangeBuyer(...);
  *   $pretargetingConfig = $adexchangebuyerService->pretargetingConfig;
  *  </code>
  */
-class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_Service_Resource
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -623,13 +623,13 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_
    * @param string $accountId The account id to get the pretargeting config for.
    * @param string $configId The specific id of the configuration to retrieve.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_PretargetingConfig
+   * @return Postman_Google_Service_AdExchangeBuyer_PretargetingConfig
    */
   public function get($accountId, $configId, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'configId' => $configId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeBuyer_PretargetingConfig");
+    return $this->call('get', array($params), "Postman_Google_Service_AdExchangeBuyer_PretargetingConfig");
   }
 
   /**
@@ -637,15 +637,15 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_
    *
    * @param string $accountId The account id to insert the pretargeting config
    * for.
-   * @param Google_PretargetingConfig $postBody
+   * @param Postman_Google_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_PretargetingConfig
+   * @return Postman_Google_Service_AdExchangeBuyer_PretargetingConfig
    */
-  public function insert($accountId, Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
+  public function insert($accountId, Postman_Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_AdExchangeBuyer_PretargetingConfig");
+    return $this->call('insert', array($params), "Postman_Google_Service_AdExchangeBuyer_PretargetingConfig");
   }
 
   /**
@@ -654,13 +654,13 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_
    *
    * @param string $accountId The account id to get the pretargeting configs for.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_PretargetingConfigList
+   * @return Postman_Google_Service_AdExchangeBuyer_PretargetingConfigList
    */
   public function listPretargetingConfig($accountId, $optParams = array())
   {
     $params = array('accountId' => $accountId);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyer_PretargetingConfigList");
+    return $this->call('list', array($params), "Postman_Google_Service_AdExchangeBuyer_PretargetingConfigList");
   }
 
   /**
@@ -670,15 +670,15 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_
    * @param string $accountId The account id to update the pretargeting config
    * for.
    * @param string $configId The specific id of the configuration to update.
-   * @param Google_PretargetingConfig $postBody
+   * @param Postman_Google_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_PretargetingConfig
+   * @return Postman_Google_Service_AdExchangeBuyer_PretargetingConfig
    */
-  public function patch($accountId, $configId, Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
+  public function patch($accountId, $configId, Postman_Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'configId' => $configId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AdExchangeBuyer_PretargetingConfig");
+    return $this->call('patch', array($params), "Postman_Google_Service_AdExchangeBuyer_PretargetingConfig");
   }
 
   /**
@@ -687,27 +687,27 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig_Resource extends Google_
    * @param string $accountId The account id to update the pretargeting config
    * for.
    * @param string $configId The specific id of the configuration to update.
-   * @param Google_PretargetingConfig $postBody
+   * @param Postman_Google_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AdExchangeBuyer_PretargetingConfig
+   * @return Postman_Google_Service_AdExchangeBuyer_PretargetingConfig
    */
-  public function update($accountId, $configId, Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
+  public function update($accountId, $configId, Postman_Google_Service_AdExchangeBuyer_PretargetingConfig $postBody, $optParams = array())
   {
     $params = array('accountId' => $accountId, 'configId' => $configId, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_AdExchangeBuyer_PretargetingConfig");
+    return $this->call('update', array($params), "Postman_Google_Service_AdExchangeBuyer_PretargetingConfig");
   }
 }
 
 
 
 
-class Google_Service_AdExchangeBuyer_Account extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_Account extends Postman_Google_Collection
 {
   protected $collection_key = 'bidderLocation';
   protected $internal_gapi_mappings = array(
   );
-  protected $bidderLocationType = 'Google_Service_AdExchangeBuyer_AccountBidderLocation';
+  protected $bidderLocationType = 'Postman_Google_Service_AdExchangeBuyer_AccountBidderLocation';
   protected $bidderLocationDataType = 'array';
   public $cookieMatchingNid;
   public $cookieMatchingUrl;
@@ -784,7 +784,7 @@ class Google_Service_AdExchangeBuyer_Account extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_AccountBidderLocation extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_AccountBidderLocation extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -819,12 +819,12 @@ class Google_Service_AdExchangeBuyer_AccountBidderLocation extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeBuyer_AccountsList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_AccountsList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeBuyer_Account';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeBuyer_Account';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -847,7 +847,7 @@ class Google_Service_AdExchangeBuyer_AccountsList extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_BillingInfo extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_BillingInfo extends Postman_Google_Collection
 {
   protected $collection_key = 'billingId';
   protected $internal_gapi_mappings = array(
@@ -892,12 +892,12 @@ class Google_Service_AdExchangeBuyer_BillingInfo extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_BillingInfoList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_BillingInfoList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeBuyer_BillingInfo';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeBuyer_BillingInfo';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -920,7 +920,7 @@ class Google_Service_AdExchangeBuyer_BillingInfoList extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_Creative extends Postman_Google_Collection
 {
   protected $collection_key = 'vendorType';
   protected $internal_gapi_mappings = array(
@@ -934,11 +934,11 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   public $attribute;
   public $buyerCreativeId;
   public $clickThroughUrl;
-  protected $correctionsType = 'Google_Service_AdExchangeBuyer_CreativeCorrections';
+  protected $correctionsType = 'Postman_Google_Service_AdExchangeBuyer_CreativeCorrections';
   protected $correctionsDataType = 'array';
-  protected $disapprovalReasonsType = 'Google_Service_AdExchangeBuyer_CreativeDisapprovalReasons';
+  protected $disapprovalReasonsType = 'Postman_Google_Service_AdExchangeBuyer_CreativeDisapprovalReasons';
   protected $disapprovalReasonsDataType = 'array';
-  protected $filteringReasonsType = 'Google_Service_AdExchangeBuyer_CreativeFilteringReasons';
+  protected $filteringReasonsType = 'Postman_Google_Service_AdExchangeBuyer_CreativeFilteringReasons';
   protected $filteringReasonsDataType = '';
   public $height;
   public $kind;
@@ -1031,7 +1031,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->disapprovalReasons;
   }
-  public function setFilteringReasons(Google_Service_AdExchangeBuyer_CreativeFilteringReasons $filteringReasons)
+  public function setFilteringReasons(Postman_Google_Service_AdExchangeBuyer_CreativeFilteringReasons $filteringReasons)
   {
     $this->filteringReasons = $filteringReasons;
   }
@@ -1113,7 +1113,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_CreativeCorrections extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_CreativeCorrections extends Postman_Google_Collection
 {
   protected $collection_key = 'details';
   protected $internal_gapi_mappings = array(
@@ -1140,7 +1140,7 @@ class Google_Service_AdExchangeBuyer_CreativeCorrections extends Google_Collecti
   }
 }
 
-class Google_Service_AdExchangeBuyer_CreativeDisapprovalReasons extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_CreativeDisapprovalReasons extends Postman_Google_Collection
 {
   protected $collection_key = 'details';
   protected $internal_gapi_mappings = array(
@@ -1167,13 +1167,13 @@ class Google_Service_AdExchangeBuyer_CreativeDisapprovalReasons extends Google_C
   }
 }
 
-class Google_Service_AdExchangeBuyer_CreativeFilteringReasons extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_CreativeFilteringReasons extends Postman_Google_Collection
 {
   protected $collection_key = 'reasons';
   protected $internal_gapi_mappings = array(
   );
   public $date;
-  protected $reasonsType = 'Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons';
+  protected $reasonsType = 'Postman_Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons';
   protected $reasonsDataType = 'array';
 
 
@@ -1195,7 +1195,7 @@ class Google_Service_AdExchangeBuyer_CreativeFilteringReasons extends Google_Col
   }
 }
 
-class Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1221,12 +1221,12 @@ class Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons extends Goo
   }
 }
 
-class Google_Service_AdExchangeBuyer_CreativesList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_CreativesList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeBuyer_Creative';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeBuyer_Creative';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -1258,7 +1258,7 @@ class Google_Service_AdExchangeBuyer_CreativesList extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_DirectDeal extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_DirectDeal extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1374,12 +1374,12 @@ class Google_Service_AdExchangeBuyer_DirectDeal extends Google_Model
   }
 }
 
-class Google_Service_AdExchangeBuyer_DirectDealsList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_DirectDealsList extends Postman_Google_Collection
 {
   protected $collection_key = 'directDeals';
   protected $internal_gapi_mappings = array(
   );
-  protected $directDealsType = 'Google_Service_AdExchangeBuyer_DirectDeal';
+  protected $directDealsType = 'Postman_Google_Service_AdExchangeBuyer_DirectDeal';
   protected $directDealsDataType = 'array';
   public $kind;
 
@@ -1402,7 +1402,7 @@ class Google_Service_AdExchangeBuyer_DirectDealsList extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_PerformanceReport extends Postman_Google_Collection
 {
   protected $collection_key = 'hostedMatchStatusRate';
   protected $internal_gapi_mappings = array(
@@ -1555,13 +1555,13 @@ class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
   }
 }
 
-class Google_Service_AdExchangeBuyer_PerformanceReportList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_PerformanceReportList extends Postman_Google_Collection
 {
   protected $collection_key = 'performanceReport';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $performanceReportType = 'Google_Service_AdExchangeBuyer_PerformanceReport';
+  protected $performanceReportType = 'Postman_Google_Service_AdExchangeBuyer_PerformanceReport';
   protected $performanceReportDataType = 'array';
 
 
@@ -1583,7 +1583,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReportList extends Google_Collec
   }
 }
 
-class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfig extends Postman_Google_Collection
 {
   protected $collection_key = 'verticals';
   protected $internal_gapi_mappings = array(
@@ -1592,11 +1592,11 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public $configId;
   public $configName;
   public $creativeType;
-  protected $dimensionsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigDimensions';
+  protected $dimensionsType = 'Postman_Google_Service_AdExchangeBuyer_PretargetingConfigDimensions';
   protected $dimensionsDataType = 'array';
   public $excludedContentLabels;
   public $excludedGeoCriteriaIds;
-  protected $excludedPlacementsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements';
+  protected $excludedPlacementsType = 'Postman_Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements';
   protected $excludedPlacementsDataType = 'array';
   public $excludedUserLists;
   public $excludedVerticals;
@@ -1607,7 +1607,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public $mobileCarriers;
   public $mobileDevices;
   public $mobileOperatingSystemVersions;
-  protected $placementsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigPlacements';
+  protected $placementsType = 'Postman_Google_Service_AdExchangeBuyer_PretargetingConfigPlacements';
   protected $placementsDataType = 'array';
   public $platforms;
   public $supportedCreativeAttributes;
@@ -1802,7 +1802,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   }
 }
 
-class Google_Service_AdExchangeBuyer_PretargetingConfigDimensions extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfigDimensions extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1828,7 +1828,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigDimensions extends Google
   }
 }
 
-class Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1854,12 +1854,12 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements extend
   }
 }
 
-class Google_Service_AdExchangeBuyer_PretargetingConfigList extends Google_Collection
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfigList extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_AdExchangeBuyer_PretargetingConfig';
+  protected $itemsType = 'Postman_Google_Service_AdExchangeBuyer_PretargetingConfig';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -1882,7 +1882,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigList extends Google_Colle
   }
 }
 
-class Google_Service_AdExchangeBuyer_PretargetingConfigPlacements extends Google_Model
+class Postman_Google_Service_AdExchangeBuyer_PretargetingConfigPlacements extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

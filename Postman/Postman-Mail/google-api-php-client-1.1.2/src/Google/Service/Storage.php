@@ -28,7 +28,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Storage extends Google_Service
+class Postman_Google_Service_Storage extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -54,16 +54,16 @@ class Google_Service_Storage extends Google_Service
   /**
    * Constructs the internal representation of the Storage service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'storage/v1/';
     $this->version = 'v1';
     $this->serviceName = 'storage';
 
-    $this->bucketAccessControls = new Google_Service_Storage_BucketAccessControls_Resource(
+    $this->bucketAccessControls = new Postman_Google_Service_Storage_BucketAccessControls_Resource(
         $this,
         $this->serviceName,
         'bucketAccessControls',
@@ -153,7 +153,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->buckets = new Google_Service_Storage_Buckets_Resource(
+    $this->buckets = new Postman_Google_Service_Storage_Buckets_Resource(
         $this,
         $this->serviceName,
         'buckets',
@@ -295,7 +295,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Storage_Channels_Resource(
+    $this->channels = new Postman_Google_Service_Storage_Channels_Resource(
         $this,
         $this->serviceName,
         'channels',
@@ -309,7 +309,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->defaultObjectAccessControls = new Google_Service_Storage_DefaultObjectAccessControls_Resource(
+    $this->defaultObjectAccessControls = new Postman_Google_Service_Storage_DefaultObjectAccessControls_Resource(
         $this,
         $this->serviceName,
         'defaultObjectAccessControls',
@@ -407,7 +407,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->objectAccessControls = new Google_Service_Storage_ObjectAccessControls_Resource(
+    $this->objectAccessControls = new Postman_Google_Service_Storage_ObjectAccessControls_Resource(
         $this,
         $this->serviceName,
         'objectAccessControls',
@@ -551,7 +551,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->objects = new Google_Service_Storage_Objects_Resource(
+    $this->objects = new Postman_Google_Service_Storage_Objects_Resource(
         $this,
         $this->serviceName,
         'objects',
@@ -935,11 +935,11 @@ class Google_Service_Storage extends Google_Service
  * The "bucketAccessControls" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $bucketAccessControls = $storageService->bucketAccessControls;
  *  </code>
  */
-class Google_Service_Storage_BucketAccessControls_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_BucketAccessControls_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -968,13 +968,13 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_BucketAccessControl
+   * @return Postman_Google_Service_Storage_BucketAccessControl
    */
   public function get($bucket, $entity, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Storage_BucketAccessControl");
+    return $this->call('get', array($params), "Postman_Google_Service_Storage_BucketAccessControl");
   }
 
   /**
@@ -982,15 +982,15 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
    * (bucketAccessControls.insert)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_BucketAccessControl $postBody
+   * @param Postman_Google_BucketAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_BucketAccessControl
+   * @return Postman_Google_Service_Storage_BucketAccessControl
    */
-  public function insert($bucket, Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
+  public function insert($bucket, Postman_Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Storage_BucketAccessControl");
+    return $this->call('insert', array($params), "Postman_Google_Service_Storage_BucketAccessControl");
   }
 
   /**
@@ -999,13 +999,13 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
    *
    * @param string $bucket Name of a bucket.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_BucketAccessControls
+   * @return Postman_Google_Service_Storage_BucketAccessControls
    */
   public function listBucketAccessControls($bucket, $optParams = array())
   {
     $params = array('bucket' => $bucket);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Storage_BucketAccessControls");
+    return $this->call('list', array($params), "Postman_Google_Service_Storage_BucketAccessControls");
   }
 
   /**
@@ -1016,15 +1016,15 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_BucketAccessControl $postBody
+   * @param Postman_Google_BucketAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_BucketAccessControl
+   * @return Postman_Google_Service_Storage_BucketAccessControl
    */
-  public function patch($bucket, $entity, Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
+  public function patch($bucket, $entity, Postman_Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Storage_BucketAccessControl");
+    return $this->call('patch', array($params), "Postman_Google_Service_Storage_BucketAccessControl");
   }
 
   /**
@@ -1034,15 +1034,15 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_BucketAccessControl $postBody
+   * @param Postman_Google_BucketAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_BucketAccessControl
+   * @return Postman_Google_Service_Storage_BucketAccessControl
    */
-  public function update($bucket, $entity, Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
+  public function update($bucket, $entity, Postman_Google_Service_Storage_BucketAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Storage_BucketAccessControl");
+    return $this->call('update', array($params), "Postman_Google_Service_Storage_BucketAccessControl");
   }
 }
 
@@ -1050,11 +1050,11 @@ class Google_Service_Storage_BucketAccessControls_Resource extends Google_Servic
  * The "buckets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $buckets = $storageService->buckets;
  *  </code>
  */
-class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_Buckets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1088,20 +1088,20 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
    * metadata conditional on whether the bucket's current metageneration does not
    * match the given value.
    * @opt_param string projection Set of properties to return. Defaults to noAcl.
-   * @return Google_Service_Storage_Bucket
+   * @return Postman_Google_Service_Storage_Bucket
    */
   public function get($bucket, $optParams = array())
   {
     $params = array('bucket' => $bucket);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Storage_Bucket");
+    return $this->call('get', array($params), "Postman_Google_Service_Storage_Bucket");
   }
 
   /**
    * Creates a new bucket. (buckets.insert)
    *
    * @param string $project A valid API project identifier.
-   * @param Google_Bucket $postBody
+   * @param Postman_Google_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
@@ -1109,13 +1109,13 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
    * @opt_param string projection Set of properties to return. Defaults to noAcl,
    * unless the bucket resource specifies acl or defaultObjectAcl properties, when
    * it defaults to full.
-   * @return Google_Service_Storage_Bucket
+   * @return Postman_Google_Service_Storage_Bucket
    */
-  public function insert($project, Google_Service_Storage_Bucket $postBody, $optParams = array())
+  public function insert($project, Postman_Google_Service_Storage_Bucket $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Storage_Bucket");
+    return $this->call('insert', array($params), "Postman_Google_Service_Storage_Bucket");
   }
 
   /**
@@ -1128,20 +1128,20 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
    * part of the larger set of results to view.
    * @opt_param string projection Set of properties to return. Defaults to noAcl.
    * @opt_param string maxResults Maximum number of buckets to return.
-   * @return Google_Service_Storage_Buckets
+   * @return Postman_Google_Service_Storage_Buckets
    */
   public function listBuckets($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Storage_Buckets");
+    return $this->call('list', array($params), "Postman_Google_Service_Storage_Buckets");
   }
 
   /**
    * Updates a bucket. This method supports patch semantics. (buckets.patch)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_Bucket $postBody
+   * @param Postman_Google_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifMetagenerationMatch Makes the return of the bucket
@@ -1153,20 +1153,20 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
    * metadata conditional on whether the bucket's current metageneration does not
    * match the given value.
    * @opt_param string projection Set of properties to return. Defaults to full.
-   * @return Google_Service_Storage_Bucket
+   * @return Postman_Google_Service_Storage_Bucket
    */
-  public function patch($bucket, Google_Service_Storage_Bucket $postBody, $optParams = array())
+  public function patch($bucket, Postman_Google_Service_Storage_Bucket $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Storage_Bucket");
+    return $this->call('patch', array($params), "Postman_Google_Service_Storage_Bucket");
   }
 
   /**
    * Updates a bucket. (buckets.update)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_Bucket $postBody
+   * @param Postman_Google_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifMetagenerationMatch Makes the return of the bucket
@@ -1178,13 +1178,13 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
    * metadata conditional on whether the bucket's current metageneration does not
    * match the given value.
    * @opt_param string projection Set of properties to return. Defaults to full.
-   * @return Google_Service_Storage_Bucket
+   * @return Postman_Google_Service_Storage_Bucket
    */
-  public function update($bucket, Google_Service_Storage_Bucket $postBody, $optParams = array())
+  public function update($bucket, Postman_Google_Service_Storage_Bucket $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Storage_Bucket");
+    return $this->call('update', array($params), "Postman_Google_Service_Storage_Bucket");
   }
 }
 
@@ -1192,20 +1192,20 @@ class Google_Service_Storage_Buckets_Resource extends Google_Service_Resource
  * The "channels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $channels = $storageService->channels;
  *  </code>
  */
-class Google_Service_Storage_Channels_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_Channels_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Stop watching resources through this channel (channels.stop)
    *
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    */
-  public function stop(Google_Service_Storage_Channel $postBody, $optParams = array())
+  public function stop(Postman_Google_Service_Storage_Channel $postBody, $optParams = array())
   {
     $params = array('postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -1217,11 +1217,11 @@ class Google_Service_Storage_Channels_Resource extends Google_Service_Resource
  * The "defaultObjectAccessControls" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $defaultObjectAccessControls = $storageService->defaultObjectAccessControls;
  *  </code>
  */
-class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_DefaultObjectAccessControls_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1250,13 +1250,13 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
   public function get($bucket, $entity, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('get', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1264,15 +1264,15 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
    * (defaultObjectAccessControls.insert)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function insert($bucket, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function insert($bucket, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('insert', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1287,13 +1287,13 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
    * @opt_param string ifMetagenerationNotMatch If present, only return default
    * ACL listing if the bucket's current metageneration does not match the given
    * value.
-   * @return Google_Service_Storage_ObjectAccessControls
+   * @return Postman_Google_Service_Storage_ObjectAccessControls
    */
   public function listDefaultObjectAccessControls($bucket, $optParams = array())
   {
     $params = array('bucket' => $bucket);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Storage_ObjectAccessControls");
+    return $this->call('list', array($params), "Postman_Google_Service_Storage_ObjectAccessControls");
   }
 
   /**
@@ -1304,15 +1304,15 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function patch($bucket, $entity, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function patch($bucket, $entity, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('patch', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1323,15 +1323,15 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function update($bucket, $entity, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function update($bucket, $entity, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('update', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 }
 
@@ -1339,11 +1339,11 @@ class Google_Service_Storage_DefaultObjectAccessControls_Resource extends Google
  * The "objectAccessControls" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $objectAccessControls = $storageService->objectAccessControls;
  *  </code>
  */
-class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_ObjectAccessControls_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1380,13 +1380,13 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
    *
    * @opt_param string generation If present, selects a specific revision of this
    * object (as opposed to the latest version, the default).
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
   public function get($bucket, $object, $entity, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'entity' => $entity);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('get', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1395,18 +1395,18 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
    *
    * @param string $bucket Name of a bucket.
    * @param string $object Name of the object.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
    * object (as opposed to the latest version, the default).
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function insert($bucket, $object, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function insert($bucket, $object, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('insert', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1419,13 +1419,13 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
    *
    * @opt_param string generation If present, selects a specific revision of this
    * object (as opposed to the latest version, the default).
-   * @return Google_Service_Storage_ObjectAccessControls
+   * @return Postman_Google_Service_Storage_ObjectAccessControls
    */
   public function listObjectAccessControls($bucket, $object, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Storage_ObjectAccessControls");
+    return $this->call('list', array($params), "Postman_Google_Service_Storage_ObjectAccessControls");
   }
 
   /**
@@ -1437,18 +1437,18 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
    * object (as opposed to the latest version, the default).
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function patch($bucket, $object, $entity, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function patch($bucket, $object, $entity, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('patch', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 
   /**
@@ -1459,18 +1459,18 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Postman_Google_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
    * object (as opposed to the latest version, the default).
-   * @return Google_Service_Storage_ObjectAccessControl
+   * @return Postman_Google_Service_Storage_ObjectAccessControl
    */
-  public function update($bucket, $object, $entity, Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
+  public function update($bucket, $object, $entity, Postman_Google_Service_Storage_ObjectAccessControl $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'entity' => $entity, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Storage_ObjectAccessControl");
+    return $this->call('update', array($params), "Postman_Google_Service_Storage_ObjectAccessControl");
   }
 }
 
@@ -1478,11 +1478,11 @@ class Google_Service_Storage_ObjectAccessControls_Resource extends Google_Servic
  * The "objects" collection of methods.
  * Typical usage is:
  *  <code>
- *   $storageService = new Google_Service_Storage(...);
+ *   $storageService = new Postman_Google_Service_Storage(...);
  *   $objects = $storageService->objects;
  *  </code>
  */
-class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
+class Postman_Google_Service_Storage_Objects_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -1492,7 +1492,7 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @param string $destinationBucket Name of the bucket in which to store the new
    * object.
    * @param string $destinationObject Name of the new object.
-   * @param Google_ComposeRequest $postBody
+   * @param Postman_Google_ComposeRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifGenerationMatch Makes the operation conditional on
@@ -1501,13 +1501,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * whether the object's current metageneration matches the given value.
    * @opt_param string destinationPredefinedAcl Apply a predefined set of access
    * controls to the destination object.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
-  public function compose($destinationBucket, $destinationObject, Google_Service_Storage_ComposeRequest $postBody, $optParams = array())
+  public function compose($destinationBucket, $destinationObject, Postman_Google_Service_Storage_ComposeRequest $postBody, $optParams = array())
   {
     $params = array('destinationBucket' => $destinationBucket, 'destinationObject' => $destinationObject, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('compose', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('compose', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
@@ -1522,7 +1522,7 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @param string $destinationObject Name of the new object. Required when the
    * object metadata is not otherwise provided. Overrides the object metadata's
    * name value, if any.
-   * @param Google_StorageObject $postBody
+   * @param Postman_Google_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifSourceGenerationNotMatch Makes the operation conditional
@@ -1553,13 +1553,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @opt_param string projection Set of properties to return. Defaults to noAcl,
    * unless the object resource specifies the acl property, when it defaults to
    * full.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
-  public function copy($sourceBucket, $sourceObject, $destinationBucket, $destinationObject, Google_Service_Storage_StorageObject $postBody, $optParams = array())
+  public function copy($sourceBucket, $sourceObject, $destinationBucket, $destinationObject, Postman_Google_Service_Storage_StorageObject $postBody, $optParams = array())
   {
     $params = array('sourceBucket' => $sourceBucket, 'sourceObject' => $sourceObject, 'destinationBucket' => $destinationBucket, 'destinationObject' => $destinationObject, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('copy', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('copy', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
@@ -1607,13 +1607,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @opt_param string ifMetagenerationNotMatch Makes the operation conditional on
    * whether the object's current metageneration does not match the given value.
    * @opt_param string projection Set of properties to return. Defaults to noAcl.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
   public function get($bucket, $object, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('get', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
@@ -1621,7 +1621,7 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    *
    * @param string $bucket Name of the bucket in which to store the new object.
    * Overrides the provided object metadata's bucket value, if any.
-   * @param Google_StorageObject $postBody
+   * @param Postman_Google_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
@@ -1645,13 +1645,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @opt_param string name Name of the object. Required when the object metadata
    * is not otherwise provided. Overrides the object metadata's name value, if
    * any.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
-  public function insert($bucket, Google_Service_Storage_StorageObject $postBody, $optParams = array())
+  public function insert($bucket, Postman_Google_Service_Storage_StorageObject $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('insert', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
@@ -1675,13 +1675,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * delimiter. Objects whose names, aside from the prefix, contain delimiter will
    * have their name, truncated after the delimiter, returned in prefixes.
    * Duplicate prefixes are omitted.
-   * @return Google_Service_Storage_Objects
+   * @return Postman_Google_Service_Storage_Objects
    */
   public function listObjects($bucket, $optParams = array())
   {
     $params = array('bucket' => $bucket);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Storage_Objects");
+    return $this->call('list', array($params), "Postman_Google_Service_Storage_Objects");
   }
 
   /**
@@ -1690,7 +1690,7 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    *
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object.
-   * @param Google_StorageObject $postBody
+   * @param Postman_Google_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
@@ -1706,13 +1706,13 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @opt_param string ifMetagenerationNotMatch Makes the operation conditional on
    * whether the object's current metageneration does not match the given value.
    * @opt_param string projection Set of properties to return. Defaults to full.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
-  public function patch($bucket, $object, Google_Service_Storage_StorageObject $postBody, $optParams = array())
+  public function patch($bucket, $object, Postman_Google_Service_Storage_StorageObject $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('patch', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
@@ -1720,7 +1720,7 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    *
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object.
-   * @param Google_StorageObject $postBody
+   * @param Postman_Google_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
@@ -1736,20 +1736,20 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * @opt_param string ifMetagenerationNotMatch Makes the operation conditional on
    * whether the object's current metageneration does not match the given value.
    * @opt_param string projection Set of properties to return. Defaults to full.
-   * @return Google_Service_Storage_StorageObject
+   * @return Postman_Google_Service_Storage_StorageObject
    */
-  public function update($bucket, $object, Google_Service_Storage_StorageObject $postBody, $optParams = array())
+  public function update($bucket, $object, Postman_Google_Service_Storage_StorageObject $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'object' => $object, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Storage_StorageObject");
+    return $this->call('update', array($params), "Postman_Google_Service_Storage_StorageObject");
   }
 
   /**
    * Watch for changes on all objects in a bucket. (objects.watchAll)
    *
    * @param string $bucket Name of the bucket in which to look for objects.
-   * @param Google_Channel $postBody
+   * @param Postman_Google_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projection Set of properties to return. Defaults to noAcl.
@@ -1767,49 +1767,49 @@ class Google_Service_Storage_Objects_Resource extends Google_Service_Resource
    * delimiter. Objects whose names, aside from the prefix, contain delimiter will
    * have their name, truncated after the delimiter, returned in prefixes.
    * Duplicate prefixes are omitted.
-   * @return Google_Service_Storage_Channel
+   * @return Postman_Google_Service_Storage_Channel
    */
-  public function watchAll($bucket, Google_Service_Storage_Channel $postBody, $optParams = array())
+  public function watchAll($bucket, Postman_Google_Service_Storage_Channel $postBody, $optParams = array())
   {
     $params = array('bucket' => $bucket, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('watchAll', array($params), "Google_Service_Storage_Channel");
+    return $this->call('watchAll', array($params), "Postman_Google_Service_Storage_Channel");
   }
 }
 
 
 
 
-class Google_Service_Storage_Bucket extends Google_Collection
+class Postman_Google_Service_Storage_Bucket extends Postman_Google_Collection
 {
   protected $collection_key = 'defaultObjectAcl';
   protected $internal_gapi_mappings = array(
   );
-  protected $aclType = 'Google_Service_Storage_BucketAccessControl';
+  protected $aclType = 'Postman_Google_Service_Storage_BucketAccessControl';
   protected $aclDataType = 'array';
-  protected $corsType = 'Google_Service_Storage_BucketCors';
+  protected $corsType = 'Postman_Google_Service_Storage_BucketCors';
   protected $corsDataType = 'array';
-  protected $defaultObjectAclType = 'Google_Service_Storage_ObjectAccessControl';
+  protected $defaultObjectAclType = 'Postman_Google_Service_Storage_ObjectAccessControl';
   protected $defaultObjectAclDataType = 'array';
   public $etag;
   public $id;
   public $kind;
-  protected $lifecycleType = 'Google_Service_Storage_BucketLifecycle';
+  protected $lifecycleType = 'Postman_Google_Service_Storage_BucketLifecycle';
   protected $lifecycleDataType = '';
   public $location;
-  protected $loggingType = 'Google_Service_Storage_BucketLogging';
+  protected $loggingType = 'Postman_Google_Service_Storage_BucketLogging';
   protected $loggingDataType = '';
   public $metageneration;
   public $name;
-  protected $ownerType = 'Google_Service_Storage_BucketOwner';
+  protected $ownerType = 'Postman_Google_Service_Storage_BucketOwner';
   protected $ownerDataType = '';
   public $projectNumber;
   public $selfLink;
   public $storageClass;
   public $timeCreated;
-  protected $versioningType = 'Google_Service_Storage_BucketVersioning';
+  protected $versioningType = 'Postman_Google_Service_Storage_BucketVersioning';
   protected $versioningDataType = '';
-  protected $websiteType = 'Google_Service_Storage_BucketWebsite';
+  protected $websiteType = 'Postman_Google_Service_Storage_BucketWebsite';
   protected $websiteDataType = '';
 
 
@@ -1861,7 +1861,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLifecycle(Google_Service_Storage_BucketLifecycle $lifecycle)
+  public function setLifecycle(Postman_Google_Service_Storage_BucketLifecycle $lifecycle)
   {
     $this->lifecycle = $lifecycle;
   }
@@ -1877,7 +1877,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->location;
   }
-  public function setLogging(Google_Service_Storage_BucketLogging $logging)
+  public function setLogging(Postman_Google_Service_Storage_BucketLogging $logging)
   {
     $this->logging = $logging;
   }
@@ -1901,7 +1901,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->name;
   }
-  public function setOwner(Google_Service_Storage_BucketOwner $owner)
+  public function setOwner(Postman_Google_Service_Storage_BucketOwner $owner)
   {
     $this->owner = $owner;
   }
@@ -1941,7 +1941,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->timeCreated;
   }
-  public function setVersioning(Google_Service_Storage_BucketVersioning $versioning)
+  public function setVersioning(Postman_Google_Service_Storage_BucketVersioning $versioning)
   {
     $this->versioning = $versioning;
   }
@@ -1949,7 +1949,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   {
     return $this->versioning;
   }
-  public function setWebsite(Google_Service_Storage_BucketWebsite $website)
+  public function setWebsite(Postman_Google_Service_Storage_BucketWebsite $website)
   {
     $this->website = $website;
   }
@@ -1959,7 +1959,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   }
 }
 
-class Google_Service_Storage_BucketAccessControl extends Google_Model
+class Postman_Google_Service_Storage_BucketAccessControl extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -1971,7 +1971,7 @@ class Google_Service_Storage_BucketAccessControl extends Google_Model
   public $etag;
   public $id;
   public $kind;
-  protected $projectTeamType = 'Google_Service_Storage_BucketAccessControlProjectTeam';
+  protected $projectTeamType = 'Postman_Google_Service_Storage_BucketAccessControlProjectTeam';
   protected $projectTeamDataType = '';
   public $role;
   public $selfLink;
@@ -2041,7 +2041,7 @@ class Google_Service_Storage_BucketAccessControl extends Google_Model
   {
     return $this->kind;
   }
-  public function setProjectTeam(Google_Service_Storage_BucketAccessControlProjectTeam $projectTeam)
+  public function setProjectTeam(Postman_Google_Service_Storage_BucketAccessControlProjectTeam $projectTeam)
   {
     $this->projectTeam = $projectTeam;
   }
@@ -2067,7 +2067,7 @@ class Google_Service_Storage_BucketAccessControl extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketAccessControlProjectTeam extends Google_Model
+class Postman_Google_Service_Storage_BucketAccessControlProjectTeam extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2093,12 +2093,12 @@ class Google_Service_Storage_BucketAccessControlProjectTeam extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketAccessControls extends Google_Collection
+class Postman_Google_Service_Storage_BucketAccessControls extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Storage_BucketAccessControl';
+  protected $itemsType = 'Postman_Google_Service_Storage_BucketAccessControl';
   protected $itemsDataType = 'array';
   public $kind;
 
@@ -2121,7 +2121,7 @@ class Google_Service_Storage_BucketAccessControls extends Google_Collection
   }
 }
 
-class Google_Service_Storage_BucketCors extends Google_Collection
+class Postman_Google_Service_Storage_BucketCors extends Postman_Google_Collection
 {
   protected $collection_key = 'responseHeader';
   protected $internal_gapi_mappings = array(
@@ -2166,12 +2166,12 @@ class Google_Service_Storage_BucketCors extends Google_Collection
   }
 }
 
-class Google_Service_Storage_BucketLifecycle extends Google_Collection
+class Postman_Google_Service_Storage_BucketLifecycle extends Postman_Google_Collection
 {
   protected $collection_key = 'rule';
   protected $internal_gapi_mappings = array(
   );
-  protected $ruleType = 'Google_Service_Storage_BucketLifecycleRule';
+  protected $ruleType = 'Postman_Google_Service_Storage_BucketLifecycleRule';
   protected $ruleDataType = 'array';
 
 
@@ -2185,17 +2185,17 @@ class Google_Service_Storage_BucketLifecycle extends Google_Collection
   }
 }
 
-class Google_Service_Storage_BucketLifecycleRule extends Google_Model
+class Postman_Google_Service_Storage_BucketLifecycleRule extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
-  protected $actionType = 'Google_Service_Storage_BucketLifecycleRuleAction';
+  protected $actionType = 'Postman_Google_Service_Storage_BucketLifecycleRuleAction';
   protected $actionDataType = '';
-  protected $conditionType = 'Google_Service_Storage_BucketLifecycleRuleCondition';
+  protected $conditionType = 'Postman_Google_Service_Storage_BucketLifecycleRuleCondition';
   protected $conditionDataType = '';
 
 
-  public function setAction(Google_Service_Storage_BucketLifecycleRuleAction $action)
+  public function setAction(Postman_Google_Service_Storage_BucketLifecycleRuleAction $action)
   {
     $this->action = $action;
   }
@@ -2203,7 +2203,7 @@ class Google_Service_Storage_BucketLifecycleRule extends Google_Model
   {
     return $this->action;
   }
-  public function setCondition(Google_Service_Storage_BucketLifecycleRuleCondition $condition)
+  public function setCondition(Postman_Google_Service_Storage_BucketLifecycleRuleCondition $condition)
   {
     $this->condition = $condition;
   }
@@ -2213,7 +2213,7 @@ class Google_Service_Storage_BucketLifecycleRule extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketLifecycleRuleAction extends Google_Model
+class Postman_Google_Service_Storage_BucketLifecycleRuleAction extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2230,7 +2230,7 @@ class Google_Service_Storage_BucketLifecycleRuleAction extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketLifecycleRuleCondition extends Google_Model
+class Postman_Google_Service_Storage_BucketLifecycleRuleCondition extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2274,7 +2274,7 @@ class Google_Service_Storage_BucketLifecycleRuleCondition extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketLogging extends Google_Model
+class Postman_Google_Service_Storage_BucketLogging extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2300,7 +2300,7 @@ class Google_Service_Storage_BucketLogging extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketOwner extends Google_Model
+class Postman_Google_Service_Storage_BucketOwner extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2326,7 +2326,7 @@ class Google_Service_Storage_BucketOwner extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketVersioning extends Google_Model
+class Postman_Google_Service_Storage_BucketVersioning extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2343,7 +2343,7 @@ class Google_Service_Storage_BucketVersioning extends Google_Model
   }
 }
 
-class Google_Service_Storage_BucketWebsite extends Google_Model
+class Postman_Google_Service_Storage_BucketWebsite extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2369,12 +2369,12 @@ class Google_Service_Storage_BucketWebsite extends Google_Model
   }
 }
 
-class Google_Service_Storage_Buckets extends Google_Collection
+class Postman_Google_Service_Storage_Buckets extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Storage_Bucket';
+  protected $itemsType = 'Postman_Google_Service_Storage_Bucket';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2406,7 +2406,7 @@ class Google_Service_Storage_Buckets extends Google_Collection
   }
 }
 
-class Google_Service_Storage_Channel extends Google_Model
+class Postman_Google_Service_Storage_Channel extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2504,23 +2504,23 @@ class Google_Service_Storage_Channel extends Google_Model
   }
 }
 
-class Google_Service_Storage_ChannelParams extends Google_Model
+class Postman_Google_Service_Storage_ChannelParams extends Postman_Google_Model
 {
 }
 
-class Google_Service_Storage_ComposeRequest extends Google_Collection
+class Postman_Google_Service_Storage_ComposeRequest extends Postman_Google_Collection
 {
   protected $collection_key = 'sourceObjects';
   protected $internal_gapi_mappings = array(
   );
-  protected $destinationType = 'Google_Service_Storage_StorageObject';
+  protected $destinationType = 'Postman_Google_Service_Storage_StorageObject';
   protected $destinationDataType = '';
   public $kind;
-  protected $sourceObjectsType = 'Google_Service_Storage_ComposeRequestSourceObjects';
+  protected $sourceObjectsType = 'Postman_Google_Service_Storage_ComposeRequestSourceObjects';
   protected $sourceObjectsDataType = 'array';
 
 
-  public function setDestination(Google_Service_Storage_StorageObject $destination)
+  public function setDestination(Postman_Google_Service_Storage_StorageObject $destination)
   {
     $this->destination = $destination;
   }
@@ -2546,13 +2546,13 @@ class Google_Service_Storage_ComposeRequest extends Google_Collection
   }
 }
 
-class Google_Service_Storage_ComposeRequestSourceObjects extends Google_Model
+class Postman_Google_Service_Storage_ComposeRequestSourceObjects extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $generation;
   public $name;
-  protected $objectPreconditionsType = 'Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions';
+  protected $objectPreconditionsType = 'Postman_Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions';
   protected $objectPreconditionsDataType = '';
 
 
@@ -2572,7 +2572,7 @@ class Google_Service_Storage_ComposeRequestSourceObjects extends Google_Model
   {
     return $this->name;
   }
-  public function setObjectPreconditions(Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions $objectPreconditions)
+  public function setObjectPreconditions(Postman_Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions $objectPreconditions)
   {
     $this->objectPreconditions = $objectPreconditions;
   }
@@ -2582,7 +2582,7 @@ class Google_Service_Storage_ComposeRequestSourceObjects extends Google_Model
   }
 }
 
-class Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions extends Google_Model
+class Postman_Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2599,7 +2599,7 @@ class Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions exte
   }
 }
 
-class Google_Service_Storage_ObjectAccessControl extends Google_Model
+class Postman_Google_Service_Storage_ObjectAccessControl extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2613,7 +2613,7 @@ class Google_Service_Storage_ObjectAccessControl extends Google_Model
   public $id;
   public $kind;
   public $object;
-  protected $projectTeamType = 'Google_Service_Storage_ObjectAccessControlProjectTeam';
+  protected $projectTeamType = 'Postman_Google_Service_Storage_ObjectAccessControlProjectTeam';
   protected $projectTeamDataType = '';
   public $role;
   public $selfLink;
@@ -2699,7 +2699,7 @@ class Google_Service_Storage_ObjectAccessControl extends Google_Model
   {
     return $this->object;
   }
-  public function setProjectTeam(Google_Service_Storage_ObjectAccessControlProjectTeam $projectTeam)
+  public function setProjectTeam(Postman_Google_Service_Storage_ObjectAccessControlProjectTeam $projectTeam)
   {
     $this->projectTeam = $projectTeam;
   }
@@ -2725,7 +2725,7 @@ class Google_Service_Storage_ObjectAccessControl extends Google_Model
   }
 }
 
-class Google_Service_Storage_ObjectAccessControlProjectTeam extends Google_Model
+class Postman_Google_Service_Storage_ObjectAccessControlProjectTeam extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -2751,7 +2751,7 @@ class Google_Service_Storage_ObjectAccessControlProjectTeam extends Google_Model
   }
 }
 
-class Google_Service_Storage_ObjectAccessControls extends Google_Collection
+class Postman_Google_Service_Storage_ObjectAccessControls extends Postman_Google_Collection
 {
   protected $collection_key = 'items';
   protected $internal_gapi_mappings = array(
@@ -2778,12 +2778,12 @@ class Google_Service_Storage_ObjectAccessControls extends Google_Collection
   }
 }
 
-class Google_Service_Storage_Objects extends Google_Collection
+class Postman_Google_Service_Storage_Objects extends Postman_Google_Collection
 {
   protected $collection_key = 'prefixes';
   protected $internal_gapi_mappings = array(
   );
-  protected $itemsType = 'Google_Service_Storage_StorageObject';
+  protected $itemsType = 'Postman_Google_Service_Storage_StorageObject';
   protected $itemsDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -2824,12 +2824,12 @@ class Google_Service_Storage_Objects extends Google_Collection
   }
 }
 
-class Google_Service_Storage_StorageObject extends Google_Collection
+class Postman_Google_Service_Storage_StorageObject extends Postman_Google_Collection
 {
   protected $collection_key = 'acl';
   protected $internal_gapi_mappings = array(
   );
-  protected $aclType = 'Google_Service_Storage_ObjectAccessControl';
+  protected $aclType = 'Postman_Google_Service_Storage_ObjectAccessControl';
   protected $aclDataType = 'array';
   public $bucket;
   public $cacheControl;
@@ -2848,7 +2848,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $metadata;
   public $metageneration;
   public $name;
-  protected $ownerType = 'Google_Service_Storage_StorageObjectOwner';
+  protected $ownerType = 'Postman_Google_Service_Storage_StorageObjectOwner';
   protected $ownerDataType = '';
   public $selfLink;
   public $size;
@@ -3001,7 +3001,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   {
     return $this->name;
   }
-  public function setOwner(Google_Service_Storage_StorageObjectOwner $owner)
+  public function setOwner(Postman_Google_Service_Storage_StorageObjectOwner $owner)
   {
     $this->owner = $owner;
   }
@@ -3051,11 +3051,11 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   }
 }
 
-class Google_Service_Storage_StorageObjectMetadata extends Google_Model
+class Postman_Google_Service_Storage_StorageObjectMetadata extends Postman_Google_Model
 {
 }
 
-class Google_Service_Storage_StorageObjectOwner extends Google_Model
+class Postman_Google_Service_Storage_StorageObjectOwner extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );

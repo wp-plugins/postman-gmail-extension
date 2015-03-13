@@ -16,7 +16,7 @@
  */
 require_once dirname(__FILE__) . '/../autoload.php';
 
-$client = new Google_Client();
+$client = new Postman_Google_Client();
 $client->setScopes(
     array(
       "https://www.googleapis.com/auth/plus.me",

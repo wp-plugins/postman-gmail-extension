@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Dns extends Google_Service
+class Postman_Google_Service_Dns extends Postman_Google_Service
 {
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
@@ -50,16 +50,16 @@ class Google_Service_Dns extends Google_Service
   /**
    * Constructs the internal representation of the Dns service.
    *
-   * @param Google_Client $client
+   * @param Postman_Google_Client $client
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Postman_Google_Client $client)
   {
     parent::__construct($client);
     $this->servicePath = 'dns/v1beta1/projects/';
     $this->version = 'v1beta1';
     $this->serviceName = 'dns';
 
-    $this->changes = new Google_Service_Dns_Changes_Resource(
+    $this->changes = new Postman_Google_Service_Dns_Changes_Resource(
         $this,
         $this->serviceName,
         'changes',
@@ -135,7 +135,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->managedZones = new Google_Service_Dns_ManagedZones_Resource(
+    $this->managedZones = new Postman_Google_Service_Dns_ManagedZones_Resource(
         $this,
         $this->serviceName,
         'managedZones',
@@ -203,7 +203,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->projects = new Google_Service_Dns_Projects_Resource(
+    $this->projects = new Postman_Google_Service_Dns_Projects_Resource(
         $this,
         $this->serviceName,
         'projects',
@@ -223,7 +223,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->resourceRecordSets = new Google_Service_Dns_ResourceRecordSets_Resource(
+    $this->resourceRecordSets = new Postman_Google_Service_Dns_ResourceRecordSets_Resource(
         $this,
         $this->serviceName,
         'resourceRecordSets',
@@ -272,11 +272,11 @@ class Google_Service_Dns extends Google_Service
  * The "changes" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dnsService = new Google_Service_Dns(...);
+ *   $dnsService = new Postman_Google_Service_Dns(...);
  *   $changes = $dnsService->changes;
  *  </code>
  */
-class Google_Service_Dns_Changes_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dns_Changes_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -285,15 +285,15 @@ class Google_Service_Dns_Changes_Resource extends Google_Service_Resource
    * @param string $project Identifies the project addressed by this request.
    * @param string $managedZone Identifies the managed zone addressed by this
    * request. Can be the managed zone name or id.
-   * @param Google_Change $postBody
+   * @param Postman_Google_Change $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dns_Change
+   * @return Postman_Google_Service_Dns_Change
    */
-  public function create($project, $managedZone, Google_Service_Dns_Change $postBody, $optParams = array())
+  public function create($project, $managedZone, Postman_Google_Service_Dns_Change $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'managedZone' => $managedZone, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Dns_Change");
+    return $this->call('create', array($params), "Postman_Google_Service_Dns_Change");
   }
 
   /**
@@ -305,13 +305,13 @@ class Google_Service_Dns_Changes_Resource extends Google_Service_Resource
    * @param string $changeId The identifier of the requested change, from a
    * previous ResourceRecordSetsChangeResponse.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dns_Change
+   * @return Postman_Google_Service_Dns_Change
    */
   public function get($project, $managedZone, $changeId, $optParams = array())
   {
     $params = array('project' => $project, 'managedZone' => $managedZone, 'changeId' => $changeId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dns_Change");
+    return $this->call('get', array($params), "Postman_Google_Service_Dns_Change");
   }
 
   /**
@@ -331,13 +331,13 @@ class Google_Service_Dns_Changes_Resource extends Google_Service_Resource
    * change sequence.
    * @opt_param string sortOrder Sorting order direction: 'ascending' or
    * 'descending'.
-   * @return Google_Service_Dns_ChangesListResponse
+   * @return Postman_Google_Service_Dns_ChangesListResponse
    */
   public function listChanges($project, $managedZone, $optParams = array())
   {
     $params = array('project' => $project, 'managedZone' => $managedZone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dns_ChangesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Dns_ChangesListResponse");
   }
 }
 
@@ -345,26 +345,26 @@ class Google_Service_Dns_Changes_Resource extends Google_Service_Resource
  * The "managedZones" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dnsService = new Google_Service_Dns(...);
+ *   $dnsService = new Postman_Google_Service_Dns(...);
  *   $managedZones = $dnsService->managedZones;
  *  </code>
  */
-class Google_Service_Dns_ManagedZones_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dns_ManagedZones_Resource extends Postman_Google_Service_Resource
 {
 
   /**
    * Create a new ManagedZone. (managedZones.create)
    *
    * @param string $project Identifies the project addressed by this request.
-   * @param Google_ManagedZone $postBody
+   * @param Postman_Google_ManagedZone $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dns_ManagedZone
+   * @return Postman_Google_Service_Dns_ManagedZone
    */
-  public function create($project, Google_Service_Dns_ManagedZone $postBody, $optParams = array())
+  public function create($project, Postman_Google_Service_Dns_ManagedZone $postBody, $optParams = array())
   {
     $params = array('project' => $project, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Dns_ManagedZone");
+    return $this->call('create', array($params), "Postman_Google_Service_Dns_ManagedZone");
   }
 
   /**
@@ -389,13 +389,13 @@ class Google_Service_Dns_ManagedZones_Resource extends Google_Service_Resource
    * @param string $managedZone Identifies the managed zone addressed by this
    * request. Can be the managed zone name or id.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dns_ManagedZone
+   * @return Postman_Google_Service_Dns_ManagedZone
    */
   public function get($project, $managedZone, $optParams = array())
   {
     $params = array('project' => $project, 'managedZone' => $managedZone);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dns_ManagedZone");
+    return $this->call('get', array($params), "Postman_Google_Service_Dns_ManagedZone");
   }
 
   /**
@@ -410,13 +410,13 @@ class Google_Service_Dns_ManagedZones_Resource extends Google_Service_Resource
    * request.
    * @opt_param int maxResults Optional. Maximum number of results to be returned.
    * If unspecified, the server will decide how many results to return.
-   * @return Google_Service_Dns_ManagedZonesListResponse
+   * @return Postman_Google_Service_Dns_ManagedZonesListResponse
    */
   public function listManagedZones($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dns_ManagedZonesListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Dns_ManagedZonesListResponse");
   }
 }
 
@@ -424,11 +424,11 @@ class Google_Service_Dns_ManagedZones_Resource extends Google_Service_Resource
  * The "projects" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dnsService = new Google_Service_Dns(...);
+ *   $dnsService = new Postman_Google_Service_Dns(...);
  *   $projects = $dnsService->projects;
  *  </code>
  */
-class Google_Service_Dns_Projects_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dns_Projects_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -436,13 +436,13 @@ class Google_Service_Dns_Projects_Resource extends Google_Service_Resource
    *
    * @param string $project Identifies the project addressed by this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Dns_Project
+   * @return Postman_Google_Service_Dns_Project
    */
   public function get($project, $optParams = array())
   {
     $params = array('project' => $project);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Dns_Project");
+    return $this->call('get', array($params), "Postman_Google_Service_Dns_Project");
   }
 }
 
@@ -450,11 +450,11 @@ class Google_Service_Dns_Projects_Resource extends Google_Service_Resource
  * The "resourceRecordSets" collection of methods.
  * Typical usage is:
  *  <code>
- *   $dnsService = new Google_Service_Dns(...);
+ *   $dnsService = new Postman_Google_Service_Dns(...);
  *   $resourceRecordSets = $dnsService->resourceRecordSets;
  *  </code>
  */
-class Google_Service_Dns_ResourceRecordSets_Resource extends Google_Service_Resource
+class Postman_Google_Service_Dns_ResourceRecordSets_Resource extends Postman_Google_Service_Resource
 {
 
   /**
@@ -475,27 +475,27 @@ class Google_Service_Dns_ResourceRecordSets_Resource extends Google_Service_Reso
    * request.
    * @opt_param string type Restricts the list to return only records of this
    * type. If present, the "name" parameter must also be present.
-   * @return Google_Service_Dns_ResourceRecordSetsListResponse
+   * @return Postman_Google_Service_Dns_ResourceRecordSetsListResponse
    */
   public function listResourceRecordSets($project, $managedZone, $optParams = array())
   {
     $params = array('project' => $project, 'managedZone' => $managedZone);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Dns_ResourceRecordSetsListResponse");
+    return $this->call('list', array($params), "Postman_Google_Service_Dns_ResourceRecordSetsListResponse");
   }
 }
 
 
 
 
-class Google_Service_Dns_Change extends Google_Collection
+class Postman_Google_Service_Dns_Change extends Postman_Google_Collection
 {
   protected $collection_key = 'deletions';
   protected $internal_gapi_mappings = array(
   );
-  protected $additionsType = 'Google_Service_Dns_ResourceRecordSet';
+  protected $additionsType = 'Postman_Google_Service_Dns_ResourceRecordSet';
   protected $additionsDataType = 'array';
-  protected $deletionsType = 'Google_Service_Dns_ResourceRecordSet';
+  protected $deletionsType = 'Postman_Google_Service_Dns_ResourceRecordSet';
   protected $deletionsDataType = 'array';
   public $id;
   public $kind;
@@ -553,12 +553,12 @@ class Google_Service_Dns_Change extends Google_Collection
   }
 }
 
-class Google_Service_Dns_ChangesListResponse extends Google_Collection
+class Postman_Google_Service_Dns_ChangesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'changes';
   protected $internal_gapi_mappings = array(
   );
-  protected $changesType = 'Google_Service_Dns_Change';
+  protected $changesType = 'Postman_Google_Service_Dns_Change';
   protected $changesDataType = 'array';
   public $kind;
   public $nextPageToken;
@@ -590,7 +590,7 @@ class Google_Service_Dns_ChangesListResponse extends Google_Collection
   }
 }
 
-class Google_Service_Dns_ManagedZone extends Google_Collection
+class Postman_Google_Service_Dns_ManagedZone extends Postman_Google_Collection
 {
   protected $collection_key = 'nameServers';
   protected $internal_gapi_mappings = array(
@@ -662,13 +662,13 @@ class Google_Service_Dns_ManagedZone extends Google_Collection
   }
 }
 
-class Google_Service_Dns_ManagedZonesListResponse extends Google_Collection
+class Postman_Google_Service_Dns_ManagedZonesListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'managedZones';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
-  protected $managedZonesType = 'Google_Service_Dns_ManagedZone';
+  protected $managedZonesType = 'Postman_Google_Service_Dns_ManagedZone';
   protected $managedZonesDataType = 'array';
   public $nextPageToken;
 
@@ -699,14 +699,14 @@ class Google_Service_Dns_ManagedZonesListResponse extends Google_Collection
   }
 }
 
-class Google_Service_Dns_Project extends Google_Model
+class Postman_Google_Service_Dns_Project extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
   public $id;
   public $kind;
   public $number;
-  protected $quotaType = 'Google_Service_Dns_Quota';
+  protected $quotaType = 'Postman_Google_Service_Dns_Quota';
   protected $quotaDataType = '';
 
 
@@ -734,7 +734,7 @@ class Google_Service_Dns_Project extends Google_Model
   {
     return $this->number;
   }
-  public function setQuota(Google_Service_Dns_Quota $quota)
+  public function setQuota(Postman_Google_Service_Dns_Quota $quota)
   {
     $this->quota = $quota;
   }
@@ -744,7 +744,7 @@ class Google_Service_Dns_Project extends Google_Model
   }
 }
 
-class Google_Service_Dns_Quota extends Google_Model
+class Postman_Google_Service_Dns_Quota extends Postman_Google_Model
 {
   protected $internal_gapi_mappings = array(
   );
@@ -815,7 +815,7 @@ class Google_Service_Dns_Quota extends Google_Model
   }
 }
 
-class Google_Service_Dns_ResourceRecordSet extends Google_Collection
+class Postman_Google_Service_Dns_ResourceRecordSet extends Postman_Google_Collection
 {
   protected $collection_key = 'rrdatas';
   protected $internal_gapi_mappings = array(
@@ -869,14 +869,14 @@ class Google_Service_Dns_ResourceRecordSet extends Google_Collection
   }
 }
 
-class Google_Service_Dns_ResourceRecordSetsListResponse extends Google_Collection
+class Postman_Google_Service_Dns_ResourceRecordSetsListResponse extends Postman_Google_Collection
 {
   protected $collection_key = 'rrsets';
   protected $internal_gapi_mappings = array(
   );
   public $kind;
   public $nextPageToken;
-  protected $rrsetsType = 'Google_Service_Dns_ResourceRecordSet';
+  protected $rrsetsType = 'Postman_Google_Service_Dns_ResourceRecordSet';
   protected $rrsetsDataType = 'array';
 
 
