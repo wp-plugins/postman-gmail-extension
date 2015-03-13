@@ -4,51 +4,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-extension\n"
-"POT-Creation-Date: 2015-03-09 04:57:32+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-03-13 08:39-0500\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: 2015-03-13 12:41:47+00:00\n"
+"PO-Revision-Date: 2015-03-13 08:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.5\n"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:20
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:21
 msgctxt "Transport Name"
 msgid "Gmail API"
 msgstr "API Gmail"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:123
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:124
 msgctxt "Authentication Type"
 msgid "OAuth 2.0"
 msgstr "OAuth 2.0"
 
 #. translators: %s is the Authentication Type (e.g. OAuth 2.0)
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:125
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:126
 msgid "Postman will send mail via the <b>Gmail API</b> using %s authentication."
 msgstr "Postman invierà mail tramite il <b>API Gmail</b> utilizzando l'autenticazione %s."
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:170
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:171
 msgid "The Gmail API transport requires a Sender Email Address, Client ID and Client Secret."
 msgstr ""
 "Il trasporto API Gmail richiede un mittente Indirizzo e-mail, ID client e client segreto."
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:172
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:173
 msgid ""
 "You have configured OAuth 2.0 authentication, but have not received permission to use it."
 msgstr ""
 "È stato configurato l'autenticazione OAuth 2.0, ma non hai ricevuto il permesso di usarlo."
 
 #. translators: where %d is the port number
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:223
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:224
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr "Postman raccomanda configurazione API Gmail sulla porta %d "
 
 #: Postman/PostmanGmailExtension.php:74
 msgid ""
-"You must install and actvate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
+"You must install and activate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
 "Extension"
 msgstr ""
 "È necessario installare e attivare <a href=\"%s\">Postman SMTP</a> utilizzare Gmail "
@@ -79,3 +79,4 @@ msgstr "Jason Hendriks"
 #. Author URI of the plugin/theme
 msgid "https://profiles.wordpress.org/jasonhendriks/"
 msgstr "https://profiles.wordpress.org/jasonhendriks/"
+

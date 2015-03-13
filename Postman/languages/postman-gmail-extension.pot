@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-"
 "extension\n"
-"POT-Creation-Date: 2015-03-09 04:57:32+00:00\n"
+"POT-Creation-Date: 2015-03-13 12:41:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,42 +13,42 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:20
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:21
 msgctxt "Transport Name"
 msgid "Gmail API"
 msgstr ""
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:123
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:124
 msgctxt "Authentication Type"
 msgid "OAuth 2.0"
 msgstr ""
 
 #. translators: %s is the Authentication Type (e.g. OAuth 2.0)
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:125
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:126
 msgid ""
 "Postman will send mail via the <b>Gmail API</b> using %s authentication."
 msgstr ""
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:170
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:171
 msgid ""
 "The Gmail API transport requires a Sender Email Address, Client ID and "
 "Client Secret."
 msgstr ""
 
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:172
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:173
 msgid ""
 "You have configured OAuth 2.0 authentication, but have not received "
 "permission to use it."
 msgstr ""
 
 #. translators: where %d is the port number
-#: Postman/Postman-Mail/PostmanGmailApiTransport.php:223
+#: Postman/Postman-Mail/PostmanGmailApiTransport.php:224
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr ""
 
 #: Postman/PostmanGmailExtension.php:74
 msgid ""
-"You must install and actvate <a href=\"%s\">Postman SMTP</a> to use the "
+"You must install and activate <a href=\"%s\">Postman SMTP</a> to use the "
 "Postman Gmail Extension"
 msgstr ""
 
