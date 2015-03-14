@@ -88,13 +88,13 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 = 1.0.0 =
 * Stable release
-* Renamed Google API classes to prevent errors with other plugins using the Google API
-* Renamed Zend framework classes to prevent errors with other plugins using the Zend framework
+* [[Ticket](https://wordpress.org/support/topic/fatal-error-on-registration-form?replies=7)] Renamed Google API classes to prevent errors with other plugins using the Google API
+* [[Ticket](https://wordpress.org/support/topic/conflict-when-used-in-conjunction-with-advanced-access-manager-by-vasyl-martyn?replies=9)] Renamed Zend framework classes to prevent errors with other plugins using the Zend framework
 
 = 0.2.2 - 2015-03-06 =
-* Quick fix for collisions with other plugins that use the Google API
-* Fixed an error on activation, and fatal error on switching languages, when using a non-supported language (not US English, not French)
-* Stopped writing to error log if a language file can't be found
+* [[Ticket](https://wordpress.org/support/topic/fatal-error-on-registration-form?replies=7)] Quick fix for collisions with other plugins that use the Google API
+* [[Ticket](https://wordpress.org/support/topic/fatal-error-on-activation-52?replies=5)] Fixed an error on activation, and fatal error on switching languages, when using a non-supported language (not US English, not French)
+* [[Ticket](https://wordpress.org/support/topic/language-file-errors-in-debug-log?replies=3)] Stopped writing to error log if a language file can't be found
 
 = 0.2.1 - 2015-03-01 =
 * A bug in the Plugin causes it to crash when deactivating if the parent Postman SMTP plugin is not installed and active. Fixed.
