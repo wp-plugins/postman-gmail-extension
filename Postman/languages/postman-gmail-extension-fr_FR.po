@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-extension\n"
-"POT-Creation-Date: 2015-03-13 12:41:47+00:00\n"
-"PO-Revision-Date: 2015-03-13 09:07-0500\n"
+"POT-Creation-Date: 2015-03-14 18:25:33+00:00\n"
+"PO-Revision-Date: 2015-03-14 14:27-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: Postman/Postman-Mail/PostmanGmailApiTransport.php:21
 msgctxt "Transport Name"
@@ -48,13 +48,15 @@ msgstr ""
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr "Recommande configuration API Gmail sur le port %d"
 
-#: Postman/PostmanGmailExtension.php:74
+#. translators: where %1$s is the URL to Postman's homepage and %2$s is the
+#. minimum version of Postman required
+#: Postman/PostmanGmailExtension.php:77
 msgid ""
-"You must install and activate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
-"Extension"
-msgstr ""
-"Vous devez installer et activer <a href=\"%s\">Postman SMTP</a> d'utiliser le Postman "
+"You must install and activate <a href=\"%1$s\">Postman SMTP v%2$s</a> to use the Postman "
 "Gmail Extension"
+msgstr ""
+"Vous devez installer et activer <a href=\"%1$s\">Postman SMTP v%2$s</a> d'utiliser le "
+"Postman Gmail Extension"
 
 #. Plugin Name of the plugin/theme
 msgid "Postman Gmail API Extension"
@@ -81,3 +83,10 @@ msgstr "Jason Hendriks"
 #. Author URI of the plugin/theme
 msgid "https://profiles.wordpress.org/jasonhendriks/"
 msgstr "https://profiles.wordpress.org/jasonhendriks/"
+
+#~ msgid ""
+#~ "You must install and activate <a href=\"%s\">Postman SMTP</a> to use the Postman Gmail "
+#~ "Extension"
+#~ msgstr ""
+#~ "Vous devez installer et activer <a href=\"%s\">Postman SMTP</a> d'utiliser le Postman "
+#~ "Gmail Extension"

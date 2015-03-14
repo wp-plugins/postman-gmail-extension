@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Postman Gmail API Extension 0.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/postman-gmail-"
 "extension\n"
-"POT-Creation-Date: 2015-03-13 12:41:47+00:00\n"
+"POT-Creation-Date: 2015-03-14 18:25:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,10 +46,12 @@ msgstr ""
 msgid "Postman recommends Gmail API configuration on port %d"
 msgstr ""
 
-#: Postman/PostmanGmailExtension.php:74
+#. translators: where %1$s is the URL to Postman's homepage and %2$s is the
+#. minimum version of Postman required
+#: Postman/PostmanGmailExtension.php:77
 msgid ""
-"You must install and activate <a href=\"%s\">Postman SMTP</a> to use the "
-"Postman Gmail Extension"
+"You must install and activate <a href=\"%1$s\">Postman SMTP v%2$s</a> to use "
+"the Postman Gmail Extension"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
