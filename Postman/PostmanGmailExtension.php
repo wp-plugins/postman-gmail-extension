@@ -33,7 +33,9 @@ if (! class_exists ( 'PostmanGmail' )) {
 			$this->loadTextDomain ();
 			
 			// add the SMTP transport
-			$this->registerTransport ();
+			if (class_exists ( 'Postman_Zend_Mail_Transport_Abstract' )) {
+				$this->registerTransport ();
+			}
 			
 			// ask WpMailBinder to re-bind, if Postman has already loaded
 			if (class_exists ( 'PostmanWpMailBinder' )) {
@@ -57,21 +59,21 @@ if (! class_exists ( 'PostmanGmail' )) {
 		 */
 		public function init() {
 			// start the logger
-			if (class_exists ( 'PostmanLogger' )) {
-				$this->logger = new PostmanLogger ( get_class ( $this ) );
-				$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
-			} else {
+			if (! class_exists ( 'PostmanLogger' ) || ! class_exists ( 'Postman_Zend_Mail_Transport_Abstract' )) {
 				// Postman is not installed or activated
 				add_action ( 'admin_notices', Array (
 						$this,
 						'displayMissingPostmanMessage' 
 				) );
+			} else {
+				$this->logger = new PostmanLogger ( get_class ( $this ) );
+				$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
 			}
 		}
 		/**
 		 */
 		public function displayMissingPostmanMessage() {
-			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', sprintf ( __ ( 'You must install and activate <a href="%s">Postman SMTP</a> to use the Postman Gmail Extension', 'postman-gmail-extension' ), 'https://wordpress.org/plugins/postman-smtp/' ) );
+			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', sprintf ( __ ( 'You must install and activate <a href="%s">Postman SMTP %s</a> to use the Postman Gmail Extension', 'postman-gmail-extension' ), 'https://wordpress.org/plugins/postman-smtp/', REQUIRES_POSTMAN_PLUGIN_VERSION ) );
 		}
 		
 		/**
@@ -82,7 +84,7 @@ if (! class_exists ( 'PostmanGmail' )) {
 		
 		/**
 		 * Loads the appropriate language file.
-		 * 
+		 *
 		 * This function is called from the constructor
 		 * and therefore may NOT access the Logger instance.
 		 */

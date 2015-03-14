@@ -14,6 +14,7 @@
 
 // define constants
 define ( 'POSTMAN_GMAIL_API_PLUGIN_VERSION', '0.2.2' );
+define ( 'REQUIRES_POSTMAN_PLUGIN_VERSION', '1.5.6' );
 
 require_once 'Postman/PostmanGmailExtension.php';
 
