@@ -19,7 +19,7 @@ The Postman Gmail API Extension includes the **Google APIs Client Library for PH
 
 = Features =
 * Send Gmail from your WordPress site over HTTPS
-* Available translations: English, French
+* Available translations: English, French, Italian
 
 If you are willing to help translate Postman into your language, [please let me know](https://wordpress.org/support/plugin/postman-smtp#postform)!
 
