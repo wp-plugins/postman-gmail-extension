@@ -48,7 +48,7 @@ If you are willing to help translate Postman into your language, [please let me 
 1. Choose the 'Request Permission from Google' link and follow the instructions.
 1. Send yourself a test email. 
 
-> Postman is developed on OS X with PHP 5.5.14 and Apache 2.4.9. Postman is tested in a [Red Hat OpenShift](http://www.openshift.com/) environment with PHP 5.3.3 and Apache 2.2.15 with Gmail, Hotmail and Yahoo Mail (US).
+> Postman is developed on OS X with PHP 5.5.14 and Apache 2.4.9. Postman is tested in a [Red Hat OpenShift](http://www.openshift.com/) environment with PHP 5.3.3 and Apache 2.2.15 with Gmail, Hotmail and Yahoo Mail (US). Postman is tested with [mailtrap.io](http://mailtrap.io)
 
 == Frequently Asked Questions == 
 
@@ -86,7 +86,7 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.0 - 2015-03-15 =
 * Stable release
 * [[Ticket](https://wordpress.org/support/topic/fatal-error-on-registration-form?replies=7)] Renamed Google API classes to prevent errors with other plugins using the Google API
 * [[Ticket](https://wordpress.org/support/topic/conflict-when-used-in-conjunction-with-advanced-access-manager-by-vasyl-martyn?replies=9)] Renamed Zend framework classes to prevent errors with other plugins using the Zend framework
