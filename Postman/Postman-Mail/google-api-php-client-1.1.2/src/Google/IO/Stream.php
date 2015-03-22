@@ -132,7 +132,8 @@ class Postman_Google_IO_Stream extends Postman_Google_IO_Abstract
     $respHttpCode = self::UNKNOWN_CODE;
     if ($fh) {
       if (isset($this->options[self::TIMEOUT])) {
-        stream_set_timeout($fh, $this->options[self::TIMEOUT]);
+    	// @jason: added @ to hide PHP warnings if the host has disabled stream_set_timeout
+      	@stream_set_timeout($fh, $this->options[self::TIMEOUT]);
       }
 
       $response_data = stream_get_contents($fh);
