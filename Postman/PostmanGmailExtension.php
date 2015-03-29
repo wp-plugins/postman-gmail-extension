@@ -3,7 +3,7 @@
 // setup the main entry point
 if (! class_exists ( 'PostmanGmail' )) {
 	
-	require_once 'Common.php';
+	require_once 'Postman-Common.php';
 	require_once 'Postman-Mail/PostmanGmailApiTransport.php';
 	
 	/**
