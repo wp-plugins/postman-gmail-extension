@@ -113,6 +113,12 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+* Fix for compatibility with Windows PHP Pear
+
+= 1.0.0 =
+* First stable release
+
 = 0.2.2 =
 * Switching languages causes a non-recoverable error - fixed
 
