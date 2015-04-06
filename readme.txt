@@ -7,11 +7,11 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Send Gmail from GoDaddy and other hosts that block the standard email ports with this add-on for the Postman SMTP plugin.
+Send Gmail from GoDaddy, Bluehost and other hosts that block the standard email ports with this add-on for the Postman SMTP plugin.
 
 == Description ==
 
-Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail API Extension works in combination with [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) to send your mail out on the HTTPS port, port 443. Even if you host your site on GoDaddy, your Gmail will be delivered!
+Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail API Extension works in combination with [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) to send your mail out on the HTTPS port, port 443. Even if you host your site on GoDaddy or Bluehost, your Gmail will be delivered!
 
 The Postman Gmail API Extension includes the **Google APIs Client Library for PHP**. The [Google API](https://developers.google.com/gmail/api/) does not support password-based authentication and Postman will guide you in creating a (free) [Google OAuth 2.0 Client ID](https://developers.google.com/accounts/docs/OAuth2).
 
