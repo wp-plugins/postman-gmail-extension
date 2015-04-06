@@ -86,7 +86,7 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
-= 1.0.1 - 2015-03-22 =
+= 1.0.1 - 2015-04-05 =
 [[Ticket](https://wordpress.org/support/topic/problem-with-responding?replies=7#post-6723830)] Hide PHP warnings from `stream_set_timeout()` in case the host has disabled this function. 
 
 = 1.0.0 - 2015-03-15 =
