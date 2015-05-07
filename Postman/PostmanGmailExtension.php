@@ -63,6 +63,12 @@ if (! class_exists ( 'PostmanGmail' )) {
 						$this,
 						'displayMissingPostmanMessage' 
 				) );
+			} else if (class_exists ( 'PostmanTransportRegistry' )) {
+				// Postman v1.6 has deprecated this plugin
+				add_action ( 'admin_notices', Array (
+						$this,
+						'displayDeprecatedMessage' 
+				) );
 			} else {
 				$this->logger = new PostmanLogger ( get_class ( $this ) );
 				$this->logger->debug ( 'Postman Gmail Extension v' . POSTMAN_GMAIL_API_PLUGIN_VERSION . ' starting' );
@@ -73,6 +79,13 @@ if (! class_exists ( 'PostmanGmail' )) {
 		public function displayMissingPostmanMessage() {
 			/* translators: where %1$s is the URL to Postman's homepage and %2$s is the minimum version of Postman required */
 			printf ( '<div class="%s"><p>%s</p></div>', 'error', sprintf ( __ ( 'You must install and activate <a href="%1$s">Postman SMTP v%2$s</a> to use the Postman Gmail Extension', 'postman-gmail-extension' ), 'https://wordpress.org/plugins/postman-smtp/', REQUIRES_POSTMAN_PLUGIN_VERSION ) );
+		}
+		
+		/**
+		 */
+		public function displayDeprecatedMessage() {
+			/* translators: where %1$s is the URL to Postman's homepage and %2$s is the minimum version of Postman required */
+			printf ( '<div class="%s"><p>%s</p></div>', 'update-nag', sprintf ( __ ( 'Please deactivate and delete the <b>Postman Gmail API Extension</b>. Installation of <b>Postman v1.6</b> has deprecated this plugin. Your email service will not be interrupted in any way by this change. Please see <a href="https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1">The Official Plugin Page</a> for more information.', 'postman-gmail-extension' ), 'https://wordpress.org/plugins/postman-smtp/', REQUIRES_POSTMAN_PLUGIN_VERSION ) );
 		}
 		
 		/**

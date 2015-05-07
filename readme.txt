@@ -3,7 +3,7 @@ Contributors: jasonhendriks
 Tags: oauth, gmail, gmail api, google api, email, mail, google apps, godaddy, blocked ports, https
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,11 +11,13 @@ Send Gmail from GoDaddy, Bluehost and other hosts that block the standard email 
 
 == Description ==
 
+###* Please read before downloading *
+> This plugin is deprecated as of May 3rd, 2015. The functionality previously provided has been merged into the [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) plugin, v1.6. That single package is all you need to send your Gmail from web hosts that block your access to remote SMTP servers. If you previously installed this plugin, you may remove it. See [this post](https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1) for more information.
+
 Can't send Gmail because ports 465 and 587 are blocked on your host? No problem! The Postman Gmail API Extension works in combination with [Postman SMTP](https://wordpress.org/plugins/postman-smtp/) to send your mail out on the HTTPS port, port 443. Even if you host your site on GoDaddy or Bluehost, your Gmail will be delivered!
 
 The Postman Gmail API Extension includes the **Google APIs Client Library for PHP**. The [Google API](https://developers.google.com/gmail/api/) does not support password-based authentication and Postman will guide you in creating a (free) [Google OAuth 2.0 Client ID](https://developers.google.com/accounts/docs/OAuth2).
 
-> [There is a known issue](https://wordpress.org/support/topic/upgradedeactivation-bug-in-v02?replies=1) with deactivating/upgrading from v0.2. You will have to go back into Postman settings after upgrading and re-enable the Gmail API transport. This issue is fixed in v0.2.1
 
 = Features =
 * Send Gmail from your WordPress site over HTTPS
@@ -85,6 +87,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 1. A Postman port-test initiated from a GoDaddy.com WordPress site.
 
 == Changelog ==
+
+= 1.0.2 - 2015-05-06 =
+* Deprecated. See [https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1](https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1)
 
 = 1.0.1 - 2015-04-05 =
 * [[Ticket](https://wordpress.org/support/topic/problem-with-responding?replies=7#post-6723830)] Hide PHP warnings from `stream_set_timeout()` in case the host has disabled this function. 
