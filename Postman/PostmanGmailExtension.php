@@ -56,16 +56,20 @@ if (! class_exists ( 'PostmanGmail' )) {
 		 * If we can't initialize the plugin, display an error message to the user
 		 */
 		public function init() {
+			$hook = 'admin_notices';
+			if (is_multisite ()) {
+				$hook = 'network_admin_notices';
+			}
 			// start the logger
 			if (! class_exists ( 'PostmanLogger' ) || ! class_exists ( 'Postman_Zend_Mail_Transport_Abstract' )) {
 				// Postman is not installed or activated
-				add_action ( 'admin_notices', Array (
+				add_action ( $hook, Array (
 						$this,
 						'displayMissingPostmanMessage' 
 				) );
 			} else if (class_exists ( 'PostmanTransportRegistry' )) {
 				// Postman v1.6 has deprecated this plugin
-				add_action ( 'admin_notices', Array (
+				add_action ( $hook, Array (
 						$this,
 						'displayDeprecatedMessage' 
 				) );

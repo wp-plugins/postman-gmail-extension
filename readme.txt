@@ -88,6 +88,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 
 == Changelog ==
 
+= 1.0.3 - 2015-06-08 =
+* In case of multisite, display the plugin administration notices on the network admin pages instead of the admin pages
+
 = 1.0.2 - 2015-05-06 =
 * Deprecated. See [https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1](https://wordpress.org/support/topic/postman-gmail-api-extension-is-deprecated?replies=1)
 
