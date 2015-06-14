@@ -3,7 +3,7 @@ Contributors: jasonhendriks
 Tags: oauth, gmail, gmail api, google api, email, mail, google apps, godaddy, blocked ports, https
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,9 @@ To use OAuth, your website needs it's own Client ID. The Client ID is used to co
 1. A Postman port-test initiated from a GoDaddy.com WordPress site.
 
 == Changelog ==
+
+= 1.0.4 - 2015-06-14 =
+* Uses a filter to check for the existence of Postman, much cleaner
 
 = 1.0.3 - 2015-06-08 =
 * In case of multisite, display the plugin administration notices on the network admin pages instead of the admin pages

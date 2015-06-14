@@ -61,7 +61,8 @@ if (! class_exists ( 'PostmanGmail' )) {
 				$hook = 'network_admin_notices';
 			}
 			// start the logger
-			if (! class_exists ( 'PostmanLogger' ) || ! class_exists ( 'Postman_Zend_Mail_Transport_Abstract' )) {
+			$pluginData = apply_filters ( 'postman_get_plugin_metadata', null );
+			if (! isset ( $pluginData ) && (! class_exists ( 'PostmanLogger' ) || ! class_exists ( 'Postman_Zend_Mail_Transport_Abstract' ))) {
 				// Postman is not installed or activated
 				add_action ( $hook, Array (
 						$this,
